@@ -15,7 +15,5 @@ namespace TOD_Prototype
         {
             InitializeComponent();
         }
-
-        private int _da = 1;
     }
 }
