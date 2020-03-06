@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADE37570-0E80-46AA-BD4E-975E0EA99947}</ProjectGuid>
+    <ProjectGuid>{C41F7195-72F5-4C8F-9AEB-57660A744E75}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TOD_Prototype</RootNamespace>
     <AssemblyName>TOD-Prototype</AssemblyName>
