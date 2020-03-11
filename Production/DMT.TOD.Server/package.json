@@ -1,0 +1,9 @@
+{
+  "name": "dmt.tod.server",
+  "version": "1.0.0",
+  "description": "DMT.TOD.Server",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
