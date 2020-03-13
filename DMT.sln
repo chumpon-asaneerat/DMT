@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Production", "Production", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOD.Wpf", "Prototypes\TOD.Wpf\TOD.Wpf.csproj", "{8ADB0F71-56D0-4BE5-9EA8-B0DBC79F1A82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Wpf", "Prototypes\TA.Wpf\TA.Wpf.csproj", "{6D525BBB-A53B-4166-B1DF-840401A4E2E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8ADB0F71-56D0-4BE5-9EA8-B0DBC79F1A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADB0F71-56D0-4BE5-9EA8-B0DBC79F1A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADB0F71-56D0-4BE5-9EA8-B0DBC79F1A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D525BBB-A53B-4166-B1DF-840401A4E2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D525BBB-A53B-4166-B1DF-840401A4E2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D525BBB-A53B-4166-B1DF-840401A4E2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D525BBB-A53B-4166-B1DF-840401A4E2E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{DFAD3A93-6541-48CF-98A3-D1C1A799FFD7} = {A4E396F5-E8DF-4EA1-A41E-95273D202FBB}
 		{4D58472E-32FB-4CD1-8276-443F2D6050EE} = {4CC1E95E-89BD-4A5B-A810-C22DCF1F5315}
 		{8ADB0F71-56D0-4BE5-9EA8-B0DBC79F1A82} = {111B7690-8DC1-4844-9B1F-46ECB991B3F1}
+		{6D525BBB-A53B-4166-B1DF-840401A4E2E4} = {111B7690-8DC1-4844-9B1F-46ECB991B3F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E21131E-314E-4FB9-90A9-21D6E385910A}
