@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOD.Wpf", "Prototypes\TOD.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Wpf", "Prototypes\TA.Wpf\TA.Wpf.csproj", "{6D525BBB-A53B-4166-B1DF-840401A4E2E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesignWpfSample", "Samples\MaterialDesignWpfSample\MaterialDesignWpfSample.csproj", "{2AE90E0F-2639-406D-8EFC-AFDFD01F5960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{6D525BBB-A53B-4166-B1DF-840401A4E2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D525BBB-A53B-4166-B1DF-840401A4E2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D525BBB-A53B-4166-B1DF-840401A4E2E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE90E0F-2639-406D-8EFC-AFDFD01F5960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE90E0F-2639-406D-8EFC-AFDFD01F5960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE90E0F-2639-406D-8EFC-AFDFD01F5960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE90E0F-2639-406D-8EFC-AFDFD01F5960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{4D58472E-32FB-4CD1-8276-443F2D6050EE} = {4CC1E95E-89BD-4A5B-A810-C22DCF1F5315}
 		{8ADB0F71-56D0-4BE5-9EA8-B0DBC79F1A82} = {111B7690-8DC1-4844-9B1F-46ECB991B3F1}
 		{6D525BBB-A53B-4166-B1DF-840401A4E2E4} = {111B7690-8DC1-4844-9B1F-46ECB991B3F1}
+		{2AE90E0F-2639-406D-8EFC-AFDFD01F5960} = {A4E396F5-E8DF-4EA1-A41E-95273D202FBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E21131E-314E-4FB9-90A9-21D6E385910A}
