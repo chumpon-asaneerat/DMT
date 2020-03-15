@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="images/TOLL-813.jpg"/>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="100" Margin="41,23,0,0" VerticalAlignment="Top" Width="100" Source="images/1350762.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="201,23,0,0" VerticalAlignment="Top" Width="100" Source="images/941056.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="358,23,0,0" VerticalAlignment="Top" Width="100" Source="images/cash_register-512.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="511,23,0,0" VerticalAlignment="Top" Width="100" Source="images/img_184513.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="658,23,0,0" VerticalAlignment="Top" Width="100" Source="images/img_452625.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="41,178,0,0" VerticalAlignment="Top" Width="100" Source="images/money-icon-png-transparent-3.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="201,178,0,0" VerticalAlignment="Top" Width="100" Source="images/phone-alarm-clock-pngrepo-com.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="358,178,0,0" VerticalAlignment="Top" Width="100" Source="images/Shopping-Money-Bag-icon.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="511,178,0,0" VerticalAlignment="Top" Width="100" Source="images/tollway.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="658,178,0,0" VerticalAlignment="Top" Width="100" Source="images/unnamed.png"/>
+        <Button HorizontalAlignment="Left" Margin="65,321,0,0" VerticalAlignment="Top" Width="201" Height="62" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" BorderBrush="#7F3C1E1E">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#D8000000" Offset="0.792"/>
+                    <GradientStop Color="#D80E212F" Offset="0.951"/>
+                    <GradientStop Color="#D8213646" Offset="0.297"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Content>
+                <Grid>
+                    <Image Source="images/1350762.png" Margin="7,10,140.6,10"/>
+                </Grid>
+            </Button.Content>
+        </Button>
+
     </Grid>
 </Window>

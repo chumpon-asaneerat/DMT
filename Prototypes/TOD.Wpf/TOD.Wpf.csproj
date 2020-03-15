@@ -94,5 +94,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\1350762.png" />
+    <Resource Include="images\941056.png" />
+    <Resource Include="images\cash_register-512.png" />
+    <Resource Include="images\img_184513.png" />
+    <Resource Include="images\img_452625.png" />
+    <Resource Include="images\money-icon-png-transparent-3.png" />
+    <Resource Include="images\phone-alarm-clock-pngrepo-com.png" />
+    <Resource Include="images\Shopping-Money-Bag-icon.png" />
+    <Resource Include="images\TOLL-813.jpg" />
+    <Resource Include="images\tollway.png" />
+    <Resource Include="images\unnamed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
