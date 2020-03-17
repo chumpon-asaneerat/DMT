@@ -34,6 +34,7 @@ namespace DMT
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             PageContentManager.Instance.Start();
+            revEntry.Setup(new Models.RevenueEntry());
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)

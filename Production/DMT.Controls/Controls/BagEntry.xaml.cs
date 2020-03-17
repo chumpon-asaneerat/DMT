@@ -13,25 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using DMT;
-
 namespace DMT.Controls
 {
     /// <summary>
-    /// Interaction logic for RevenueEntry.xaml
+    /// Interaction logic for BagEntry.xaml
     /// </summary>
-    public partial class RevenueEntry : UserControl
+    public partial class BagEntry : UserControl
     {
-        public RevenueEntry()
+        public BagEntry()
         {
             InitializeComponent();
-        }
-
-        public void Setup(Models.RevenueEntry entry)
-        {
-            bagTraffic.DataContext = entry.Traffic;
-            bagCoupon.DataContext = entry.Coupon;
-            bagOther.DataContext = entry.Other;
         }
     }
 }
