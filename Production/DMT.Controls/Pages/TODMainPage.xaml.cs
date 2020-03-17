@@ -33,12 +33,20 @@ namespace DMT.Pages
 
         private void beginJob_Click(object sender, RoutedEventArgs e)
         {
+            Windows.SignInWindow win = new Windows.SignInWindow();
+            win.Owner = Application.Current.MainWindow;
+            if (win.ShowDialog() == false)
+            {
 
-        }
+            }
+            try
+            {
 
-        private void changeLane_Click(object sender, RoutedEventArgs e)
-        {
-
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
         }
 
         private void endJob_Click(object sender, RoutedEventArgs e)

@@ -29,7 +29,6 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" 
                        FontSize="28"
@@ -38,7 +37,7 @@
                        HorizontalAlignment="Stretch" 
                        VerticalAlignment="Center"
                        TextAlignment="Center"
-                       Text="Shift"/>
+                       Text="Job"/>
             <Button x:Name="beginJob" 
                     Grid.Column="0" Grid.Row="1" 
                     Margin="0 0 5 0"
@@ -65,35 +64,6 @@
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="เปิดผลัดงาน"/>
-                    </StackPanel>
-                </DockPanel>
-            </Button>
-            <Button x:Name="changeLane"
-                    Grid.Column="1" Grid.Row="1" 
-                    Margin="0 0 5 0"
-                    Background="DarkOrange"
-                    Foreground="WhiteSmoke" Click="changeLane_Click">
-                <DockPanel>
-                    <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                        <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Controls;component/images/clock.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                    </Grid>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="28" 
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="Change Lane"/>
-                        <Grid Height="10" />
-                        <TextBlock FontSize="14"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="เปลี่ยนช่องทางประจำการ"/>
                     </StackPanel>
                 </DockPanel>
             </Button>

@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DMT.Pages
+namespace DMT.Windows
 {
     /// <summary>
-    /// Interaction logic for SignInPage.xaml
+    /// Interaction logic for SignInWindow.xaml
     /// </summary>
-    public partial class SignInPage : UserControl
+    public partial class SignInWindow : Window
     {
-        public SignInPage()
+        public SignInWindow()
         {
             InitializeComponent();
         }
