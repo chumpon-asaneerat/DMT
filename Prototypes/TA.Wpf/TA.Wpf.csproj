@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6D525BBB-A53B-4166-B1DF-840401A4E2E4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TA.Wpf</RootNamespace>
+    <RootNamespace>DMT</RootNamespace>
     <AssemblyName>TA.Wpf</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -93,6 +93,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Production\DMT.Controls\DMT.Controls.csproj">
+      <Project>{7f19adba-884d-4d46-a7c1-4bf672f829d9}</Project>
+      <Name>DMT.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Production\DMT.Models\DMT.Models.csproj">
+      <Project>{0f37fd1a-5491-4e10-9e2c-9cd631b333f1}</Project>
+      <Name>DMT.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
