@@ -1,0 +1,150 @@
+﻿<UserControl x:Class="DMT.Controls.RevenueEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMT.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="200">
+    <Grid>
+        <StackPanel Margin="5">
+            <!-- 1 BHT -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                           Margin="2"
+                           DockPanel.Dock="Left" 
+                           TextAlignment="Right"
+                           Text="1 BHT"
+                           Width="90"/>
+                <TextBox FontSize="16" 
+                         Margin="2"
+                         TextAlignment="Right"
+                         Text="0"/>
+            </DockPanel>
+            <!-- 2 BHT -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                           Margin="2"
+                           DockPanel.Dock="Left" 
+                           TextAlignment="Right"
+                           Text="2 BHT"
+                           Width="90"/>
+                <TextBox FontSize="16" 
+                         Margin="2"
+                         TextAlignment="Right"
+                         Text="0"/>
+            </DockPanel>
+            <!-- 5 BHT -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                           Margin="2" 
+                           DockPanel.Dock="Left"  
+                           TextAlignment="Right" 
+                           Text="5 BHT" 
+                           Width="90"/>
+                <TextBox FontSize="16" 
+                         Margin="2"
+                         TextAlignment="Right"
+                         Text="0"/>
+            </DockPanel>
+            <!-- 10 BHT coin -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                        Margin="2" 
+                        DockPanel.Dock="Left"  
+                        TextAlignment="Right" 
+                        Text="10 BHT (coin)" 
+                        Width="90"/>
+                <TextBox FontSize="16" 
+                        Margin="2"
+                        TextAlignment="Right"
+                        Text="0"/>
+                    
+            </DockPanel>
+            <!-- 10 BHT bill -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                        Margin="2" 
+                        DockPanel.Dock="Left"  
+                        TextAlignment="Right" 
+                        Text="10 BHT (bill)" 
+                        Width="90"/>
+                <TextBox FontSize="16" 
+                        Margin="2"
+                        TextAlignment="Right"
+                        Text="0"/>
+
+            </DockPanel>
+            <!-- 20 BHT -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                        Margin="2" 
+                        DockPanel.Dock="Left"  
+                        TextAlignment="Right" 
+                        Text="20 BHT" 
+                        Width="90"/>
+                <TextBox FontSize="16" 
+                        Margin="2"
+                        TextAlignment="Right"
+                        Text="0"/>
+
+            </DockPanel>
+            <!-- 50 BHT -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                        Margin="2" 
+                        DockPanel.Dock="Left"  
+                        TextAlignment="Right" 
+                        Text="50 BHT" 
+                        Width="90"/>
+                <TextBox FontSize="16" 
+                        Margin="2"
+                        TextAlignment="Right"
+                        Text="0"/>
+
+            </DockPanel>
+            <!-- 100 BHT -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                        Margin="2" 
+                        DockPanel.Dock="Left"  
+                        TextAlignment="Right" 
+                        Text="100 BHT" 
+                        Width="90"/>
+                <TextBox FontSize="16" 
+                        Margin="2"
+                        TextAlignment="Right"
+                        Text="0"/>
+
+            </DockPanel>
+            <!-- 500 BHT -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                        Margin="2" 
+                        DockPanel.Dock="Left"  
+                        TextAlignment="Right" 
+                        Text="500 BHT" 
+                        Width="90"/>
+                <TextBox FontSize="16" 
+                        Margin="2"
+                        TextAlignment="Right"
+                        Text="0"/>
+
+            </DockPanel>
+            <!-- 1000 BHT -->
+            <DockPanel>
+                <TextBlock FontSize="16" 
+                        Margin="2" 
+                        DockPanel.Dock="Left"  
+                        TextAlignment="Right" 
+                        Text="1000 BHT" 
+                        Width="90"/>
+                <TextBox FontSize="16" 
+                        Margin="2"
+                        TextAlignment="Right"
+                        Text="0"/>
+
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

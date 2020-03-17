@@ -35,11 +35,12 @@
                            Foreground="#FFDEDEDE"></TextBlock>
                 <TextBlock x:Name="txtCurrentTime" 
                            FontFamily="Verdana" 
-                           FontSize="48" 
+                           FontSize="32" 
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center"
                            TextAlignment="Center"
-                           Width="150" Text="09:30"
+                           Width="150" 
+                           Text="09:30:00"
                            Foreground="#FFDEDEDE"></TextBlock>
             </DockPanel>
             <Grid Margin="5"></Grid>

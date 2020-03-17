@@ -10,7 +10,23 @@
     <Grid>
         <DockPanel>
             <ctrl:PlazaInfo DockPanel.Dock="Top" Height="100"></ctrl:PlazaInfo>
-            <Grid></Grid>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Margin="5" Text="Traffic" HorizontalAlignment="Center" TextAlignment="Center"></TextBlock>
+                    <ctrl:RevenueEntry Width="200" DockPanel.Dock="Left"></ctrl:RevenueEntry>
+                    <Grid></Grid>
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Margin="5" Text="Coupon" HorizontalAlignment="Center" TextAlignment="Center"></TextBlock>
+                    <ctrl:RevenueEntry Width="200" DockPanel.Dock="Left"></ctrl:RevenueEntry>
+                    <Grid></Grid>
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Margin="5" Text="Other" HorizontalAlignment="Center" TextAlignment="Center"></TextBlock>
+                    <ctrl:RevenueEntry Width="200" DockPanel.Dock="Left"></ctrl:RevenueEntry>
+                    <Grid></Grid>
+                </DockPanel>
+            </StackPanel>
         </DockPanel>
     </Grid>
 </Window>
