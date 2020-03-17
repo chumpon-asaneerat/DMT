@@ -10,15 +10,15 @@
             <local:BagEntry x:Name="bagTraffic" 
                             Background="ForestGreen"
                             Foreground="WhiteSmoke"
-                            Width="250" Margin="3"></local:BagEntry>
+                            Width="250" Margin="3"/>
             <local:BagEntry x:Name="bagCoupon" 
                             Background="Indigo"
                             Foreground="WhiteSmoke"
-                            Width="250" Margin="3"></local:BagEntry>
+                            Width="250" Margin="3"/>
             <local:BagEntry x:Name="bagOther" 
                             Background="CornflowerBlue"
                             Foreground="WhiteSmoke"
-                            Width="250" Margin="3"></local:BagEntry>
+                            Width="250" Margin="3"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -37,13 +37,21 @@
         <StackPanel Grid.Row="1"
                     Grid.Column="1">
             <StackPanel Margin="5">
-                <TextBlock Foreground="WhiteSmoke" Text="Smart Card User ID:"/>
+                <TextBlock Foreground="WhiteSmoke" 
+                           FontSize="18"
+                           Text="Smart Card User ID:"/>
                 <Grid Height="5" />
-                <TextBox Text=""/>
+                <TextBox x:Name="txtSmartCardId" 
+                         FontSize="18"
+                         Text=""/>
                 <Grid Height="5" />
-                <TextBlock Foreground="WhiteSmoke" Text="กรุณาระบุรหัสพนักงาน 10 หลัก"/>
+                <TextBlock Foreground="WhiteSmoke" 
+                           FontSize="18"
+                           Text="กรุณาระบุรหัสพนักงาน 10 หลัก"/>
                 <Grid Height="5" />
-                <TextBox Text=""/>
+                <TextBox x:Name="txtManualCardId" 
+                         FontSize="18"
+                         Text=""/>
                 <Grid Height="5" />
             </StackPanel>
         </StackPanel>
@@ -52,9 +60,11 @@
               Margin="5">
             <StackPanel Margin="5 0">
                 <Grid Height="20" />
-                <Button Height="22">OK</Button>
+                <Button x:Name="cmdOK" 
+                        Height="22" Click="cmdOK_Click">OK</Button>
                 <Grid Height="5"/>
-                <Button Height="22">Cancel</Button>
+                <Button x:Name="cmdCancel" 
+                        Height="22" Click="cmdCancel_Click">Cancel</Button>
             </StackPanel>
         </Grid>
     </Grid>

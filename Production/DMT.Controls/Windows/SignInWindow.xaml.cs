@@ -23,5 +23,18 @@ namespace DMT.Windows
         {
             InitializeComponent();
         }
+
+        private void cmdOK_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+        }
+
+        private void cmdCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = false;
+        }
+
+        public string SmartCardId { get { return txtSmartCardId.Text; } }
+        public string ManualId { get { return txtManualCardId.Text; } }
     }
 }

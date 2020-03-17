@@ -27,8 +27,13 @@ namespace DMT.Controls
             InitializeComponent();
         }
 
-        public void Setup(Models.RevenueEntry entry)
+        private Models.Job _job;
+        private Models.RevenueEntry _entry;
+
+        public void Setup(Models.Job job, Models.RevenueEntry entry)
         {
+            _job = job;
+            _entry = entry;
             bagTraffic.DataContext = entry.Traffic;
             bagCoupon.DataContext = entry.Coupon;
             bagOther.DataContext = entry.Other;

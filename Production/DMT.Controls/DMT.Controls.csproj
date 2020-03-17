@@ -61,8 +61,14 @@
     <Compile Include="Controls\RevenueEntry.xaml.cs">
       <DependentUpon>RevenueEntry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ShiftView.xaml.cs">
+      <DependentUpon>ShiftView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ChangeShiftPage.xaml.cs">
       <DependentUpon>ChangeShiftPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RevenueDateSelectionPage.xaml.cs">
+      <DependentUpon>RevenueDateSelectionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RevenueEntryPage.xaml.cs">
       <DependentUpon>RevenueEntryPage.xaml</DependentUpon>
@@ -117,7 +123,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\ShiftView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ChangeShiftPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RevenueDateSelectionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

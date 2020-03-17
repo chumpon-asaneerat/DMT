@@ -46,8 +46,6 @@ namespace DMT
             PageContentManager.Instance.Start();
             // Init Main Menu
             PageContentManager.Instance.Current = new Pages.TODMainPage();
-
-            //revEntry.Setup(new Models.RevenueEntry());
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)

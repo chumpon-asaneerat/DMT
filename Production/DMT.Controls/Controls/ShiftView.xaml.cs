@@ -13,26 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DMT.Pages
+namespace DMT.Controls
 {
     /// <summary>
-    /// Interaction logic for RevenueEntryPage.xaml
+    /// Interaction logic for ShiftView.xaml
     /// </summary>
-    public partial class RevenueEntryPage : UserControl
+    public partial class ShiftView : UserControl
     {
-        public RevenueEntryPage()
+        public ShiftView()
         {
             InitializeComponent();
         }
 
-        private Models.Job _job;
-        private Models.RevenueEntry _entry;
-
-        public void Setup(Models.Job job, Models.RevenueEntry entry)
+        public void Setup(List<Models.Shift> shifts) 
         {
-            _job = job;
-            _entry = entry;
-            revEntry.Setup(_job, _entry);
+            listView.ItemsSource = shifts;
         }
     }
 }
