@@ -20,9 +20,42 @@ namespace DMT.Pages
     /// </summary>
     public partial class TODMainPage : UserControl
     {
+        #region Constructor
+
         public TODMainPage()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Button (Menu) Command Handlers
+
+        private void beginJob_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void changeLane_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void endJob_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void revEntry_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void reprintRevSlip_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        #endregion
     }
 }

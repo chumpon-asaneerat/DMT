@@ -143,6 +143,27 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Styles\" />
+    <Folder Include="Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coupon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bag4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\report1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\begin_of_job.png" />
+    <Resource Include="Images\end_of_job.png" />
+    <Resource Include="Images\reventry.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

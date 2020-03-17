@@ -26,20 +26,59 @@ namespace DMT
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Constructor
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        #endregion
+
+        #region Load/Unload
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // Initial Page Content Manager
+            PageContentManager.Instance.ContentChanged += new EventHandler(Instance_ContentChanged);
+            PageContentManager.Instance.StatusUpdated += new StatusMessageEventHandler(Instance_StatusUpdated);
+            PageContentManager.Instance.OnTick += new EventHandler(Instance_OnTick);
             PageContentManager.Instance.Start();
-            revEntry.Setup(new Models.RevenueEntry());
+            // Init Main Menu
+            PageContentManager.Instance.Current = new Pages.TODMainPage();
+
+            //revEntry.Setup(new Models.RevenueEntry());
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
+            // Release Page Content Manager
             PageContentManager.Instance.Shutdown();
+            PageContentManager.Instance.OnTick -= new EventHandler(Instance_OnTick);
+            PageContentManager.Instance.StatusUpdated -= new StatusMessageEventHandler(Instance_StatusUpdated);
+            PageContentManager.Instance.ContentChanged -= new EventHandler(Instance_ContentChanged);
         }
+
+        #endregion
+
+        #region Page Content Manager Handlers
+
+        void Instance_OnTick(object sender, EventArgs e)
+        {
+            //UpdateTime();
+            //UpdateConnectionStatus();
+        }
+
+        void Instance_StatusUpdated(object sender, StatusMessageEventArgs e)
+        {
+            //txtStatus.Text = e.Message;
+        }
+
+        void Instance_ContentChanged(object sender, EventArgs e)
+        {
+            this.container.Content = PageContentManager.Instance.Current;
+        }
+
+        #endregion
     }
 }

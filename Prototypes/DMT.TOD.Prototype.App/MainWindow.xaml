@@ -10,12 +10,7 @@
     <Grid>
         <DockPanel>
             <ctrl:PlazaInfo DockPanel.Dock="Top" Height="100"></ctrl:PlazaInfo>
-            <Grid Background="DimGray">
-                <ctrl:RevenueEntry x:Name="revEntry"></ctrl:RevenueEntry>
-            </Grid>
-            <!--
             <ContentPresenter x:Name="container"/>
-            -->
         </DockPanel>
     </Grid>
 </Window>
