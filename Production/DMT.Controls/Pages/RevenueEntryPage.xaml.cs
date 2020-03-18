@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using NLib;
+using NLib.Services;
+
 namespace DMT.Pages
 {
     /// <summary>
@@ -33,6 +36,20 @@ namespace DMT.Pages
             _job = job;
             _entry = entry;
             revEntry.Setup(_job, _entry);
+        }
+
+        private void cmdOk_Click(object sender, RoutedEventArgs e)
+        {
+            // Main Menu Page
+            var page = new Pages.RevenuePreviewPage();
+            PageContentManager.Instance.Current = page;
+        }
+
+        private void cmdCancel_Click(object sender, RoutedEventArgs e)
+        {
+            // Main Menu Page
+            var page = new Pages.TODMainPage();
+            PageContentManager.Instance.Current = page;
         }
     }
 }

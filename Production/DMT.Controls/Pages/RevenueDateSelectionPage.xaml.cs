@@ -36,8 +36,8 @@ namespace DMT.Pages
         private void cmdCancel_Click(object sender, RoutedEventArgs e)
         {
             // Main Menu Page
-            var entry = new Pages.TODMainPage();
-            PageContentManager.Instance.Current = entry;
+            var page = new Pages.TODMainPage();
+            PageContentManager.Instance.Current = page;
         }
 
         private void cmdOk_Click(object sender, RoutedEventArgs e)

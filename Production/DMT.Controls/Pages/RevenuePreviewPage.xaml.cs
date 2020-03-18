@@ -19,11 +19,11 @@ using NLib.Services;
 namespace DMT.Pages
 {
     /// <summary>
-    /// Interaction logic for ChangeShiftPage.xaml
+    /// Interaction logic for RevenuePreviewPage.xaml
     /// </summary>
-    public partial class ChangeShiftPage : UserControl
+    public partial class RevenuePreviewPage : UserControl
     {
-        public ChangeShiftPage()
+        public RevenuePreviewPage()
         {
             InitializeComponent();
         }
@@ -40,16 +40,6 @@ namespace DMT.Pages
             // Main Menu Page
             var page = new Pages.TODMainPage();
             PageContentManager.Instance.Current = page;
-        }
-
-        private Models.Job _job;
-        private Models.RevenueEntry _entry;
-
-        public void Setup(Models.Job job, Models.RevenueEntry entry) 
-        {
-            _job = job;
-            _entry = entry;
-            grid.Setup(_job.Shifts);
         }
     }
 }

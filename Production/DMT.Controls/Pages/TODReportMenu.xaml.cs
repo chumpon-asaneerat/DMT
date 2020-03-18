@@ -19,37 +19,44 @@ using NLib.Services;
 namespace DMT.Pages
 {
     /// <summary>
-    /// Interaction logic for ChangeShiftPage.xaml
+    /// Interaction logic for TODReportMenu.xaml
     /// </summary>
-    public partial class ChangeShiftPage : UserControl
+    public partial class TODReportMenu : UserControl
     {
-        public ChangeShiftPage()
+        public TODReportMenu()
         {
             InitializeComponent();
         }
 
-        private void cmdCancel_Click(object sender, RoutedEventArgs e)
+        private void revSlip_Click(object sender, RoutedEventArgs e)
+        {
+            // Main Menu Page
+            var page = new Pages.RevenuePreviewPage();
+            PageContentManager.Instance.Current = page;
+        }
+
+        private void couponSlip_Click(object sender, RoutedEventArgs e)
+        {
+            // Main Menu Page
+            var page = new Pages.CouponPreviewPage();
+            PageContentManager.Instance.Current = page;
+        }
+
+        private void revSummary_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void couponSummary_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backHome_Click(object sender, RoutedEventArgs e)
         {
             // Main Menu Page
             var page = new Pages.TODMainPage();
             PageContentManager.Instance.Current = page;
-        }
-
-        private void cmdOk_Click(object sender, RoutedEventArgs e)
-        {
-            // Main Menu Page
-            var page = new Pages.TODMainPage();
-            PageContentManager.Instance.Current = page;
-        }
-
-        private Models.Job _job;
-        private Models.RevenueEntry _entry;
-
-        public void Setup(Models.Job job, Models.RevenueEntry entry) 
-        {
-            _job = job;
-            _entry = entry;
-            grid.Setup(_job.Shifts);
         }
     }
 }
