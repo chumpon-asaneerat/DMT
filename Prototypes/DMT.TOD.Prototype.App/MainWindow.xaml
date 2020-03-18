@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:DMT"
         xmlns:ctrl="clr-namespace:DMT.Controls;assembly=DMT.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1200" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
+        Title="DMT - Toll of Duty" 
+        Height="750" 
+        Width="1200" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
     <Grid Background="DimGray">
         <DockPanel>
             <ctrl:PlazaInfo DockPanel.Dock="Top" Height="100"></ctrl:PlazaInfo>
