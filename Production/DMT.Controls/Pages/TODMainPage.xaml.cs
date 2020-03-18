@@ -44,7 +44,35 @@ namespace DMT.Pages
             }
             try
             {
+                // Begin of Job Page
+                var page = new Pages.BOJPage();
+                PageContentManager.Instance.Current = page;
+                var job = new Models.Job();
+                //job.Begin = new DateTime(2020, 3, 17, 9, 30, 45);
+                //job.End = new DateTime(2020, 3, 17, 22, 15, 33);
+                job.Staff = new Models.Staff();
+                job.Staff.CardID = "1400000001";
+                job.Staff.Name = "นายเอนก หอมจรูง";
+                /*
+                var shift = new Models.Shift(job);
+                shift.Lane = 3;
+                shift.Begin = new DateTime(2020, 3, 17, 9, 31, 22);
+                shift.End = new DateTime(2020, 3, 17, 11, 30, 45);
+                job.Shifts.Add(shift);
+                shift = new Models.Shift(job);
+                shift.Lane = 1;
+                shift.Begin = new DateTime(2020, 3, 17, 13, 10, 11);
+                shift.End = new DateTime(2020, 3, 17, 17, 22, 58);
+                job.Shifts.Add(shift);
+                shift = new Models.Shift(job);
+                shift.Lane = 6;
+                shift.Begin = new DateTime(2020, 3, 17, 20, 3, 12);
+                shift.End = new DateTime(2020, 3, 17, 22, 50, 6);
+                job.Shifts.Add(shift);
+                */
 
+                var entry = new Models.RevenueEntry();
+                page.Setup(job, entry);
             }
             catch (Exception)
             {
@@ -62,7 +90,34 @@ namespace DMT.Pages
             }
             try
             {
+                // End of Job Page
+                var page = new Pages.EOJPage();
+                PageContentManager.Instance.Current = page;
+                var job = new Models.Job();
+                job.Begin = new DateTime(2020, 3, 17, 9, 30, 45);
+                job.End = new DateTime(2020, 3, 17, 22, 15, 33);
+                job.Staff = new Models.Staff();
+                job.Staff.CardID = "1400000001";
+                job.Staff.Name = "นายเอนก หอมจรูง";
 
+                var shift = new Models.Shift(job);
+                shift.Lane = 3;
+                shift.Begin = new DateTime(2020, 3, 17, 9, 31, 22);
+                shift.End = new DateTime(2020, 3, 17, 11, 30, 45);
+                job.Shifts.Add(shift);
+                shift = new Models.Shift(job);
+                shift.Lane = 1;
+                shift.Begin = new DateTime(2020, 3, 17, 13, 10, 11);
+                shift.End = new DateTime(2020, 3, 17, 17, 22, 58);
+                job.Shifts.Add(shift);
+                shift = new Models.Shift(job);
+                shift.Lane = 6;
+                shift.Begin = new DateTime(2020, 3, 17, 20, 3, 12);
+                shift.End = new DateTime(2020, 3, 17, 22, 50, 6);
+                job.Shifts.Add(shift);
+
+                var entry = new Models.RevenueEntry();
+                page.Setup(job, entry);
             }
             catch (Exception)
             {

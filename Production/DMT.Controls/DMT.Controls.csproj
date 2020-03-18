@@ -64,11 +64,17 @@
     <Compile Include="Controls\ShiftView.xaml.cs">
       <DependentUpon>ShiftView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BOJPage.xaml.cs">
+      <DependentUpon>BOJPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ChangeShiftPage.xaml.cs">
       <DependentUpon>ChangeShiftPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CouponPreviewPage.xaml.cs">
       <DependentUpon>CouponPreviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EOJPage.xaml.cs">
+      <DependentUpon>EOJPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RevenueDateSelectionPage.xaml.cs">
       <DependentUpon>RevenueDateSelectionPage.xaml</DependentUpon>
@@ -136,11 +142,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\BOJPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ChangeShiftPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CouponPreviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EOJPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
