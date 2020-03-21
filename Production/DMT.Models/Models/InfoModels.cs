@@ -6,14 +6,6 @@ using System.Threading.Tasks;
 
 namespace DMT.Models
 {
-    public class Plaza
-    {
-        public Plaza() { }
-        ~Plaza() { }
-
-        string PlazaName { get; set; }
-    }
-
     public class Staff
     {
         public Staff() : base() { }
@@ -215,4 +207,76 @@ namespace DMT.Models
         }
         public List<Shift> Shifts;
     }
+
+    #region Plaza
+
+    /// <summary>
+    /// The Plaza class.
+    /// </summary>
+    public class Plaza
+    {
+        #region Internal Variables
+
+        private List<Collector> _collectors = null;
+
+        #endregion
+
+        #region Constructor and Destructor
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Plaza() 
+        {
+            _collectors = new List<Collector>();
+        }
+        /// <summary>
+        /// Destructor
+        /// </summary>
+        ~Plaza() 
+        {
+            if (null != _collectors) _collectors.Clear();
+            _collectors = null;
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        public void ChangeShift(Supervisor supervisor)
+        {
+            // update supvervisor
+            this.Supervisor = supervisor;
+            this.Begin = DateTime.Now; // setup start of shift.
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Plaza Id,
+        /// </summary>
+        string PlazaId { get; set; }
+        /// <summary>
+        /// Gets or sets Plaza Name,
+        /// </summary>
+        string PlazaName { get; set; }
+        /// <summary>
+        /// Gets or sets supervisor.
+        /// </summary>
+        Supervisor Supervisor { get; set; }
+        /// <summary>
+        /// Gets or sets shift start datetime.
+        /// </summary>
+        DateTime Begin { get; set; }
+        /// <summary>
+        /// Gets List of all avaliable collectors at current time.
+        /// </summary>
+        List<Collector> Collectors { get { return _collectors;  } }
+
+        #endregion
+    }
+
+    #endregion
 }
