@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="DMT.Pages.EOJPage"
+﻿<UserControl x:Class="DMT.Pages.BOJPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DMT.Pages"
-             xmlns:ctrl="clr-namespace:DMT.Controls"
+             xmlns:ctrl="clr-namespace:DMT.Controls;assembly=DMT.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -93,7 +93,7 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="สิ้นสุดการทำงาน"
+                            Content="เริ่มงาน"
                             Height="45"
                             Width="150"
                             Click="cmdOk_Click"/>

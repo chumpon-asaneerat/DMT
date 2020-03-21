@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Services", "Production\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Core", "Production\DMT.Core\DMT.Core.csproj", "{BE453E55-331A-4F2D-B7D2-5522098C9B6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Pages", "Production\DMT.Pages\DMT.Pages.csproj", "{31FBE6FB-4831-4E7B-B82A-433F40E20091}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{BE453E55-331A-4F2D-B7D2-5522098C9B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE453E55-331A-4F2D-B7D2-5522098C9B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE453E55-331A-4F2D-B7D2-5522098C9B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FBE6FB-4831-4E7B-B82A-433F40E20091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FBE6FB-4831-4E7B-B82A-433F40E20091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FBE6FB-4831-4E7B-B82A-433F40E20091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FBE6FB-4831-4E7B-B82A-433F40E20091}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{4F08DBAC-2036-42CE-92B6-2E87E8B42A7C} = {111B7690-8DC1-4844-9B1F-46ECB991B3F1}
 		{87F5E07B-E56B-4E29-8F7F-B4BC171900B1} = {4CC1E95E-89BD-4A5B-A810-C22DCF1F5315}
 		{BE453E55-331A-4F2D-B7D2-5522098C9B6D} = {4CC1E95E-89BD-4A5B-A810-C22DCF1F5315}
+		{31FBE6FB-4831-4E7B-B82A-433F40E20091} = {4CC1E95E-89BD-4A5B-A810-C22DCF1F5315}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E21131E-314E-4FB9-90A9-21D6E385910A}

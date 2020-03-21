@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F19ADBA-884D-4D46-A7C1-4BF672F829D9}</ProjectGuid>
+    <ProjectGuid>{31FBE6FB-4831-4E7B-B82A-433F40E20091}</ProjectGuid>
     <OutputType>library</OutputType>
     <RootNamespace>DMT</RootNamespace>
-    <AssemblyName>DMT.Controls</AssemblyName>
+    <AssemblyName>DMT.Pages</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -22,10 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <DocumentationFile>
-    </DocumentationFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLib">
+    <Reference Include="NLib, Version=4.0.4.3, Culture=neutral, PublicKeyToken=6b9d63d2a8a62ab5, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\References\NLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -55,32 +54,35 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\BagEntry.xaml.cs">
-      <DependentUpon>BagEntry.xaml</DependentUpon>
+    <Compile Include="Pages\BOJPage.xaml.cs">
+      <DependentUpon>BOJPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Compound\PlazaHeader.xaml.cs">
-      <DependentUpon>PlazaHeader.xaml</DependentUpon>
+    <Compile Include="Pages\ChangeShiftPage.xaml.cs">
+      <DependentUpon>ChangeShiftPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PlazaInfo.xaml.cs">
-      <DependentUpon>PlazaInfo.xaml</DependentUpon>
+    <Compile Include="Pages\CouponPreviewPage.xaml.cs">
+      <DependentUpon>CouponPreviewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Primitives\Plaza\DateTime.xaml.cs">
-      <DependentUpon>DateTime.xaml</DependentUpon>
+    <Compile Include="Pages\EOJPage.xaml.cs">
+      <DependentUpon>EOJPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Primitives\Plaza\Logo.xaml.cs">
-      <DependentUpon>Logo.xaml</DependentUpon>
+    <Compile Include="Pages\RevenueDateSelectionPage.xaml.cs">
+      <DependentUpon>RevenueDateSelectionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Primitives\Plaza\Shift.xaml.cs">
-      <DependentUpon>Shift.xaml</DependentUpon>
+    <Compile Include="Pages\RevenueEntryPage.xaml.cs">
+      <DependentUpon>RevenueEntryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Primitives\Plaza\Supervisor.xaml.cs">
-      <DependentUpon>Supervisor.xaml</DependentUpon>
+    <Compile Include="Pages\RevenuePreviewPage.xaml.cs">
+      <DependentUpon>RevenuePreviewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\RevenueEntry.xaml.cs">
-      <DependentUpon>RevenueEntry.xaml</DependentUpon>
+    <Compile Include="Pages\TAMainPage.xaml.cs">
+      <DependentUpon>TAMainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ShiftView.xaml.cs">
-      <DependentUpon>ShiftView.xaml</DependentUpon>
+    <Compile Include="Pages\TODMainPage.xaml.cs">
+      <DependentUpon>TODMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TODReportMenu.xaml.cs">
+      <DependentUpon>TODReportMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -95,6 +97,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Windows\SignInWindow.xaml.cs">
+      <DependentUpon>SignInWindow.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,6 +110,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DMT.Controls\DMT.Controls.csproj">
+      <Project>{7f19adba-884d-4d46-a7c1-4bf672f829d9}</Project>
+      <Name>DMT.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DMT.Core\DMT.Core.csproj">
       <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
       <Name>DMT.Core</Name>
@@ -119,84 +128,50 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\BagEntry.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Pages\BOJPage.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Compound\PlazaHeader.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PlazaInfo.xaml">
+    <Page Include="Pages\ChangeShiftPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Primitives\Plaza\DateTime.xaml">
+    <Page Include="Pages\CouponPreviewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Primitives\Plaza\Logo.xaml">
+    <Page Include="Pages\EOJPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Primitives\Plaza\Shift.xaml">
+    <Page Include="Pages\RevenueDateSelectionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Primitives\Plaza\Supervisor.xaml">
+    <Page Include="Pages\RevenueEntryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\RevenueEntry.xaml">
+    <Page Include="Pages\RevenuePreviewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\ShiftView.xaml">
+    <Page Include="Pages\TAMainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\tollway.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Styles\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\coupon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\bag4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\clock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\report1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\begin_of_job.png" />
-    <Resource Include="Images\end_of_job.png" />
-    <Resource Include="Images\reventry.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\snartcard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\ใบนำส่งคูปอง.jpg" />
-    <Resource Include="Images\ใบนำส่งรายได้รวม.jpg" />
-    <Resource Include="Images\ใบนำส่งเงิน.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\คืนคูปอง 1.jpg" />
-    <Resource Include="Images\คืนคูปอง 2.jpg" />
-    <Resource Include="Images\คืนเงินยืม.jpg" />
-    <Resource Include="Images\จ่ายคูปอง.jpg" />
-    <Resource Include="Images\จ่ายคูปอง2.jpg" />
-    <Resource Include="Images\จ่ายเงินยืม.jpg" />
+    <Page Include="Pages\TODMainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\TODReportMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\SignInWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
