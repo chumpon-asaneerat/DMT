@@ -21,6 +21,8 @@ namespace DMT
         /// <returns>Returns string that represents date part.</returns>
         public static string ToDateString(this DateTime value)
         {
+            if (value == DateTime.MinValue || value == DateTime.MaxValue)
+                return "";
             return value.ToString("yyyy/MM/dd", DateTimeFormatInfo.InvariantInfo);
         }
         /// <summary>
@@ -30,6 +32,8 @@ namespace DMT
         /// <returns>Returns string that represents time part.</returns>
         public static string ToTimeString(this DateTime value)
         {
+            if (value == DateTime.MinValue || value == DateTime.MaxValue)
+                return "";
             return value.ToString("HH:mm:ss.fff", DateTimeFormatInfo.InvariantInfo);
         }
         /// <summary>
@@ -39,6 +43,8 @@ namespace DMT
         /// <returns>Returns string that represents datetime part.</returns>
         public static string ToDateTimeString(this DateTime value)
         {
+            if (value == DateTime.MinValue || value == DateTime.MaxValue)
+                return "";
             return value.ToString("yyyy/MM/dd HH:mm:ss.fff", DateTimeFormatInfo.InvariantInfo);
         }
     }
