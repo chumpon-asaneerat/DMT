@@ -79,5 +79,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DMT.Core\DMT.Core.csproj">
+      <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
+      <Name>DMT.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -106,6 +106,10 @@
       <Project>{7f19adba-884d-4d46-a7c1-4bf672f829d9}</Project>
       <Name>DMT.Controls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Production\DMT.Core\DMT.Core.csproj">
+      <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
+      <Name>DMT.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Production\DMT.Models\DMT.Models.csproj">
       <Project>{0f37fd1a-5491-4e10-9e2c-9cd631b333f1}</Project>
       <Name>DMT.Models</Name>
