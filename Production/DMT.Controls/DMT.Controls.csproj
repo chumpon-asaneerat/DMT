@@ -58,8 +58,23 @@
     <Compile Include="Controls\BagEntry.xaml.cs">
       <DependentUpon>BagEntry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Compound\PlazaHeader.xaml.cs">
+      <DependentUpon>PlazaHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PlazaInfo.xaml.cs">
       <DependentUpon>PlazaInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Primitives\Plaza\DateTime.xaml.cs">
+      <DependentUpon>DateTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Primitives\Plaza\Logo.xaml.cs">
+      <DependentUpon>Logo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Primitives\Plaza\Shift.xaml.cs">
+      <DependentUpon>Shift.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Primitives\Plaza\Supervisor.xaml.cs">
+      <DependentUpon>Supervisor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\RevenueEntry.xaml.cs">
       <DependentUpon>RevenueEntry.xaml</DependentUpon>
@@ -141,7 +156,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Compound\PlazaHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\PlazaInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Primitives\Plaza\DateTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Primitives\Plaza\Logo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Primitives\Plaza\Shift.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Primitives\Plaza\Supervisor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
