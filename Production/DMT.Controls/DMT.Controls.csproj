@@ -224,5 +224,13 @@
     <Resource Include="Images\ใบนำส่งรายได้รวม.jpg" />
     <Resource Include="Images\ใบนำส่งเงิน.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\คืนคูปอง 1.jpg" />
+    <Resource Include="Images\คืนคูปอง 2.jpg" />
+    <Resource Include="Images\คืนเงินยืม.jpg" />
+    <Resource Include="Images\จ่ายคูปอง.jpg" />
+    <Resource Include="Images\จ่ายคูปอง2.jpg" />
+    <Resource Include="Images\จ่ายเงินยืม.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
