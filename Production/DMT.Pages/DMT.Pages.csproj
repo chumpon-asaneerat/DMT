@@ -54,34 +54,37 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\BOJPage.xaml.cs">
+    <Compile Include="Pages\TOD\BOJPage.xaml.cs">
       <DependentUpon>BOJPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ChangeShiftPage.xaml.cs">
+    <Compile Include="Pages\Test\ButtonTestPage.xaml.cs">
+      <DependentUpon>ButtonTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TOD\ChangeShiftPage.xaml.cs">
       <DependentUpon>ChangeShiftPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CouponPreviewPage.xaml.cs">
+    <Compile Include="Pages\TOD\CouponPreviewPage.xaml.cs">
       <DependentUpon>CouponPreviewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EOJPage.xaml.cs">
+    <Compile Include="Pages\TOD\EOJPage.xaml.cs">
       <DependentUpon>EOJPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RevenueDateSelectionPage.xaml.cs">
+    <Compile Include="Pages\TOD\RevenueDateSelectionPage.xaml.cs">
       <DependentUpon>RevenueDateSelectionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RevenueEntryPage.xaml.cs">
+    <Compile Include="Pages\TOD\RevenueEntryPage.xaml.cs">
       <DependentUpon>RevenueEntryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RevenuePreviewPage.xaml.cs">
+    <Compile Include="Pages\TOD\RevenuePreviewPage.xaml.cs">
       <DependentUpon>RevenuePreviewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TAMainPage.xaml.cs">
+    <Compile Include="Pages\TA\TAMainPage.xaml.cs">
       <DependentUpon>TAMainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TODMainPage.xaml.cs">
+    <Compile Include="Pages\TOD\TODMainPage.xaml.cs">
       <DependentUpon>TODMainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TODReportMenu.xaml.cs">
+    <Compile Include="Pages\TOD\TODReportMenu.xaml.cs">
       <DependentUpon>TODReportMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -128,43 +131,47 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Pages\BOJPage.xaml">
+    <Page Include="Pages\TOD\BOJPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\ChangeShiftPage.xaml">
+    <Page Include="Pages\Test\ButtonTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TOD\ChangeShiftPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\CouponPreviewPage.xaml">
+    <Page Include="Pages\TOD\CouponPreviewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\EOJPage.xaml">
+    <Page Include="Pages\TOD\EOJPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\RevenueDateSelectionPage.xaml">
+    <Page Include="Pages\TOD\RevenueDateSelectionPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\RevenueEntryPage.xaml">
+    <Page Include="Pages\TOD\RevenueEntryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\RevenuePreviewPage.xaml">
+    <Page Include="Pages\TOD\RevenuePreviewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\TAMainPage.xaml">
+    <Page Include="Pages\TA\TAMainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\TODMainPage.xaml">
+    <Page Include="Pages\TOD\TODMainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\TODReportMenu.xaml">
+    <Page Include="Pages\TOD\TODReportMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

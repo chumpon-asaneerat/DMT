@@ -6,6 +6,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="640" 
              d:DesignWidth="1220">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DMT.Controls;component/Styles/Common/MenuButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
     </Grid>
 </UserControl>
