@@ -200,5 +200,32 @@
   <ItemGroup>
     <Resource Include="Images\Report\จ่ายคูปอง2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\bag4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\begin_of_job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\coupon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\end_of_job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\report1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\reventry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background\snartcard.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

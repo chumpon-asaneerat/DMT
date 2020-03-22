@@ -48,7 +48,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Controls;component/images/begin_of_job.png" 
+                                Source="/DMT.Pages;component/images/Menu/begin_of_job.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -77,7 +77,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Controls;component/images/end_of_job.png" 
+                                Source="/DMT.Pages;component/images/Menu/end_of_job.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -125,7 +125,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Controls;component/images/reventry.png" 
+                                Source="/DMT.Pages;component/images/Menu/reventry.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -154,7 +154,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Controls;component/images/report1.png" 
+                                Source="/DMT.Pages;component/images/Menu/report1.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -202,7 +202,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Controls;component/Images/clock.png" 
+                                Source="/DMT.Pages;component/Images/Menu/clock.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -231,7 +231,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Controls;component/images/report1.png" 
+                                Source="/DMT.Pages;component/images/Menu/report1.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
