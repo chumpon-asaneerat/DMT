@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:DMT.Controls"
              mc:Ignorable="d">
     <Grid>
-        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal"  
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
             <local:BagEntry x:Name="bagTraffic" 
                             Background="ForestGreen"
                             Foreground="WhiteSmoke"

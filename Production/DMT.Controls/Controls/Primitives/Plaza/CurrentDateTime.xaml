@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="DMT.Controls.Primitives.Plaza.Shift"
+﻿<UserControl x:Class="DMT.Controls.Primitives.Plaza.CurrentDateTime"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -16,25 +16,21 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid Margin="1">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
-        </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" 
-                   x:Name="txtShiftNo"
-                   Text="3"
-                   TextAlignment="Center"
-                   Style="{StaticResource InfoTextLarge}"/>
-        <TextBlock Grid.Row="1"
-                   x:Name="txtBeginDate"
-                   Text="22/03/2020"
-                   TextAlignment="Center"
-                   Style="{StaticResource InfoTextSmall}"/>
-        <TextBlock Grid.Row="2"
-                   x:Name="txtBeginTime"
-                   Text="12:59:44"
-                   TextAlignment="Center"
-                   Style="{StaticResource InfoTextSmall}"/>
+        <Border BorderBrush="Silver"
+                BorderThickness="1"
+                CornerRadius="3"
+                Margin="1">
+            <DockPanel>
+                <TextBlock x:Name="txtDate" 
+                           Style="{StaticResource InfoTextSmall}"
+                           DockPanel.Dock="Bottom" 
+                           TextAlignment="Center"
+                           Text="2020/03/22" />
+                <TextBlock x:Name="txtTime"
+                           Style="{StaticResource InfoTextLarge}"
+                           TextAlignment="Center"
+                           Text="16:10:22" />
+            </DockPanel>
+        </Border>
     </Grid>
 </UserControl>

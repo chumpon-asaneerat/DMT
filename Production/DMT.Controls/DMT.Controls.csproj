@@ -64,11 +64,17 @@
     <Compile Include="Controls\PlazaInfo.xaml.cs">
       <DependentUpon>PlazaInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Primitives\Plaza\DateTime.xaml.cs">
-      <DependentUpon>DateTime.xaml</DependentUpon>
+    <Compile Include="Controls\Primitives\Plaza\CurrentDateTime.xaml.cs">
+      <DependentUpon>CurrentDateTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Primitives\Plaza\InfoBox.xaml.cs">
+      <DependentUpon>InfoBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Primitives\Plaza\Logo.xaml.cs">
       <DependentUpon>Logo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Primitives\Plaza\Plaza.xaml.cs">
+      <DependentUpon>Plaza.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Primitives\Plaza\Shift.xaml.cs">
       <DependentUpon>Shift.xaml</DependentUpon>
@@ -131,11 +137,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Primitives\Plaza\DateTime.xaml">
+    <Page Include="Controls\Primitives\Plaza\CurrentDateTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Primitives\Plaza\InfoBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Primitives\Plaza\Logo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Primitives\Plaza\Plaza.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,48 +169,50 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Resource Include="Styles\Common\TextBlockStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\tollway.png" />
+    <Resource Include="Images\Logo\tollway.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Menu\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Styles\" />
+    <Resource Include="Images\Menu\coupon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\user.png" />
+    <Resource Include="Images\Menu\bag4.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\coupon.png" />
+    <Resource Include="Images\Menu\clock.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\bag4.png" />
+    <Resource Include="Images\Menu\report1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\clock.png" />
+    <Resource Include="Images\Menu\begin_of_job.png" />
+    <Resource Include="Images\Menu\end_of_job.png" />
+    <Resource Include="Images\Menu\reventry.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\report1.png" />
+    <Resource Include="Images\Background\snartcard.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\begin_of_job.png" />
-    <Resource Include="Images\end_of_job.png" />
-    <Resource Include="Images\reventry.png" />
+    <Resource Include="Images\Report\ใบนำส่งคูปอง.jpg" />
+    <Resource Include="Images\Report\ใบนำส่งรายได้รวม.jpg" />
+    <Resource Include="Images\Report\ใบนำส่งเงิน.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\snartcard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\ใบนำส่งคูปอง.jpg" />
-    <Resource Include="Images\ใบนำส่งรายได้รวม.jpg" />
-    <Resource Include="Images\ใบนำส่งเงิน.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\คืนคูปอง 1.jpg" />
-    <Resource Include="Images\คืนคูปอง 2.jpg" />
-    <Resource Include="Images\คืนเงินยืม.jpg" />
-    <Resource Include="Images\จ่ายคูปอง.jpg" />
-    <Resource Include="Images\จ่ายคูปอง2.jpg" />
-    <Resource Include="Images\จ่ายเงินยืม.jpg" />
+    <Resource Include="Images\Report\คืนคูปอง 1.jpg" />
+    <Resource Include="Images\Report\คืนคูปอง 2.jpg" />
+    <Resource Include="Images\Report\คืนเงินยืม.jpg" />
+    <Resource Include="Images\Report\จ่ายคูปอง.jpg" />
+    <Resource Include="Images\Report\จ่ายคูปอง2.jpg" />
+    <Resource Include="Images\Report\จ่ายเงินยืม.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

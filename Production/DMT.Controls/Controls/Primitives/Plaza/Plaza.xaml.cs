@@ -14,16 +14,16 @@ using DMT.Services;
 namespace DMT.Controls.Primitives.Plaza
 {
     /// <summary>
-    /// Interaction logic for Supervisor.xaml
+    /// Interaction logic for Plaza.xaml
     /// </summary>
-    public partial class Supervisor : UserControl
+    public partial class Plaza : UserControl
     {
         #region Constructor
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        public Supervisor()
+        public Plaza()
         {
             InitializeComponent();
         }
@@ -48,7 +48,7 @@ namespace DMT.Controls.Primitives.Plaza
 
         private void ShiftChanged(object sender, System.EventArgs e)
         {
-            
+
         }
 
         #endregion

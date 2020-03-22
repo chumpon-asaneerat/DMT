@@ -91,7 +91,7 @@ namespace DMT.Services
 
         private void UpdateInfo()
         {
-            if (null != Changed) Changed.Invoke(this, EventArgs.Empty);
+            if (null != ShiftChanged) ShiftChanged.Invoke(this, EventArgs.Empty);
         }
 
         #endregion
@@ -156,9 +156,9 @@ namespace DMT.Services
         #region Public Events
 
         /// <summary>
-        /// The InfoChanged event.
+        /// The Shift Changed event.
         /// </summary>
-        public event System.EventHandler Changed;
+        public event System.EventHandler ShiftChanged;
 
         #endregion
     }
