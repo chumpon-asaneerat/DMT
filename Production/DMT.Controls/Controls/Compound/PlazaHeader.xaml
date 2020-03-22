@@ -6,7 +6,8 @@
              xmlns:plaza="clr-namespace:DMT.Controls.Primitives.Plaza"
              mc:Ignorable="d" 
              d:DesignHeight="110"
-             d:DesignWidth="1200">
+             d:DesignWidth="1200"
+             Foreground="WhiteSmoke">
     <Grid Margin="3"
           Background="DimGray">
         <Grid.ColumnDefinitions>
@@ -17,16 +18,16 @@
             <ColumnDefinition Width="150" />
         </Grid.ColumnDefinitions>
         <plaza:Logo Grid.Column="0" Foreground="White" />
-        <plaza:InfoBox Grid.Column="1" Caption="Plaza" Foreground="White">
+        <plaza:InfoBox Grid.Column="1" Caption="Plaza">
             <plaza:Plaza />
         </plaza:InfoBox>
-        <plaza:InfoBox Grid.Column="2" Caption="Shift" Foreground="White">
+        <plaza:InfoBox Grid.Column="2" Caption="Shift">
             <plaza:Shift />
         </plaza:InfoBox>
-        <plaza:InfoBox Grid.Column="3" Caption="Chief Collector" Foreground="White">
+        <plaza:InfoBox Grid.Column="3" Caption="Chief Collector">
             <plaza:Supervisor />
         </plaza:InfoBox>
-        <plaza:InfoBox Grid.Column="4" Caption="Date" Foreground="White">
+        <plaza:InfoBox Grid.Column="4" Caption="Date">
             <plaza:CurrentDateTime />
         </plaza:InfoBox>
     </Grid>

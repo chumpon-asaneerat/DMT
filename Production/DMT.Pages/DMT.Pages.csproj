@@ -173,5 +173,32 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\ใบนำส่งเงิน.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\ใบนำส่งคูปอง.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\ใบนำส่งรายได้รวม.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\คืนเงินยืม.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\คืนคูปอง 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\คืนคูปอง 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\จ่ายเงินยืม.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\จ่ายคูปอง.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\จ่ายคูปอง2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

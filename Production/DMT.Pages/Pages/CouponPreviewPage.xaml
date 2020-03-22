@@ -33,7 +33,7 @@
             <Grid />
         </DockPanel>
         <ScrollViewer>
-            <Image Source="/DMT.Controls;component/Images/ใบนำส่งคูปอง.jpg" />
+            <Image Source="/DMT.Pages;component/Images/Report/ใบนำส่งคูปอง.jpg" />
         </ScrollViewer>
     </DockPanel>
 </UserControl>

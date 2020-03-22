@@ -58,6 +58,9 @@
     <Compile Include="Controls\BagEntry.xaml.cs">
       <DependentUpon>BagEntry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Compound\DMLPage.xaml.cs">
+      <DependentUpon>DMLPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Compound\PlazaHeader.xaml.cs">
       <DependentUpon>PlazaHeader.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\BagEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Compound\DMLPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -200,19 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Background\snartcard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Report\ใบนำส่งคูปอง.jpg" />
-    <Resource Include="Images\Report\ใบนำส่งรายได้รวม.jpg" />
-    <Resource Include="Images\Report\ใบนำส่งเงิน.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Report\คืนคูปอง 1.jpg" />
-    <Resource Include="Images\Report\คืนคูปอง 2.jpg" />
-    <Resource Include="Images\Report\คืนเงินยืม.jpg" />
-    <Resource Include="Images\Report\จ่ายคูปอง.jpg" />
-    <Resource Include="Images\Report\จ่ายคูปอง2.jpg" />
-    <Resource Include="Images\Report\จ่ายเงินยืม.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
