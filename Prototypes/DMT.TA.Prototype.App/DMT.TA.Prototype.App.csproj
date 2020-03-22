@@ -38,6 +38,9 @@
   <PropertyGroup>
     <StartupObject>DMT.App</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NLib, Version=4.0.4.3, Culture=neutral, PublicKeyToken=6b9d63d2a8a62ab5, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -123,6 +126,9 @@
       <Project>{87f5e07b-e56b-4e29-8f7f-b4bc171900b1}</Project>
       <Name>DMT.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="app.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

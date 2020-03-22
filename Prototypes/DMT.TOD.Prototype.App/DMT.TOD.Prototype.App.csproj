@@ -38,6 +38,9 @@
   <PropertyGroup>
     <StartupObject>DMT.App</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NLib">
       <HintPath>..\..\References\NLib.dll</HintPath>
@@ -122,6 +125,9 @@
       <Project>{87f5e07b-e56b-4e29-8f7f-b4bc171900b1}</Project>
       <Name>DMT.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="app.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
