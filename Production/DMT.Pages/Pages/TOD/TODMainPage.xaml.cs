@@ -51,7 +51,7 @@ namespace DMT.Pages
                 //job.Begin = new DateTime(2020, 3, 17, 9, 30, 45);
                 //job.End = new DateTime(2020, 3, 17, 22, 15, 33);
                 job.Staff = new Models.Staff();
-                job.Staff.CardID = "1400000001";
+                job.Staff.CardID = "14077";
                 job.Staff.Name = "นายเอนก หอมจรูง";
                 /*
                 var shift = new Models.Shift(job);
@@ -97,7 +97,7 @@ namespace DMT.Pages
                 job.Begin = new DateTime(2020, 3, 17, 9, 30, 45);
                 job.End = new DateTime(2020, 3, 17, 22, 15, 33);
                 job.Staff = new Models.Staff();
-                job.Staff.CardID = "1400000001";
+                job.Staff.CardID = "14077";
                 job.Staff.Name = "นายเอนก หอมจรูง";
 
                 var shift = new Models.Shift(job);
@@ -142,7 +142,7 @@ namespace DMT.Pages
                 job.Begin = new DateTime(2020, 3, 17, 9, 30, 45);
                 job.End = new DateTime(2020, 3, 17, 22, 15, 33);
                 job.Staff = new Models.Staff();
-                job.Staff.CardID = "1400000001";
+                job.Staff.CardID = "14077";
                 job.Staff.Name = "นายเอนก หอมจรูง";
 
                 var shift = new Models.Shift(job);
@@ -193,7 +193,7 @@ namespace DMT.Pages
                 job.Begin = new DateTime(2020, 3, 17, 9, 30, 45);
                 job.End = new DateTime(2020, 3, 17, 22, 15, 33);
                 job.Staff = new Models.Staff();
-                job.Staff.CardID = "1400000001";
+                job.Staff.CardID = "14077";
                 job.Staff.Name = "นายเอนก หอมจรูง";
 
                 var shift = new Models.Shift(job);

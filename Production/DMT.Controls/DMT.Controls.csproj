@@ -64,6 +64,15 @@
     <Compile Include="Controls\Compound\PlazaHeader.xaml.cs">
       <DependentUpon>PlazaHeader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CouponPlazaView.xaml.cs">
+      <DependentUpon>CouponPlazaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CouponView.xaml.cs">
+      <DependentUpon>CouponView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FundEntry.xaml.cs">
+      <DependentUpon>FundEntry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PlazaInfo.xaml.cs">
       <DependentUpon>PlazaInfo.xaml</DependentUpon>
     </Compile>
@@ -137,6 +146,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Compound\PlazaHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CouponPlazaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CouponView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FundEntry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

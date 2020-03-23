@@ -103,11 +103,25 @@
                                        Text="Shift"/>
                         </Border>
                         <TextBlock Foreground="WhiteSmoke"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                TextAlignment="Center"
-                                FontSize="36"
-                                Text="3"/>
+                                   DockPanel.Dock="Bottom"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    TextAlignment="Center"
+                                    FontSize="14"
+                                    Text="06:01:14"/>
+                        <TextBlock Foreground="WhiteSmoke"
+                                   DockPanel.Dock="Bottom"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    TextAlignment="Center"
+                                    FontSize="14"
+                                    Text="17/03/2020"/>
+                        <TextBlock Foreground="WhiteSmoke"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    TextAlignment="Center"
+                                    FontSize="36"
+                                    Text="3"/>
                     </DockPanel>
                 </Border>
                 <Border BorderBrush="Silver"
@@ -130,7 +144,7 @@
                                 VerticalAlignment="Center"
                                 TextAlignment="Center"
                                 FontSize="18"
-                                Text="ID: 1400000001"/>
+                                Text="ID: 14023"/>
                         <TextBlock Foreground="WhiteSmoke"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"

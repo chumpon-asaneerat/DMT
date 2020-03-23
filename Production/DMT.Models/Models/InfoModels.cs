@@ -279,4 +279,34 @@ namespace DMT.Models
     }
 
     #endregion
+
+    public class Coupon
+    {
+        public Coupon()
+        {
+            this.Date = DateTime.MinValue;
+        }
+        public string StaffId { get; set; }
+        public int Lane { get; set; }
+        public int Count { get; set; }
+        public DateTime Date { get; set; }
+        public string DateString
+        {
+            get
+            {
+                var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToString("dd/MM/yyyy");
+                return ret;
+            }
+            set { }
+        }
+        public string TimeString
+        {
+            get
+            {
+                var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToString("HH:mm:ss.fff");
+                return ret;
+            }
+            set { }
+        }
+    }
 }

@@ -54,6 +54,18 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\PlazaFundReceivedPage.xaml.cs">
+      <DependentUpon>PlazaFundReceivedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TA\PlazaReceivedCouponPage.xaml.cs">
+      <DependentUpon>PlazaReceivedCouponPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TA\CollectorReceivedCouponPage.xaml.cs">
+      <DependentUpon>CollectorReceivedCouponPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TA\CollectorReturnCouponPage.xaml.cs">
+      <DependentUpon>CollectorReturnCouponPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TOD\BOJPage.xaml.cs">
       <DependentUpon>BOJPage.xaml</DependentUpon>
     </Compile>
@@ -100,6 +112,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Windows\ReceivedFundWindow.xaml.cs">
+      <DependentUpon>ReceivedFundWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\SignInWindow.xaml.cs">
       <DependentUpon>SignInWindow.xaml</DependentUpon>
     </Compile>
@@ -131,6 +146,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Pages\PlazaFundReceivedPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TA\PlazaReceivedCouponPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TA\CollectorReceivedCouponPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TA\CollectorReturnCouponPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TOD\BOJPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -174,6 +205,10 @@
     <Page Include="Pages\TOD\TODReportMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ReceivedFundWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\SignInWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
