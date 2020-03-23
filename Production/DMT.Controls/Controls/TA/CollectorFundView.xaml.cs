@@ -93,6 +93,7 @@ namespace DMT.Controls
             if (null != fund)
             {
                 Models.FundEntry obj = new Models.FundEntry();
+                obj.Description = fund.Description;
 
                 var win = new Windows.FundWindow();
                 win.Owner = Application.Current.MainWindow;
@@ -113,6 +114,7 @@ namespace DMT.Controls
             if (null != fund)
             {
                 Models.FundEntry obj = new Models.FundEntry();
+                obj.Description = fund.Description;
 
                 var win = new Windows.FundWindow();
                 win.Owner = Application.Current.MainWindow;

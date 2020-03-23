@@ -55,7 +55,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\CollectorFundView.xaml.cs">
+    <Compile Include="Controls\TA\CollectorFundView.xaml.cs">
       <DependentUpon>CollectorFundView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TOD\BagEntry.xaml.cs">
@@ -146,7 +146,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\CollectorFundView.xaml">
+    <Page Include="Controls\TA\CollectorFundView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

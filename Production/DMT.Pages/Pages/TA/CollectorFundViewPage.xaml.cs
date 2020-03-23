@@ -81,6 +81,7 @@ namespace DMT.Pages
             if (null == _current) return;
             if (null == _funds) return;
 
+            plazaBalance.Text = _plaza.BHTTotal.ToString("n0");
             // set init value.
             assign(_plaza, _current);
 

@@ -58,6 +58,7 @@ namespace DMT.Pages
                 fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 fund.StaffId = "14055";
                 fund.BHT1 = 50000;
+                fund.BHT2 = 50000;
                 fund.BHT5 = 50000;
                 fund.BHT10c = 20000;
                 fund.BHT10b = 20000;
@@ -113,6 +114,7 @@ namespace DMT.Pages
                 plazaFund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 plazaFund.StaffId = "14055";
                 plazaFund.BHT1 = 50000;
+                plazaFund.BHT2 = 50000;
                 plazaFund.BHT5 = 50000;
                 plazaFund.BHT10c = 20000;
                 plazaFund.BHT10b = 20000;
@@ -131,6 +133,7 @@ namespace DMT.Pages
                 fund.StaffId = "14321";
                 fund.Lane = 1;
                 fund.BHT1 = 300;
+                fund.BHT2 = 300;
                 fund.BHT5 = 300;
                 fund.BHT10c = 300;
                 fund.BHT10b = 300;
@@ -140,7 +143,7 @@ namespace DMT.Pages
                 fund.BHT500 = 300;
                 fund.BHT1000 = 300;
                 funds.Add(fund);
-                page.Setup(plazaFund, funds);
+                
                 // Collector 2
                 fund = new Models.FundEntry();
                 fund.Description = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์";
@@ -148,6 +151,7 @@ namespace DMT.Pages
                 fund.StaffId = "13201";
                 fund.Lane = 4;
                 fund.BHT1 = 500;
+                fund.BHT2 = 300;
                 fund.BHT5 = 200;
                 fund.BHT10c = 150;
                 fund.BHT10b = 150;
@@ -157,13 +161,15 @@ namespace DMT.Pages
                 fund.BHT500 = 30;
                 fund.BHT1000 = 30;
                 funds.Add(fund);
+
                 // Collector 3
                 fund = new Models.FundEntry();
                 fund.Description = "นางวิภา สวัสดิวัฒน์";
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
                 fund.StaffId = "11559";
                 fund.Lane = 8;
-                fund.BHT1 = 100;
+                fund.BHT1 = 50;
+                fund.BHT2 = 300;
                 fund.BHT5 = 100;
                 fund.BHT10c = 200;
                 fund.BHT10b = 200;
@@ -173,6 +179,7 @@ namespace DMT.Pages
                 fund.BHT500 = 50;
                 fund.BHT1000 = 50;
                 funds.Add(fund);
+
                 // Collector 4
                 fund = new Models.FundEntry();
                 fund.Description = "นาย ภักดี อมรรุ่งโรจน์";
@@ -180,6 +187,7 @@ namespace DMT.Pages
                 fund.StaffId = "12866";
                 fund.Lane = 5;
                 fund.BHT1 = 150;
+                fund.BHT2 = 300;
                 fund.BHT5 = 50;
                 fund.BHT10c = 50;
                 fund.BHT10b = 50;
@@ -189,6 +197,8 @@ namespace DMT.Pages
                 fund.BHT500 = 70;
                 fund.BHT1000 = 70;
                 funds.Add(fund);
+
+                page.Setup(plazaFund, funds);
 
                 PageContentManager.Instance.Current = page;
             }

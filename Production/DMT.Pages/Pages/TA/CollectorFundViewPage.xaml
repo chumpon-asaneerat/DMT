@@ -11,6 +11,31 @@
                 BorderThickness="1"
                 BorderBrush="Silver">
             <DockPanel Width="250">
+                <Border Background="DimGray"
+                        DockPanel.Dock="Top"
+                        BorderThickness="1"
+                        BorderBrush="Silver">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="2"
+                                   FontSize="18"
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"
+                                   Text="Balance:"
+                                   Width="100"/>
+                        <TextBlock Margin="2"
+                                   x:Name="plazaBalance"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"
+                                   Text="0"
+                                   Width="200"/>
+                    </StackPanel>
+                </Border>
                 <StackPanel Orientation="Horizontal"
                             DockPanel.Dock="Bottom"                            
                             HorizontalAlignment="Center">
