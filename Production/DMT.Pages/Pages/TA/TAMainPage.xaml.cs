@@ -40,12 +40,6 @@ namespace DMT.Pages
 
         private void receivedFund_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
                 // Plaza Fund Received
@@ -81,12 +75,6 @@ namespace DMT.Pages
 
         private void receivedFundReport_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
 
@@ -99,12 +87,6 @@ namespace DMT.Pages
 
         private void collectorFund_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
                 var page = new CollectorFundViewPage();
@@ -210,12 +192,6 @@ namespace DMT.Pages
 
         private void collectorFundReport_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
 
@@ -228,12 +204,6 @@ namespace DMT.Pages
 
         private void receivedCoupon_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
                 // Plaza Coupon Received
@@ -272,12 +242,6 @@ namespace DMT.Pages
 
         private void receivedCouponReport_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
 
@@ -290,12 +254,6 @@ namespace DMT.Pages
 
         private void collectorReveivedCoupon_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
                 // Coupon Received
@@ -338,12 +296,14 @@ namespace DMT.Pages
 
         private void collectorReturnCoupon_Click(object sender, RoutedEventArgs e)
         {
+            /*
             Windows.SignInWindow win = new Windows.SignInWindow();
             win.Owner = Application.Current.MainWindow;
             if (win.ShowDialog() == false)
             {
                 return;
             }
+            */
             try
             {
                 // Coupon Return
@@ -382,6 +342,12 @@ namespace DMT.Pages
             {
                 //Console.WriteLine("Refresh data error.");
             }
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            // Init Sign In Page
+            PageContentManager.Instance.Current = new Pages.TASignInPage();
         }
 
         #endregion

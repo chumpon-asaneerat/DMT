@@ -39,19 +39,19 @@
             <StackPanel Margin="5">
                 <TextBlock Foreground="WhiteSmoke" 
                            FontSize="18"
-                           Text="Smart Card User ID:"/>
+                           Text="กรุณาระบุรหัสพนักงาน 5 หลัก"/>
                 <Grid Height="5" />
-                <TextBox x:Name="txtSmartCardId" 
+                <TextBox x:Name="txtCardId" 
                          FontSize="18"
                          Text=""/>
                 <Grid Height="5" />
                 <TextBlock Foreground="WhiteSmoke" 
                            FontSize="18"
-                           Text="กรุณาระบุรหัสพนักงาน 5 หลัก"/>
+                           Text="กรุณาป้อนรหัสผ่าน"/>
                 <Grid Height="5" />
-                <TextBox x:Name="txtManualCardId" 
-                         FontSize="18"
-                         Text=""/>
+                <PasswordBox x:Name="txtPassword" 
+                             FontSize="18"
+                             PasswordChar="*"/>
                 <Grid Height="5" />
             </StackPanel>
         </StackPanel>

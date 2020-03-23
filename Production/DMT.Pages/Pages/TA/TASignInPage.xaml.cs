@@ -10,31 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DMT.Windows
+using NLib;
+using NLib.Services;
+
+namespace DMT.Pages
 {
     /// <summary>
-    /// Interaction logic for SignInWindow.xaml
+    /// Interaction logic for TASignInPage.xaml
     /// </summary>
-    public partial class SignInWindow : Window
+    public partial class TASignInPage : UserControl
     {
-        public SignInWindow()
+        public TASignInPage()
         {
             InitializeComponent();
         }
 
         private void cmdOK_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = true;
+            // Init Main Menu
+            PageContentManager.Instance.Current = new Pages.TAMainPage();
         }
-
-        private void cmdCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.DialogResult = false;
-        }
-
-        public string CardId { get { return txtCardId.Text; } }
-        public string Password { get { return txtPassword.Password; } }
     }
 }

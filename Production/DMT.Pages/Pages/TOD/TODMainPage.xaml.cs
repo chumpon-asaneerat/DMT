@@ -36,12 +36,6 @@ namespace DMT.Pages
 
         private void beginJob_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
                 // Begin of Job Page
@@ -82,12 +76,6 @@ namespace DMT.Pages
 
         private void endJob_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
                 // End of Job Page
@@ -127,12 +115,6 @@ namespace DMT.Pages
 
         private void revEntry_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
             try
             {
                 // Revenue Entry Page
@@ -178,12 +160,14 @@ namespace DMT.Pages
 
         private void changeShift_Click(object sender, RoutedEventArgs e)
         {
+            /*
             Windows.SignInWindow win = new Windows.SignInWindow();
             win.Owner = Application.Current.MainWindow;
             if (win.ShowDialog() == false)
             {
                 return;
             }
+            */
             try
             {
                 // Revenue Entry Page
@@ -225,6 +209,12 @@ namespace DMT.Pages
         {
             var page = new Pages.TODReportMenu();
             PageContentManager.Instance.Current = page;
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            // Init Sign In Page
+            PageContentManager.Instance.Current = new Pages.TODSignInPage();
         }
 
         #endregion
