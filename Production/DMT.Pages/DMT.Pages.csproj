@@ -294,5 +294,8 @@
     <Resource Include="Images\Menu\login.png" />
     <Resource Include="Images\Menu\logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\สรุปเงินยิมทอน.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
