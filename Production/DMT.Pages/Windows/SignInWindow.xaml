@@ -47,7 +47,7 @@
                 <Grid Height="5" />
                 <TextBlock Foreground="WhiteSmoke" 
                            FontSize="18"
-                           Text="กรุณาระบุรหัสพนักงาน 10 หลัก"/>
+                           Text="กรุณาระบุรหัสพนักงาน 5 หลัก"/>
                 <Grid Height="5" />
                 <TextBox x:Name="txtManualCardId" 
                          FontSize="18"
