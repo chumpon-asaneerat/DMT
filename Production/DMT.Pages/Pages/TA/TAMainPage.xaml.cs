@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,7 +51,7 @@ namespace DMT.Pages
                 // Plaza Fund Received
                 var page = new Pages.PlazaFundReceivedPage();
 
-                List<Models.FundEntry> funds = new List<Models.FundEntry>();
+                BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
                 Models.FundEntry fund;
 
                 fund = new Models.FundEntry();

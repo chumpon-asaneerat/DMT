@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,15 +55,11 @@ namespace DMT.Pages
             if (fund.BHTTotal > decimal.Zero)
             {
                 _funds.Add(fund);
-                // clear
-                grid.Setup(null);
-                // set
-                grid.Setup(_funds);
             }
         }
 
-        private List<Models.FundEntry> _funds;
-        public void Setup(List<Models.FundEntry> funds)
+        private BindingList<Models.FundEntry> _funds;
+        public void Setup(BindingList<Models.FundEntry> funds)
         {
             _funds = funds;
             grid.Setup(_funds);

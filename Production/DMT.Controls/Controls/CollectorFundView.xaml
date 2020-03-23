@@ -7,6 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <ListView x:Name="listView" FontSize="18" ItemsSource="{Binding}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="วันที่" 
+                                    DisplayMemberBinding="{Binding Path=DateString}" 
+                                    Width="150"/>
+                    <GridViewColumn Header="เวลา" 
+                                    DisplayMemberBinding="{Binding Path=TimeString}" 
+                                    Width="150"/>
+                    <GridViewColumn Header="รหัสพนักงาน" 
+                                    DisplayMemberBinding="{Binding Path=StaffId}" 
+                                    Width="150"/>
+                    <GridViewColumn Header="จำนวนเงิน" 
+                                    DisplayMemberBinding="{Binding Path=BHTTotal}"
+                                    Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,11 @@ namespace DMT.Controls
         public CollectorFundView()
         {
             InitializeComponent();
+        }
+
+        public void Setup(BindingList<Models.FundEntry> funds)
+        {
+            listView.ItemsSource = funds;
         }
     }
 }
