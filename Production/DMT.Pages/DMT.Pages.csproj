@@ -54,7 +54,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\PlazaFundReceivedPage.xaml.cs">
+    <Compile Include="Pages\TA\PlazaFundReceivedPage.xaml.cs">
       <DependentUpon>PlazaFundReceivedPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TA\PlazaReceivedCouponPage.xaml.cs">
@@ -146,7 +146,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Pages\PlazaFundReceivedPage.xaml">
+    <Page Include="Pages\TA\PlazaFundReceivedPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

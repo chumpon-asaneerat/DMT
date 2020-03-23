@@ -55,7 +55,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\BagEntry.xaml.cs">
+    <Compile Include="Controls\TOD\BagEntry.xaml.cs">
       <DependentUpon>BagEntry.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Compound\DMLPage.xaml.cs">
@@ -64,14 +64,17 @@
     <Compile Include="Controls\Compound\PlazaHeader.xaml.cs">
       <DependentUpon>PlazaHeader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CouponPlazaView.xaml.cs">
+    <Compile Include="Controls\TA\CouponPlazaView.xaml.cs">
       <DependentUpon>CouponPlazaView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CouponView.xaml.cs">
+    <Compile Include="Controls\TA\CouponView.xaml.cs">
       <DependentUpon>CouponView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FundEntry.xaml.cs">
+    <Compile Include="Controls\TA\FundEntry.xaml.cs">
       <DependentUpon>FundEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\FundPlazaView.xaml.cs">
+      <DependentUpon>FundPlazaView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\PlazaInfo.xaml.cs">
       <DependentUpon>PlazaInfo.xaml</DependentUpon>
@@ -94,10 +97,10 @@
     <Compile Include="Controls\Primitives\Plaza\Supervisor.xaml.cs">
       <DependentUpon>Supervisor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\RevenueEntry.xaml.cs">
+    <Compile Include="Controls\TOD\RevenueEntry.xaml.cs">
       <DependentUpon>RevenueEntry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ShiftView.xaml.cs">
+    <Compile Include="Controls\TOD\ShiftView.xaml.cs">
       <DependentUpon>ShiftView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -137,7 +140,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\BagEntry.xaml">
+    <Page Include="Controls\TOD\BagEntry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,15 +152,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\CouponPlazaView.xaml">
+    <Page Include="Controls\TA\CouponPlazaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\CouponView.xaml">
+    <Page Include="Controls\TA\CouponView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\FundEntry.xaml">
+    <Page Include="Controls\TA\FundEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TA\FundPlazaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,11 +196,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\RevenueEntry.xaml">
+    <Page Include="Controls\TOD\RevenueEntry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\ShiftView.xaml">
+    <Page Include="Controls\TOD\ShiftView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

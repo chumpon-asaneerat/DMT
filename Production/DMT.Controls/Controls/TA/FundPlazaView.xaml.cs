@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace DMT.Controls
 {
     /// <summary>
-    /// Interaction logic for FundEntry.xaml
+    /// Interaction logic for FundPlazaView.xaml
     /// </summary>
-    public partial class FundEntry : UserControl
+    public partial class FundPlazaView : UserControl
     {
-        public FundEntry()
+        public FundPlazaView()
         {
             InitializeComponent();
+        }
+
+        public void Setup(List<Models.FundEntry> funds)
+        {
+            listView.ItemsSource = funds;
         }
     }
 }

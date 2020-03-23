@@ -24,12 +24,22 @@ namespace DMT.Windows
             InitializeComponent();
         }
 
-        public void Setup(Models.BagEntry bag)
+        private void cmdOk_Click(object sender, RoutedEventArgs e)
         {
-            this.Bag = bag;
-            entry.DataContext = this.Bag;
+            this.DialogResult = true;
         }
 
-        public Models.BagEntry Bag { get; private set; }
+        private void cmdCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = false;
+        }
+
+        public void Setup(Models.FundEntry fund)
+        {
+            this.Fund = fund;
+            entry.DataContext = this.Fund;
+        }
+
+        public Models.FundEntry Fund { get; private set; }
     }
 }

@@ -13,16 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DMT.Pages
+namespace DMT.Controls
 {
     /// <summary>
-    /// Interaction logic for PlazaFundReceivedPage.xaml
+    /// Interaction logic for FundEntry.xaml
     /// </summary>
-    public partial class PlazaFundReceivedPage : UserControl
+    public partial class FundEntry : UserControl
     {
-        public PlazaFundReceivedPage()
+        public FundEntry()
         {
             InitializeComponent();
+        }
+
+        public void Setup(List<Models.FundEntry> funds)
+        {
+            //listView.ItemsSource = funds;
         }
     }
 }

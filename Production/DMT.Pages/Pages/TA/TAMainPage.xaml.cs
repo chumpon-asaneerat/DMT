@@ -47,7 +47,29 @@ namespace DMT.Pages
             }
             try
             {
+                // Plaza Fund Received
+                var page = new Pages.PlazaFundReceivedPage();
 
+                List<Models.FundEntry> funds = new List<Models.FundEntry>();
+                Models.FundEntry fund;
+
+                fund = new Models.FundEntry();
+                fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
+                fund.StaffId = "14055";
+                fund.BHT1 = 50000;
+                fund.BHT5 = 50000;
+                fund.BHT10c = 20000;
+                fund.BHT10b = 20000;
+                fund.BHT20 = 10000;
+                fund.BHT50 = 5000;
+                fund.BHT100 = 5000;
+                fund.BHT500 = 3000;
+                fund.BHT1000 = 2500;
+                funds.Add(fund);
+
+                page.Setup(funds);
+
+                PageContentManager.Instance.Current = page;
             }
             catch (Exception)
             {
@@ -83,7 +105,6 @@ namespace DMT.Pages
             }
             try
             {
-
             }
             catch (Exception)
             {

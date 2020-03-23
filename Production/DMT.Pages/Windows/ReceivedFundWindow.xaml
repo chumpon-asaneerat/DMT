@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ctrl="clr-namespace:DMT.Controls;assembly=DMT.Controls"
         mc:Ignorable="d"
-        Title="ReceivedFundWindow" Height="450" Width="800">
+        Title="รับเงินยืม-ทอน" 
+        ResizeMode="NoResize" 
+        ShowInTaskbar="False" 
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center" 
+        WindowStartupLocation="CenterOwner"
+        Height="500" 
+        Width="400">
     <Grid Margin="15">
-        <ctrl:FundEntry x:Name="entry"/>
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Bottom">
+                <Button x:Name="cmdOk" 
+                            DockPanel.Dock="Right"
+                            Margin="2"
+                            FontSize="18"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Content="ตกลง"
+                            Height="45"
+                            Width="150"
+                            Click="cmdOk_Click"/>
+                <Button x:Name="cmdCancel" 
+                            DockPanel.Dock="Left"
+                            Margin="2"
+                            FontSize="18"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Content="ยกเลิก"
+                            Height="45"
+                            Width="150"
+                            Click="cmdCancel_Click"/>
+                <Grid />
+            </DockPanel>
+            <ctrl:FundEntry x:Name="entry"
+                            FontSize="16"
+                            Background="Indigo"
+                            Foreground="WhiteSmoke"/>
+        </DockPanel>
     </Grid>
 </Window>
