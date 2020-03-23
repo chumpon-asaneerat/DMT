@@ -669,6 +669,7 @@ namespace DMT.Models
 
 		public string StaffId { get; set; }
 		public DateTime Date { get; set; }
+		public int Lane { get; set; }
 		public string DateString
 		{
 			get

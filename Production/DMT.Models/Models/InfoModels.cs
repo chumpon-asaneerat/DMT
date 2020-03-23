@@ -62,22 +62,22 @@ namespace DMT.Models
 
             results.Add(new Collector()
             {
-                CardID = "1400000001",
-                Name = "นายเอนก หอมจรูง"
+                CardID = "14321",
+                Name = "นาย สุเทพ เหมัน"
             });
             results.Add(new Collector()
             {
-                CardID = "1400000002",
+                CardID = "11559",
                 Name = "นางวิภา สวัสดิวัฒน์"
             });
             results.Add(new Collector()
             {
-                CardID = "1400000003",
+                CardID = "13201",
                 Name = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์"
             });
             results.Add(new Collector()
             {
-                CardID = "1400000004",
+                CardID = "12866",
                 Name = "นาย ภักดี อมรรุ่งโรจน์"
             });
 
