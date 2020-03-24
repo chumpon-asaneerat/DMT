@@ -54,6 +54,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\TA\PlazaFundReturnPage.xaml.cs">
+      <DependentUpon>PlazaFundReturnPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TA\FundSummaryReportPage.xaml.cs">
       <DependentUpon>FundSummaryReportPage.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Pages\TA\PlazaFundReturnPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TA\FundSummaryReportPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

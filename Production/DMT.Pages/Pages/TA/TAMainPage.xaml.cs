@@ -51,16 +51,51 @@ namespace DMT.Pages
                 fund = new Models.FundEntry();
                 fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 fund.StaffId = "14055";
-                fund.BHT1 = 50000;
-                fund.BHT2 = 50000;
-                fund.BHT5 = 50000;
-                fund.BHT10c = 20000;
-                fund.BHT10b = 20000;
-                fund.BHT20 = 10000;
-                fund.BHT50 = 5000;
-                fund.BHT100 = 5000;
-                fund.BHT500 = 3000;
-                fund.BHT1000 = 2500;
+                fund.BHT1 = 500;
+                fund.BHT2 = 500;
+                fund.BHT5 = 500;
+                fund.BHT10c = 200;
+                fund.BHT10b = 200;
+                fund.BHT20 = 250;
+                fund.BHT50 = 100;
+                fund.BHT100 = 100;
+                fund.BHT500 = 50;
+                fund.BHT1000 = 50;
+                funds.Add(fund);
+
+                page.Setup(funds);
+
+                PageContentManager.Instance.Current = page;
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
+        }
+
+        private void reutrnFund_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Plaza Fund Received
+                var page = new Pages.PlazaFundReturnPage();
+
+                BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
+                Models.FundEntry fund;
+
+                fund = new Models.FundEntry();
+                fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
+                fund.StaffId = "14055";
+                fund.BHT1 = 500;
+                fund.BHT2 = 500;
+                fund.BHT5 = 500;
+                fund.BHT10c = 200;
+                fund.BHT10b = 200;
+                fund.BHT20 = 250;
+                fund.BHT50 = 100;
+                fund.BHT100 = 100;
+                fund.BHT500 = 50;
+                fund.BHT1000 = 50;
                 funds.Add(fund);
 
                 page.Setup(funds);
