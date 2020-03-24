@@ -420,6 +420,7 @@ namespace DMT.Models
 		#region Internal Variables
 
 		private string _desc = "";
+
 		private int _BHT1 = 0;
 		private int _BHT2 = 0;
 		private int _BHT5 = 0;

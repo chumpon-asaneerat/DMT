@@ -92,13 +92,21 @@ namespace DMT.Controls
             var fund = (Models.FundEntry)((FrameworkElement)sender).DataContext;
             if (null != fund)
             {
+                Models.FundEntry src = new Models.FundEntry();
                 Models.FundEntry obj = new Models.FundEntry();
-                obj.Description = fund.Description;
+                Models.FundEntry ret = new Models.FundEntry();
 
-                var win = new Windows.FundWindow();
+                assign(fund, src);
+                src.Description = "ยอดก่อนยืม";
+                obj.Description = "ยืมเงิน";
+                ret.Description = "ยอดรวม";
+
+                var win = new Windows.FundBorrowWindow();
                 win.Owner = Application.Current.MainWindow;
-                win.Title = "ยืมเงิน";
-                win.Setup(obj);
+                win.Title = fund.Description;
+                
+                win.Setup(src, obj, ret);
+
                 if (win.ShowDialog() == false)
                 {
                     return;
@@ -113,35 +121,27 @@ namespace DMT.Controls
             var fund = (Models.FundEntry)((FrameworkElement)sender).DataContext;
             if (null != fund)
             {
+                Models.FundEntry src = new Models.FundEntry();
                 Models.FundEntry obj = new Models.FundEntry();
-                obj.Description = fund.Description;
+                Models.FundEntry ret = new Models.FundEntry();
 
-                var win = new Windows.FundWindow();
+                assign(fund, src);
+                src.Description = "ยอดก่อนคืน";
+                obj.Description = "คืนเงิน";
+                ret.Description = "ยอดรวม";
+
+                var win = new Windows.FundReturnWindow();
                 win.Owner = Application.Current.MainWindow;
-                win.Title = "คืนเงิน";
-                win.Setup(obj);
+                win.Title = fund.Description;
+
+                win.Setup(src, obj, ret);
+                
                 if (win.ShowDialog() == false)
                 {
                     return;
                 }
 
                 ReturnFund(fund, obj);
-            }
-        }
-
-        private void cmdView_Click(object sender, RoutedEventArgs e)
-        {
-            var fund = (Models.FundEntry)((FrameworkElement)sender).DataContext;
-            if (null != fund)
-            {
-                var win = new Windows.FundWindow();
-                win.Owner = Application.Current.MainWindow;
-                win.Title = "ดูยอดยืม-คืนเงิน";
-                win.Setup(fund);
-                if (win.ShowDialog() == false) 
-                {
-                    return;
-                }
             }
         }
 

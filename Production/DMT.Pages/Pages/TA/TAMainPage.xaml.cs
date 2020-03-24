@@ -95,16 +95,16 @@ namespace DMT.Pages
                 plazaFund.Description = "เงินยืม-ทอน (ด่าน)";
                 plazaFund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 plazaFund.StaffId = "14055";
-                plazaFund.BHT1 = 50000;
-                plazaFund.BHT2 = 50000;
-                plazaFund.BHT5 = 50000;
-                plazaFund.BHT10c = 20000;
-                plazaFund.BHT10b = 20000;
-                plazaFund.BHT20 = 10000;
-                plazaFund.BHT50 = 5000;
-                plazaFund.BHT100 = 5000;
-                plazaFund.BHT500 = 3000;
-                plazaFund.BHT1000 = 2500;
+                plazaFund.BHT1 = 1000;
+                plazaFund.BHT2 = 1000;
+                plazaFund.BHT5 = 1000;
+                plazaFund.BHT10c = 500;
+                plazaFund.BHT10b = 500;
+                plazaFund.BHT20 = 200;
+                plazaFund.BHT50 = 100;
+                plazaFund.BHT100 = 200;
+                plazaFund.BHT500 = 100;
+                plazaFund.BHT1000 = 100;
 
                 BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
                 Models.FundEntry fund;
@@ -114,16 +114,16 @@ namespace DMT.Pages
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
                 fund.StaffId = "14321";
                 fund.Lane = 1;
-                fund.BHT1 = 300;
-                fund.BHT2 = 300;
-                fund.BHT5 = 300;
-                fund.BHT10c = 300;
-                fund.BHT10b = 300;
-                fund.BHT20 = 300;
-                fund.BHT50 = 300;
-                fund.BHT100 = 300;
-                fund.BHT500 = 300;
-                fund.BHT1000 = 300;
+                fund.BHT1 = 50;
+                fund.BHT2 = 50;
+                fund.BHT5 = 40;
+                fund.BHT10c = 20;
+                fund.BHT10b = 20;
+                fund.BHT20 = 10;
+                fund.BHT50 = 5;
+                fund.BHT100 = 18;
+                fund.BHT500 = 10;
+                fund.BHT1000 = 5;
                 funds.Add(fund);
                 
                 // Collector 2
@@ -132,16 +132,16 @@ namespace DMT.Pages
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
                 fund.StaffId = "13201";
                 fund.Lane = 4;
-                fund.BHT1 = 500;
-                fund.BHT2 = 300;
-                fund.BHT5 = 200;
-                fund.BHT10c = 150;
-                fund.BHT10b = 150;
-                fund.BHT20 = 250;
-                fund.BHT50 = 50;
-                fund.BHT100 = 75;
-                fund.BHT500 = 30;
-                fund.BHT1000 = 30;
+                fund.BHT1 = 20;
+                fund.BHT2 = 15;
+                fund.BHT5 = 60;
+                fund.BHT10c = 45;
+                fund.BHT10b = 65;
+                fund.BHT20 = 45;
+                fund.BHT50 = 5;
+                fund.BHT100 = 24;
+                fund.BHT500 = 10;
+                fund.BHT1000 = 5;
                 funds.Add(fund);
 
                 // Collector 3
@@ -150,16 +150,16 @@ namespace DMT.Pages
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
                 fund.StaffId = "11559";
                 fund.Lane = 8;
-                fund.BHT1 = 50;
-                fund.BHT2 = 300;
-                fund.BHT5 = 100;
-                fund.BHT10c = 200;
-                fund.BHT10b = 200;
-                fund.BHT20 = 150;
-                fund.BHT50 = 100;
-                fund.BHT100 = 50;
-                fund.BHT500 = 50;
-                fund.BHT1000 = 50;
+                fund.BHT1 = 20;
+                fund.BHT2 = 15;
+                fund.BHT5 = 20;
+                fund.BHT10c = 20;
+                fund.BHT10b = 20;
+                fund.BHT20 = 10;
+                fund.BHT50 = 3;
+                fund.BHT100 = 21;
+                fund.BHT500 = 14;
+                fund.BHT1000 = 2;
                 funds.Add(fund);
 
                 // Collector 4
@@ -168,16 +168,16 @@ namespace DMT.Pages
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
                 fund.StaffId = "12866";
                 fund.Lane = 5;
-                fund.BHT1 = 150;
-                fund.BHT2 = 300;
-                fund.BHT5 = 50;
-                fund.BHT10c = 50;
-                fund.BHT10b = 50;
-                fund.BHT20 = 200;
-                fund.BHT50 = 150;
-                fund.BHT100 = 70;
-                fund.BHT500 = 70;
-                fund.BHT1000 = 70;
+                fund.BHT1 = 0;
+                fund.BHT2 = 0;
+                fund.BHT5 = 0;
+                fund.BHT10c = 0;
+                fund.BHT10b = 0;
+                fund.BHT20 = 0;
+                fund.BHT50 = 0;
+                fund.BHT100 = 0;
+                fund.BHT500 = 0;
+                fund.BHT1000 = 0;
                 funds.Add(fund);
 
                 page.Setup(plazaFund, funds);
@@ -194,7 +194,8 @@ namespace DMT.Pages
         {
             try
             {
-
+                var page = new FundSummaryReportPage();
+                PageContentManager.Instance.Current = page;
             }
             catch (Exception)
             {
