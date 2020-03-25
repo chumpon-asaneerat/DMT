@@ -27,7 +27,13 @@
             <TabItem Header="การขายคูปอง"
                      HorizontalAlignment="Center"
                      VerticalAlignment="Center">
+                <!--
                 <local:CouponRevenueEntry x:Name="couponRevenue" 
+                            Background="Indigo"
+                            Foreground="WhiteSmoke"
+                            Width="400" Margin="3"/>
+                -->
+                <local:BagEntry x:Name="bagCoupon" 
                             Background="Indigo"
                             Foreground="WhiteSmoke"
                             Width="400" Margin="3"/>

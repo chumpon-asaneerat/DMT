@@ -71,7 +71,7 @@
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
                                        TextAlignment="Center"
-                                       Text="Plaza"/>
+                                       Text="Tour"/>
                         </Border>
                         <TextBlock DockPanel.Dock="Top"
                                 Foreground="WhiteSmoke"
@@ -136,7 +136,7 @@
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
                                        TextAlignment="Center"
-                                       Text="Chief Collector"/>
+                                       Text="Toll Admin"/>
                         </Border>
                         <TextBlock DockPanel.Dock="Top"
                                 Foreground="WhiteSmoke"
