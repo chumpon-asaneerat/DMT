@@ -425,7 +425,6 @@ namespace DMT.Models
 		private int _BHT2 = 0;
 		private int _BHT5 = 0;
 		private int _BHT10c = 0;
-		private int _BHT10b = 0;
 		private int _BHT20 = 0;
 		private int _BHT50 = 0;
 		private int _BHT100 = 0;
@@ -460,7 +459,6 @@ namespace DMT.Models
 			total += _BHT2 * 2;
 			total += _BHT5 * 5;
 			total += _BHT10c * 10;
-			total += _BHT10b * 10;
 			total += _BHT20 * 20;
 			total += _BHT50 * 50;
 			total += _BHT100 * 100;
@@ -554,23 +552,6 @@ namespace DMT.Models
 					CalcTotal();
 					// Raise event.
 					PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT10c"));
-				}
-			}
-		}
-		/// <summary>
-		/// Gets or sets number of 10 baht bill.
-		/// </summary>
-		public int BHT10b
-		{
-			get { return _BHT10b; }
-			set
-			{
-				if (_BHT10b != value)
-				{
-					_BHT10b = value;
-					CalcTotal();
-					// Raise event.
-					PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT10b"));
 				}
 			}
 		}

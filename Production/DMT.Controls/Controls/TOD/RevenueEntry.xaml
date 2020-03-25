@@ -6,21 +6,62 @@
              xmlns:local="clr-namespace:DMT.Controls"
              mc:Ignorable="d">
     <Grid>
+        <TabControl FontSize="18"
+                    Background="Transparent">
+            <TabItem Header="ค่าผ่านทาง"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:BagEntry x:Name="bagTraffic" 
+                            Background="ForestGreen"
+                            Foreground="WhiteSmoke"
+                            Width="400" Margin="3"/>
+            </TabItem>
+            <TabItem Header="รายได้อื่น"                     
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:BagEntry x:Name="bagOther" 
+                            Background="CornflowerBlue"
+                            Foreground="WhiteSmoke"
+                            Width="400" Margin="3"/>
+            </TabItem>
+            <TabItem Header="การขายคูปอง"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:CouponRevenueEntry x:Name="couponRevenue" 
+                            Background="Indigo"
+                            Foreground="WhiteSmoke"
+                            Width="400" Margin="3"/>
+            </TabItem>
+            <TabItem Header="การใช้คูปอง"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:CouponUsageEntry x:Name="couponUsage" 
+                            Background="Indigo"
+                            Foreground="WhiteSmoke"
+                            Width="400" Margin="3"/>
+            </TabItem>
+            <TabItem Header="QR Code"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:QRCodeEntry x:Name="qrcodeEntry" 
+                            Background="Orange"
+                            Foreground="WhiteSmoke"
+                            Width="700" Margin="3"/>
+            </TabItem>
+            <TabItem Header="EMV"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:EMVEntry x:Name="emvEntry" 
+                            Background="Gainsboro"
+                            Foreground="WhiteSmoke"
+                            Width="700" Margin="3"/>
+            </TabItem>
+        </TabControl>
+        <!--
         <StackPanel Orientation="Horizontal"  
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
-            <local:BagEntry x:Name="bagTraffic" 
-                            Background="ForestGreen"
-                            Foreground="WhiteSmoke"
-                            Width="250" Margin="3"/>
-            <local:BagEntry x:Name="bagCoupon" 
-                            Background="Indigo"
-                            Foreground="WhiteSmoke"
-                            Width="250" Margin="3"/>
-            <local:BagEntry x:Name="bagOther" 
-                            Background="CornflowerBlue"
-                            Foreground="WhiteSmoke"
-                            Width="250" Margin="3"/>
         </StackPanel>
+        -->
     </Grid>
 </UserControl>

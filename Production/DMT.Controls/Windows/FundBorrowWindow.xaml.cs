@@ -38,8 +38,8 @@ namespace DMT.Windows
             Models.FundEntry fund, Models.FundEntry result)
         {
             if (null != this.Fund) this.Fund.PropertyChanged -= Fund_PropertyChanged;
-            
-            this.Source = src;            
+
+            this.Source = src;
             this.Fund = fund;
             this.Result = result;
 
@@ -59,7 +59,6 @@ namespace DMT.Windows
             this.Result.BHT2 = this.Source.BHT2 + this.Fund.BHT2;
             this.Result.BHT5 = this.Source.BHT5 + this.Fund.BHT5;
             this.Result.BHT10c = this.Source.BHT10c + this.Fund.BHT10c;
-            this.Result.BHT10b = this.Source.BHT10b + this.Fund.BHT10b;
             this.Result.BHT20 = this.Source.BHT20 + this.Fund.BHT20;
             this.Result.BHT50 = this.Source.BHT50 + this.Fund.BHT50;
             this.Result.BHT100 = this.Source.BHT100 + this.Fund.BHT100;

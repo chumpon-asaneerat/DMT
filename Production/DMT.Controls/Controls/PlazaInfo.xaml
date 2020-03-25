@@ -79,13 +79,13 @@
                                 VerticalAlignment="Center"
                                 TextAlignment="Center"
                                 FontSize="18"
-                                Text="ID: 310"/>
+                                Text="Plaza Code: 01"/>
                         <TextBlock Foreground="WhiteSmoke"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
                                 TextAlignment="Center"
                                 FontSize="18"
-                                Text="Din Dang"/>
+                                Text="Plaza Name: Din Daeng"/>
                     </DockPanel>
                 </Border>
                 <Border BorderBrush="Silver"

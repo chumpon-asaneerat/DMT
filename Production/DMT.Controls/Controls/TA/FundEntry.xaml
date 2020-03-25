@@ -72,23 +72,11 @@
                         <TextBlock Margin="2" 
                             DockPanel.Dock="Left"  
                             TextAlignment="Right" 
-                            Text="10 BHT (coin)" 
+                            Text="10 BHT" 
                             Width="110"/>
                         <TextBox Margin="2"
                             TextAlignment="Right"
                             Text="{Binding BHT10c}"/>
-
-                    </DockPanel>
-                    <!-- 10 BHT bill -->
-                    <DockPanel Margin="5 0 5 0">
-                        <TextBlock Margin="2" 
-                            DockPanel.Dock="Left"  
-                            TextAlignment="Right" 
-                            Text="10 BHT (bill)" 
-                            Width="110"/>
-                        <TextBox Margin="2"
-                            TextAlignment="Right"
-                            Text="{Binding BHT10b}"/>
 
                     </DockPanel>
                     <!-- 20 BHT -->
@@ -164,7 +152,19 @@
                             Text="{Binding BHTTotal}"/>
 
                     </DockPanel>
-                    <Grid Height="10"/>
+                    <Grid Height="5"/>
+                    <!-- Remark -->
+                    <StackPanel Orientation="Vertical"
+                                Margin="10 5 10 5"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center">
+                        <TextBlock Text="Remark"
+                                   FontSize="16"
+                                   TextAlignment="Left"
+                                   Foreground="WhiteSmoke"/>
+                        <RichTextBox Height="100"/>
+                    </StackPanel>
+                    <Grid Height="5"/>
                 </StackPanel>
             </DockPanel>
         </Border>

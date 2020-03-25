@@ -54,6 +54,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\TA\AllPlazaFundPage.xaml.cs">
+      <DependentUpon>AllPlazaFundPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TA\PlazaFundReturnPage.xaml.cs">
       <DependentUpon>PlazaFundReturnPage.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Pages\TA\AllPlazaFundPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TA\PlazaFundReturnPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -310,6 +317,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Report\สรุปเงินยิมทอน.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\all_plaza_fund.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

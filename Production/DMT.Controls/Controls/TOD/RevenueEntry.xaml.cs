@@ -35,8 +35,9 @@ namespace DMT.Controls
             _job = job;
             _entry = entry;
             bagTraffic.DataContext = entry.Traffic;
-            bagCoupon.DataContext = entry.Coupon;
             bagOther.DataContext = entry.Other;
+            couponRevenue.DataContext = null;
+            couponUsage.DataContext = null;
         }
     }
 }

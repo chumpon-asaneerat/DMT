@@ -32,9 +32,25 @@ namespace DMT.Pages
         public TAMainPage()
         {
             InitializeComponent();
+
+            InitPlazaFund();
         }
 
         #endregion
+
+        private Models.FundEntry plaza = new Models.FundEntry();
+
+        private void InitPlazaFund()
+        {
+            plaza.BHT1 = 100;
+            plaza.BHT2 = 100;
+            plaza.BHT5 = 100;
+            plaza.BHT10c = 100;
+            plaza.BHT50 = 100;
+            plaza.BHT100 = 100;
+            plaza.BHT500 = 100;
+            plaza.BHT1000 = 100;
+        }
 
         #region Button (Menu) Command Handlers
 
@@ -55,7 +71,6 @@ namespace DMT.Pages
                 fund.BHT2 = 500;
                 fund.BHT5 = 500;
                 fund.BHT10c = 200;
-                fund.BHT10b = 200;
                 fund.BHT20 = 250;
                 fund.BHT50 = 100;
                 fund.BHT100 = 100;
@@ -63,7 +78,7 @@ namespace DMT.Pages
                 fund.BHT1000 = 50;
                 funds.Add(fund);
 
-                page.Setup(funds);
+                page.Setup(plaza, funds);
 
                 PageContentManager.Instance.Current = page;
             }
@@ -90,7 +105,6 @@ namespace DMT.Pages
                 fund.BHT2 = 500;
                 fund.BHT5 = 500;
                 fund.BHT10c = 200;
-                fund.BHT10b = 200;
                 fund.BHT20 = 250;
                 fund.BHT50 = 100;
                 fund.BHT100 = 100;
@@ -98,7 +112,22 @@ namespace DMT.Pages
                 fund.BHT1000 = 50;
                 funds.Add(fund);
 
-                page.Setup(funds);
+                page.Setup(plaza, funds);
+
+                PageContentManager.Instance.Current = page;
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
+        }
+
+        private void AllPlazaFundSummary_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // All Plaza Fund Page.
+                var page = new Pages.AllPlazaFundPage();
 
                 PageContentManager.Instance.Current = page;
             }
@@ -134,7 +163,6 @@ namespace DMT.Pages
                 plazaFund.BHT2 = 1000;
                 plazaFund.BHT5 = 1000;
                 plazaFund.BHT10c = 500;
-                plazaFund.BHT10b = 500;
                 plazaFund.BHT20 = 200;
                 plazaFund.BHT50 = 100;
                 plazaFund.BHT100 = 200;
@@ -153,7 +181,6 @@ namespace DMT.Pages
                 fund.BHT2 = 50;
                 fund.BHT5 = 40;
                 fund.BHT10c = 20;
-                fund.BHT10b = 20;
                 fund.BHT20 = 10;
                 fund.BHT50 = 5;
                 fund.BHT100 = 18;
@@ -171,7 +198,6 @@ namespace DMT.Pages
                 fund.BHT2 = 15;
                 fund.BHT5 = 60;
                 fund.BHT10c = 45;
-                fund.BHT10b = 65;
                 fund.BHT20 = 45;
                 fund.BHT50 = 5;
                 fund.BHT100 = 24;
@@ -189,7 +215,6 @@ namespace DMT.Pages
                 fund.BHT2 = 15;
                 fund.BHT5 = 20;
                 fund.BHT10c = 20;
-                fund.BHT10b = 20;
                 fund.BHT20 = 10;
                 fund.BHT50 = 3;
                 fund.BHT100 = 21;
@@ -207,7 +232,6 @@ namespace DMT.Pages
                 fund.BHT2 = 0;
                 fund.BHT5 = 0;
                 fund.BHT10c = 0;
-                fund.BHT10b = 0;
                 fund.BHT20 = 0;
                 fund.BHT50 = 0;
                 fund.BHT100 = 0;

@@ -29,6 +29,45 @@ namespace DMT.Pages
             InitializeComponent();
         }
 
+        private void ReturnFund(Models.FundEntry src, Models.FundEntry dst)
+        {
+            src.BHT1 -= dst.BHT1;
+            src.BHT2 -= dst.BHT2;
+            src.BHT5 -= dst.BHT5;
+            src.BHT10c -= dst.BHT10c;
+            src.BHT20 -= dst.BHT20;
+            src.BHT50 -= dst.BHT50;
+            src.BHT100 -= dst.BHT100;
+            src.BHT500 -= dst.BHT500;
+            src.BHT1000 -= dst.BHT1000;
+        }
+
+        private void BorrowFund(Models.FundEntry src, Models.FundEntry dst)
+        {
+            src.BHT1 += dst.BHT1;
+            src.BHT2 += dst.BHT2;
+            src.BHT5 += dst.BHT5;
+            src.BHT10c += dst.BHT10c;
+            src.BHT20 += dst.BHT20;
+            src.BHT50 += dst.BHT50;
+            src.BHT100 += dst.BHT100;
+            src.BHT500 += dst.BHT500;
+            src.BHT1000 += dst.BHT1000;
+        }
+
+        private void assign(Models.FundEntry src, Models.FundEntry dst)
+        {
+            dst.BHT1 = src.BHT1;
+            dst.BHT2 = src.BHT2;
+            dst.BHT5 = src.BHT5;
+            dst.BHT10c = src.BHT10c;
+            dst.BHT20 = src.BHT20;
+            dst.BHT50 = src.BHT50;
+            dst.BHT100 = src.BHT100;
+            dst.BHT500 = src.BHT500;
+            dst.BHT1000 = src.BHT1000;
+        }
+
         private void cmdCancel_Click(object sender, RoutedEventArgs e)
         {
             // Main Menu Page
@@ -38,29 +77,50 @@ namespace DMT.Pages
 
         private void cmdAppend_Click(object sender, RoutedEventArgs e)
         {
-            Windows.ReceivedFundWindow win = new Windows.ReceivedFundWindow();
+            Windows.FundBorrowWindow win = new Windows.FundBorrowWindow();
             win.Owner = Application.Current.MainWindow;
 
+            /*
             Models.FundEntry fund = new Models.FundEntry();
-            fund.Description = "เงินยืม-ทอน";
-            fund.Date = DateTime.Now;
-            fund.StaffId = "14577";
+            fund.BHT1 = 100;
+            fund.BHT2 = 100;
+            fund.BHT5 = 100;
+            fund.BHT10c = 100;
+            fund.BHT50 = 100;
+            fund.BHT100 = 100;
+            fund.BHT500 = 100;
+            fund.BHT1000 = 100;
+            */
 
-            win.Setup(fund);
+            Models.FundEntry src = new Models.FundEntry();
+            Models.FundEntry obj = new Models.FundEntry();
+            Models.FundEntry ret = new Models.FundEntry();
+            assign(_plaza, src);
+
+            src.Description = "ยอดก่อนคืน";
+            obj.Description = "คืนเงิน";
+            ret.Description = "ยอดรวม";
+
+            win.Setup(src, obj, ret);
             if (win.ShowDialog() == false)
             {
                 return;
             }
 
-            if (fund.BHTTotal > decimal.Zero)
+            if (obj.BHTTotal > decimal.Zero)
             {
-                _funds.Add(fund);
+                obj.StaffId = "14077";
+                obj.Date = DateTime.Now;
+                _funds.Add(obj);
             }
         }
 
+        private Models.FundEntry _plaza;
         private BindingList<Models.FundEntry> _funds;
-        public void Setup(BindingList<Models.FundEntry> funds)
+
+        public void Setup(Models.FundEntry fund, BindingList<Models.FundEntry> funds)
         {
+            _plaza = fund;
             _funds = funds;
             grid.Setup(_funds);
         }

@@ -47,7 +47,6 @@ namespace DMT.Controls
             src.BHT2 -= dst.BHT2;
             src.BHT5 -= dst.BHT5;
             src.BHT10c -= dst.BHT10c;
-            src.BHT10b -= dst.BHT10b;
             src.BHT20 -= dst.BHT20;
             src.BHT50 -= dst.BHT50;
             src.BHT100 -= dst.BHT100;
@@ -63,7 +62,6 @@ namespace DMT.Controls
             src.BHT2 += dst.BHT2;
             src.BHT5 += dst.BHT5;
             src.BHT10c += dst.BHT10c;
-            src.BHT10b += dst.BHT10b;
             src.BHT20 += dst.BHT20;
             src.BHT50 += dst.BHT50;
             src.BHT100 += dst.BHT100;
@@ -79,7 +77,6 @@ namespace DMT.Controls
             dst.BHT2 = src.BHT2;
             dst.BHT5 = src.BHT5;
             dst.BHT10c = src.BHT10c;
-            dst.BHT10b = src.BHT10b;
             dst.BHT20 = src.BHT20;
             dst.BHT50 = src.BHT50;
             dst.BHT100 = src.BHT100;

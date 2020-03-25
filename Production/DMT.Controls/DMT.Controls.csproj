@@ -55,6 +55,18 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\TOD\EMVEntry.xaml.cs">
+      <DependentUpon>EMVEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\QRCodeEntry.xaml.cs">
+      <DependentUpon>QRCodeEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\CouponRevenueEntry.xaml.cs">
+      <DependentUpon>CouponRevenueEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\CouponUsageEntry.xaml.cs">
+      <DependentUpon>CouponUsageEntry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TA\CollectorFundView.xaml.cs">
       <DependentUpon>CollectorFundView.xaml</DependentUpon>
     </Compile>
@@ -149,6 +161,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\TOD\EMVEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TOD\QRCodeEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TOD\CouponRevenueEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TOD\CouponUsageEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TA\CollectorFundView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

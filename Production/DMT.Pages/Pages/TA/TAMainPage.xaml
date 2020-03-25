@@ -102,8 +102,38 @@
                         </StackPanel>
                     </DockPanel>
                 </Button>
-                <Button x:Name="receivedFundReport"
+                <Button x:Name="AllPlazaFundSummary"
                         Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"
+                        Margin="0 0 5 30"
+                        Background="DarkOrange"
+                        Foreground="WhiteSmoke"
+                        Click="AllPlazaFundSummary_Click">
+                    <DockPanel>
+                        <Grid DockPanel.Dock="Left"
+                          Margin="5">
+                            <Image Height="50"
+                                Width="50"
+                                Source="/DMT.Pages;component/Images/Menu/report1.png" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" />
+                        </Grid>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="28" 
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="สรุปยอดด่าน"/>
+                            <Grid Height="10" />
+                            <TextBlock FontSize="14"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="สรุปยอดด่าน"/>
+                        </StackPanel>
+                    </DockPanel>
+                </Button>
+                <Button x:Name="receivedFundReport"
+                        Grid.Column="2" Grid.Row="3" Grid.RowSpan="2"
                         Margin="0 0 5 30"
                         Background="DarkOrange"
                         Foreground="WhiteSmoke"

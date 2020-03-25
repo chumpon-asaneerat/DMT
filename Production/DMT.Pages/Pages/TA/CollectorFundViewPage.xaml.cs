@@ -55,7 +55,6 @@ namespace DMT.Pages
             dst.BHT2 = src.BHT2;
             dst.BHT5 = src.BHT5;
             dst.BHT10c = src.BHT10c;
-            dst.BHT10b = src.BHT10b;
             dst.BHT20 = src.BHT20;
             dst.BHT50 = src.BHT50;
             dst.BHT100 = src.BHT100;
@@ -91,7 +90,6 @@ namespace DMT.Pages
                 _current.BHT2 -= fund.BHT2;
                 _current.BHT5 -= fund.BHT5;
                 _current.BHT10c -= fund.BHT10c;
-                _current.BHT10b -= fund.BHT10b;
                 _current.BHT20 -= fund.BHT20;
                 _current.BHT50 -= fund.BHT50;
                 _current.BHT100 -= fund.BHT100;
