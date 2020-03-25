@@ -100,9 +100,10 @@ namespace DMT.Pages
 
             win.Setup(src, obj, ret);
             src.Description = "ยอดก่อนยืม";
-            obj.Description = "ยืมเงิน";
+            obj.Description = "คืนเงิน";
             ret.Description = "ยอดรวม";
 
+            win.Title = "คืนเงิน";
             win.Setup(src, obj, ret);
             if (win.ShowDialog() == false)
             {
