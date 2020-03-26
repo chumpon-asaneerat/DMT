@@ -42,12 +42,12 @@
                        VerticalAlignment="Center"
                        TextAlignment="Center"
                        Text="รับเงินยืม-ทอนจากฝ่ายบัญชี"/>
-                <Button x:Name="receivedFund" 
+                <Button x:Name="plazaFundReceivedReturn" 
                         Grid.Column="0" Grid.Row="1" 
                         Margin="0 0 5 0"
                         Background="DarkOrange"
                         Foreground="WhiteSmoke"
-                        Click="receivedFund_Click">
+                        Click="plazaFundReceivedReturn_Click">
                     <DockPanel>
                         <Grid DockPanel.Dock="Left"
                           Margin="5">
@@ -72,12 +72,12 @@
                         </StackPanel>
                     </DockPanel>
                 </Button>
-                <Button x:Name="reutrnFund" 
+                <Button x:Name="exchangeBankNote" 
                         Grid.Column="2" Grid.Row="1" 
                         Margin="0 0 5 0"
                         Background="DarkOrange"
                         Foreground="WhiteSmoke"
-                        Click="reutrnFund_Click">
+                        Click="exchangeBankNote_Click">
                     <DockPanel>
                         <Grid DockPanel.Dock="Left"
                           Margin="5">
@@ -92,13 +92,13 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="คืนเงิน"/>
+                                   Text="Exchange Bank Note"/>
                             <Grid Height="10" />
                             <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="คืนเงิน"/>
+                                   Text="แลกเงิน"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>
@@ -122,7 +122,7 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="สรุปยอดด่าน"/>
+                                   Text="บัญชีตรวจสอบยอด"/>
                             <Grid Height="10" />
                             <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"

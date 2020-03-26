@@ -54,11 +54,11 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\TA\PlazaRequestExchangePage.xaml.cs">
+      <DependentUpon>PlazaRequestExchangePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TA\AllPlazaFundPage.xaml.cs">
       <DependentUpon>AllPlazaFundPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\TA\PlazaFundReturnPage.xaml.cs">
-      <DependentUpon>PlazaFundReturnPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TA\FundSummaryReportPage.xaml.cs">
       <DependentUpon>FundSummaryReportPage.xaml</DependentUpon>
@@ -72,8 +72,8 @@
     <Compile Include="Pages\TA\CollectorFundViewPage.xaml.cs">
       <DependentUpon>CollectorFundViewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TA\PlazaFundReceivedPage.xaml.cs">
-      <DependentUpon>PlazaFundReceivedPage.xaml</DependentUpon>
+    <Compile Include="Pages\TA\PlazaFundReceivedReturnPage.xaml.cs">
+      <DependentUpon>PlazaFundReceivedReturnPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TA\PlazaReceivedCouponPage.xaml.cs">
       <DependentUpon>PlazaReceivedCouponPage.xaml</DependentUpon>
@@ -164,11 +164,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Pages\TA\AllPlazaFundPage.xaml">
+    <Page Include="Pages\TA\PlazaRequestExchangePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\TA\PlazaFundReturnPage.xaml">
+    <Page Include="Pages\TA\AllPlazaFundPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,7 +188,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\TA\PlazaFundReceivedPage.xaml">
+    <Page Include="Pages\TA\PlazaFundReceivedReturnPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

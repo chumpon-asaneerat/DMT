@@ -22,6 +22,9 @@
                     <GridViewColumn Header="เลน" 
                                     DisplayMemberBinding="{Binding Path=Lane}" 
                                     Width="150"/>
+                    <GridViewColumn Header="ประเภทคูปอง" 
+                                    DisplayMemberBinding="{Binding Path=Type}" 
+                                    Width="150"/>
                     <GridViewColumn Header="จำนวนเล่ม" 
                                     DisplayMemberBinding="{Binding Path=Count}" 
                                     Width="150"/>

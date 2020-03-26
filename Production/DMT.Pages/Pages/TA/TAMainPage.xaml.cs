@@ -46,6 +46,7 @@ namespace DMT.Pages
             plaza.BHT2 = 100;
             plaza.BHT5 = 100;
             plaza.BHT10c = 100;
+            plaza.BHT20 = 100;
             plaza.BHT50 = 100;
             plaza.BHT100 = 100;
             plaza.BHT500 = 100;
@@ -54,12 +55,12 @@ namespace DMT.Pages
 
         #region Button (Menu) Command Handlers
 
-        private void receivedFund_Click(object sender, RoutedEventArgs e)
+        private void plazaFundReceivedReturn_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 // Plaza Fund Received
-                var page = new Pages.PlazaFundReceivedPage();
+                var page = new Pages.PlazaFundReceivedReturnPage();
 
                 BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
                 Models.FundEntry fund;
@@ -67,15 +68,15 @@ namespace DMT.Pages
                 fund = new Models.FundEntry();
                 fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 fund.StaffId = "14055";
-                fund.BHT1 = 500;
-                fund.BHT2 = 500;
-                fund.BHT5 = 500;
-                fund.BHT10c = 200;
-                fund.BHT20 = 250;
-                fund.BHT50 = 100;
-                fund.BHT100 = 100;
-                fund.BHT500 = 50;
-                fund.BHT1000 = 50;
+                fund.BHT1 = 10;
+                fund.BHT2 = 10;
+                fund.BHT5 = 10;
+                fund.BHT10c = 10;
+                fund.BHT20 = 10;
+                fund.BHT50 = 10;
+                fund.BHT100 = 10;
+                fund.BHT500 = 10;
+                fund.BHT1000 = 10;
                 funds.Add(fund);
 
                 page.Setup(plaza, funds);
@@ -88,31 +89,16 @@ namespace DMT.Pages
             }
         }
 
-        private void reutrnFund_Click(object sender, RoutedEventArgs e)
+        private void exchangeBankNote_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                // Plaza Fund Received
-                var page = new Pages.PlazaFundReturnPage();
+                // Exchange Fund Page.
+                var page = new Pages.PlazaRequestExchangePage();
 
-                BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
-                Models.FundEntry fund;
+                BindingList<Models.FundExchange> items = new BindingList<Models.FundExchange>();
 
-                fund = new Models.FundEntry();
-                fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
-                fund.StaffId = "14055";
-                fund.BHT1 = 500;
-                fund.BHT2 = 500;
-                fund.BHT5 = 500;
-                fund.BHT10c = 200;
-                fund.BHT20 = 250;
-                fund.BHT50 = 100;
-                fund.BHT100 = 100;
-                fund.BHT500 = 50;
-                fund.BHT1000 = 50;
-                funds.Add(fund);
-
-                page.Setup(plaza, funds);
+                page.Setup(plaza, items);
 
                 PageContentManager.Instance.Current = page;
             }
@@ -275,19 +261,22 @@ namespace DMT.Pages
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 coupon.StaffId = "14055";
-                coupon.Count = 500;
+                coupon.Count = 10;
+                coupon.Type = "คูปอง 35 บาท";
                 coupons.Add(coupon);
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 15, 08, 50, 21);
                 coupon.StaffId = "14124";
-                coupon.Count = 200;
+                coupon.Count = 20;
+                coupon.Type = "คูปอง 35 บาท";
                 coupons.Add(coupon);
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 17, 09, 10, 42);
                 coupon.StaffId = "14211";
-                coupon.Count = 250;
+                coupon.Count = 15;
+                coupon.Type = "คูปอง 80 บาท";
                 coupons.Add(coupon);
 
                 page.Setup(coupons);
@@ -327,21 +316,24 @@ namespace DMT.Pages
                 coupon.Date = new DateTime(2020, 3, 16, 18, 50, 11);
                 coupon.StaffId = staffId;
                 coupon.Lane = 6;
-                coupon.Count = 50;
+                coupon.Count = 5;
+                coupon.Type = "คูปอง 80 บาท";
                 coupons.Add(coupon);
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 16, 23, 15, 24);
                 coupon.StaffId = staffId;
                 coupon.Lane = 2;
-                coupon.Count = 24;
+                coupon.Count = 4;
+                coupon.Type = "คูปอง 35 บาท";
                 coupons.Add(coupon);
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 17, 12, 1, 47);
                 coupon.StaffId = staffId;
                 coupon.Lane = 4;
-                coupon.Count = 20;
+                coupon.Count = 9;
+                coupon.Type = "คูปอง 80 บาท";
                 coupons.Add(coupon);
 
                 page.Setup(coupons);
@@ -377,21 +369,24 @@ namespace DMT.Pages
                 coupon.Date = new DateTime(2020, 3, 16, 18, 50, 11);
                 coupon.StaffId = staffId;
                 coupon.Lane = 6;
-                coupon.Count = 50;
+                coupon.Count = 10;
+                coupon.Type = "คูปอง 35 บาท";
                 coupons.Add(coupon);
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 16, 23, 15, 24);
                 coupon.StaffId = staffId;
                 coupon.Lane = 2;
-                coupon.Count = 24;
+                coupon.Count = 7;
+                coupon.Type = "คูปอง 80 บาท";
                 coupons.Add(coupon);
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 17, 12, 1, 47);
                 coupon.StaffId = staffId;
                 coupon.Lane = 4;
-                coupon.Count = 20;
+                coupon.Count = 8;
+                coupon.Type = "คูปอง 35 บาท";
                 coupons.Add(coupon);
 
                 page.Setup(coupons);

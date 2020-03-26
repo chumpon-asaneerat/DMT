@@ -7,6 +7,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel Margin="5">
+        <Border DockPanel.Dock="Left"
+                BorderThickness="1"
+                BorderBrush="Silver">
+            <ctrl:CouponUsageEntry x:Name="plaza"
+                                   FontSize="16"
+                                   Width="250"
+                                   Background="Orange"
+                                   Foreground="WhiteSmoke"/>
+        </Border>
         <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom">
             <Border BorderBrush="Silver" 
                     BorderThickness="1"
@@ -93,6 +102,21 @@
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    Width="150"
+                                   Text="ประเภทคูปอง" />
+                        <ComboBox x:Name="cbCouponTypes" 
+                                  ItemsSource="{Binding}"
+                                  FontSize="20"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  HorizontalContentAlignment="Center"
+                                  VerticalContentAlignment="Center"
+                                  Width="200"/>
+                        <Grid Height="50" Width="10" />
+                        <TextBlock FontSize="20"
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Width="150"
                                    Text="จำนวนเล่ม" />
                         <TextBox FontSize="20"
                                  HorizontalAlignment="Center"
@@ -100,7 +124,7 @@
                                  HorizontalContentAlignment="Center"
                                  VerticalContentAlignment="Center"
                                  Width="200"
-                                 Text="1000"/>
+                                 Text="10"/>
                         <Button Content="บันทึก" 
                                 x:Name="cmdAppend"
                                 Margin="5"

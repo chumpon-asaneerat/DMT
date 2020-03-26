@@ -55,6 +55,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\TA\RequestExchangeView.xaml.cs">
+      <DependentUpon>RequestExchangeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TOD\EMVEntry.xaml.cs">
       <DependentUpon>EMVEntry.xaml</DependentUpon>
     </Compile>
@@ -131,8 +134,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Windows\FundBorrowReturnWindow.xaml.cs">
+      <DependentUpon>FundBorrowReturnWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\FundBorrowWindow.xaml.cs">
       <DependentUpon>FundBorrowWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\FundExchangeWindow.xaml.cs">
+      <DependentUpon>FundExchangeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\FundReturnWindow.xaml.cs">
       <DependentUpon>FundReturnWindow.xaml</DependentUpon>
@@ -161,6 +170,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\TA\RequestExchangeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TOD\EMVEntry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -249,13 +262,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\FundBorrowReturnWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\FundBorrowWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\FundExchangeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\FundReturnWindow.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Resource Include="Styles\Common\TextBlockStyles.xaml">
       <SubType>Designer</SubType>

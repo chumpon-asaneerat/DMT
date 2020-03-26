@@ -93,6 +93,21 @@
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    Width="150"
+                                   Text="ประเภทคูปอง" />
+                        <ComboBox x:Name="cbCouponTypes" 
+                                  ItemsSource="{Binding}"
+                                  FontSize="20"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  HorizontalContentAlignment="Center"
+                                  VerticalContentAlignment="Center"
+                                  Width="200"/>
+                        <Grid Height="50" Width="10" />
+                        <TextBlock FontSize="20"
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Width="150"
                                    Text="จำนวนเล่ม" />
                         <TextBox FontSize="20"
                                  HorizontalAlignment="Center"

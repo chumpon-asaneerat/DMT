@@ -289,6 +289,7 @@ namespace DMT.Models
         public string StaffId { get; set; }
         public int Lane { get; set; }
         public int Count { get; set; }
+        public string Type { get; set; }
         public DateTime Date { get; set; }
         public string DateString
         {

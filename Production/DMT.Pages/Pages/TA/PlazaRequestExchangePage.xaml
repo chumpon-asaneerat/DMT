@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="DMT.Pages.PlazaFundReturnPage"
+﻿<UserControl x:Class="DMT.Pages.PlazaRequestExchangePage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,12 +7,47 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel Margin="5">
+        <Border DockPanel.Dock="Left"
+                BorderThickness="1"
+                BorderBrush="Silver">
+            <DockPanel Width="250">
+                <Border Background="DimGray"
+                        DockPanel.Dock="Top"
+                        BorderThickness="1"
+                        BorderBrush="Silver">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="2"
+                                   FontSize="18"
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"
+                                   Text="Balance:"
+                                   Width="100"/>
+                        <TextBlock Margin="2"
+                                   x:Name="plazaBalance"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"
+                                   Text="0"
+                                   Width="200"/>
+                    </StackPanel>
+                </Border>
+                <ctrl:FundEntry x:Name="plaza"
+                                FontSize="16"
+                                Background="Orange"
+                                Foreground="WhiteSmoke"/>
+            </DockPanel>
+        </Border>
         <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom">
             <Border BorderBrush="Silver" 
                     BorderThickness="1"
                     Background="Silver">
                 <DockPanel>
-                    <Button x:Name="cmdAppend" 
+                    <Button x:Name="cmdRequest" 
                             DockPanel.Dock="Left"
                             Margin="2"
                             FontSize="18"
@@ -20,10 +55,10 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="คืนเงินยืม-ทอน"
+                            Content="Request Exchange"
                             Height="45"
                             Width="200"
-                            Click="cmdAppend_Click"/>
+                            Click="cmdRequest_Click"/>
                     <Button x:Name="cmdCancel" 
                             DockPanel.Dock="Right"
                             Margin="2"
@@ -47,12 +82,12 @@
                 <TextBlock FontSize="18"
                            Foreground="WhiteSmoke"
                            Margin="5"
-                           Text="ข้อมูลการคืนเงินยืม-ทอน"                           
+                           Text="สถานะการ Request Exchange"                           
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"/>
             </Border>
             <Grid>
-                <ctrl:FundPlazaView x:Name="grid"></ctrl:FundPlazaView>
+                <ctrl:RequestExchangeView x:Name="grid"></ctrl:RequestExchangeView>
             </Grid>
         </StackPanel>
     </DockPanel>

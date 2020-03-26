@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="DMT.Controls.CouponPlazaView"
+﻿<UserControl x:Class="DMT.Controls.RequestExchangeView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -19,12 +19,19 @@
                     <GridViewColumn Header="รหัสพนักงาน" 
                                     DisplayMemberBinding="{Binding Path=StaffId}" 
                                     Width="150"/>
-                    <GridViewColumn Header="ประเภทคูปอง" 
-                                    DisplayMemberBinding="{Binding Path=Type}" 
+                    <GridViewColumn Header="จำนวนเงิน" 
+                                    DisplayMemberBinding="{Binding Path=BHTTotal}" 
                                     Width="150"/>
-                    <GridViewColumn Header="จำนวนเล่ม" 
-                                    DisplayMemberBinding="{Binding Path=Count}" 
+                    <GridViewColumn Header="สถานะ" 
+                                    DisplayMemberBinding="{Binding Path=Status}" 
                                     Width="150"/>
+                    <GridViewColumn Header="View" Width="200">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="View" Click="Button_Click" CommandParameter="{Binding}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

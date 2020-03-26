@@ -293,6 +293,196 @@ namespace DMT.Models
 
 	#endregion
 
+	#region CouponEntry
+
+	/// <summary>
+	/// The CouponEntry Class.
+	/// </summary>
+	public class CouponEntry : INotifyPropertyChanged
+	{
+		#region Internal Variables
+
+		private string _desc = "";
+		private string _bagNo = "";
+		private int _BHT30 = 0;
+		private int _BHT35 = 0;
+		private int _BHT75 = 0;
+		private int _BHT80 = 0;
+		private decimal _CntTotal = 0;
+		private decimal _BHTTotal = 0;
+
+		#endregion
+
+		#region Constructor and Destructor
+
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		public CouponEntry() : base() { }
+		/// <summary>
+		/// Destructor.
+		/// </summary>
+		~CouponEntry() { }
+
+		#endregion
+
+		#region Private Methods
+
+		private void CalcTotal()
+		{
+			int cnt = 0;
+			cnt += _BHT30;
+			cnt += _BHT35;
+			cnt += _BHT75;
+			cnt += _BHT80;
+			_CntTotal = cnt;
+
+			// Raise event.
+			PropertyChanged.Call(this, new PropertyChangedEventArgs("CntTotal"));
+
+			decimal total = 0;
+			total += _BHT30 * 30;
+			total += _BHT35 * 35;
+			total += _BHT75 * 75;
+			total += _BHT80 * 80;
+
+			_BHTTotal = total;
+			// Raise event.
+			PropertyChanged.Call(this, new PropertyChangedEventArgs("BHTTotal"));
+		}
+
+		#endregion
+
+		#region Public Properties
+
+		public string Description
+		{
+			get { return _desc; }
+			set
+			{
+				if (_desc != value)
+				{
+					_desc = value;
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("Description"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets bag number.
+		/// </summary>
+		public string BagNo
+		{
+			get { return _bagNo; }
+			set
+			{
+				if (_bagNo != value)
+				{
+					_bagNo = value;
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("BagNo"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets number of 30 BHT coupon.
+		/// </summary>
+		public int BHT30
+		{
+			get { return _BHT30; }
+			set
+			{
+				if (_BHT30 != value)
+				{
+					_BHT30 = value;
+					CalcTotal();
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT30"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets number of 35 BHT coupon.
+		/// </summary>
+		public int BHT35
+		{
+			get { return _BHT35; }
+			set
+			{
+				if (_BHT35 != value)
+				{
+					_BHT35 = value;
+					CalcTotal();
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT35"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets number of 75 BHT coupon.
+		/// </summary>
+		public int BHT75
+		{
+			get { return _BHT75; }
+			set
+			{
+				if (_BHT75 != value)
+				{
+					_BHT75 = value;
+					CalcTotal();
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT75"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets number of 80 BHT coupon.
+		/// </summary>
+		public int BHT80
+		{
+			get { return _BHT80; }
+			set
+			{
+				if (_BHT80 != value)
+				{
+					_BHT80 = value;
+					CalcTotal();
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT80"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets total coupon count (all type).
+		/// </summary>
+		public decimal CntTotal
+		{
+			get { return _CntTotal; }
+			set { }
+		}
+		/// <summary>
+		/// Gets or sets total value in baht.
+		/// </summary>
+		public decimal BHTTotal
+		{
+			get { return _BHTTotal; }
+			set { }
+		}
+
+		#endregion
+
+		#region Public Events
+
+		/// <summary>
+		/// The PropertyChanged event.
+		/// </summary>
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		#endregion
+	}
+
+	#endregion
+
 	#region RevenueEntry
 
 	/// <summary>
@@ -305,6 +495,7 @@ namespace DMT.Models
 		private BagEntry _traffic = null;
 		private BagEntry _coupon = null;
 		private BagEntry _other = null;
+		private CouponEntry _couponUsage = null;
 		private decimal _grandTotal = 0;
 
 		#endregion
@@ -325,12 +516,19 @@ namespace DMT.Models
 			_other = new BagEntry();
 			_other.Description = "รายได้อื่น";
 			_other.PropertyChanged += _other_PropertyChanged;
+
+			_couponUsage = new CouponEntry();
+			_couponUsage.Description = "การใช้คูปอง";
+			_couponUsage.PropertyChanged += _couponUsage_PropertyChanged;
 		}
+
 		/// <summary>
 		/// Destructor.
 		/// </summary>
 		~RevenueEntry()
 		{
+			_couponUsage.PropertyChanged -= _other_PropertyChanged;
+			_couponUsage = null;
 			_other.PropertyChanged -= _other_PropertyChanged;
 			_other = null;
 			_coupon.PropertyChanged -= _coupon_PropertyChanged;
@@ -359,6 +557,11 @@ namespace DMT.Models
 			CalcGrandTotal();			
 		}
 
+		private void _couponUsage_PropertyChanged(object sender, PropertyChangedEventArgs e)
+		{
+
+		}
+
 		private void CalcGrandTotal() 
 		{
 			decimal total = 0;
@@ -384,6 +587,10 @@ namespace DMT.Models
 		/// Gets Coupon bag entry.
 		/// </summary>
 		public BagEntry Coupon { get { return _coupon; } }
+		/// <summary>
+		/// Gets Coupon Usage entry.
+		/// </summary>
+		public CouponEntry CouponUsage { get { return _couponUsage; } }
 		/// <summary>
 		/// Gets Other bag entry.
 		/// </summary>
@@ -667,6 +874,109 @@ namespace DMT.Models
 			{
 				var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToString("HH:mm:ss.fff");
 				return ret;
+			}
+			set { }
+		}
+
+		#endregion
+
+		#region Public Events
+
+		/// <summary>
+		/// The PropertyChanged event.
+		/// </summary>
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		#endregion
+	}
+
+	#endregion
+
+	#region FundExchange
+
+	/// <summary>
+	/// The FundExchange class.
+	/// </summary>
+	public class FundExchange
+	{
+		#region Internal Variable
+
+		#endregion
+
+		#region Constructor and Destructor
+
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		public FundExchange() : base()
+		{
+			this.Date = DateTime.MinValue;
+		}
+		/// <summary>
+		/// Destructor.
+		/// </summary>
+		~FundExchange() 
+		{
+		}
+
+		#endregion
+
+		#region Private Methods
+
+		#endregion
+
+		#region Public Methods
+
+		public void Raise(string name)
+		{
+			PropertyChanged.Call(this, new PropertyChangedEventArgs(name));
+		}
+
+		public void Calculate()
+		{
+			if (null != Plaza && null != Request && null != Exchange && null != Result)
+			{
+
+			}
+		}
+
+		#endregion
+
+		#region Public Properties
+
+		public string StaffId { get; set; }
+		public string Status { get; set; }
+		public DateTime Date { get; set; }
+
+		public FundEntry Plaza { get; set; }
+		public FundEntry Request { get; set; }
+		public FundEntry Exchange { get; set; }
+		public FundEntry Result { get; set; }
+
+		public string DateString
+		{
+			get
+			{
+				var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToString("dd/MM/yyyy");
+				return ret;
+			}
+			set { }
+		}
+		public string TimeString
+		{
+			get
+			{
+				var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToString("HH:mm:ss.fff");
+				return ret;
+			}
+			set { }
+		}
+
+		public decimal BHTTotal
+		{
+			get
+			{
+				return (null != Request) ? Request.BHTTotal : 0;
 			}
 			set { }
 		}

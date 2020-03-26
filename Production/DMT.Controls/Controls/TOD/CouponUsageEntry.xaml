@@ -31,29 +31,73 @@
                 <StackPanel Orientation="Vertical" Margin="10 5 10 5">
                     <!-- Seperator -->
                     <Grid Height="5"/>
-                    <!-- Total Count (Book) -->
+                    <!-- 30 BHT -->
                     <DockPanel Margin="5 0 5 0">
                         <TextBlock Margin="2"
                                DockPanel.Dock="Left" 
                                TextAlignment="Right"
-                               Text="จำนวน (ฉบับ)"
+                               Text="30 BHT"
                                Width="110"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"
-                             Text=""/>
+                             Text="{Binding BHT30}"/>
                     </DockPanel>
-                    <!-- Total BHT -->
+                    <!-- 35 BHT -->
+                    <DockPanel Margin="5 0 5 0">
+                        <TextBlock Margin="2"
+                               DockPanel.Dock="Left" 
+                               TextAlignment="Right"
+                               Text="35 BHT"
+                               Width="110"/>
+                        <TextBox Margin="2"
+                             TextAlignment="Right"
+                             Text="{Binding BHT35}"/>
+                    </DockPanel>
+                    <!-- 75 BHT -->
+                    <DockPanel Margin="5 0 5 0">
+                        <TextBlock Margin="2" 
+                               DockPanel.Dock="Left"  
+                               TextAlignment="Right" 
+                               Text="75 BHT" 
+                               Width="110"/>
+                        <TextBox Margin="2"
+                             TextAlignment="Right"
+                             Text="{Binding BHT75}"/>
+                    </DockPanel>
+                    <!-- 80 BHT -->
                     <DockPanel Margin="5 0 5 0">
                         <TextBlock Margin="2" 
                             DockPanel.Dock="Left"  
                             TextAlignment="Right" 
-                            Text="Total BHT" 
+                            Text="80 BHT" 
                             Width="110"/>
                         <TextBox Margin="2"
                             TextAlignment="Right"
-                             IsReadOnly="True"
-                            Text=""/>
+                            Text="{Binding BHT80}"/>
 
+                    </DockPanel>
+                    <!-- Count Total -->
+                    <DockPanel Margin="5 0 5 0">
+                        <TextBlock Margin="2" 
+                            DockPanel.Dock="Left"  
+                            TextAlignment="Right" 
+                            Text="Total Count" 
+                            Width="110"/>
+                        <TextBox Margin="2"
+                            TextAlignment="Right"
+                            Text="{Binding CntTotal}"/>
+
+                    </DockPanel>
+                    <!-- Total BHT -->
+                    <DockPanel Margin="5 0 5 0">
+                        <TextBlock Margin="2"
+                               DockPanel.Dock="Left" 
+                               TextAlignment="Right"
+                               Text="Total BHT"
+                               Width="110"/>
+                        <TextBox Margin="2"
+                             TextAlignment="Right"
+                             Text="{Binding BHTTotal}"/>
                     </DockPanel>
                     <Grid Height="5"/>
                     <!-- Remark -->
