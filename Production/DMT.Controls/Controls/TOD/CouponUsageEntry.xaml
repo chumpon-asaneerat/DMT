@@ -36,7 +36,7 @@
                         <TextBlock Margin="2"
                                DockPanel.Dock="Left" 
                                TextAlignment="Right"
-                               Text="30 BHT"
+                               Text="30 บาท"
                                Width="140"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"
@@ -47,7 +47,7 @@
                         <TextBlock Margin="2"
                                DockPanel.Dock="Left" 
                                TextAlignment="Right"
-                               Text="35 BHT"
+                               Text="35 บาท"
                                Width="140"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"
@@ -58,7 +58,7 @@
                         <TextBlock Margin="2" 
                                DockPanel.Dock="Left"  
                                TextAlignment="Right" 
-                               Text="75 BHT" 
+                               Text="75 บาท" 
                                Width="140"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"
@@ -69,7 +69,7 @@
                         <TextBlock Margin="2" 
                             DockPanel.Dock="Left"  
                             TextAlignment="Right" 
-                            Text="80 BHT" 
+                            Text="80 บาท" 
                             Width="140"/>
                         <TextBox Margin="2"
                             TextAlignment="Right"
@@ -91,7 +91,7 @@
                         <TextBlock Margin="2" 
                             DockPanel.Dock="Left"  
                             TextAlignment="Right" 
-                            Text="Total Count" 
+                            Text="จำนวนรวม" 
                             Width="140"/>
                         <TextBox Margin="2"
                             TextAlignment="Right"
@@ -103,7 +103,7 @@
                         <TextBlock Margin="2"
                                DockPanel.Dock="Left" 
                                TextAlignment="Right"
-                               Text="Total BHT"
+                               Text="ยอดรวม (บาท)"
                                Width="140"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"

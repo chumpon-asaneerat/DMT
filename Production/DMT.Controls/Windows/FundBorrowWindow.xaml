@@ -27,7 +27,7 @@
                                VerticalAlignment="Center"
                                TextAlignment="Right"
                                Foreground="WhiteSmoke"
-                               Text="Collector ID:"
+                               Text="รหัสพนักงาน:"
                                Width="150"/>
                     <Grid Width="5"/>
                     <TextBox x:Name="txtStaffId"
@@ -41,7 +41,7 @@
                                VerticalAlignment="Center"
                                TextAlignment="Right"
                                Foreground="WhiteSmoke"
-                               Text="Name:"
+                               Text="ชื่อพนักงาน:"
                                Width="100"/>
                     <Grid Width="5"/>
                     <TextBox x:Name="txtName"

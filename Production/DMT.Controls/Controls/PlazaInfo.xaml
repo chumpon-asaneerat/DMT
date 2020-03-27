@@ -79,13 +79,13 @@
                                 VerticalAlignment="Center"
                                 TextAlignment="Center"
                                 FontSize="18"
-                                Text="Plaza Code: 01"/>
+                                Text="รหัสด่าน: 01"/>
                         <TextBlock Foreground="WhiteSmoke"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
                                 TextAlignment="Center"
                                 FontSize="18"
-                                Text="Plaza Name: Din Daeng"/>
+                                Text="ชื่อด่าน: ดินแดง"/>
                     </DockPanel>
                 </Border>
                 <Border BorderBrush="Silver"
@@ -144,13 +144,13 @@
                                 VerticalAlignment="Center"
                                 TextAlignment="Center"
                                 FontSize="18"
-                                Text="ID: 14023"/>
+                                Text="รหัสหัวหน้าด่าน: 14023"/>
                         <TextBlock Foreground="WhiteSmoke"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
                                 TextAlignment="Center"
                                 FontSize="18"
-                                Text="นาย ศิระ ทรงศรีชาติ"/>
+                                Text="หัวหน้าด่าน: นาย ศิระ ทรงศรีชาติ"/>
                     </DockPanel>
                 </Border>
             </Grid>

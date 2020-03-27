@@ -34,9 +34,9 @@
                             <GridView>
                                 <GridViewColumn Header="Approval Code" 
                                     Width="150"/>
-                                <GridViewColumn Header="Date" 
+                                <GridViewColumn Header="วันที่" 
                                     Width="150"/>
-                                <GridViewColumn Header="Amount" 
+                                <GridViewColumn Header="จำนวนเงิน" 
                                     Width="150"/>
                             </GridView>
                         </ListView.View>

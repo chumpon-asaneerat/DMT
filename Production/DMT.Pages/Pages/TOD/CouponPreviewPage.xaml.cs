@@ -30,15 +30,15 @@ namespace DMT.Pages
 
         private void cmdCancel_Click(object sender, RoutedEventArgs e)
         {
-            // Main Menu Page
-            var page = new Pages.TODMainPage();
+            // Main Report Page
+            var page = new Pages.TODReportMenu();
             PageContentManager.Instance.Current = page;
         }
 
         private void cmdOk_Click(object sender, RoutedEventArgs e)
         {
-            // Main Menu Page
-            var page = new Pages.TODMainPage();
+            // Main Report Page
+            var page = new Pages.TODReportMenu();
             PageContentManager.Instance.Current = page;
         }
     }

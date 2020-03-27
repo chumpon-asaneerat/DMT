@@ -175,7 +175,7 @@
                                        HorizontalAlignment="Center"
                                        TextAlignment="Center"
                                        TextWrapping="Wrap"
-                                       Text="Main Menu"/>
+                                       Text="กลับสู่หน้าจอหลัก"/>
                         <Grid Height="10" />
                         <TextBlock FontSize="14"
                                        HorizontalAlignment="Center"
