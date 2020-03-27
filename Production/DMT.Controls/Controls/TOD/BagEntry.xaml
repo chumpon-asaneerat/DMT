@@ -170,7 +170,7 @@
                                 Margin="10 5 10 5"
                                 HorizontalAlignment="Stretch"
                                 VerticalAlignment="Center">
-                        <TextBlock Text="Remark"
+                        <TextBlock Text="หมายเหตุ"
                                    FontSize="16"
                                    TextAlignment="Left"
                                    Foreground="WhiteSmoke"/>
