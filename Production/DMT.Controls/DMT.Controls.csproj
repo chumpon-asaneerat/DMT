@@ -134,17 +134,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Windows\Emuns.cs" />
     <Compile Include="Windows\FundBorrowReturnWindow.xaml.cs">
       <DependentUpon>FundBorrowReturnWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\FundBorrowWindow.xaml.cs">
       <DependentUpon>FundBorrowWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\FundExchangeWindow.xaml.cs">
-      <DependentUpon>FundExchangeWindow.xaml</DependentUpon>
+    <Compile Include="Windows\FundRequestExchangeWindow.xaml.cs">
+      <DependentUpon>FundRequestExchangeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\FundReturnWindow.xaml.cs">
       <DependentUpon>FundReturnWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\FundUpdateExchangeWindow.xaml.cs">
+      <DependentUpon>FundUpdateExchangeWindow.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -270,13 +274,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Windows\FundExchangeWindow.xaml">
+    <Page Include="Windows\FundRequestExchangeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\FundReturnWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\FundUpdateExchangeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Resource Include="Styles\Common\TextBlockStyles.xaml">
       <SubType>Designer</SubType>

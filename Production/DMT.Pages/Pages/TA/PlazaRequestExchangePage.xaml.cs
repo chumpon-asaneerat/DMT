@@ -31,6 +31,25 @@ namespace DMT.Pages
 
         private void cmdRequest_Click(object sender, RoutedEventArgs e)
         {
+            var win = new Windows.FundRequestExchangeWindow();
+            win.Owner = Application.Current.MainWindow;
+
+            var obj = Models.FundExchange.CreateNewRequest(_plaza, "14055", 0);
+
+            win.Title = "คำร้องขอการแลกเปลี่ยนเงิน";
+            win.Setup(Windows.ExchangeWindowMode.New, obj);
+            if (win.ShowDialog() == false)
+            {
+                return;
+            }
+
+            if (win.Mode == Windows.ExchangeWindowMode.New)
+            {
+                // append item.
+                _items.Add(obj);
+            }
+
+            /*
             Windows.FundExchangeWindow win = new Windows.FundExchangeWindow();
             win.Owner = Application.Current.MainWindow;
 
@@ -67,6 +86,7 @@ namespace DMT.Pages
             }
             // append item.
             _items.Add(obj);
+            */
         }
 
         private void cmdCancel_Click(object sender, RoutedEventArgs e)
@@ -74,11 +94,6 @@ namespace DMT.Pages
             // Main Menu Page
             var page = new Pages.TAMainPage();
             PageContentManager.Instance.Current = page;
-        }
-
-        private void UpdateResult()
-        {
-
         }
 
         private Models.FundEntry _plaza;
@@ -91,8 +106,6 @@ namespace DMT.Pages
 
             this.plaza.DataContext = _plaza;
             this.grid.Setup(_plaza, _items);
-
-            UpdateResult();
         }
     }
 }

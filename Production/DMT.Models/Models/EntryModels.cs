@@ -921,6 +921,8 @@ namespace DMT.Models
 	{
 		#region Internal Variable
 
+		private int _statusId = 0;
+
 		#endregion
 
 		#region Constructor and Destructor
@@ -931,6 +933,7 @@ namespace DMT.Models
 		public FundExchange() : base()
 		{
 			this.Date = DateTime.MinValue;
+			this.IsEditing = false;
 		}
 		/// <summary>
 		/// Destructor.
@@ -941,16 +944,7 @@ namespace DMT.Models
 
 		#endregion
 
-		#region Private Methods
-
-		#endregion
-
 		#region Public Methods
-
-		public void Raise(string name)
-		{
-			PropertyChanged.Call(this, new PropertyChangedEventArgs(name));
-		}
 
 		public void Calculate()
 		{
@@ -965,7 +959,42 @@ namespace DMT.Models
 		#region Public Properties
 
 		public string StaffId { get; set; }
-		public string Status { get; set; }
+
+		public int StatusId {
+			get { return _statusId; }
+			set
+			{
+				if (_statusId != value)
+				{
+					_statusId = value;
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("StatusId"));
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("Status"));
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("CanEdit"));
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("CanExchange"));
+				}
+			}
+		}
+		public string Status 
+		{
+			get 
+			{
+				var str = "รออนุมัติ";
+				if (_statusId > 0) str = "อนุมัติแล้ว";
+				return str;
+			} 
+			set { }
+		}
+		public bool IsEditing { get; set; }
+		public bool CanEdit
+		{
+			get { return (_statusId == 0); }
+			set { }
+		}
+		public bool CanExchange
+		{
+			get { return (_statusId > 0); }
+			set { }
+		}
 		public DateTime Date { get; set; }
 
 		public FundEntry Plaza { get; set; }
@@ -1009,6 +1038,47 @@ namespace DMT.Models
 		/// The PropertyChanged event.
 		/// </summary>
 		public event PropertyChangedEventHandler PropertyChanged;
+
+		#endregion
+
+		#region Static Methods
+
+		/// <summary>
+		/// Create New Request Exchange Item.
+		/// </summary>
+		/// <param name="plaza"></param>
+		/// <param name="staffId"></param>
+		/// <param name="statusId"></param>
+		/// <returns></returns>
+		public static Models.FundExchange CreateNewRequest(
+			Models.FundEntry plaza, string staffId, int statusId)
+		{
+			DateTime dt = DateTime.Now;
+			Models.FundExchange obj = new Models.FundExchange();
+			obj.StaffId = staffId;
+			obj.Date = dt;
+			obj.StatusId = statusId;
+
+			obj.Plaza = plaza;
+			obj.Plaza.Description = "ธนบัตร/เหรียญ ปัจจุบัน";
+
+			obj.Request = new Models.FundEntry();
+			obj.Request.Description = "ธนบัตร/เหรียญ ที่ขอ";
+			obj.Request.StaffId = staffId;
+			obj.Request.Date = dt;
+
+			obj.Exchange = new Models.FundEntry();
+			obj.Exchange.Description = "จ่ายออก ธนบัตร/เหรียญ";
+			obj.Exchange.StaffId = staffId;
+			obj.Exchange.Date = dt;
+
+			obj.Result = new Models.FundEntry();
+			obj.Result.Description = "ยอดรวมคงเหลือ";
+			obj.Result.StaffId = staffId;
+			obj.Result.Date = dt;
+
+			return obj;
+		}
 
 		#endregion
 	}
