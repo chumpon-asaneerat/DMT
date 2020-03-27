@@ -22,7 +22,7 @@
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    TextAlignment="Center"
-                                   Text="Balance:"
+                                   Text="ยอดคงเหลือ"
                                    Width="100"/>
                         <TextBlock Margin="2"
                                    x:Name="plazaBalance"
@@ -55,9 +55,9 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="Request Exchange"
+                            Content="ส่งคำร้องขอการแลกเปลี่ยนเงิน"
                             Height="45"
-                            Width="200"
+                            Width="250"
                             Click="cmdRequest_Click"/>
                     <Button x:Name="cmdCancel" 
                             DockPanel.Dock="Right"
@@ -69,7 +69,7 @@
                             VerticalContentAlignment="Center"
                             Content="กลับสู่หน้าจอหลัก"
                             Height="45"
-                            Width="200"
+                            Width="250"
                             Click="cmdCancel_Click"/>
                     <Grid />
                 </DockPanel>
@@ -82,7 +82,7 @@
                 <TextBlock FontSize="18"
                            Foreground="WhiteSmoke"
                            Margin="5"
-                           Text="สถานะการ Request Exchange"                           
+                           Text="สถานะการร้องขอการแลกเปลี่ยนเงิน"                 
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"/>
             </Border>

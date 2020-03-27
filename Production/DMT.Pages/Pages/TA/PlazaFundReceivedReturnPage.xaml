@@ -22,7 +22,7 @@
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    TextAlignment="Center"
-                                   Text="Balance:"
+                                   Text="ยอดคงเหลือ"
                                    Width="100"/>
                         <TextBlock Margin="2"
                                    x:Name="plazaBalance"

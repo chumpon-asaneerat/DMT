@@ -45,12 +45,12 @@ namespace DMT.Pages
             obj.Plaza.Description = "ยอดเงินยืม-ทอน (ด่าน)";
 
             obj.Request = new Models.FundEntry();
-            obj.Request.Description = "Request Exchange";
+            obj.Request.Description = "ประเภทเงินยืมทอนที่ขอเปลี่ยน";
             obj.Request.StaffId = "14055";
             obj.Request.Date = dt;
 
             obj.Exchange = new Models.FundEntry();
-            obj.Exchange.Description = "Exchange With";
+            obj.Exchange.Description = "ประเภทเงินยืมทอนที่ขอแลก";
             obj.Exchange.StaffId = "14055";
             obj.Exchange.Date = dt;
 

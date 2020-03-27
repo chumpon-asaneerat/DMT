@@ -308,6 +308,7 @@ namespace DMT.Models
 		private int _BHT35 = 0;
 		private int _BHT75 = 0;
 		private int _BHT80 = 0;
+		private int _FreePass = 0;
 		private decimal _CntTotal = 0;
 		private decimal _BHTTotal = 0;
 
@@ -335,6 +336,7 @@ namespace DMT.Models
 			cnt += _BHT35;
 			cnt += _BHT75;
 			cnt += _BHT80;
+			cnt += _FreePass;
 			_CntTotal = cnt;
 
 			// Raise event.
@@ -345,6 +347,7 @@ namespace DMT.Models
 			total += _BHT35 * 35;
 			total += _BHT75 * 75;
 			total += _BHT80 * 80;
+			total += _FreePass * 0;
 
 			_BHTTotal = total;
 			// Raise event.
@@ -449,6 +452,23 @@ namespace DMT.Models
 					CalcTotal();
 					// Raise event.
 					PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT80"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets number of FreePass.
+		/// </summary>
+		public int FreePass
+		{
+			get { return _FreePass; }
+			set
+			{
+				if (_FreePass != value)
+				{
+					_FreePass = value;
+					CalcTotal();
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("FreePass"));
 				}
 			}
 		}

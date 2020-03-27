@@ -37,7 +37,7 @@
                                DockPanel.Dock="Left" 
                                TextAlignment="Right"
                                Text="30 BHT"
-                               Width="110"/>
+                               Width="140"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"
                              Text="{Binding BHT30}"/>
@@ -48,7 +48,7 @@
                                DockPanel.Dock="Left" 
                                TextAlignment="Right"
                                Text="35 BHT"
-                               Width="110"/>
+                               Width="140"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"
                              Text="{Binding BHT35}"/>
@@ -59,7 +59,7 @@
                                DockPanel.Dock="Left"  
                                TextAlignment="Right" 
                                Text="75 BHT" 
-                               Width="110"/>
+                               Width="140"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"
                              Text="{Binding BHT75}"/>
@@ -70,11 +70,21 @@
                             DockPanel.Dock="Left"  
                             TextAlignment="Right" 
                             Text="80 BHT" 
-                            Width="110"/>
+                            Width="140"/>
                         <TextBox Margin="2"
                             TextAlignment="Right"
                             Text="{Binding BHT80}"/>
-
+                    </DockPanel>
+                    <!-- Card Count -->
+                    <DockPanel Margin="5 0 5 0">
+                        <TextBlock Margin="2" 
+                            DockPanel.Dock="Left"  
+                            TextAlignment="Right"
+                            Text="บัตรอนุญาตผ่านทาง" 
+                            Width="140"/>
+                        <TextBox Margin="2"
+                            TextAlignment="Right"
+                            Text="{Binding FreePass}"/>
                     </DockPanel>
                     <!-- Count Total -->
                     <DockPanel Margin="5 0 5 0">
@@ -82,7 +92,7 @@
                             DockPanel.Dock="Left"  
                             TextAlignment="Right" 
                             Text="Total Count" 
-                            Width="110"/>
+                            Width="140"/>
                         <TextBox Margin="2"
                             TextAlignment="Right"
                             Text="{Binding CntTotal}"/>
@@ -94,7 +104,7 @@
                                DockPanel.Dock="Left" 
                                TextAlignment="Right"
                                Text="Total BHT"
-                               Width="110"/>
+                               Width="140"/>
                         <TextBox Margin="2"
                              TextAlignment="Right"
                              Text="{Binding BHTTotal}"/>

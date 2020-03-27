@@ -51,7 +51,7 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="Exchange"
+                            Content="แลกเปลี่ยนเงิน"
                             Height="45"
                             Width="150"
                             Click="cmdExchangeRequest_Click"/>

@@ -50,7 +50,7 @@
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
                                            TextAlignment="Center">
-                                    <Run Text="Balance: " />
+                                    <Run Text="ยืมแล้ว" />
                                     <Run Text="{Binding Path=BHTTotal, StringFormat={}{0:N0}}" />
                                 </TextBlock>
                                 <StackPanel Orientation="Horizontal"
