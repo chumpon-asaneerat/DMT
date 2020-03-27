@@ -41,7 +41,8 @@ namespace DMT.Pages
             obj.Status = "รออนุมัติ";
 
             obj.Plaza = _plaza;
-            obj.Plaza.Description = "ยอดก่อนยืม";
+            //obj.Plaza.Description = "ยอดก่อนยืม";
+            obj.Plaza.Description = "ยอดเงินยืม-ทอน (ด่าน)";
 
             obj.Request = new Models.FundEntry();
             obj.Request.Description = "Request Exchange";
@@ -54,7 +55,7 @@ namespace DMT.Pages
             obj.Exchange.Date = dt;
 
             obj.Result = new Models.FundEntry();
-            obj.Result.Description = "ยอดรวม";
+            obj.Result.Description = "ยอดรวมคงเหลือ";
             obj.Result.StaffId = "14055";
             obj.Result.Date = dt;
 

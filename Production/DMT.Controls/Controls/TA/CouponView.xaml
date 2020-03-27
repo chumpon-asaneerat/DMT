@@ -19,9 +19,11 @@
                     <GridViewColumn Header="รหัสพนักงาน" 
                                     DisplayMemberBinding="{Binding Path=StaffId}" 
                                     Width="150"/>
+                    <!--
                     <GridViewColumn Header="เลน" 
                                     DisplayMemberBinding="{Binding Path=Lane}" 
                                     Width="150"/>
+                    -->
                     <GridViewColumn Header="ประเภทคูปอง" 
                                     DisplayMemberBinding="{Binding Path=Type}" 
                                     Width="150"/>
