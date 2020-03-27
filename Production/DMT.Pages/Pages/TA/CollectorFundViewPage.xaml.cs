@@ -36,6 +36,49 @@ namespace DMT.Pages
             Calculate();
         }
 
+        private void addCollector_Click(object sender, RoutedEventArgs e)
+        {
+            var win = new Windows.FundBorrowWindow();
+
+            Models.FundEntry fund = new Models.FundEntry();
+
+            Models.FundEntry src = new Models.FundEntry();
+            Models.FundEntry obj = new Models.FundEntry();
+            Models.FundEntry ret = new Models.FundEntry();
+
+            assign(fund, src);
+
+            _current.Description = "ยอดที่สามารถยืมได้";
+
+            src.Description = "ยอดยืมปัจจุบัน";
+            obj.Description = "ยืมเงิน";
+            ret.Description = "ยอดเด่านคงเหลือ";
+
+            win.Owner = Application.Current.MainWindow;
+            win.Title = fund.Description;
+
+            win.Setup(_current, src, obj, ret, true);
+
+            if (win.ShowDialog() == false)
+            {
+                return;
+            }
+
+            if (win.StaffId != String.Empty && win.CollectorName != String.Empty)
+            {
+                obj.StaffId = win.StaffId;
+                obj.Description = win.CollectorName;
+                obj.Lane = 1;
+                obj.Date = DateTime.Now;
+
+                _funds.Add(obj);
+
+                BorrowFund(fund, obj);
+
+                Calculate();
+            }
+        }
+
         private void cmdCancel_Click(object sender, RoutedEventArgs e)
         {
             // Main Menu Page
@@ -46,6 +89,20 @@ namespace DMT.Pages
         private Models.FundEntry _plaza;
         private Models.FundEntry _current = new Models.FundEntry();
         private BindingList<Models.FundEntry> _funds;
+
+
+        private void BorrowFund(Models.FundEntry src, Models.FundEntry dst)
+        {
+            src.BHT1 += dst.BHT1;
+            src.BHT2 += dst.BHT2;
+            src.BHT5 += dst.BHT5;
+            src.BHT10c += dst.BHT10c;
+            src.BHT20 += dst.BHT20;
+            src.BHT50 += dst.BHT50;
+            src.BHT100 += dst.BHT100;
+            src.BHT500 += dst.BHT500;
+            src.BHT1000 += dst.BHT1000;
+        }
 
         private void assign(Models.FundEntry src, Models.FundEntry dst)
         {
@@ -71,7 +128,7 @@ namespace DMT.Pages
             Calculate();
 
             plaza.DataContext = _current;
-            grid.Setup(_plaza, _funds);
+            grid.Setup(_current, _funds);
         }
 
         public void Calculate()

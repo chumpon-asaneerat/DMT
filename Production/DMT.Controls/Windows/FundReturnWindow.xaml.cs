@@ -47,7 +47,7 @@ namespace DMT.Windows
 
             this.srcEntry.DataContext = this.Source;
             this.usrEntry.DataContext = this.Fund;
-            this.sumEntry.DataContext = this.Result;
+            //this.sumEntry.DataContext = this.Result;
 
             UpdateResult();
         }
@@ -55,6 +55,7 @@ namespace DMT.Windows
         private void UpdateResult()
         {
             if (null == this.Source || null == this.Fund || null == this.Result) return;
+            /*
             this.Result.BHT1 = this.Source.BHT1 - this.Fund.BHT1;
             this.Result.BHT2 = this.Source.BHT2 - this.Fund.BHT2;
             this.Result.BHT5 = this.Source.BHT5 - this.Fund.BHT5;
@@ -64,6 +65,7 @@ namespace DMT.Windows
             this.Result.BHT100 = this.Source.BHT100 - this.Fund.BHT100;
             this.Result.BHT500 = this.Source.BHT500 - this.Fund.BHT500;
             this.Result.BHT1000 = this.Source.BHT1000 - this.Fund.BHT1000;
+            */
         }
 
         private void Fund_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

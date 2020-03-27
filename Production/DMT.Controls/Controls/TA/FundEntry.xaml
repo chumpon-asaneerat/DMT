@@ -28,8 +28,7 @@
                                TextAlignment="Center"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
-                               Text="{Binding Description}"
-                               Width="110"/>
+                               Text="{Binding Description}"/>
                 </Border>
                 <StackPanel Orientation="Vertical" Margin="10 5 10 5">
                     <!-- Seperator -->

@@ -87,7 +87,7 @@ namespace DMT.Pages
 
             assign(_plaza, srcObj);
 
-            srcObj.Description = "ยอดก่อนคืน";
+            srcObj.Description = "ยอดเงินยืม-ทอน (ด่าน)";
             rcvObj.Description = "รับเงิน";
             retObj.Description = "คืนเงิน";
             resObj.Description = "ยอดรวม";

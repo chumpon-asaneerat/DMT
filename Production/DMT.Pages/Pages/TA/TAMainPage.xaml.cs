@@ -42,6 +42,7 @@ namespace DMT.Pages
 
         private void InitPlazaFund()
         {
+            plaza.Description = "เงินยืม-ทอน (ด่าน)";
             plaza.BHT1 = 100;
             plaza.BHT2 = 100;
             plaza.BHT5 = 100;
@@ -63,7 +64,7 @@ namespace DMT.Pages
                 var page = new Pages.PlazaFundReceivedReturnPage();
 
                 BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
-                Models.FundEntry fund;
+                Models.FundEntry fund;                
 
                 fund = new Models.FundEntry();
                 fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
@@ -143,6 +144,7 @@ namespace DMT.Pages
 
                 Models.FundEntry plazaFund = new Models.FundEntry();
                 plazaFund.Description = "เงินยืม-ทอน (ด่าน)";
+
                 plazaFund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 plazaFund.StaffId = "14055";
                 plazaFund.BHT1 = 1000;

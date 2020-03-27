@@ -94,15 +94,17 @@ namespace DMT.Controls
                 Models.FundEntry ret = new Models.FundEntry();
 
                 assign(fund, src);
-                src.Description = "ยอดก่อนยืม";
+
+                _plaza.Description = "ยอดที่สามารถยืมได้";
+                src.Description = "ยอดยืมปัจจุบัน";
                 obj.Description = "ยืมเงิน";
-                ret.Description = "ยอดรวม";
+                ret.Description = "ยอดเด่านคงเหลือ";
 
                 var win = new Windows.FundBorrowWindow();
                 win.Owner = Application.Current.MainWindow;
                 win.Title = fund.Description;
                 
-                win.Setup(src, obj, ret);
+                win.Setup(_plaza, src, obj, ret);
 
                 if (win.ShowDialog() == false)
                 {
@@ -123,7 +125,8 @@ namespace DMT.Controls
                 Models.FundEntry ret = new Models.FundEntry();
 
                 assign(fund, src);
-                src.Description = "ยอดก่อนคืน";
+                //src.Description = "ยอดก่อนคืน";
+                src.Description = "ยอดยืมปัจจุบัน";
                 obj.Description = "คืนเงิน";
                 ret.Description = "ยอดรวม";
 

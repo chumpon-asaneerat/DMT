@@ -11,8 +11,8 @@
         HorizontalAlignment="Center" 
         VerticalAlignment="Center" 
         WindowStartupLocation="CenterOwner"
-        Height="500" 
-        Width="780"
+        Height="600" 
+        Width="580"
         Background="DimGray">
     <Grid Margin="15">
         <DockPanel>
@@ -49,9 +49,11 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="30" />
                     <ColumnDefinition Width="*" />
+                    <!---
                     <ColumnDefinition Width="30" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="10" />
+                    -->
                 </Grid.ColumnDefinitions>
                 <ctrl:FundEntry x:Name="srcEntry"
                                 Grid.Column="1"
@@ -63,15 +65,18 @@
                       Margin="5"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
+                    <!--
                     <Image Source="/DMT.Controls;component/Images/Icons/minus2.png" 
                            Width="20"
                            Height="20"/>
+                    -->
                 </Grid>
                 <ctrl:FundEntry x:Name="usrEntry"
                                 Grid.Column="3"
                                 FontSize="16"
                                 Background="Indigo"
                                 Foreground="WhiteSmoke"/>
+                <!--
                 <Grid Grid.Column="4"
                       Margin="5"
                       HorizontalAlignment="Center"
@@ -86,6 +91,7 @@
                                 IsEnabled="False"
                                 Background="ForestGreen"
                                 Foreground="WhiteSmoke"/>
+                -->
             </Grid>
         </DockPanel>
     </Grid>

@@ -39,7 +39,8 @@
                 <StackPanel Orientation="Horizontal"
                             DockPanel.Dock="Bottom"                            
                             HorizontalAlignment="Center">
-                    <Button Content="เพิ่มพนักงาน" 
+                    <Button x:Name="addCollector"
+                            Content="เพิ่มพนักงาน" 
                             Margin="2"
                             FontSize="18"
                             HorizontalAlignment="Center"
@@ -47,7 +48,8 @@
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
                             Height="45"
-                            Width="200"/>
+                            Width="200"
+                            Click="addCollector_Click"/>
                 </StackPanel>
                 <ctrl:FundEntry x:Name="plaza"
                                 FontSize="16"

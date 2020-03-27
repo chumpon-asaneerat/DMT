@@ -11,11 +11,65 @@
         HorizontalAlignment="Center" 
         VerticalAlignment="Center" 
         WindowStartupLocation="CenterOwner"
-        Height="500" 
-        Width="780"
+        Height="600" 
+        Width="1000"
         Background="DimGray">
     <Grid Margin="15">
         <DockPanel>
+            <DockPanel x:Name="infoPanel" 
+                       DockPanel.Dock="Top"
+                       Margin="10"
+                       Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal">
+                    <Grid Height="10"/>
+                    <TextBlock FontSize="18"    
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Right"
+                               Foreground="WhiteSmoke"
+                               Text="Collector ID:"
+                               Width="150"/>
+                    <Grid Width="5"/>
+                    <TextBox x:Name="txtStaffId"
+                             FontSize="18"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Width="70"
+                             Text=""/>
+                    <TextBlock FontSize="18"    
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Right"
+                               Foreground="WhiteSmoke"
+                               Text="Name:"
+                               Width="100"/>
+                    <Grid Width="5"/>
+                    <TextBox x:Name="txtName"
+                             FontSize="18"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Width="100"
+                             Text=""/>
+                    <!--
+                    <TextBlock FontSize="18"    
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Right"
+                               Foreground="WhiteSmoke"
+                               Text="Lane:"
+                               Width="70"/>
+                    <Grid Width="5"/>
+                    
+                    <TextBox x:Name="txtLane"
+                             FontSize="18"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Width="50"
+                             Text="{Binding Lane}"/>
+                    <Grid Height="5"/>
+                    -->
+                </StackPanel>
+            </DockPanel>
             <DockPanel DockPanel.Dock="Bottom">
                 <Button x:Name="cmdOk" 
                             DockPanel.Dock="Right"
@@ -51,37 +105,59 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="30" />
                     <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="10" />
                 </Grid.ColumnDefinitions>
-                <ctrl:FundEntry x:Name="srcEntry"
+                <ctrl:FundEntry x:Name="plazaEntry"
                                 Grid.Column="1"
                                 FontSize="16"
                                 IsEnabled="False"
-                                Background="CornflowerBlue"
+                                Background="Orange"
                                 Foreground="WhiteSmoke"/>
                 <Grid Grid.Column="2"
                       Margin="5"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
+                    <!--
                     <Image Source="/DMT.Controls;component/Images/Icons/plus2.png" 
                            Width="20"
                            Height="20"/>
+                    -->
                 </Grid>
-                <ctrl:FundEntry x:Name="usrEntry"
+                <ctrl:FundEntry x:Name="srcEntry"
                                 Grid.Column="3"
                                 FontSize="16"
-                                Background="Indigo"
+                                IsEnabled="False"
+                                Background="CornflowerBlue"
                                 Foreground="WhiteSmoke"/>
                 <Grid Grid.Column="4"
                       Margin="5"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
+                    <!--
+                    <Image Source="/DMT.Controls;component/Images/Icons/plus2.png" 
+                           Width="20"
+                           Height="20"/>
+                    -->
+                </Grid>
+                <ctrl:FundEntry x:Name="usrEntry"
+                                Grid.Column="5"
+                                FontSize="16"
+                                Background="Indigo"
+                                Foreground="WhiteSmoke"/>
+                <Grid Grid.Column="6"
+                      Margin="5"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center">
+                    <!--
                     <Image Source="/DMT.Controls;component/Images/Icons/equal3.png" 
                            Width="20"
                            Height="20"/>
+                    -->
                 </Grid>
                 <ctrl:FundEntry x:Name="sumEntry"
-                                Grid.Column="5"
+                                Grid.Column="7"
                                 FontSize="16"
                                 IsEnabled="False"
                                 Background="ForestGreen"

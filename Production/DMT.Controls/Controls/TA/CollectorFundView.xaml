@@ -35,6 +35,7 @@
                                     <Run Text="ID: " />
                                     <Run Text="{Binding StaffId}" />
                                 </TextBlock>
+                                <!--
                                 <TextBlock FontSize="20"
                                            Foreground="White"
                                            HorizontalAlignment="Center"
@@ -43,6 +44,7 @@
                                     <Run Text="Lane: " />
                                     <Run Text="{Binding Lane}" />
                                 </TextBlock>
+                                -->
                                 <TextBlock FontSize="24"
                                            Foreground="GreenYellow"
                                            HorizontalAlignment="Center"
