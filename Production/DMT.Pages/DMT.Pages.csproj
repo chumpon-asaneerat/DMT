@@ -130,6 +130,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Windows\BOJWindow.xaml.cs">
+      <DependentUpon>BOJWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EOJWindow.xaml.cs">
+      <DependentUpon>EOJWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ReceivedFundWindow.xaml.cs">
       <DependentUpon>ReceivedFundWindow.xaml</DependentUpon>
     </Compile>
@@ -247,6 +253,14 @@
     <Page Include="Pages\TOD\TODReportMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\BOJWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EOJWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ReceivedFundWindow.xaml">
       <SubType>Designer</SubType>

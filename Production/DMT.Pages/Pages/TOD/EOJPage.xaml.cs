@@ -30,6 +30,14 @@ namespace DMT.Pages
 
         private void cmdOk_Click(object sender, RoutedEventArgs e)
         {
+            Windows.EOJWindow win = new Windows.EOJWindow();
+            win.Owner = Application.Current.MainWindow;
+
+            if (win.ShowDialog() == false)
+            {
+                return;
+            }
+
             // Main Menu Page
             var page = new Pages.TODMainPage();
             PageContentManager.Instance.Current = page;
