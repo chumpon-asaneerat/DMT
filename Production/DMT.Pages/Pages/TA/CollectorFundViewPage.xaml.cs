@@ -52,7 +52,7 @@ namespace DMT.Pages
 
             src.Description = "ยอดยืมปัจจุบัน";
             obj.Description = "ยืมเงิน";
-            ret.Description = "ยอดเด่านคงเหลือ";
+            ret.Description = "ยอดด่านคงเหลือ";
 
             win.Owner = Application.Current.MainWindow;
             win.Title = fund.Description;

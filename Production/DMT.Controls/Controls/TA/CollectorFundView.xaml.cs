@@ -98,7 +98,7 @@ namespace DMT.Controls
                 _plaza.Description = "ยอดที่สามารถยืมได้";
                 src.Description = "ยอดยืมปัจจุบัน";
                 obj.Description = "ยืมเงิน";
-                ret.Description = "ยอดเด่านคงเหลือ";
+                ret.Description = "ยอดด่านคงเหลือ";
 
                 var win = new Windows.FundBorrowWindow();
                 win.Owner = Application.Current.MainWindow;
