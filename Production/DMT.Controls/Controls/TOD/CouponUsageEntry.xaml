@@ -31,6 +31,17 @@
                 <StackPanel Orientation="Vertical" Margin="10 5 10 5">
                     <!-- Seperator -->
                     <Grid Height="5"/>
+                    <!-- Bag No. -->
+                    <DockPanel Margin="5 0 5 0">
+                        <TextBlock Margin="2"
+                               DockPanel.Dock="Left" 
+                               TextAlignment="Right"
+                               Text="หมายเลขถุงเงิน"
+                               Width="140"/>
+                        <TextBox Margin="2"
+                             TextAlignment="Right"
+                             Text="{Binding BagNo}"/>
+                    </DockPanel>
                     <!-- 30 BHT -->
                     <DockPanel Margin="5 0 5 0">
                         <TextBlock Margin="2"
