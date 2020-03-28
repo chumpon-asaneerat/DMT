@@ -39,7 +39,7 @@
                                Text="หมายเลขถุงเงิน"
                                Width="140"/>
                         <TextBox Margin="2"
-                             TextAlignment="Right"
+                             TextAlignment="Center"
                              Text="{Binding BagNo}"/>
                     </DockPanel>
                     <!-- 30 BHT -->
