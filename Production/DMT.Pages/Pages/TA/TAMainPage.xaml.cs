@@ -128,7 +128,10 @@ namespace DMT.Pages
         {
             try
             {
+                // Account Report
+                var page = new Pages.AccountReport();
 
+                PageContentManager.Instance.Current = page;
             }
             catch (Exception)
             {
@@ -293,6 +296,31 @@ namespace DMT.Pages
 
         private void receivedCouponReport_Click(object sender, RoutedEventArgs e)
         {
+            var win = new Windows.PlazaStockWindow();
+            win.Owner = Application.Current.MainWindow;
+
+            Models.FundEntry fund = new Models.FundEntry();
+            fund.Description = "เงินยืมทอน";
+            fund.BHT1 = 100;
+            fund.BHT2 = 100;
+            fund.BHT5 = 100;
+            fund.BHT10c = 100;
+            fund.BHT20 = 100;
+            fund.BHT50 = 100;
+            fund.BHT100 = 100;
+            fund.BHT500 = 100;
+            fund.BHT1000 = 100;
+            
+            Models.CouponEntry coupon = new Models.CouponEntry();
+            coupon.Description = "คุปอง";
+            coupon.BHT35 = 32;
+            coupon.BHT80 = 43;
+            win.Setup(fund, coupon);
+
+            if (win.ShowDialog() == false)
+            {
+                return;
+            }
             try
             {
 
@@ -310,13 +338,13 @@ namespace DMT.Pages
                 // Coupon Received
                 var page = new Pages.CollectorReceivedCouponPage();
 
-                var staffId = "14055";
+                //var staffId = "14055";
                 List<Models.Coupon> coupons = new List<Models.Coupon>();
                 Models.Coupon coupon;
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 16, 18, 50, 11);
-                coupon.StaffId = staffId;
+                coupon.StaffId = "14055";
                 coupon.Lane = 6;
                 coupon.Count = 5;
                 coupon.Type = "คูปอง 80 บาท";
@@ -324,7 +352,7 @@ namespace DMT.Pages
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 16, 23, 15, 24);
-                coupon.StaffId = staffId;
+                coupon.StaffId = "14147";
                 coupon.Lane = 2;
                 coupon.Count = 4;
                 coupon.Type = "คูปอง 35 บาท";
@@ -332,7 +360,7 @@ namespace DMT.Pages
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 17, 12, 1, 47);
-                coupon.StaffId = staffId;
+                coupon.StaffId = "12562";
                 coupon.Lane = 4;
                 coupon.Count = 9;
                 coupon.Type = "คูปอง 80 บาท";
@@ -363,13 +391,13 @@ namespace DMT.Pages
                 // Coupon Return
                 var page = new Pages.CollectorReturnCouponPage();
 
-                var staffId = "14055";
+                //var staffId = "14055";
                 List<Models.Coupon> coupons = new List<Models.Coupon>();
                 Models.Coupon coupon;
                 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 16, 18, 50, 11);
-                coupon.StaffId = staffId;
+                coupon.StaffId = "14055";
                 coupon.Lane = 6;
                 coupon.Count = 10;
                 coupon.Type = "คูปอง 35 บาท";
@@ -377,7 +405,7 @@ namespace DMT.Pages
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 16, 23, 15, 24);
-                coupon.StaffId = staffId;
+                coupon.StaffId = "14147";
                 coupon.Lane = 2;
                 coupon.Count = 7;
                 coupon.Type = "คูปอง 80 บาท";
@@ -385,7 +413,7 @@ namespace DMT.Pages
 
                 coupon = new Models.Coupon();
                 coupon.Date = new DateTime(2020, 3, 17, 12, 1, 47);
-                coupon.StaffId = staffId;
+                coupon.StaffId = "12562";
                 coupon.Lane = 4;
                 coupon.Count = 8;
                 coupon.Type = "คูปอง 35 บาท";

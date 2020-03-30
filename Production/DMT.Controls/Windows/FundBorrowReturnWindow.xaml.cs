@@ -65,7 +65,7 @@ namespace DMT.Windows
 
             this.srcEntry.DataContext = this.Source;
             this.borrowEntry.DataContext = this.Borrow;
-            this.returnEntry.DataContext = this.Return;
+            //this.returnEntry.DataContext = this.Return;
             this.sumEntry.DataContext = this.Result;
 
             UpdateResult();

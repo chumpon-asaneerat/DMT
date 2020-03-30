@@ -129,7 +129,7 @@
                 </Grid>
             </Border>
             <Grid>
-                <ctrl:CouponView x:Name="grid"></ctrl:CouponView>
+                <ctrl:CouponReceiveView x:Name="grid"></ctrl:CouponReceiveView>
             </Grid>
         </StackPanel>
     </DockPanel>

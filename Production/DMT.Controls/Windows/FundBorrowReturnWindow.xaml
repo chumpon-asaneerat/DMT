@@ -12,7 +12,7 @@
         VerticalAlignment="Center" 
         WindowStartupLocation="CenterOwner"
         Height="600" 
-        Width="1100"
+        Width="900"
         Background="DimGray">
     <Grid Margin="15">
         <DockPanel>
@@ -51,8 +51,6 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="30" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="30" />
-                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="10" />
                 </Grid.ColumnDefinitions>
                 <ctrl:FundEntry x:Name="srcEntry"
@@ -65,9 +63,11 @@
                       Margin="5"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
+                    <!--
                     <Image Source="/DMT.Controls;component/Images/Icons/plus2.png" 
                            Width="20"
                            Height="20"/>
+                    -->
                 </Grid>
                 <ctrl:FundEntry x:Name="borrowEntry"
                                 Grid.Column="3"
@@ -78,25 +78,14 @@
                       Margin="5"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
+                    <!--
                     <Image Source="/DMT.Controls;component/Images/Icons/minus2.png" 
                            Width="20"
                            Height="20"/>
-                </Grid>
-                <ctrl:FundEntry x:Name="returnEntry"
-                                Grid.Column="5"
-                                FontSize="16"
-                                Background="Indigo"
-                                Foreground="WhiteSmoke"/>
-                <Grid Grid.Column="6"
-                      Margin="5"
-                      HorizontalAlignment="Center"
-                      VerticalAlignment="Center">
-                    <Image Source="/DMT.Controls;component/Images/Icons/equal3.png" 
-                           Width="20"
-                           Height="20"/>
+                    -->
                 </Grid>
                 <ctrl:FundEntry x:Name="sumEntry"
-                                Grid.Column="7"
+                                Grid.Column="5"
                                 FontSize="16"
                                 IsEnabled="False"
                                 Background="ForestGreen"

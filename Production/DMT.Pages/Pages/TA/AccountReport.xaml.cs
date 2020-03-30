@@ -19,37 +19,26 @@ using NLib.Services;
 namespace DMT.Pages
 {
     /// <summary>
-    /// Interaction logic for CollectorReturnCouponPage.xaml
+    /// Interaction logic for AccountReport.xaml
     /// </summary>
-    public partial class CollectorReturnCouponPage : UserControl
+    public partial class AccountReport : UserControl
     {
-        public CollectorReturnCouponPage()
+        public AccountReport()
         {
             InitializeComponent();
         }
 
-        private void cmdCancel_Click(object sender, RoutedEventArgs e)
-        {
-            // Main Menu Page
-            var page = new Pages.TAMainPage();
-            PageContentManager.Instance.Current = page;
-        }
-
         private void cmdOk_Click(object sender, RoutedEventArgs e)
         {
-            // Main Menu Page
+            // Main Report Page
             var page = new Pages.TAMainPage();
             PageContentManager.Instance.Current = page;
         }
 
-        public void Setup(List<Models.Coupon> coupons)
+        private void cmdCancel_Click(object sender, RoutedEventArgs e)
         {
-            var couponTypes = new List<string>();
-            couponTypes.Add("คูปอง 35 บาท");
-            couponTypes.Add("คูปอง 80 บาท");
-            //cbCouponTypes.DataContext = couponTypes;
-            //cbCouponTypes.SelectedIndex = 0;
-            grid.Setup(coupons);
+            var page = new Pages.TAMainPage();
+            PageContentManager.Instance.Current = page;
         }
     }
 }

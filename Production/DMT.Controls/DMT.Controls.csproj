@@ -55,6 +55,15 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\TA\CouponPlazaEntry.xaml.cs">
+      <DependentUpon>CouponPlazaEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\CouponReceiveView.xaml.cs">
+      <DependentUpon>CouponReceiveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\CouponReturnView.xaml.cs">
+      <DependentUpon>CouponReturnView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TA\RequestExchangeView.xaml.cs">
       <DependentUpon>RequestExchangeView.xaml</DependentUpon>
     </Compile>
@@ -174,6 +183,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\TA\CouponPlazaEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TA\CouponReceiveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TA\CouponReturnView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TA\RequestExchangeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

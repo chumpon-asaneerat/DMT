@@ -54,6 +54,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\TA\AccountReport.xaml.cs">
+      <DependentUpon>AccountReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TA\PlazaRequestExchangePage.xaml.cs">
       <DependentUpon>PlazaRequestExchangePage.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,9 @@
     <Compile Include="Windows\EOJWindow.xaml.cs">
       <DependentUpon>EOJWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\PlazaStockWindow.xaml.cs">
+      <DependentUpon>PlazaStockWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ReceivedFundWindow.xaml.cs">
       <DependentUpon>ReceivedFundWindow.xaml</DependentUpon>
     </Compile>
@@ -170,6 +176,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Pages\TA\AccountReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TA\PlazaRequestExchangePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -262,6 +272,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\PlazaStockWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\ReceivedFundWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -334,6 +348,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Report\all_plaza_fund.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\รายการอนุมัติ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\รายการรออนุมัติ.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

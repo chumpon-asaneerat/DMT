@@ -51,6 +51,7 @@
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"/>
             </Border>
+            <!--
             <Border BorderBrush="Silver" 
                     BorderThickness="1"
                     Background="Silver">
@@ -82,6 +83,7 @@
                            VerticalAlignment="Center"/>
                 </StackPanel>
             </Border>
+            
             <Border BorderBrush="Silver" 
                     BorderThickness="1">
                 <Grid HorizontalAlignment="Center"
@@ -128,8 +130,9 @@
                     </StackPanel>
                 </Grid>
             </Border>
+            -->
             <Grid>
-                <ctrl:CouponView x:Name="grid"></ctrl:CouponView>
+                <ctrl:CouponReturnView x:Name="grid"></ctrl:CouponReturnView>
             </Grid>
         </StackPanel>
     </DockPanel>
