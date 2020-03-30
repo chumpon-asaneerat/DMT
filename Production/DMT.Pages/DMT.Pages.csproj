@@ -54,6 +54,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\TOD\CouponSummaryPreviewPage.xaml.cs">
+      <DependentUpon>CouponSummaryPreviewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TA\AccountReport.xaml.cs">
       <DependentUpon>AccountReport.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Pages\TOD\CouponSummaryPreviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TA\AccountReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -354,6 +361,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Report\รายการรออนุมัติ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Report\สรุปการนำส่งคูปอง TOD.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

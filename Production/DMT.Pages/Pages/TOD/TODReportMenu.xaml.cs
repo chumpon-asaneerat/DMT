@@ -30,14 +30,14 @@ namespace DMT.Pages
 
         private void revSlip_Click(object sender, RoutedEventArgs e)
         {
-            // Main Menu Page
+            // Revenue Preview
             var page = new Pages.RevenuePreviewPage();
             PageContentManager.Instance.Current = page;
         }
 
         private void couponSlip_Click(object sender, RoutedEventArgs e)
         {
-            // Main Menu Page
+            // Coupon Slip Preview
             var page = new Pages.CouponPreviewPage();
             PageContentManager.Instance.Current = page;
         }
@@ -49,7 +49,9 @@ namespace DMT.Pages
 
         private void couponSummary_Click(object sender, RoutedEventArgs e)
         {
-
+            // Coupon Summary Preview.
+            var page = new Pages.CouponSummaryPreviewPage();
+            PageContentManager.Instance.Current = page;
         }
 
         private void backHome_Click(object sender, RoutedEventArgs e)
