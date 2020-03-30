@@ -49,10 +49,13 @@ namespace DMT.Pages
             assign(fund, src);
 
             _current.Description = "ยอดที่สามารถยืมได้";
+            _current.HasRemark = (Models.AppVersion.version == 1) ? false : true;
 
             src.Description = "ยอดยืมปัจจุบัน";
+            src.HasRemark = (Models.AppVersion.version == 1) ? false : true;
             obj.Description = "ยืมเงิน";
             ret.Description = "ยอดด่านคงเหลือ";
+            ret.HasRemark = (Models.AppVersion.version == 1) ? false : true;
 
             win.Owner = Application.Current.MainWindow;
             win.Title = fund.Description;
@@ -126,6 +129,8 @@ namespace DMT.Pages
             _funds = funds;
 
             Calculate();
+
+            _current.HasRemark = (Models.AppVersion.version == 1) ? false : true;
 
             plaza.DataContext = _current;
             grid.Setup(_current, _funds);

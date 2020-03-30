@@ -160,7 +160,7 @@
                             Width="110"/>
                         <TextBox Margin="2"
                             TextAlignment="Right"
-                             IsReadOnly="True"
+                            IsReadOnly="True"
                             Text="{Binding BHTTotal}"/>
 
                     </DockPanel>
@@ -169,7 +169,8 @@
                     <StackPanel Orientation="Vertical"
                                 Margin="10 5 10 5"
                                 HorizontalAlignment="Stretch"
-                                VerticalAlignment="Center">
+                                VerticalAlignment="Center"
+                                Visibility="{Binding RemarkVisibility}">
                         <TextBlock Text="หมายเหตุ"
                                    FontSize="16"
                                    TextAlignment="Left"

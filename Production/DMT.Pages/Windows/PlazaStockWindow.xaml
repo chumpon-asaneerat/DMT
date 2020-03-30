@@ -13,7 +13,7 @@
         WindowStartupLocation="CenterOwner"
         Height="550" 
         Width="700">
-    <Grid>
+    <Grid Background="DimGray">
         <DockPanel>
             <DockPanel DockPanel.Dock="Bottom">
                 <StackPanel DockPanel.Dock="Right"

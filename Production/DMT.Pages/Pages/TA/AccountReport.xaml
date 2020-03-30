@@ -35,7 +35,8 @@
                             Width="150" 
                     Click="cmdCancel_Click"/>
         </DockPanel>
-        <TabControl>
+        <TabControl FontSize="18"
+                    Background="Transparent">
             <TabItem Header="รายการรออนุมัติ">
                 <DockPanel DockPanel.Dock="Top">
                     <StackPanel Orientation="Horizontal"

@@ -259,7 +259,7 @@
                        HorizontalAlignment="Stretch" 
                        VerticalAlignment="Center"
                        TextAlignment="Center"
-                       Text="บัญชี"/>
+                       Text="อนุมัติ เงินยืม-ทอน/คูปอง ของฝ่ายบัญชี"/>
                 <Button x:Name="AllPlazaFundSummary"
                         Grid.Column="0" Grid.Row="1" 
                         Margin="0 0 5 0"
@@ -280,13 +280,13 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="บัญชีตรวจสอบยอด"/>
+                                   Text="ตรวจสอบยอด"/>
                             <Grid Height="10" />
                             <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="สรุปยอดด่าน"/>
+                                   Text="สรุปยอด่าน"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>
@@ -310,13 +310,13 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="บัญชีอนุมัติ"/>
+                                   Text="อนุมัติ"/>
                             <Grid Height="10" />
                             <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="บัญชีอนุมัติ"/>
+                                   Text="อนุมัติ"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>

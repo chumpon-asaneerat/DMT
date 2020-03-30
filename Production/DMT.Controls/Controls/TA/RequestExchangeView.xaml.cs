@@ -89,6 +89,7 @@ namespace DMT.Controls
 
                 // replace descriptions
                 item.Request.Description = "รับเข้า ธนบัตร/เหรียญ";
+                item.Request.HasRemark = (Models.AppVersion.version == 1) ? false : true;
                 item.Exchange.Description = "จ่ายออก ธนบัตร/เหรียญ";
 
                 win.Title = "ยืนยันข้อมูลการแลกเปลี่ยนเงิน";

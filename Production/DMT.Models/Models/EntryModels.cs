@@ -8,6 +8,11 @@ using NLib;
 
 namespace DMT.Models
 {
+	public class AppVersion 
+	{
+		public static int version = 1;
+	}
+
 	#region BagEntry
 
 	/// <summary>
@@ -30,6 +35,8 @@ namespace DMT.Models
 		private int _BHT500 = 0;
 		private int _BHT1000 = 0;
 		private decimal _BHTTotal = 0;
+		private bool _hasRemark = true;
+		private string _remark = "";
 
 		#endregion
 
@@ -278,6 +285,43 @@ namespace DMT.Models
 			get { return _BHTTotal; }
 			set { } 
 		}
+		/// <summary>
+		/// Gets or sets has remark.
+		/// </summary>
+		public bool HasRemark
+		{
+			get { return _hasRemark; }
+			set
+			{
+				if (_hasRemark != value)
+				{
+					_hasRemark = value;
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("HasRemark"));
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("RemarkVisibility"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets Remark.
+		/// </summary>
+		public string Remark
+		{
+			get { return _remark; }
+			set
+			{
+				if (_remark != value)
+				{
+					_remark = value;
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("Remark"));
+				}
+			}
+		}
+		public System.Windows.Visibility RemarkVisibility
+		{
+			get { return (_hasRemark) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
+		}
 
 		#endregion
 
@@ -311,6 +355,8 @@ namespace DMT.Models
 		private int _FreePass = 0;
 		private decimal _CntTotal = 0;
 		private decimal _BHTTotal = 0;
+		private bool _hasRemark = true;
+		private string _remark = "";
 
 		#endregion
 
@@ -488,6 +534,43 @@ namespace DMT.Models
 			get { return _BHTTotal; }
 			set { }
 		}
+		/// <summary>
+		/// Gets or sets has remark.
+		/// </summary>
+		public bool HasRemark
+		{
+			get { return _hasRemark; }
+			set
+			{
+				if (_hasRemark != value)
+				{
+					_hasRemark = value;
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("HasRemark"));
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("RemarkVisibility"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets Remark.
+		/// </summary>
+		public string Remark
+		{
+			get { return _remark; }
+			set
+			{
+				if (_remark != value)
+				{
+					_remark = value;
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("Remark"));
+				}
+			}
+		}
+		public System.Windows.Visibility RemarkVisibility
+		{
+			get { return (_hasRemark) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
+		}
 
 		#endregion
 
@@ -658,6 +741,8 @@ namespace DMT.Models
 		private int _BHT500 = 0;
 		private int _BHT1000 = 0;
 		private decimal _BHTTotal = 0;
+		private bool _hasRemark = true;
+		private string _remark = "";
 
 		#endregion
 
@@ -874,6 +959,43 @@ namespace DMT.Models
 		{
 			get { return _BHTTotal; }
 			set { }
+		}
+		/// <summary>
+		/// Gets or sets has remark.
+		/// </summary>
+		public bool HasRemark
+		{
+			get { return _hasRemark; }
+			set
+			{
+				if (_hasRemark != value)
+				{
+					_hasRemark = value;
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("HasRemark"));
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("RemarkVisibility"));
+				}
+			}
+		}
+		/// <summary>
+		/// Gets or sets Remark.
+		/// </summary>
+		public string Remark
+		{
+			get { return _remark; }
+			set
+			{
+				if (_remark != value)
+				{
+					_remark = value;
+					// Raise event.
+					PropertyChanged.Call(this, new PropertyChangedEventArgs("Remark"));
+				}
+			}
+		}
+		public System.Windows.Visibility RemarkVisibility
+		{
+			get { return (_hasRemark) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
 		}
 
 		public string StaffId { get; set; }

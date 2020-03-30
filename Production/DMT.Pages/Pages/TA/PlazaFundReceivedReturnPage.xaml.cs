@@ -88,9 +88,13 @@ namespace DMT.Pages
             assign(_plaza, srcObj);
 
             srcObj.Description = "ยอดเงินยืม-ทอน (ด่าน)";
+            srcObj.HasRemark = (Models.AppVersion.version == 1) ? false : true;
+
             rcvObj.Description = "รับเงิน";
             retObj.Description = "คืนเงิน";
+            
             resObj.Description = "ยอดรวม";
+            resObj.HasRemark = (Models.AppVersion.version == 1) ? false : true;
 
             win.Title = "ยืมเงิน";
             win.Setup(srcObj, rcvObj, retObj, resObj);
@@ -141,6 +145,8 @@ namespace DMT.Pages
             if (null != _plaza) _plaza.PropertyChanged += _plaza_PropertyChanged;
 
             plaza.DataContext = _plaza; // bind plaza current fund.
+            _plaza.HasRemark = (Models.AppVersion.version == 1) ? false : true;
+
             _funds = funds;
             grid.Setup(_funds);
 

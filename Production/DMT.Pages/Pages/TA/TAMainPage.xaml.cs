@@ -52,6 +52,7 @@ namespace DMT.Pages
             plaza.BHT100 = 100;
             plaza.BHT500 = 100;
             plaza.BHT1000 = 100;
+            plaza.HasRemark = (Models.AppVersion.version == 1) ? false : true;
         }
 
         #region Button (Menu) Command Handlers
@@ -147,6 +148,7 @@ namespace DMT.Pages
 
                 Models.FundEntry plazaFund = new Models.FundEntry();
                 plazaFund.Description = "เงินยืม-ทอน (ด่าน)";
+                plazaFund.HasRemark = (Models.AppVersion.version == 1) ? false : true;
 
                 plazaFund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 plazaFund.StaffId = "14055";
@@ -301,6 +303,7 @@ namespace DMT.Pages
 
             Models.FundEntry fund = new Models.FundEntry();
             fund.Description = "เงินยืมทอน";
+            fund.HasRemark = (Models.AppVersion.version == 1) ? false : true;
             fund.BHT1 = 100;
             fund.BHT2 = 100;
             fund.BHT5 = 100;

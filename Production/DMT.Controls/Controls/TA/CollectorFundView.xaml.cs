@@ -96,9 +96,14 @@ namespace DMT.Controls
                 assign(fund, src);
 
                 _plaza.Description = "ยอดที่สามารถยืมได้";
+                _plaza.HasRemark = (Models.AppVersion.version == 1) ? false : true;
                 src.Description = "ยอดยืมปัจจุบัน";
+                src.HasRemark = (Models.AppVersion.version == 1) ? false : true;
+                
                 obj.Description = "ยืมเงิน";
+
                 ret.Description = "ยอดด่านคงเหลือ";
+                ret.HasRemark = (Models.AppVersion.version == 1) ? false : true;
 
                 var win = new Windows.FundBorrowWindow();
                 win.Owner = Application.Current.MainWindow;
@@ -127,8 +132,12 @@ namespace DMT.Controls
                 assign(fund, src);
                 //src.Description = "ยอดก่อนคืน";
                 src.Description = "ยอดยืมปัจจุบัน";
+                src.HasRemark = (Models.AppVersion.version == 1) ? false : true;
+
                 obj.Description = "คืนเงิน";
+
                 ret.Description = "ยอดรวม";
+                ret.HasRemark = (Models.AppVersion.version == 1) ? false : true;
 
                 var win = new Windows.FundReturnWindow();
                 win.Owner = Application.Current.MainWindow;

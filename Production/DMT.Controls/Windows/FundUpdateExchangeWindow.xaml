@@ -89,7 +89,7 @@
                 <ctrl:FundEntry x:Name="exchangeEntry"
                                 Grid.Column="5"
                                 FontSize="16"
-                                Background="Indigo"
+                                Background="DarkRed"
                                 Foreground="WhiteSmoke"/>
             </Grid>
         </DockPanel>
