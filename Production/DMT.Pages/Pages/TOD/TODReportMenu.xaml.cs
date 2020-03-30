@@ -44,7 +44,8 @@ namespace DMT.Pages
 
         private void revSummary_Click(object sender, RoutedEventArgs e)
         {
-
+            var page = new Pages.DailyRevenueSummaryPreviewPage();
+            PageContentManager.Instance.Current = page;
         }
 
         private void couponSummary_Click(object sender, RoutedEventArgs e)
