@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Executables\</OutputPath>
+    <OutputPath>..\..\Executables\Prototypes\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -106,29 +106,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Production\DMT.Controls\DMT.Controls.csproj">
-      <Project>{7f19adba-884d-4d46-a7c1-4bf672f829d9}</Project>
-      <Name>DMT.Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Production\DMT.Core\DMT.Core.csproj">
-      <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
-      <Name>DMT.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Production\DMT.Models\DMT.Models.csproj">
-      <Project>{0f37fd1a-5491-4e10-9e2c-9cd631b333f1}</Project>
-      <Name>DMT.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Production\DMT.Pages\DMT.Pages.csproj">
-      <Project>{31fbe6fb-4831-4e7b-b82a-433f40e20091}</Project>
-      <Name>DMT.Pages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Production\DMT.Services\DMT.Services.csproj">
-      <Project>{87f5e07b-e56b-4e29-8f7f-b4bc171900b1}</Project>
-      <Name>DMT.Services</Name>
-    </ProjectReference>
+    <Resource Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="app.ico" />
+    <ProjectReference Include="..\DMT.Prototype.Controls\DMT.Prototype.Controls.csproj">
+      <Project>{7f19adba-884d-4d46-a7c1-4bf672f829d9}</Project>
+      <Name>DMT.Prototype.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMT.Prototype.Core\DMT.Prototype.Core.csproj">
+      <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
+      <Name>DMT.Prototype.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMT.Prototype.Models\DMT.Prototype.Models.csproj">
+      <Project>{0f37fd1a-5491-4e10-9e2c-9cd631b333f1}</Project>
+      <Name>DMT.Prototype.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMT.Prototype.Pages\DMT.Prototype.Pages.csproj">
+      <Project>{31fbe6fb-4831-4e7b-b82a-433f40e20091}</Project>
+      <Name>DMT.Prototype.Pages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMT.Prototype.Services\DMT.Prototype.Services.csproj">
+      <Project>{87f5e07b-e56b-4e29-8f7f-b4bc171900b1}</Project>
+      <Name>DMT.Prototype.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

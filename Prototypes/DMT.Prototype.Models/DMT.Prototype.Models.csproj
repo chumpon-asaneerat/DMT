@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Executables\</OutputPath>
+    <OutputPath>..\..\Executables\Prototypes\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -80,9 +80,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DMT.Core\DMT.Core.csproj">
+    <ProjectReference Include="..\DMT.Prototype.Core\DMT.Prototype.Core.csproj">
       <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
-      <Name>DMT.Core</Name>
+      <Name>DMT.Prototype.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
