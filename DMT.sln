@@ -60,6 +60,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.TA.Prototype.v2.App", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.TOD.Prototype.v2.App", "Prototypes.v2\App\DMT.TOD.Prototype.v2.App\DMT.TOD.Prototype.v2.App.csproj", "{93D65947-1B08-4101-843B-9EBB2718862E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.Core", "Prototypes.v2\Code Library\DMT.Prototype.Core\DMT.Prototype.Core.csproj", "{B41B4CDE-9658-48FD-8F31-C960AFAD498B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +128,10 @@ Global
 		{93D65947-1B08-4101-843B-9EBB2718862E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D65947-1B08-4101-843B-9EBB2718862E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D65947-1B08-4101-843B-9EBB2718862E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41B4CDE-9658-48FD-8F31-C960AFAD498B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41B4CDE-9658-48FD-8F31-C960AFAD498B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41B4CDE-9658-48FD-8F31-C960AFAD498B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41B4CDE-9658-48FD-8F31-C960AFAD498B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -153,6 +159,7 @@ Global
 		{18F56FC1-D2E0-4C95-AF43-E14185F241B0} = {3DB50208-322C-4753-A10B-C1E059DB6EDA}
 		{1FEDFDFB-6C0F-4AF8-9851-7BD54110E025} = {3E9438D4-FE01-4FD3-AC10-492A0E56737A}
 		{93D65947-1B08-4101-843B-9EBB2718862E} = {3E9438D4-FE01-4FD3-AC10-492A0E56737A}
+		{B41B4CDE-9658-48FD-8F31-C960AFAD498B} = {3DB50208-322C-4753-A10B-C1E059DB6EDA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E21131E-314E-4FB9-90A9-21D6E385910A}
