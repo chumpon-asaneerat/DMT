@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace DMT.TA.Prototype.v2.App
+namespace DMT.App
 {
     /// <summary>
     /// Interaction logic for App.xaml

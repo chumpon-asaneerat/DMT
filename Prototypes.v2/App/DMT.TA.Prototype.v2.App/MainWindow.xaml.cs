@@ -10,10 +10,9 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DMT.TA.Prototype.v2.App
+namespace DMT
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,7 +22,6 @@ namespace DMT.TA.Prototype.v2.App
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine("constructor");
         }
     }
 }
