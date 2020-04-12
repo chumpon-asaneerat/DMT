@@ -9,6 +9,7 @@
 ======================================================================================
 [ ] Re implement models.
 [ ] Re implement button control.
+[ ] Implements Numeric text input control.
 [ ] Implements Date Time picker control (1/X).
 [ ] Implements Date Time picker control (2/X).
 [ ] Implements Date Time picker control (3/X).
@@ -17,7 +18,6 @@
 [ ] Implements Date Time picker control (6/X).
 [ ] Implements Date Time picker control (7/X).
 [ ] Implements Date Time picker control (8/X).
-[ ] Implements Numeric text input control.
 [ ] Implements Mock data for plaza information.
 [ ] 
 [ ] 
