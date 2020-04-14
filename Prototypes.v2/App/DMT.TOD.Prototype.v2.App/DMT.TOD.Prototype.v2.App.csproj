@@ -97,5 +97,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Control Library\DMT.Prototype.v2.Controls\DMT.Prototype.v2.Controls.csproj">
+      <Project>{d9c73d06-7206-4f42-aa20-eba08af10b2d}</Project>
+      <Name>DMT.Prototype.v2.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

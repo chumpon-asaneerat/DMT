@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DMT"
+        xmlns:util="clr-namespace:DMT.Controls;assembly=DMT.Prototype.v2.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBox util:NumericTextBox.OnlyNumeric="Int" 
+                 util:NumericTextBox.DefaultValue=""
+                 VerticalAlignment="Center"
+                 HorizontalContentAlignment="Center"
+                 Width="200"/>
     </Grid>
 </Window>
