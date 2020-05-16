@@ -72,7 +72,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Styles\TextBoxStyles.xaml">
       <SubType>Designer</SubType>
