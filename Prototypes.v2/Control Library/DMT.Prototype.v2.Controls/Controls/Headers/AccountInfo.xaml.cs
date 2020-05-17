@@ -12,16 +12,16 @@ using DMT.Services;
 namespace DMT.Controls
 {
     /// <summary>
-    /// Interaction logic for PlazaInfo.xaml
+    /// Interaction logic for AccountInfo.xaml
     /// </summary>
-    public partial class PlazaInfo : UserControl
+    public partial class AccountInfo : UserControl
     {
         #region Constructor
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        public PlazaInfo()
+        public AccountInfo()
         {
             InitializeComponent();
         }
@@ -46,34 +46,8 @@ namespace DMT.Controls
 
         private void UpdateInfo()
         {
-            if (null != DMTPlazaManager.Instance.Plaza)
-            {
-                Models.Plaza plaza = DMTPlazaManager.Instance.Plaza;
-                // Plaza
-                txtPlazaId.Text = "รหัสด่าน: " + plaza.PlazaId;
-                txtPlazaName.Text = "ชื่อด่าน: " + plaza.PlazaName;
-                // Shift
-                txtShiftId.Text = plaza.ShiftId;
-                txtShiftDate.Text = plaza.ShiftDate;
-                txtShiftTime.Text = plaza.ShiftTime;
-                // Supervisor
-                txtSupervisorId.Text = "รหัสหัวหน้าด่าน: " + plaza.SupervisorId;
-                txtSupervisorName.Text = "หัวหน้าด่าน: " + plaza.SupervisorName;
-            }
-            else 
-            {
-                // Plaza
-                txtPlazaId.Text = "รหัสด่าน: ";
-                txtPlazaName.Text = "ชื่อด่าน: ";
-                // Shift
-                txtShiftId.Text = "";
-                txtShiftDate.Text = "";
-                txtShiftTime.Text = "";
-                // Supervisor
-                txtSupervisorId.Text = "รหัสหัวหน้าด่าน: ";
-                txtSupervisorName.Text = "หัวหน้าด่าน: ";
-            }
         }
+
         private void UpdateTime()
         {
             // Current date time.

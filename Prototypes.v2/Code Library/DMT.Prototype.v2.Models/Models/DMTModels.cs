@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using NLib;
+using DMT;
 
 // required for JsonIgnore.
 using Newtonsoft.Json;
@@ -58,68 +59,6 @@ namespace DMT.Sample
 
 namespace DMT.Models
 {
-    #region Test Class
-
-    public class X
-    {
-        public string account { get; set; }
-        public DateTime logindate { get; set; }
-
-        public string data { get; set; }
-
-        [JsonIgnore]
-        public string ignore { get; set; }
-
-        public static List<X> getTests()
-        {
-            List<X> list = new List<X>();
-            Random r = new Random();
-            X inst;
-            inst = new X();
-            inst.account = "aaa";
-            inst.logindate = DateTime.Now;
-            inst.data = "1";
-            inst.ignore = "ignore a";
-            list.Add(inst);
-            inst = new X();
-            inst.account = "bbb";
-            inst.logindate = DateTime.Now.AddMilliseconds(r.Next(999));
-            inst.data = "2";
-            inst.ignore = "ignore b";
-            list.Add(inst);
-            inst = new X();
-            inst.account = "ccc";
-            inst.data = "3";
-            inst.ignore = "ignore c";
-            inst.logindate = DateTime.Now.AddMilliseconds(r.Next(999));
-            list.Add(inst);
-
-            return list;
-        }
-
-        public static void Test()
-        {
-            // Test Json Code.
-            List<X> list = X.getTests();
-            string fileName = NJson.LocalFile("sample.json");
-
-            //string json = list.ToJson();
-            //Console.WriteLine(json);
-
-            if (!list.SaveToFile(fileName))
-            {
-                Console.WriteLine("Cannot save file.");
-            }
-
-            List<X> list2;
-            list2 = NJson.LoadFromFile<List<X>>(fileName);
-            Console.WriteLine(list2);
-            Console.WriteLine(list2.ToJson());
-        }
-    }
-
-    #endregion
-
     #region DMTBaseModel (abstract)
 
     /// <summary>
@@ -189,7 +128,6 @@ namespace DMT.Models
     {
         #region Internal Variables
 
-        private string _appMode = string.Empty;
         private string _plazaId = string.Empty;
         private string _plazaName = string.Empty;
         private Shift _shift;
@@ -223,22 +161,6 @@ namespace DMT.Models
 
         #region Public Properties
 
-        /// <summary>
-        /// Gets or sets Application mode.
-        /// </summary>
-        public string Mode
-        {
-            get { return _appMode; }
-            set
-            {
-                if (_appMode != value)
-                {
-                    _appMode = value;
-                    // Raise event.
-                    RaiseChanged("Mode");
-                }
-            }
-        }
         /// <summary>
         /// Gets or sets Plaza Id.
         /// </summary>

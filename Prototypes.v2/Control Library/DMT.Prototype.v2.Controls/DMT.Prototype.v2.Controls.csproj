@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -52,6 +53,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Headers\AccountInfo.xaml.cs">
+      <DependentUpon>AccountInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Common.cs" />
     <Compile Include="Controls\Headers\Elements\DateTimeBox.xaml.cs">
       <DependentUpon>DateTimeBox.xaml</DependentUpon>
@@ -101,6 +105,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Controls\Headers\AccountInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Headers\Elements\DateTimeBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

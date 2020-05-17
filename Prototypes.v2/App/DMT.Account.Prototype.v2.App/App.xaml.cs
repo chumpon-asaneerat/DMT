@@ -41,7 +41,7 @@ namespace DMT
                     /*  This property is required */
                     CompanyName = "DMT",
                     /*  This property is required */
-                    ProductName = "DMT Account Application",
+                    ProductName = "DMT Toll Account Application",
                     /* For Application Version */
                     Version = "1.0",
                     Minor = "0",

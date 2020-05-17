@@ -43,7 +43,7 @@ namespace DMT.Services
 
         private Thread _th = null;
         private bool _running = false;
-        private string _fileName = NJson.LocalFile("app.json");
+        private string _fileName = NJson.LocalFile("plaza.json");
         private Plaza _plaza = null;
 
         #endregion
@@ -91,7 +91,6 @@ namespace DMT.Services
             {
                 _plaza = new Plaza();
                 // _plaza.Mode = "Account";
-                _plaza.Mode = "Plaza";
                 _plaza.PlazaId = "01";
                 _plaza.PlazaName = "ดินแดง";
                 _plaza.Shift = new Shift();
