@@ -11,26 +11,26 @@ using System.Runtime.InteropServices;
 namespace DMT.Services
 {
     /// <summary>
-    /// DMT App Manager.
+    /// DMT Plaza Manager.
     /// </summary>
-    public class DMTAppManager
+    public class DMTPlazaManager
     {
         #region Static Instance Access
 
-        private static DMTAppManager _instance = null;
+        private static DMTPlazaManager _instance = null;
 
         /// <summary>
         /// Gets DMTAppManager instance access.
         /// </summary>
-        public static DMTAppManager Instance
+        public static DMTPlazaManager Instance
         {
             get
             {
                 if (null == _instance)
                 {
-                    lock (typeof(DMTAppManager))
+                    lock (typeof(DMTPlazaManager))
                     {
-                        _instance = new DMTAppManager();
+                        _instance = new DMTPlazaManager();
                     }
                 }
                 return _instance;
@@ -53,13 +53,13 @@ namespace DMT.Services
         /// <summary>
         /// Constructor.
         /// </summary>
-        private DMTAppManager() : base()
+        private DMTPlazaManager() : base()
         {
         }
         /// <summary>
         /// Destructor.
         /// </summary>
-        ~DMTAppManager()
+        ~DMTPlazaManager()
         {
             Shutdown();
         }

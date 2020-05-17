@@ -34,20 +34,15 @@ namespace DMT
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // Start app manager.
-            DMTAppManager.Instance.Start();
+            DMTPlazaManager.Instance.Start();
             // Initial Page Content Manager
             PageContentManager.Instance.ContentChanged += new EventHandler(Instance_ContentChanged);
             PageContentManager.Instance.StatusUpdated += new StatusMessageEventHandler(Instance_StatusUpdated);
             PageContentManager.Instance.OnTick += new EventHandler(Instance_OnTick);
             PageContentManager.Instance.Start();
             // Init Main Menu
-            //PageContentManager.Instance.Current = new Pages.TASignInPage();
-
-            /*
-            X.Test();
-            string sDT = DateTime.Now.ToThaiDateTimeString();
-            Console.WriteLine(sDT);
-            */
+            PageContentManager.Instance.Current = new Pages.TA.TAPlazaMainMenu();
+            //PageContentManager.Instance.Current = new Pages.TA.TAAccountMainMenu();
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)
@@ -58,7 +53,7 @@ namespace DMT
             PageContentManager.Instance.StatusUpdated -= new StatusMessageEventHandler(Instance_StatusUpdated);
             PageContentManager.Instance.ContentChanged -= new EventHandler(Instance_ContentChanged);
             // Shutdown app manager.
-            DMTAppManager.Instance.Shutdown();
+            DMTPlazaManager.Instance.Shutdown();
         }
 
         #endregion

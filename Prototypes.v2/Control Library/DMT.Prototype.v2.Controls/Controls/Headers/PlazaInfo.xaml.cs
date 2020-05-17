@@ -46,10 +46,10 @@ namespace DMT.Controls
 
         private void UpdateInfo()
         {
-            if (null != DMTAppManager.Instance.Plaza && 
-                DMTAppManager.Instance.Plaza.Mode.ToLowerInvariant() == "plaza")
+            if (null != DMTPlazaManager.Instance.Plaza &&
+                DMTPlazaManager.Instance.Plaza.Mode.ToLowerInvariant() == "plaza")
             {
-                Models.Plaza plaza = DMTAppManager.Instance.Plaza;
+                Models.Plaza plaza = DMTPlazaManager.Instance.Plaza;
                 // Plaza
                 txtPlazaId.Text = "รหัสด่าน: " + plaza.PlazaId;
                 txtPlazaName.Text = "ชื่อด่าน: " + plaza.PlazaName;
