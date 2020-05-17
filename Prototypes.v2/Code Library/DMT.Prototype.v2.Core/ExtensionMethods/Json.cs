@@ -20,13 +20,14 @@ namespace DMT
         /// Convert Object to Json String.
         /// </summary>
         /// <param name="value">The object instance.</param>
+        /// <param name="minimized">True for minimize output.</param>
         /// <returns>Returns json string.</returns>
-        public static string ToJson(this object value)
+        public static string ToJson(this object value, bool minimized = false)
         {
             string result = string.Empty;
             try
             {
-                result = JsonConvert.SerializeObject(value, Formatting.Indented);
+                result = JsonConvert.SerializeObject(value, (minimized) ? Formatting.None : Formatting.Indented);
             }
             catch (Exception ex)
             {
@@ -60,19 +61,21 @@ namespace DMT
         /// </summary>
         /// <param name="value">The object instance.</param>
         /// <param name="fileName">The target file name.</param>
+        /// <param name="minimized">True for minimize output.</param>
         /// <returns>Returns true if save success.</returns>
-        public static bool SaveToFile(this object value, string fileName)
+        public static bool SaveToFile(this object value, string fileName, 
+            bool minimized = false)
         {
-            bool result = false;
+            bool result = true;
             try
             {
                 // serialize JSON directly to a file
                 using (StreamWriter file = File.CreateText(fileName))
                 {
                     JsonSerializer serializer = new JsonSerializer();
+                    serializer.Formatting = (minimized) ? Formatting.None : Formatting.Indented;
                     serializer.Serialize(file, value);
                 }
-                result = true;
             }
             catch (Exception ex)
             {

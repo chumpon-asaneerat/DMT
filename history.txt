@@ -23,8 +23,11 @@ Update 2020-05-17 #7
 Update 2020-05-17 #6
 -
 
+[commited]
 Update 2020-05-17 #5
--
+- Update DMT models classes #2.
+- DateTime extension method - add supports thai date string.
+- json wrapper extension method update #3.
 
 [commited]
 Update 2020-05-17 #4
