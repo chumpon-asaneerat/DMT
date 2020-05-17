@@ -14,16 +14,16 @@ using NLib.Services;
 namespace DMT.Pages.TA
 {
     /// <summary>
-    /// Interaction logic for TAPlazaMainMenu.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class TAPlazaMainMenu : UserControl
+    public partial class MainMenu : UserControl
     {
         #region Constructor
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        public TAPlazaMainMenu()
+        public MainMenu()
         {
             InitializeComponent();
         }

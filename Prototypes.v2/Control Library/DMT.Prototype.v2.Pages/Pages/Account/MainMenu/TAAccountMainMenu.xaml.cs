@@ -11,19 +11,19 @@ using NLib.Services;
 
 #endregion
 
-namespace DMT.Pages.TA
+namespace DMT.Pages.Account
 {
     /// <summary>
-    /// Interaction logic for TAAccountMainMenu.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class TAAccountMainMenu : UserControl
+    public partial class MainMenu : UserControl
     {
         #region Constructor
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        public TAAccountMainMenu()
+        public MainMenu()
         {
             InitializeComponent();
         }

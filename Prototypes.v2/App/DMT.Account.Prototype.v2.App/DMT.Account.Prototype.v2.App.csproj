@@ -4,17 +4,19 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{243B4B87-E332-4C54-BFA7-F1D69971BB67}</ProjectGuid>
-    <OutputType>library</OutputType>
+    <ProjectGuid>{68B3D4B3-57F7-4AC6-AC9D-145D8BB29A91}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>DMT</RootNamespace>
-    <AssemblyName>DMT.Pages</AssemblyName>
+    <AssemblyName>DMT.Account.App</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,6 +27,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,13 +35,19 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DMT.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLib">
+    <Reference Include="NLib, Version=4.0.4.3, Culture=neutral, PublicKeyToken=6b9d63d2a8a62ab5, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\NLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -53,15 +62,24 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Account\MainMenu\TAAccountMainMenu.xaml.cs">
-      <DependentUpon>TAAccountMainMenu.xaml</DependentUpon>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Pages\TA\MainMenu\TAPlazaMainMenu.xaml.cs">
-      <DependentUpon>TAPlazaMainMenu.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Pages\TOD\MainMenu\TODMainMenu.xaml.cs">
-      <DependentUpon>TODMainMenu.xaml</DependentUpon>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,12 +103,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\TOD\Job\" />
-    <Folder Include="Pages\TOD\Revenue\" />
-    <Folder Include="Pages\TOD\TollAdmin\" />
-    <Folder Include="Windows\Account\" />
-    <Folder Include="Windows\TA\" />
-    <Folder Include="Windows\TOD\Job\" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code Library\DMT.Prototype.v2.Core\DMT.Prototype.v2.Core.csproj">
@@ -105,57 +118,17 @@
       <Project>{6bffdfbc-0a3b-4463-be4f-3f15461b6a2c}</Project>
       <Name>DMT.Prototype.v2.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DMT.Prototype.v2.Controls\DMT.Prototype.v2.Controls.csproj">
+    <ProjectReference Include="..\..\Control Library\DMT.Prototype.v2.Controls\DMT.Prototype.v2.Controls.csproj">
       <Project>{d9c73d06-7206-4f42-aa20-eba08af10b2d}</Project>
       <Name>DMT.Prototype.v2.Controls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Control Library\DMT.Prototype.v2.Pages\DMT.Prototype.v2.Pages.csproj">
+      <Project>{243b4b87-e332-4c54-bfa7-f1d69971bb67}</Project>
+      <Name>DMT.Prototype.v2.Pages</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Pages\Account\MainMenu\TAAccountMainMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\TA\MainMenu\TAPlazaMainMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\TOD\MainMenu\TODMainMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Background\snartcard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\bag4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\begin_of_job.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\clock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\coupon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\end_of_job.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\login.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\logout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\report1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\reventry.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Menu\user.png" />
+    <Resource Include="app.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

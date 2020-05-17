@@ -13,11 +13,11 @@ namespace DMT.Pages.TOD
     /// <summary>
     /// Interaction logic for TODMainMenu.xaml
     /// </summary>
-    public partial class TODMainMenu : UserControl
+    public partial class MainMenu : UserControl
     {
         #region Constructor
 
-        public TODMainMenu()
+        public MainMenu()
         {
             InitializeComponent();
         }
