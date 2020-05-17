@@ -47,7 +47,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Pages;component/images/Menu/begin_of_job.png" 
+                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/begin_of_job.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -76,7 +76,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Pages;component/images/Menu/end_of_job.png" 
+                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/end_of_job.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -124,7 +124,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Pages;component/images/Menu/reventry.png" 
+                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/reventry.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -153,7 +153,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Pages;component/images/Menu/report1.png" 
+                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/report1.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -201,7 +201,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Pages;component/Images/Menu/clock.png" 
+                                Source="/DMT.Prototype.v2.Pages;component/Images/Menu/clock.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -231,7 +231,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Pages;component/images/Menu/report1.png" 
+                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/report1.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
@@ -279,7 +279,7 @@
                           Margin="5">
                         <Image Height="50"
                                 Width="50"
-                                Source="/DMT.Pages;component/Images/Menu/logout.png" 
+                                Source="/DMT.Prototype.v2.Pages;component/Images/Menu/logout.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>

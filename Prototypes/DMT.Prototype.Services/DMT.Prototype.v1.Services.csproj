@@ -51,13 +51,13 @@
     <Compile Include="Services\PlazaService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DMT.Prototype.Core\DMT.Prototype.Core.csproj">
+    <ProjectReference Include="..\DMT.Prototype.Core\DMT.Prototype.v1.Core.csproj">
       <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
-      <Name>DMT.Prototype.Core</Name>
+      <Name>DMT.Prototype.v1.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DMT.Prototype.Models\DMT.Prototype.Models.csproj">
+    <ProjectReference Include="..\DMT.Prototype.Models\DMT.Prototype.v1.Models.csproj">
       <Project>{0f37fd1a-5491-4e10-9e2c-9cd631b333f1}</Project>
-      <Name>DMT.Prototype.Models</Name>
+      <Name>DMT.Prototype.v1.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

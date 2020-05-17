@@ -9,7 +9,7 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/DMT.Controls;component/Styles/TextBlockStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMT.Prototype.v2.Controls;component/Styles/TextBlockStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>

@@ -50,7 +50,7 @@
                               Margin="5">
                         <Image Height="50"
                                     Width="50"
-                                    Source="/DMT.Pages;component/Images/Menu/report1.png" 
+                                    Source="/DMT.Prototype.v1.Pages;component/Images/Menu/report1.png" 
                                     HorizontalAlignment="Center" 
                                     VerticalAlignment="Center" />
                     </Grid>
@@ -79,7 +79,7 @@
                               Margin="5">
                         <Image Height="50"
                                     Width="50"
-                                    Source="/DMT.Pages;component/images/Menu/report1.png" 
+                                    Source="/DMT.Prototype.v1.Pages;component/images/Menu/report1.png" 
                                     HorizontalAlignment="Center" 
                                     VerticalAlignment="Center" />
                     </Grid>
@@ -108,7 +108,7 @@
                               Margin="5">
                         <Image Height="50"
                                     Width="50"
-                                    Source="/DMT.Pages;component/Images/Menu/report1.png" 
+                                    Source="/DMT.Prototype.v1.Pages;component/Images/Menu/report1.png" 
                                     HorizontalAlignment="Center" 
                                     VerticalAlignment="Center" />
                     </Grid>
@@ -137,7 +137,7 @@
                               Margin="5">
                         <Image Height="50"
                                     Width="50"
-                                    Source="/DMT.Pages;component/images/Menu/report1.png" 
+                                    Source="/DMT.Prototype.v1.Pages;component/images/Menu/report1.png" 
                                     HorizontalAlignment="Center" 
                                     VerticalAlignment="Center" />
                     </Grid>
@@ -166,7 +166,7 @@
                               Margin="5">
                         <Image Height="50"
                                     Width="50"
-                                    Source="/DMT.Pages;component/images/Menu/report1.png" 
+                                    Source="/DMT.Prototype.v1.Pages;component/images/Menu/report1.png" 
                                     HorizontalAlignment="Center" 
                                     VerticalAlignment="Center" />
                     </Grid>

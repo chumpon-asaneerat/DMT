@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DMT.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="110" 
              d:DesignWidth="1250"
@@ -22,7 +21,7 @@
             <Border BorderBrush="WhiteSmoke"
                     BorderThickness="1"
                     DockPanel.Dock="Left">
-                <Image Source="/DMT.Controls;component/Images/Logo/tollway.png" 
+                <Image Source="/DMT.Prototype.v1.Controls;component/Images/Logo/tollway.png" 
                        Margin="5"
                        Height="90"></Image>
             </Border>

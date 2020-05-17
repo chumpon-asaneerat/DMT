@@ -11,7 +11,7 @@
                 BorderThickness="1"
                 CornerRadius="3"
                 Margin="1">
-            <Image Source="/DMT.Controls;component/Images/Logo/tollway.png" />
+            <Image Source="/DMT.Prototype.v2.Controls;component/Images/Logo/tollway.png" />
         </Border>
     </Grid>
 </UserControl>

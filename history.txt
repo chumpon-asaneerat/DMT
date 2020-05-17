@@ -1,27 +1,48 @@
 --------------------------------------------------------------------------------------------
-Update 2020-05-16 #15
+Update 2020-05-18 #10
 -
 
-Update 2020-05-16 #14
+Update 2020-05-18 #09
 -
 
-Update 2020-05-16 #13
+Update 2020-05-18 #08
 -
 
-Update 2020-05-16 #12
+Update 2020-05-18 #07
+-
+
+Update 2020-05-18 #06
+-
+
+Update 2020-05-18 #05
+-
+
+Update 2020-05-18 #04
+-
+
+Update 2020-05-18 #03
+-
+
+Update 2020-05-18 #02
 -
 
 [commited]
-Update 2020-05-16 #11
+Update 2020-05-18 #01
+- Rename all v1 and v2 projects's properties.
+- Recheck all v1 and v2 code references.
+
+--------------------------------------------------------------------------------------------
+[commited]
+Update 2020-05-17 #11
 - Add control #6.
 
 [commited]
-Update 2020-05-16 #10
+Update 2020-05-17 #10
 - Add Account app project.
 - Add control #5.
 
 [commited]
-Update 2020-05-16 #9
+Update 2020-05-17 #9
 - Add control #4.
 
 [commited]
@@ -71,6 +92,7 @@ Update 2020-05-17 #1
 - TA - App.xaml ported.
 - TA - MainForm ported.
 
+--------------------------------------------------------------------------------------------
 [commited]
 Update 2020-05-16 #2
 - Update project.todo #1.

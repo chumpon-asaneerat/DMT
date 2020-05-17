@@ -7,7 +7,7 @@
     <ProjectGuid>{31FBE6FB-4831-4E7B-B82A-433F40E20091}</ProjectGuid>
     <OutputType>library</OutputType>
     <RootNamespace>DMT</RootNamespace>
-    <AssemblyName>DMT.Pages</AssemblyName>
+    <AssemblyName>DMT.Prototype.v1.Pages</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -164,21 +164,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DMT.Prototype.Controls\DMT.Prototype.Controls.csproj">
+    <ProjectReference Include="..\DMT.Prototype.Controls\DMT.Prototype.v1.Controls.csproj">
       <Project>{7f19adba-884d-4d46-a7c1-4bf672f829d9}</Project>
-      <Name>DMT.Prototype.Controls</Name>
+      <Name>DMT.Prototype.v1.Controls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DMT.Prototype.Core\DMT.Prototype.Core.csproj">
+    <ProjectReference Include="..\DMT.Prototype.Core\DMT.Prototype.v1.Core.csproj">
       <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
-      <Name>DMT.Prototype.Core</Name>
+      <Name>DMT.Prototype.v1.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DMT.Prototype.Models\DMT.Prototype.Models.csproj">
+    <ProjectReference Include="..\DMT.Prototype.Models\DMT.Prototype.v1.Models.csproj">
       <Project>{0f37fd1a-5491-4e10-9e2c-9cd631b333f1}</Project>
-      <Name>DMT.Prototype.Models</Name>
+      <Name>DMT.Prototype.v1.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DMT.Prototype.Services\DMT.Prototype.Services.csproj">
+    <ProjectReference Include="..\DMT.Prototype.Services\DMT.Prototype.v1.Services.csproj">
       <Project>{87f5e07b-e56b-4e29-8f7f-b4bc171900b1}</Project>
-      <Name>DMT.Prototype.Services</Name>
+      <Name>DMT.Prototype.v1.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

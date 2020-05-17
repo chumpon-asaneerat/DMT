@@ -7,7 +7,7 @@
     <ProjectGuid>{0F37FD1A-5491-4E10-9E2C-9CD631B333F1}</ProjectGuid>
     <OutputType>library</OutputType>
     <RootNamespace>DMT</RootNamespace>
-    <AssemblyName>DMT.Models</AssemblyName>
+    <AssemblyName>DMT.Prototype.v1.Models</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -80,9 +80,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DMT.Prototype.Core\DMT.Prototype.Core.csproj">
+    <ProjectReference Include="..\DMT.Prototype.Core\DMT.Prototype.v1.Core.csproj">
       <Project>{be453e55-331a-4f2d-b7d2-5522098c9b6d}</Project>
-      <Name>DMT.Prototype.Core</Name>
+      <Name>DMT.Prototype.v1.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

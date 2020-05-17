@@ -17,19 +17,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesignWpfSample", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroUISample", "Samples\MetroUISample\MetroUISample.csproj", "{556BE00C-2943-4B29-A6B0-102C63BF6907}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.TOD.Prototype.App", "Prototypes\DMT.TOD.Prototype.App\DMT.TOD.Prototype.App.csproj", "{4F08DBAC-2036-42CE-92B6-2E87E8B42A7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.TOD.Prototype.v1.App", "Prototypes\DMT.TOD.Prototype.App\DMT.TOD.Prototype.v1.App.csproj", "{4F08DBAC-2036-42CE-92B6-2E87E8B42A7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.TA.Prototype.App", "Prototypes\DMT.TA.Prototype.App\DMT.TA.Prototype.App.csproj", "{17E1A57A-D368-4990-A053-D7DD627507A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.TA.Prototype.v1.App", "Prototypes\DMT.TA.Prototype.App\DMT.TA.Prototype.v1.App.csproj", "{17E1A57A-D368-4990-A053-D7DD627507A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.Models", "Prototypes\DMT.Prototype.Models\DMT.Prototype.Models.csproj", "{0F37FD1A-5491-4E10-9E2C-9CD631B333F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.v1.Models", "Prototypes\DMT.Prototype.Models\DMT.Prototype.v1.Models.csproj", "{0F37FD1A-5491-4E10-9E2C-9CD631B333F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.Core", "Prototypes\DMT.Prototype.Core\DMT.Prototype.Core.csproj", "{BE453E55-331A-4F2D-B7D2-5522098C9B6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.v1.Core", "Prototypes\DMT.Prototype.Core\DMT.Prototype.v1.Core.csproj", "{BE453E55-331A-4F2D-B7D2-5522098C9B6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.Services", "Prototypes\DMT.Prototype.Services\DMT.Prototype.Services.csproj", "{87F5E07B-E56B-4E29-8F7F-B4BC171900B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.v1.Services", "Prototypes\DMT.Prototype.Services\DMT.Prototype.v1.Services.csproj", "{87F5E07B-E56B-4E29-8F7F-B4BC171900B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.Controls", "Prototypes\DMT.Prototype.Controls\DMT.Prototype.Controls.csproj", "{7F19ADBA-884D-4D46-A7C1-4BF672F829D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.v1.Controls", "Prototypes\DMT.Prototype.Controls\DMT.Prototype.v1.Controls.csproj", "{7F19ADBA-884D-4D46-A7C1-4BF672F829D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.Pages", "Prototypes\DMT.Prototype.Pages\DMT.Prototype.Pages.csproj", "{31FBE6FB-4831-4E7B-B82A-433F40E20091}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMT.Prototype.v1.Pages", "Prototypes\DMT.Prototype.Pages\DMT.Prototype.v1.Pages.csproj", "{31FBE6FB-4831-4E7B-B82A-433F40E20091}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "DMT.TOD.Server", "Prototypes\DMT.TOD.Server\DMT.TOD.Server.njsproj", "{4D58472E-32FB-4CD1-8276-443F2D6050EE}"
 EndProject
