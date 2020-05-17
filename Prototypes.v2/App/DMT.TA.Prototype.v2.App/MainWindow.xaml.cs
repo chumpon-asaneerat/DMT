@@ -7,6 +7,8 @@ using NLib.Services;
 
 #endregion
 
+using DMT.Models;
+
 namespace DMT
 {
     /// <summary>
@@ -86,32 +88,5 @@ namespace DMT
         }
 
         #endregion
-
-        class X
-        {
-            public string account { get; set; }
-            public DateTime logindate { get; set; }
-
-            public static System.Collections.Generic.List<X> getTests()
-            {
-                System.Collections.Generic.List<X> list = new System.Collections.Generic.List<X>();
-                Random r = new Random();
-                X inst;
-                inst = new X();
-                inst.account = "aaa";
-                inst.logindate = DateTime.Now;
-                list.Add(inst);
-                inst = new X();
-                inst.account = "bbb";
-                inst.logindate = DateTime.Now.AddMilliseconds(r.Next(999));
-                list.Add(inst);
-                inst = new X();
-                inst.account = "ccc";
-                inst.logindate = DateTime.Now.AddMilliseconds(r.Next(999));
-                list.Add(inst);
-
-                return list;
-            }
-        }
     }
 }
