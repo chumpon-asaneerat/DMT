@@ -40,12 +40,12 @@
                        VerticalAlignment="Center"
                        TextAlignment="Center"
                        Text="อนุมัติ เงินยืม-ทอน/คูปอง ของฝ่ายบัญชี"/>
-                <Button x:Name="AllPlazaFundSummary"
+                <Button x:Name="accountAllPlazaSummary"
                         Grid.Column="0" Grid.Row="1" 
                         Margin="0 0 5 0"
                         Background="ForestGreen"
                         Foreground="WhiteSmoke"
-                        Click="AllPlazaFundSummary_Click">
+                        Click="accountAllPlazaSummary_Click">
                     <DockPanel>
                         <Grid DockPanel.Dock="Left"
                           Margin="5">
@@ -70,12 +70,12 @@
                         </StackPanel>
                     </DockPanel>
                 </Button>
-                <Button x:Name="receivedFundReport"
+                <Button x:Name="accountExchangeApprove"
                         Grid.Column="1" Grid.Row="1" 
                         Margin="0"
                         Background="ForestGreen"
                         Foreground="WhiteSmoke"
-                        Click="receivedFundReport_Click">
+                        Click="accountExchangeApprove_Click">
                     <DockPanel>
                         <Grid DockPanel.Dock="Left"
                           Margin="5">

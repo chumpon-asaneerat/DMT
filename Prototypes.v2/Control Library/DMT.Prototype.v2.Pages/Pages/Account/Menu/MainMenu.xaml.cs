@@ -32,21 +32,21 @@ namespace DMT.Pages.Account
 
         #region Button (Menu) Command Handlers
 
-        private void AllPlazaFundSummary_Click(object sender, RoutedEventArgs e)
+        private void accountAllPlazaSummary_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
         }
 
-        private void receivedFundReport_Click(object sender, RoutedEventArgs e)
+        private void accountExchangeApprove_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -54,9 +54,9 @@ namespace DMT.Pages.Account
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }

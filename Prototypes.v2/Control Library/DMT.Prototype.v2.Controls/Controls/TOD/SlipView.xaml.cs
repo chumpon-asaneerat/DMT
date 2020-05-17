@@ -16,18 +16,18 @@ using System.Windows.Shapes;
 namespace DMT.Controls
 {
     /// <summary>
-    /// Interaction logic for ShiftView.xaml
+    /// Interaction logic for SlipView.xaml
     /// </summary>
-    public partial class ShiftView : UserControl
+    public partial class SlipView : UserControl
     {
-        public ShiftView()
+        public SlipView()
         {
             InitializeComponent();
         }
 
-        public void Setup(List<Models.Shift> shifts) 
+        public void Setup(List<Models.RevenueSlip> slips)
         {
-            listView.ItemsSource = shifts;
+            listView.ItemsSource = slips;
         }
     }
 }

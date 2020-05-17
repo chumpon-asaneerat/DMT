@@ -17,8 +17,10 @@ Update 2020-05-18 #06
 Update 2020-05-18 #05
 -
 
+[commited]
 Update 2020-05-18 #04
--
+- TOD Job process Implements #2.
+- TOD Report process Implements #1.
 
 [commited]
 Update 2020-05-18 #03

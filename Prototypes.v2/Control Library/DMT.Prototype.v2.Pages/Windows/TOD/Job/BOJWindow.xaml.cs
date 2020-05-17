@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DMT.Windows
+namespace DMT.Windows.TOD.Job
 {
     /// <summary>
     /// Interaction logic for BOJWindow.xaml
@@ -24,8 +24,15 @@ namespace DMT.Windows
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDate.Text = DateTime.Now.ToThaiDateString();
+            txtTime.Text = DateTime.Now.ToThaiTimeString();
+        }
+
         private void cmdOK_Click(object sender, RoutedEventArgs e)
         {
+            Models.Job.BeginJob("14077", "นายเอนก หอมจรูง", 2);
             DialogResult = true;
         }
 

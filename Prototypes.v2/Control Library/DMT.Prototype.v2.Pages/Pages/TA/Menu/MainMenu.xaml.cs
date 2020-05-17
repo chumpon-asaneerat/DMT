@@ -34,9 +34,9 @@ namespace DMT.Pages.TA
 
         private void plazaFundReceivedReturn_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -44,9 +44,9 @@ namespace DMT.Pages.TA
 
         private void exchangeBankNote_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -54,9 +54,9 @@ namespace DMT.Pages.TA
 
         private void collectorFund_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -64,9 +64,9 @@ namespace DMT.Pages.TA
 
         private void collectorFundReport_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -74,9 +74,9 @@ namespace DMT.Pages.TA
 
         private void receivedCoupon_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -84,9 +84,9 @@ namespace DMT.Pages.TA
 
         private void receivedCouponReport_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -94,9 +94,9 @@ namespace DMT.Pages.TA
 
         private void collectorReveivedCoupon_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -104,9 +104,9 @@ namespace DMT.Pages.TA
 
         private void collectorReturnCoupon_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }
@@ -114,9 +114,9 @@ namespace DMT.Pages.TA
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
-            Windows.SignInWindow win = new Windows.SignInWindow();
-            win.Owner = Application.Current.MainWindow;
-            if (win.ShowDialog() == false)
+            var signinWin = new Windows.SignInWindow();
+            signinWin.Owner = Application.Current.MainWindow;
+            if (signinWin.ShowDialog() == false)
             {
                 return;
             }

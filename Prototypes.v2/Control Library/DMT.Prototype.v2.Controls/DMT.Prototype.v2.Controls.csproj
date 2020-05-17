@@ -81,8 +81,11 @@
     <Compile Include="Controls\Headers\PlazaInfo.xaml.cs">
       <DependentUpon>PlazaInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\ShiftView.xaml.cs">
-      <DependentUpon>ShiftView.xaml</DependentUpon>
+    <Compile Include="Controls\TOD\SlipView.xaml.cs">
+      <DependentUpon>SlipView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\LaneView.xaml.cs">
+      <DependentUpon>LaneView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -144,7 +147,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\TOD\ShiftView.xaml">
+    <Page Include="Controls\TOD\SlipView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TOD\LaneView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

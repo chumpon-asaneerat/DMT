@@ -12,31 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace DMT.Windows.TOD.Job
+namespace DMT.Windows.TOD.Reports
 {
     /// <summary>
-    /// Interaction logic for EOJWindow.xaml
+    /// Interaction logic for RevenueSummarySearchWindow.xaml
     /// </summary>
-    public partial class EOJWindow : Window
+    public partial class RevenueSummarySearchWindow : Window
     {
-        public EOJWindow()
+        public RevenueSummarySearchWindow()
         {
             InitializeComponent();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            txtDate.Text = DateTime.Now.ToThaiDateString();
-            txtTime.Text = DateTime.Now.ToThaiTimeString();
-            txtShiftId.Text = (null != this.Job) ? this.Job.ShiftId.ToString() : string.Empty;
+            dtDate.SelectedDate = DateTime.Today;
         }
 
         private void cmdOK_Click(object sender, RoutedEventArgs e)
         {
-            if (null != this.Job)
-            {
-                this.Job.EndJob();
-            }
             DialogResult = true;
         }
 
@@ -44,7 +38,5 @@ namespace DMT.Windows.TOD.Job
         {
             DialogResult = false;
         }
-
-        public Models.Job Job { get; set; }
     }
 }

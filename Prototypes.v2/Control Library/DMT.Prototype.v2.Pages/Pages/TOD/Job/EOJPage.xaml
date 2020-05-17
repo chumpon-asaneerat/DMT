@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="DMT.Pages.TOD.BOJPage"
+﻿<UserControl x:Class="DMT.Pages.TOD.Job.EOJPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -25,7 +25,8 @@
                                    TextAlignment="Right"
                                    Text="Date :" 
                                    Width="100"/>
-                        <TextBlock FontSize="18" 
+                        <TextBlock x:Name="txtJobDate" 
+                                   FontSize="18" 
                                    DockPanel.Dock="Left"
                                    Foreground="Yellow"
                                    HorizontalAlignment="Center"
@@ -41,7 +42,8 @@
                                    TextAlignment="Right"
                                    Text="SHIFT :" 
                                    Width="80"/>
-                        <TextBlock FontSize="18" 
+                        <TextBlock x:Name="txtShiftId" 
+                                   FontSize="18" 
                                    DockPanel.Dock="Left"
                                    Foreground="Yellow"
                                    HorizontalAlignment="Center"
@@ -57,7 +59,8 @@
                                    TextAlignment="Right"
                                    Text="ID :" 
                                    Width="50"/>
-                        <TextBlock FontSize="18" 
+                        <TextBlock x:Name="txtCollectorId" 
+                                   FontSize="18" 
                                    DockPanel.Dock="Left"
                                    Foreground="Yellow"
                                    HorizontalAlignment="Center"
@@ -73,7 +76,8 @@
                                    TextAlignment="Right"
                                    Text="Collector :" 
                                    Width="100"/>
-                        <TextBlock FontSize="18" 
+                        <TextBlock x:Name="txtCollectorName" 
+                                   FontSize="18" 
                                    Foreground="Yellow"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
@@ -92,7 +96,7 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="เริ่มงาน"
+                            Content="สิ้นสุดการทำงาน"
                             Height="45"
                             Width="150"
                             Click="cmdOk_Click"/>
@@ -111,7 +115,7 @@
                 <Grid />
             </DockPanel>
             <Grid>
-                <ctrl:ShiftView x:Name="grid"></ctrl:ShiftView>
+                <ctrl:LaneView x:Name="grid"></ctrl:LaneView>
             </Grid>
         </DockPanel>
     </Grid>
