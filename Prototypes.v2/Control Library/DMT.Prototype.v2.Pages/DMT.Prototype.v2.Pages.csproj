@@ -80,6 +80,9 @@
     <Compile Include="Pages\TOD\Reports\RevenueSlipPreview.xaml.cs">
       <DependentUpon>RevenueSlipPreview.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TOD\TollAdmin\ChangeShiftPage.xaml.cs">
+      <DependentUpon>ChangeShiftPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -119,7 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\TOD\Revenue\" />
-    <Folder Include="Pages\TOD\TollAdmin\" />
     <Folder Include="Windows\Account\" />
     <Folder Include="Windows\TA\" />
   </ItemGroup>
@@ -175,6 +177,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\TOD\Reports\RevenueSlipPreview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\TOD\TollAdmin\ChangeShiftPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -276,6 +282,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Reports\สรุปการส่งเงินประจำวัน TOD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reports\สรุปรวมนำส่งรายไดรายวัน.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

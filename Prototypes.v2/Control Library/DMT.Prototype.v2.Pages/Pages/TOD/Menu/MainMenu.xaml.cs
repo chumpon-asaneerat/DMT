@@ -99,6 +99,11 @@ namespace DMT.Pages.TOD
             {
                 return;
             }
+            // Change Shift
+            var page = new TollAdmin.ChangeShiftPage();
+            // setup
+            page.Setup(Models.Job.FindJob("14077"));
+            PageContentManager.Instance.Current = page;
         }
 
         private void reportMenu_Click(object sender, RoutedEventArgs e)

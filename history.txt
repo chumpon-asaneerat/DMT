@@ -1,4 +1,19 @@
 --------------------------------------------------------------------------------------------
+Update 2020-05-18 #15
+-
+
+Update 2020-05-18 #14
+-
+
+Update 2020-05-18 #13
+-
+
+Update 2020-05-18 #12
+-
+
+Update 2020-05-18 #11
+-
+
 Update 2020-05-18 #10
 -
 
@@ -11,8 +26,10 @@ Update 2020-05-18 #08
 Update 2020-05-18 #07
 -
 
+[commited]
 Update 2020-05-18 #06
--
+- TOD Change Shift process ported.
+- TOD update Daily Revenue Slip report image.
 
 [commited]
 Update 2020-05-18 #05
