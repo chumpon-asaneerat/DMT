@@ -20,8 +20,12 @@ Update 2020-05-17 #8
 Update 2020-05-17 #7
 -
 
+[commited]
 Update 2020-05-17 #6
--
+- Update DMT models classes #3.
+- DateTime extension method - supports custom date time format.
+- Correct assembly name (all projects).
+- Add control #1.
 
 [commited]
 Update 2020-05-17 #5

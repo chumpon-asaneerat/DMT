@@ -10,6 +10,52 @@ using Newtonsoft.Json;
 
 #endregion
 
+namespace DMT.Sample
+{
+    #region Public Methods - example code from MyChoice
+    /*
+    /// <summary>
+    /// Checks Properties Equals.
+    /// </summary>
+    /// <param name="source">The source object.</param>
+    /// <returns>Returns true if current properties is same as source.</returns>
+    public bool PropertiesEquals(MyChoiceDevice source)
+    {
+        if (null == source)
+            return false;
+        int cnt = 0;
+        if (this.Group != source.Group) ++cnt;
+        if (this.DeviceSerialNumber != source.DeviceSerialNumber) ++cnt;
+        if (this.LastScanTime != source.LastScanTime) ++cnt;
+        if (this.Model != source.Model) ++cnt;
+        if (this.Mode != source.Mode) ++cnt;
+        if (this.HasErrors != source.HasErrors) ++cnt;
+        if (this.CallCounter != source.CallCounter) ++cnt;
+        if (this.AckCounter != source.AckCounter) ++cnt;
+        return (cnt == 0);
+    }
+    /// <summary>
+    /// Clone properties.
+    /// </summary>
+    /// <param name="source">The source object.</param>
+    public void Clone(MyChoiceDevice source)
+    {
+        if (null == source)
+            return;
+        this.Group = source.Group;
+        this.DeviceSerialNumber = source.DeviceSerialNumber;
+        this.LastScanTime = source.LastScanTime;
+        this.Model = source.Model;
+        this.Mode = source.Mode;
+        this.HasErrors = source.HasErrors;
+        this.CallCounter = source.CallCounter;
+        this.AckCounter = source.AckCounter;
+    }
+    */
+
+    #endregion
+}
+
 namespace DMT.Models
 {
     #region Test Class
@@ -74,53 +120,48 @@ namespace DMT.Models
 
     #endregion
 
+    #region DMTBaseModel (abstract)
+
+    /// <summary>
+    /// The DMTBaseModel abstract class.
+    /// Provide basic implementation of INotifyPropertyChanged interface.
+    /// </summary>
+    public abstract class DMTBaseModel : INotifyPropertyChanged
+    {
+        #region Private Methods
+
+        /// <summary>
+        /// Raise Property Changed Event.
+        /// </summary>
+        /// <param name="propertyName">The property name.</param>
+        protected void RaiseChanged(string propertyName)
+        {
+            PropertyChanged.Call(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
+
+        #region Public Events
+
+        /// <summary>
+        /// The PropertyChanged event.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+    }
+
+    #endregion
+
     #region DMTModel
 
     /// <summary>
     /// The DMT Model class.
     /// </summary>
-    public class DMTModel
+    public class DMTModel : DMTBaseModel
     {
-        #region Public Methods - example code from MyChoice
-        /*
-        /// <summary>
-        /// Checks Properties Equals.
-        /// </summary>
-        /// <param name="source">The source object.</param>
-        /// <returns>Returns true if current properties is same as source.</returns>
-        public bool PropertiesEquals(MyChoiceDevice source)
-        {
-            if (null == source)
-                return false;
-            int cnt = 0;
-            if (this.Group != source.Group) ++cnt;
-            if (this.DeviceSerialNumber != source.DeviceSerialNumber) ++cnt;
-            if (this.LastScanTime != source.LastScanTime) ++cnt;
-            if (this.Model != source.Model) ++cnt;
-            if (this.Mode != source.Mode) ++cnt;
-            if (this.HasErrors != source.HasErrors) ++cnt;
-            if (this.CallCounter != source.CallCounter) ++cnt;
-            if (this.AckCounter != source.AckCounter) ++cnt;
-            return (cnt == 0);
-        }
-        /// <summary>
-        /// Clone properties.
-        /// </summary>
-        /// <param name="source">The source object.</param>
-        public void Clone(MyChoiceDevice source)
-        {
-            if (null == source)
-                return;
-            this.Group = source.Group;
-            this.DeviceSerialNumber = source.DeviceSerialNumber;
-            this.LastScanTime = source.LastScanTime;
-            this.Model = source.Model;
-            this.Mode = source.Mode;
-            this.HasErrors = source.HasErrors;
-            this.CallCounter = source.CallCounter;
-            this.AckCounter = source.AckCounter;
-        }
-        */
+        #region Internal Variables
+
         #endregion
 
         #region Public Properties
@@ -144,10 +185,11 @@ namespace DMT.Models
     /// <summary>
     /// The plaza information class.
     /// </summary>
-    public class Plaza : INotifyPropertyChanged
+    public class Plaza : DMTBaseModel
     {
         #region Internal Variables
 
+        private string _appMode = string.Empty;
         private string _plazaId = string.Empty;
         private string _plazaName = string.Empty;
         private int _shiftId = 0;
@@ -181,6 +223,22 @@ namespace DMT.Models
         #region Public Properties
 
         /// <summary>
+        /// Gets or sets Application mode.
+        /// </summary>
+        public string Mode
+        {
+            get { return _appMode; }
+            set
+            {
+                if (_appMode != value)
+                {
+                    _appMode = value;
+                    // Raise event.
+                    RaiseChanged("Mode");
+                }
+            }
+        }
+        /// <summary>
         /// Gets or sets Plaza Id.
         /// </summary>
         public string PlazaId 
@@ -192,7 +250,7 @@ namespace DMT.Models
                 {
                     _plazaId = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("PlazaId"));
+                    RaiseChanged("PlazaId");
                 }
             }
         }
@@ -208,7 +266,7 @@ namespace DMT.Models
                 {
                     _plazaName = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("PlazaName"));
+                    RaiseChanged("PlazaName");
                 }
             }
         }
@@ -224,19 +282,10 @@ namespace DMT.Models
                 {
                     _shiftId = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("ShiftId"));
+                    RaiseChanged("ShiftId");
                 }
             }
         }
-
-        #endregion
-
-        #region Public Events
-
-        /// <summary>
-        /// The PropertyChanged event.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
 
         #endregion
     }
@@ -248,12 +297,12 @@ namespace DMT.Models
     /// <summary>
     /// The Job Class.
     /// </summary>
-    public class Job
+    public class Job : DMTBaseModel
     {
         #region Internal Variables
 
-        private DateTime _jobBegin = DateTime.MinValue;
-        private DateTime _jobEnd = DateTime.MinValue;
+        private DateTime _begin = DateTime.MinValue;
+        private DateTime _end = DateTime.MinValue;
 
         #endregion
 
@@ -267,7 +316,7 @@ namespace DMT.Models
         {
             string result = string.Format(
                 "{0}_{1}",
-                _jobBegin, _jobEnd);
+                _begin, _end);
             return result.GetHashCode();
         }
         /// <summary>
@@ -289,44 +338,91 @@ namespace DMT.Models
         /// <summary>
         /// Gets or sets Job Begin Date.
         /// </summary>
-        public DateTime JobBegin
+        public DateTime Begin
         {
-            get { return _jobBegin; }
+            get { return _begin; }
             set
             {
-                if (_jobBegin != value)
+                if (_begin != value)
                 {
-                    _jobBegin = value;
+                    _begin = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("JobBegin"));
+                    RaiseChanged("Begin");
+                    RaiseChanged("BeginDateString");
+                    RaiseChanged("BeginTimeString");
                 }
             }
         }
         /// <summary>
         /// Gets or sets Job End Date.
         /// </summary>
-        public DateTime JobEnd
+        public DateTime End
         {
-            get { return _jobEnd; }
+            get { return _end; }
             set
             {
-                if (_jobEnd != value)
+                if (_end != value)
                 {
-                    _jobEnd = value;
+                    _end = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("JobEnd"));
+                    RaiseChanged("End");
+                    RaiseChanged("EndDateString");
+                    RaiseChanged("EndTimeString");
                 }
             }
         }
-
-        #endregion
-
-        #region Public Events
-
         /// <summary>
-        /// The PropertyChanged event.
+        /// Gets Begin Date String.
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        [JsonIgnore]
+        public string BeginDateString
+        {
+            get
+            {
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy");
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets End Date String.
+        /// </summary>
+        [JsonIgnore]
+        public string EndDateString
+        {
+            get
+            {
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("dd/MM/yyyy");
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets Begin Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string BeginTimeString
+        {
+            get
+            {
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets End Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string EndTimeString
+        {
+            get
+            {
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
 
         #endregion
     }
@@ -338,13 +434,13 @@ namespace DMT.Models
     /// <summary>
     /// The Shift Class.
     /// </summary>
-    public class Shift
+    public class Shift : DMTBaseModel
     {
         #region Internal Variables
 
         private int _shiftId = 0;
-        private DateTime _shiftBegin = DateTime.MinValue;
-        private DateTime _shiftEnd = DateTime.MinValue;
+        private DateTime _begin = DateTime.MinValue;
+        private DateTime _end = DateTime.MinValue;
 
         #endregion
 
@@ -358,7 +454,7 @@ namespace DMT.Models
         {
             string result = string.Format(
                 "{0}_{1}_{2}", 
-                _shiftId, _shiftBegin, _shiftEnd);
+                _shiftId, _begin, _end);
             return result.GetHashCode();
         }
         /// <summary>
@@ -389,51 +485,98 @@ namespace DMT.Models
                 {
                     _shiftId = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("ShiftId"));
+                    RaiseChanged("ShiftId");
                 }
             }
         }
         /// <summary>
         /// Gets or sets Shift Begin Date.
         /// </summary>
-        public DateTime ShiftBegin
+        public DateTime Begin
         {
-            get { return _shiftBegin; }
+            get { return _begin; }
             set
             {
-                if (_shiftBegin != value)
+                if (_begin != value)
                 {
-                    _shiftBegin = value;
+                    _begin = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("ShiftBegin"));
+                    RaiseChanged("Begin");
+                    RaiseChanged("BeginDateString");
+                    RaiseChanged("BeginTimeString");
                 }
             }
         }
         /// <summary>
         /// Gets or sets Shift End Date.
         /// </summary>
-        public DateTime ShiftEnd
+        public DateTime End
         {
-            get { return _shiftEnd; }
+            get { return _end; }
             set
             {
-                if (_shiftEnd != value)
+                if (_end != value)
                 {
-                    _shiftEnd = value;
+                    _end = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("ShiftEnd"));
+                    RaiseChanged("End");
+                    RaiseChanged("EndDateString");
+                    RaiseChanged("EndTimeString");
                 }
             }
         }
-
-        #endregion
-
-        #region Public Events
-
         /// <summary>
-        /// The PropertyChanged event.
+        /// Gets Begin Date String.
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        [JsonIgnore]
+        public string BeginDateString
+        {
+            get
+            {
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy");
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets End Date String.
+        /// </summary>
+        [JsonIgnore]
+        public string EndDateString
+        {
+            get
+            {
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("dd/MM/yyyy");
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets Begin Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string BeginTimeString
+        {
+            get
+            {
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets End Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string EndTimeString
+        {
+            get
+            {
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
 
         #endregion
     }
@@ -445,7 +588,7 @@ namespace DMT.Models
     /// <summary>
     /// The Staff class.
     /// </summary>
-    public class Staff
+    public class Staff : DMTBaseModel
     {
         #region Internal Variables
 
@@ -493,7 +636,7 @@ namespace DMT.Models
                 {
                     _role = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("Role"));
+                    RaiseChanged("Role");
                 }
             }
         }
@@ -509,7 +652,7 @@ namespace DMT.Models
                 {
                     _staffId = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("StaffId"));
+                    RaiseChanged("StaffId");
                 }
             }
         }
@@ -525,19 +668,10 @@ namespace DMT.Models
                 {
                     _staffName = value;
                     // Raise event.
-                    PropertyChanged.Call(this, new PropertyChangedEventArgs("StaffName"));
+                    RaiseChanged("StaffName");
                 }
             }
         }
-
-        #endregion
-
-        #region Public Events
-
-        /// <summary>
-        /// The PropertyChanged event.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
 
         #endregion
     }

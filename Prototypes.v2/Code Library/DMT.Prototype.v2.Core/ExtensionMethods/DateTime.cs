@@ -31,7 +31,7 @@ namespace DMT
         }
 
         /// <summary>
-        /// To Date String.
+        /// To Date String (fixed format used ToDateTimeString for custom format).
         /// </summary>
         /// <param name="value">The DateTime instance.</param>
         /// <returns>Returns string that represents date part.</returns>
@@ -42,7 +42,7 @@ namespace DMT
             return value.ToString("yyyy/MM/dd", DateTimeFormatInfo.InvariantInfo);
         }
         /// <summary>
-        /// To Time String.
+        /// To Time String (fixed format used ToDateTimeString for custom format).
         /// </summary>
         /// <param name="value">The DateTime instance.</param>
         /// <returns>Returns string that represents time part.</returns>
@@ -56,16 +56,18 @@ namespace DMT
         /// To DateTime String.
         /// </summary>
         /// <param name="value">The DateTime instance.</param>
+        /// <param name="format">The DateTime format.</param>
         /// <returns>Returns string that represents datetime part.</returns>
-        public static string ToDateTimeString(this DateTime value)
+        public static string ToDateTimeString(this DateTime value, 
+            string format = "yyyy/MM/dd HH:mm:ss.fff")
         {
             if (value == DateTime.MinValue || value == DateTime.MaxValue)
                 return "";
-            return value.ToString("yyyy/MM/dd HH:mm:ss.fff", DateTimeFormatInfo.InvariantInfo);
+            return value.ToString(format, DateTimeFormatInfo.InvariantInfo);
         }
 
         /// <summary>
-        /// To Thai Date String.
+        /// To Thai Date String (fixed format used ToThaiDateTimeString for custom format).
         /// </summary>
         /// <param name="value">The DateTime instance.</param>
         /// <returns>Returns string that represents date part.</returns>
@@ -76,15 +78,26 @@ namespace DMT
             return value.ToString("yyyy/MM/dd", DateTimeExtension.ThaiCultureInfo);
         }
         /// <summary>
+        /// To Thai Time String (fixed format used ToDateTimeString for custom format).
+        /// </summary>
+        /// <param name="value">The DateTime instance.</param>
+        /// <returns>Returns string that represents time part.</returns>
+        public static string ToThaiTimeString(this DateTime value)
+        {
+            return value.ToTimeString();
+        }
+        /// <summary>
         /// To Thai DateTime String.
         /// </summary>
         /// <param name="value">The DateTime instance.</param>
+        /// <param name="format">The DateTime format.</param>
         /// <returns>Returns string that represents datetime part.</returns>
-        public static string ToThaiDateTimeString(this DateTime value)
+        public static string ToThaiDateTimeString(this DateTime value, 
+            string format = "yyyy/MM/dd HH:mm:ss.fff")
         {
             if (value == DateTime.MinValue || value == DateTime.MaxValue)
                 return "";
-            return value.ToString("yyyy/MM/dd HH:mm:ss.fff", DateTimeExtension.ThaiCultureInfo);
+            return value.ToString(format, DateTimeExtension.ThaiCultureInfo);
         }
     }
 
