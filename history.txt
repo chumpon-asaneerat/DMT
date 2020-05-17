@@ -32,8 +32,12 @@ Update 2020-05-17 #4
 Update 2020-05-17 #3
 -
 
+[commited]
 Update 2020-05-17 #2
--
+- TA - MainForm : add page content service code.
+- TOD - MainForm : add page content service code.
+- Implements json wrapper extension method.
+- Ported DateTime extension method.
 
 [commited]
 Update 2020-05-17 #1
