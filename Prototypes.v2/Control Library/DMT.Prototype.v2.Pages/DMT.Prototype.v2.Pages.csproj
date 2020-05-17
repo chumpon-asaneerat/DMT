@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLib">
+      <HintPath>..\..\..\References\NLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -75,6 +78,24 @@
     <Folder Include="Images\" />
     <Folder Include="Pages\" />
     <Folder Include="Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Code Library\DMT.Prototype.v2.Core\DMT.Prototype.v2.Core.csproj">
+      <Project>{b41b4cde-9658-48fd-8f31-c960afad498b}</Project>
+      <Name>DMT.Prototype.v2.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Code Library\DMT.Prototype.v2.Models\DMT.Prototype.v2.Models.csproj">
+      <Project>{18f56fc1-d2e0-4c95-af43-e14185f241b0}</Project>
+      <Name>DMT.Prototype.v2.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Code Library\DMT.Prototype.v2.Services\DMT.Prototype.v2.Services.csproj">
+      <Project>{6bffdfbc-0a3b-4463-be4f-3f15461b6a2c}</Project>
+      <Name>DMT.Prototype.v2.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMT.Prototype.v2.Controls\DMT.Prototype.v2.Controls.csproj">
+      <Project>{d9c73d06-7206-4f42-aa20-eba08af10b2d}</Project>
+      <Name>DMT.Prototype.v2.Controls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

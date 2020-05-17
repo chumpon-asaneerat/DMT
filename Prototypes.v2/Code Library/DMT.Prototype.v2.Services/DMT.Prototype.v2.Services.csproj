@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLib">
+      <HintPath>..\..\..\References\NLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DMT.Prototype.v2.Core\DMT.Prototype.v2.Core.csproj">
+      <Project>{b41b4cde-9658-48fd-8f31-c960afad498b}</Project>
+      <Name>DMT.Prototype.v2.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMT.Prototype.v2.Models\DMT.Prototype.v2.Models.csproj">
+      <Project>{18f56fc1-d2e0-4c95-af43-e14185f241b0}</Project>
+      <Name>DMT.Prototype.v2.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
