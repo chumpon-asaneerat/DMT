@@ -104,8 +104,7 @@
 
             <!-- Group 5 : Log out -->
             <Grid Grid.Column="2" Grid.Row="2"
-                  Margin="5 0 5 0"
-                  Visibility="Hidden">
+                  Margin="5 0 5 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>

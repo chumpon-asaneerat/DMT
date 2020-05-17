@@ -14,8 +14,10 @@ Update 2020-05-18 #07
 Update 2020-05-18 #06
 -
 
+[commited]
 Update 2020-05-18 #05
--
+- TA Change sign in process.
+- Account Change sign in process.
 
 [commited]
 Update 2020-05-18 #04

@@ -34,32 +34,18 @@ namespace DMT.Pages.Account
 
         private void accountAllPlazaSummary_Click(object sender, RoutedEventArgs e)
         {
-            var signinWin = new Windows.SignInWindow();
-            signinWin.Owner = Application.Current.MainWindow;
-            if (signinWin.ShowDialog() == false)
-            {
-                return;
-            }
+
         }
 
         private void accountExchangeApprove_Click(object sender, RoutedEventArgs e)
         {
-            var signinWin = new Windows.SignInWindow();
-            signinWin.Owner = Application.Current.MainWindow;
-            if (signinWin.ShowDialog() == false)
-            {
-                return;
-            }
+
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
-            var signinWin = new Windows.SignInWindow();
-            signinWin.Owner = Application.Current.MainWindow;
-            if (signinWin.ShowDialog() == false)
-            {
-                return;
-            }
+            // Init Sign In Page
+            PageContentManager.Instance.Current = new Account.SignInPage();
         }
 
         #endregion
