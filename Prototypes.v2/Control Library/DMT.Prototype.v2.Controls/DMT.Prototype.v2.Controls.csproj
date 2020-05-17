@@ -53,8 +53,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\Common.cs" />
-    <Compile Include="Controls\Plaza\Logo.xaml.cs">
+    <Compile Include="Controls\Headers\Elements\DateTimeBox.xaml.cs">
+      <DependentUpon>DateTimeBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Headers\Elements\InfoBox.xaml.cs">
+      <DependentUpon>InfoBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Headers\Elements\Logo.xaml.cs">
       <DependentUpon>Logo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Headers\Elements\Plaza.xaml.cs">
+      <DependentUpon>Plaza.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Headers\Elements\Shift.xaml.cs">
+      <DependentUpon>Shift.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Headers\Elements\Supervisor.xaml.cs">
+      <DependentUpon>Supervisor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Headers\PlazaHeader.xaml.cs">
+      <DependentUpon>PlazaHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Headers\PlazaInfo.xaml.cs">
+      <DependentUpon>PlazaInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -80,9 +101,41 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="Controls\Plaza\Logo.xaml">
+    <Page Include="Controls\Headers\Elements\DateTimeBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Headers\Elements\InfoBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Headers\Elements\Logo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Headers\Elements\Plaza.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Headers\Elements\Shift.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Headers\Elements\Supervisor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Headers\PlazaHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Headers\PlazaInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextBlockStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\TextBoxStyles.xaml">
       <SubType>Designer</SubType>

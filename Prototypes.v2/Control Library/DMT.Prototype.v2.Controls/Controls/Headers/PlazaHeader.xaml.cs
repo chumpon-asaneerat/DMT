@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DMT.Controls.Plaza
+namespace DMT.Controls
 {
     /// <summary>
-    /// Interaction logic for Logo.xaml
+    /// Interaction logic for PlazaHeader.xaml
     /// </summary>
-    public partial class Logo : UserControl
+    public partial class PlazaHeader : UserControl
     {
-        public Logo()
+        public PlazaHeader()
         {
             InitializeComponent();
         }
