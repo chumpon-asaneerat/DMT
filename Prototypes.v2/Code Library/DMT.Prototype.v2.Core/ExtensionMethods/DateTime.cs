@@ -50,7 +50,7 @@ namespace DMT
         {
             if (value == DateTime.MinValue || value == DateTime.MaxValue)
                 return "";
-            return value.ToString("HH:mm:ss.fff", DateTimeFormatInfo.InvariantInfo);
+            return value.ToString("HH:mm:ss", DateTimeFormatInfo.InvariantInfo);
         }
         /// <summary>
         /// To DateTime String.

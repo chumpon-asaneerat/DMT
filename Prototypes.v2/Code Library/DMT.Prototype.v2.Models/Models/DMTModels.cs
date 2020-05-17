@@ -101,7 +101,7 @@ namespace DMT.Models
         {
             // Test Json Code.
             List<X> list = X.getTests();
-            string fileName = Json.LocalFile("sample.json");
+            string fileName = NJson.LocalFile("sample.json");
 
             //string json = list.ToJson();
             //Console.WriteLine(json);
@@ -112,7 +112,7 @@ namespace DMT.Models
             }
 
             List<X> list2;
-            list2 = Json.LoadFromFile<List<X>>(fileName);
+            list2 = NJson.LoadFromFile<List<X>>(fileName);
             Console.WriteLine(list2);
             Console.WriteLine(list2.ToJson());
         }
@@ -192,7 +192,8 @@ namespace DMT.Models
         private string _appMode = string.Empty;
         private string _plazaId = string.Empty;
         private string _plazaName = string.Empty;
-        private int _shiftId = 0;
+        private Shift _shift;
+        private Staff _supervisor;
 
         #endregion
 
@@ -270,21 +271,84 @@ namespace DMT.Models
                 }
             }
         }
+
         /// <summary>
-        /// Gets or sets Current Shift Id.
+        /// Gets Current Shift.
         /// </summary>
-        public int ShiftId
+        public Shift Shift
         {
-            get { return _shiftId; }
+            get { return _shift;  }
             set
             {
-                if (_shiftId != value)
+                if (_shift != value)
                 {
-                    _shiftId = value;
+                    _shift = value;
                     // Raise event.
+                    RaiseChanged("Shift");
                     RaiseChanged("ShiftId");
+                    RaiseChanged("ShiftDate");
+                    RaiseChanged("ShiftTime");
                 }
             }
+        }
+        /// <summary>
+        /// Gets Current Shift Id.
+        /// </summary>
+        [JsonIgnore]
+        public string ShiftId
+        {
+            get { return (null != _shift) ? _shift.ShiftId.ToString() : ""; }
+        }
+        /// <summary>
+        /// Gets Current Shift Begin date (in string).
+        /// </summary>
+        [JsonIgnore]
+        public string ShiftDate
+        {
+            get { return (null != _shift) ? _shift.BeginDateString : ""; }
+        }
+        /// <summary>
+        /// Gets Current Shift Begin time (in string).
+        /// </summary>
+        [JsonIgnore]
+        public string ShiftTime
+        {
+            get { return (null != _shift) ? _shift.BeginTimeString : ""; }
+        }
+
+        /// <summary>
+        /// Gets Current Supervisor.
+        /// </summary>
+        public Staff Supervisor
+        {
+            get { return _supervisor; }
+            set
+            {
+                if (_supervisor != value)
+                {
+                    _supervisor = value;
+                    // Raise event.
+                    RaiseChanged("Supervisor");
+                    RaiseChanged("SupervisorId");
+                    RaiseChanged("SupervisorName");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets Current supervisor Id.
+        /// </summary>
+        [JsonIgnore]
+        public string SupervisorId
+        {
+            get { return (null != _supervisor) ? _supervisor.StaffId.ToString() : ""; }
+        }
+        /// <summary>
+        /// Gets Current supervisor name.
+        /// </summary>
+        [JsonIgnore]
+        public string SupervisorName
+        {
+            get { return (null != _supervisor) ? _supervisor.StaffName : ""; }
         }
 
         #endregion
@@ -379,7 +443,7 @@ namespace DMT.Models
         {
             get
             {
-                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy");
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("yyyy-MM-dd");
                 return ret;
             }
             set { }
@@ -392,7 +456,7 @@ namespace DMT.Models
         {
             get
             {
-                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("dd/MM/yyyy");
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("yyyy-MM-dd");
                 return ret;
             }
             set { }
@@ -533,7 +597,7 @@ namespace DMT.Models
         {
             get
             {
-                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy");
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("yyyy-MM-dd");
                 return ret;
             }
             set { }
@@ -546,7 +610,7 @@ namespace DMT.Models
         {
             get
             {
-                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("dd/MM/yyyy");
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("yyyy-MM-dd");
                 return ret;
             }
             set { }

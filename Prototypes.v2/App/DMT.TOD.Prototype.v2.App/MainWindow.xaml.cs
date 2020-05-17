@@ -2,7 +2,11 @@
 
 using System;
 using System.Windows;
+
 using NLib.Services;
+
+using DMT.Models;
+using DMT.Services;
 
 #endregion
 
@@ -29,13 +33,15 @@ namespace DMT
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // Start app manager.
+            DMTAppManager.Instance.Start();
             // Initial Page Content Manager
             PageContentManager.Instance.ContentChanged += new EventHandler(Instance_ContentChanged);
             PageContentManager.Instance.StatusUpdated += new StatusMessageEventHandler(Instance_StatusUpdated);
             PageContentManager.Instance.OnTick += new EventHandler(Instance_OnTick);
             PageContentManager.Instance.Start();
             // Init Main Menu
-            //PageContentManager.Instance.Current = new Pages.TODSignInPage();
+            PageContentManager.Instance.Current = new Pages.TOD.TODMainMenu();
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)
@@ -45,6 +51,8 @@ namespace DMT
             PageContentManager.Instance.OnTick -= new EventHandler(Instance_OnTick);
             PageContentManager.Instance.StatusUpdated -= new StatusMessageEventHandler(Instance_StatusUpdated);
             PageContentManager.Instance.ContentChanged -= new EventHandler(Instance_ContentChanged);
+            // Shutdown app manager.
+            DMTAppManager.Instance.Shutdown();
         }
 
         #endregion

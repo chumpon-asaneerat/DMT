@@ -14,7 +14,7 @@ namespace DMT
     /// <summary>
     /// The Json Extension Methods.
     /// </summary>
-    public static class Json
+    public static class NJson
     {
         /// <summary>
         /// Convert Object to Json String.
@@ -134,7 +134,17 @@ namespace DMT
         /// <returns>Returns full path to access file in json local folder</returns>
         public static string LocalFile(string fileName)
         {
-            return Folders.Combine(Json.LocalFolder, fileName);
+            return Folders.Combine(NJson.LocalFolder, fileName);
+        }
+        /// <summary>
+        /// Checks is local file exists.
+        /// </summary>
+        /// <param name="fileName">The file name (not include folder).</param>
+        /// <returns>Returns true if file in json local folder</returns>
+        public static bool Exists(string fileName)
+        {
+            string localFile = NJson.LocalFile(fileName);
+            return Files.Exists(localFile);
         }
     }
 }

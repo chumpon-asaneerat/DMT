@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -52,6 +53,15 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\TA\MainMenu\TAAccountMainMenu.xaml.cs">
+      <DependentUpon>TAAccountMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TA\MainMenu\TAPlazaMainMenu.xaml.cs">
+      <DependentUpon>TAPlazaMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TOD\MainMenu\TODMainMenu.xaml.cs">
+      <DependentUpon>TODMainMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -75,9 +85,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="Pages\" />
-    <Folder Include="Windows\" />
+    <Folder Include="Pages\TOD\Job\" />
+    <Folder Include="Pages\TOD\Revenue\" />
+    <Folder Include="Pages\TOD\TollAdmin\" />
+    <Folder Include="Windows\TA\" />
+    <Folder Include="Windows\TOD\Job\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code Library\DMT.Prototype.v2.Core\DMT.Prototype.v2.Core.csproj">
@@ -96,6 +108,53 @@
       <Project>{d9c73d06-7206-4f42-aa20-eba08af10b2d}</Project>
       <Name>DMT.Prototype.v2.Controls</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Pages\TA\MainMenu\TAAccountMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TA\MainMenu\TAPlazaMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TOD\MainMenu\TODMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background\snartcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\bag4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\begin_of_job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\coupon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\end_of_job.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\report1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\reventry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

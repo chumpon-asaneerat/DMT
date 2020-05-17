@@ -1,0 +1,15 @@
+{
+  "Mode": "Plaza",
+  "PlazaId": "01",
+  "PlazaName": "ดินแดง",
+  "Shift": {
+    "ShiftId": 3,
+    "Begin": "2020-05-17T15:57:21.1485853+07:00",
+    "End": "0001-01-01T00:00:00"
+  },
+  "Supervisor": {
+    "Role": "Supervisor",
+    "StaffId": "17155",
+    "StaffName": "นาย สมบูรณ์ สบายดี 3"
+  }
+}
