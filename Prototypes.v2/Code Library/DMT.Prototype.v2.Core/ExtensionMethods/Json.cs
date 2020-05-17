@@ -5,7 +5,6 @@ using System.IO;
 using System.Reflection;
 using NLib;
 using Newtonsoft.Json;
-using System.Runtime.InteropServices;
 using NLib.IO;
 
 #endregion
@@ -73,6 +72,7 @@ namespace DMT
                     JsonSerializer serializer = new JsonSerializer();
                     serializer.Serialize(file, value);
                 }
+                result = true;
             }
             catch (Exception ex)
             {

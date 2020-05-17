@@ -39,15 +39,21 @@ namespace DMT
             //PageContentManager.Instance.Current = new Pages.TASignInPage();
 
             // Test Json Code.
-            /*
             System.Collections.Generic.List<X> list = X.getTests();
-            string json = list.ToJson();
-
-            Console.WriteLine(json);
-
             string fileName = Json.LocalFile("sample.json");
-            Json.SaveToFile(list, fileName);
-            */
+
+            //string json = list.ToJson();
+            //Console.WriteLine(json);
+
+            if (!list.SaveToFile(fileName))
+            {
+                Console.WriteLine("Cannot save file.");
+            }
+
+            System.Collections.Generic.List<X> list2;
+            list2 = Json.LoadFromFile<System.Collections.Generic.List<X>>(fileName);
+            Console.WriteLine(list2);
+            Console.WriteLine(list2.ToJson());
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e)

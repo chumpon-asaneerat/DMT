@@ -57,7 +57,7 @@ namespace DMT
                 Behaviors = new NAppBehaviors()
                 {
                     /* Set to true for allow only one instance of application can execute an runtime */
-                    IsSingleAppInstance = true,
+                    IsSingleAppInstance = false,
                     /* Set to true for enable Debuggers this value should always be true */
                     EnableDebuggers = true
                 }
@@ -109,7 +109,7 @@ namespace DMT
             // Wpf shutdown process required exit code.
 
             /* If auto close the single instance must be true */
-            bool autoCloseProcess = true;
+            bool autoCloseProcess = false;
             WpfAppContoller.Instance.Shutdown(autoCloseProcess, e.ApplicationExitCode);
 
             base.OnExit(e);

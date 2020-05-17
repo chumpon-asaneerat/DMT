@@ -29,8 +29,11 @@ Update 2020-05-17 #5
 Update 2020-05-17 #4
 -
 
+[commited]
 Update 2020-05-17 #3
--
+- json wrapper extension method update #2.
+- TOD - App.xaml disable single instance.
+- TOD - MainForm disable single instance.
 
 [commited]
 Update 2020-05-17 #2
