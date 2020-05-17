@@ -20,11 +20,14 @@ Update 2020-05-18 #05
 Update 2020-05-18 #04
 -
 
+[commited]
 Update 2020-05-18 #03
--
+- TOD Job process Implements #1.
 
+[commited]
 Update 2020-05-18 #02
--
+- Rename DMT.Service v1 project's properties.
+- Cleanup all unused generate code.
 
 [commited]
 Update 2020-05-18 #01
