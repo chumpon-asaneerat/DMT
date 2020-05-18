@@ -33,7 +33,7 @@
         </DockPanel>
         <ScrollViewer VerticalAlignment="Top"
                       VerticalContentAlignment="Top">
-            <Image Source="/DMT.Pages;component/Images/Report/all_plaza_fund.jpg"/>
+            <Image Source="/DMT.Prototype.v1.Pages;component/Images/Report/all_plaza_fund.jpg"/>
         </ScrollViewer>
     </DockPanel>
 </UserControl>

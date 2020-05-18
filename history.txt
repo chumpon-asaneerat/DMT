@@ -17,8 +17,10 @@ Update 2020-05-18 #11
 Update 2020-05-18 #10
 -
 
+[commited]
 Update 2020-05-18 #09
--
+- TA Collector Coupon received/returns process #1. 
+- TA Plaza Find received/returns process #1.
 
 [commited]
 Update 2020-05-18 #08

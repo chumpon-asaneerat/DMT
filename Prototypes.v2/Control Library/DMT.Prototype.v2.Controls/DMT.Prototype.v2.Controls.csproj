@@ -53,10 +53,28 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\TOD\TrafficEntry.xaml.cs">
+    <Compile Include="Controls\TA\Coupon\CouponReceiveView.xaml.cs">
+      <DependentUpon>CouponReceiveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\Coupon\CouponReturnView.xaml.cs">
+      <DependentUpon>CouponReturnView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\Entry\CouponPlazaEntry.xaml.cs">
+      <DependentUpon>CouponPlazaEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\Entry\FundEntry.xaml.cs">
+      <DependentUpon>FundEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\Plaza\CouponPlazaView.xaml.cs">
+      <DependentUpon>CouponPlazaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\Plaza\FundPlazaView.xaml.cs">
+      <DependentUpon>FundPlazaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\Entry\TrafficEntry.xaml.cs">
       <DependentUpon>TrafficEntry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\OtherEntry.xaml.cs">
+    <Compile Include="Controls\TOD\Entry\OtherEntry.xaml.cs">
       <DependentUpon>OtherEntry.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Headers\AccountInfo.xaml.cs">
@@ -87,25 +105,25 @@
     <Compile Include="Controls\Headers\PlazaInfo.xaml.cs">
       <DependentUpon>PlazaInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\CouponRevenueEntry.xaml.cs">
+    <Compile Include="Controls\TOD\Entry\CouponRevenueEntry.xaml.cs">
       <DependentUpon>CouponRevenueEntry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\CouponUsageEntry.xaml.cs">
+    <Compile Include="Controls\TOD\Entry\CouponUsageEntry.xaml.cs">
       <DependentUpon>CouponUsageEntry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\EMVEntry.xaml.cs">
+    <Compile Include="Controls\TOD\Entry\EMVEntry.xaml.cs">
       <DependentUpon>EMVEntry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\QRCodeEntry.xaml.cs">
+    <Compile Include="Controls\TOD\Entry\QRCodeEntry.xaml.cs">
       <DependentUpon>QRCodeEntry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\RevenueEntry.xaml.cs">
+    <Compile Include="Controls\TOD\Entry\RevenueEntry.xaml.cs">
       <DependentUpon>RevenueEntry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\SlipView.xaml.cs">
+    <Compile Include="Controls\TOD\Shift\SlipView.xaml.cs">
       <DependentUpon>SlipView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TOD\LaneView.xaml.cs">
+    <Compile Include="Controls\TOD\Entry\LaneView.xaml.cs">
       <DependentUpon>LaneView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -132,11 +150,35 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="Controls\TOD\TrafficEntry.xaml">
+    <Page Include="Controls\TA\Coupon\CouponReceiveView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\TOD\OtherEntry.xaml">
+    <Page Include="Controls\TA\Coupon\CouponReturnView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TA\Entry\CouponPlazaEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TA\Entry\FundEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TA\Plaza\CouponPlazaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TA\Plaza\FundPlazaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\Entry\TrafficEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\Entry\OtherEntry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -176,31 +218,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\TOD\CouponRevenueEntry.xaml">
+    <Page Include="Controls\TOD\Entry\CouponRevenueEntry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\TOD\CouponUsageEntry.xaml">
+    <Page Include="Controls\TOD\Entry\CouponUsageEntry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\TOD\EMVEntry.xaml">
+    <Page Include="Controls\TOD\Entry\EMVEntry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\TOD\QRCodeEntry.xaml">
+    <Page Include="Controls\TOD\Entry\QRCodeEntry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\TOD\RevenueEntry.xaml">
+    <Page Include="Controls\TOD\Entry\RevenueEntry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\TOD\SlipView.xaml">
+    <Page Include="Controls\TOD\Shift\SlipView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\TOD\LaneView.xaml">
+    <Page Include="Controls\TOD\Entry\LaneView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -1662,8 +1662,8 @@ namespace DMT.Models
             RaiseChanged("CntTotal");
 
             int total = 0;
-            total += _BHT35 * 35;
-            total += _BHT80 * 80;
+            total += _BHT35Total;
+            total += _BHT80Total;
 
             _BHTTotal = total;
             // Raise event.
@@ -1685,7 +1685,7 @@ namespace DMT.Models
                 if (_BHT35 != value)
                 {
                     _BHT35 = value;
-                    _BHT35Total = _BHT35 * 35;
+                    _BHT35Total = _BHT35 * 665;
                     CalcTotal();
                     // Raise event.
                     RaiseChanged("BHT35");
@@ -1704,7 +1704,7 @@ namespace DMT.Models
                 if (_BHT80 != value)
                 {
                     _BHT80 = value;
-                    _BHT80Total = _BHT80 * 80;
+                    _BHT80Total = _BHT80 * 1520;
                     CalcTotal();
                     // Raise event.
                     RaiseChanged("BHT80");
@@ -1968,6 +1968,531 @@ namespace DMT.Models
             }
             set { }
         }
+
+        #endregion
+    }
+
+    #endregion
+}
+
+namespace DMT.Models
+{
+    public class Coupon
+    {
+        public Coupon()
+        {
+            this.Date = DateTime.MinValue;
+        }
+        public string StaffId { get; set; }
+        public string StaffName { get; set; }
+        public int Lane { get; set; }
+        public int Count { get; set; }
+        public string Type { get; set; }
+        public DateTime Date { get; set; }
+        public string DateString
+        {
+            get
+            {
+                var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToThaiDateString();
+                return ret;
+            }
+            set { }
+        }
+        public string TimeString
+        {
+            get
+            {
+                var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+    }
+}
+
+namespace DMT.Models
+{
+    #region FundEntry
+
+    /// <summary>
+    /// The FundEntry Class.
+    /// </summary>
+    public class FundEntry : INotifyPropertyChanged
+    {
+        #region Internal Variables
+
+        private string _desc = "";
+
+        private int _BHT1 = 0;
+        private int _BHT2 = 0;
+        private int _BHT5 = 0;
+        private int _BHT10c = 0;
+        private int _BHT20 = 0;
+        private int _BHT50 = 0;
+        private int _BHT100 = 0;
+        private int _BHT500 = 0;
+        private int _BHT1000 = 0;
+        private decimal _BHTTotal = 0;
+        private bool _hasRemark = true;
+        private string _remark = "";
+
+        #endregion
+
+        #region Constructor and Destructor
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public FundEntry() : base()
+        {
+            this.Date = DateTime.MinValue;
+        }
+        /// <summary>
+        /// Destructor.
+        /// </summary>
+        ~FundEntry() { }
+
+        #endregion
+
+        #region Private Methods
+
+        private void CalcTotal()
+        {
+            decimal total = 0;
+            total += _BHT1 * 1;
+            total += _BHT2 * 2;
+            total += _BHT5 * 5;
+            total += _BHT10c * 10;
+            total += _BHT20 * 20;
+            total += _BHT50 * 50;
+            total += _BHT100 * 100;
+            total += _BHT500 * 500;
+            total += _BHT1000 * 1000;
+
+            _BHTTotal = total;
+            // Raise event.
+            PropertyChanged.Call(this, new PropertyChangedEventArgs("BHTTotal"));
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        public string Description
+        {
+            get { return _desc; }
+            set
+            {
+                if (_desc != value)
+                {
+                    _desc = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("Description"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 1 baht coin.
+        /// </summary>
+        public int BHT1
+        {
+            get { return _BHT1; }
+            set
+            {
+                if (_BHT1 != value)
+                {
+                    _BHT1 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT1"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 2 baht coin.
+        /// </summary>
+        public int BHT2
+        {
+            get { return _BHT2; }
+            set
+            {
+                if (_BHT2 != value)
+                {
+                    _BHT2 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT2"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 5 baht coin.
+        /// </summary>
+        public int BHT5
+        {
+            get { return _BHT5; }
+            set
+            {
+                if (_BHT5 != value)
+                {
+                    _BHT5 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT5"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 10 baht coin.
+        /// </summary>
+        public int BHT10c
+        {
+            get { return _BHT10c; }
+            set
+            {
+                if (_BHT10c != value)
+                {
+                    _BHT10c = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT10c"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 20 baht bill.
+        /// </summary>
+        public int BHT20
+        {
+            get { return _BHT20; }
+            set
+            {
+                if (_BHT20 != value)
+                {
+                    _BHT20 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT20"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 50 baht bill.
+        /// </summary>
+        public int BHT50
+        {
+            get { return _BHT50; }
+            set
+            {
+                if (_BHT50 != value)
+                {
+                    _BHT50 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT50"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 100 baht bill.
+        /// </summary>
+        public int BHT100
+        {
+            get { return _BHT100; }
+            set
+            {
+                if (_BHT100 != value)
+                {
+                    _BHT100 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT100"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 500 baht bill.
+        /// </summary>
+        public int BHT500
+        {
+            get { return _BHT500; }
+            set
+            {
+                if (_BHT500 != value)
+                {
+                    _BHT500 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT500"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 1000 baht bill.
+        /// </summary>
+        public int BHT1000
+        {
+            get { return _BHT1000; }
+            set
+            {
+                if (_BHT1000 != value)
+                {
+                    _BHT1000 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT1000"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets total value in baht.
+        /// </summary>
+        public decimal BHTTotal
+        {
+            get { return _BHTTotal; }
+            set { }
+        }
+        /// <summary>
+        /// Gets or sets has remark.
+        /// </summary>
+        public bool HasRemark
+        {
+            get { return _hasRemark; }
+            set
+            {
+                if (_hasRemark != value)
+                {
+                    _hasRemark = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("HasRemark"));
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("RemarkVisibility"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Remark.
+        /// </summary>
+        public string Remark
+        {
+            get { return _remark; }
+            set
+            {
+                if (_remark != value)
+                {
+                    _remark = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("Remark"));
+                }
+            }
+        }
+        public System.Windows.Visibility RemarkVisibility
+        {
+            get { return (_hasRemark) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
+        }
+
+        public string StaffId { get; set; }
+        public string StaffName { get; set; }
+        public DateTime Date { get; set; }
+        public int Lane { get; set; }
+        public string DateString
+        {
+            get
+            {
+                var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToThaiDateString();
+                return ret;
+            }
+            set { }
+        }
+        public string TimeString
+        {
+            get
+            {
+                var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+
+        #endregion
+
+        #region Public Events
+
+        /// <summary>
+        /// The PropertyChanged event.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+    }
+
+    #endregion
+
+    #region CouponEntry
+
+    /// <summary>
+    /// The CouponEntry Class.
+    /// </summary>
+    public class CouponEntry : INotifyPropertyChanged
+    {
+        #region Internal Variables
+
+        private string _desc = "";
+        private int _BHT35 = 0;
+        private int _BHT80 = 0;
+        private decimal _CntTotal = 0;
+        private decimal _BHTTotal = 0;
+        private bool _hasRemark = true;
+        private string _remark = "";
+
+        #endregion
+
+        #region Constructor and Destructor
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public CouponEntry() : base() { }
+        /// <summary>
+        /// Destructor.
+        /// </summary>
+        ~CouponEntry() { }
+
+        #endregion
+
+        #region Private Methods
+
+        private void CalcTotal()
+        {
+            int cnt = 0;
+            cnt += _BHT35;
+            cnt += _BHT80;
+            _CntTotal = cnt;
+
+            // Raise event.
+            PropertyChanged.Call(this, new PropertyChangedEventArgs("CntTotal"));
+
+            decimal total = 0;
+            total += _BHT35 * 665;
+            total += _BHT80 * 1520;
+
+            _BHTTotal = total;
+            // Raise event.
+            PropertyChanged.Call(this, new PropertyChangedEventArgs("BHTTotal"));
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        public string Description
+        {
+            get { return _desc; }
+            set
+            {
+                if (_desc != value)
+                {
+                    _desc = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("Description"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 35 BHT coupon.
+        /// </summary>
+        public int BHT35
+        {
+            get { return _BHT35; }
+            set
+            {
+                if (_BHT35 != value)
+                {
+                    _BHT35 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT35"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 80 BHT coupon.
+        /// </summary>
+        public int BHT80
+        {
+            get { return _BHT80; }
+            set
+            {
+                if (_BHT80 != value)
+                {
+                    _BHT80 = value;
+                    CalcTotal();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BHT80"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets total coupon count (all type).
+        /// </summary>
+        public decimal CntTotal
+        {
+            get { return _CntTotal; }
+            set { }
+        }
+        /// <summary>
+        /// Gets or sets total value in baht.
+        /// </summary>
+        public decimal BHTTotal
+        {
+            get { return _BHTTotal; }
+            set { }
+        }
+        /// <summary>
+        /// Gets or sets has remark.
+        /// </summary>
+        public bool HasRemark
+        {
+            get { return _hasRemark; }
+            set
+            {
+                if (_hasRemark != value)
+                {
+                    _hasRemark = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("HasRemark"));
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("RemarkVisibility"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Remark.
+        /// </summary>
+        public string Remark
+        {
+            get { return _remark; }
+            set
+            {
+                if (_remark != value)
+                {
+                    _remark = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("Remark"));
+                }
+            }
+        }
+        public System.Windows.Visibility RemarkVisibility
+        {
+            get { return (_hasRemark) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
+        }
+
+        #endregion
+
+        #region Public Events
+
+        /// <summary>
+        /// The PropertyChanged event.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
         #endregion
     }
