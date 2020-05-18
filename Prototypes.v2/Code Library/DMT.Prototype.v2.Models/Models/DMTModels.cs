@@ -1038,7 +1038,702 @@ namespace DMT.Models
     /// </summary>
     public class RevenueEntry : DMTBaseModel
     {
+        #region Internal Variables
 
+        private string _bagNo = string.Empty;
+        private TrafficEntry _traffic = null;
+        private OtherEntry _other = null;
+        private CouponUsageEntry _couponUsage = null;
+        private CouponRevenueEntry _couponRevenue = null;
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Bag Number.
+        /// </summary>
+        public string BagNo
+        {
+            get { return _bagNo; }
+            set
+            {
+                if (_bagNo != value)
+                {
+                    _bagNo = value;
+                    // Raise event.
+                    RaiseChanged("BagNo");
+                }
+            }
+        }
+
+        public TrafficEntry Traffic
+        {
+            get
+            {
+                if (null == _traffic) _traffic = new TrafficEntry();
+                return _traffic;
+            }
+            set
+            {
+                _traffic = value;
+                if (null == _traffic) _traffic = new TrafficEntry();
+                // Raise event.
+                RaiseChanged("Traffic");
+            }
+        }
+
+        public OtherEntry Other
+        {
+            get
+            {
+                if (null == _other) _other = new OtherEntry();
+                return _other;
+            }
+            set
+            {
+                _other = value;
+                if (null == _other) _other = new OtherEntry();
+                // Raise event.
+                RaiseChanged("Other");
+            }
+        }
+
+        public CouponUsageEntry CouponUsage
+        {
+            get
+            {
+                if (null == _couponUsage) _couponUsage = new CouponUsageEntry();
+                return _couponUsage;
+            }
+            set
+            {
+                _couponUsage = value;
+                if (null == _couponUsage) _couponUsage = new CouponUsageEntry();
+                // Raise event.
+                RaiseChanged("CouponUsage");
+            }
+        }
+
+        public CouponRevenueEntry CouponRevenue
+        {
+            get
+            {
+                if (null == _couponRevenue) _couponRevenue = new CouponRevenueEntry();
+                return _couponRevenue;
+            }
+            set
+            {
+                _couponRevenue = value;
+                if (null == _couponRevenue) _couponRevenue = new CouponRevenueEntry();
+                // Raise event.
+                RaiseChanged("CouponRevenue");
+            }
+        }
+
+        #endregion
+    }
+
+    #endregion
+
+    #region Traffic Entry
+
+    public class TrafficEntry : DMTBaseModel
+    {
+        #region Internal Variables
+
+        private int _BHT1 = 0;
+        private int _BHT2 = 0;
+        private int _BHT5 = 0;
+        private int _BHT10c = 0;
+        private int _BHT10b = 0;
+        private int _BHT20 = 0;
+        private int _BHT50 = 0;
+        private int _BHT100 = 0;
+        private int _BHT500 = 0;
+        private int _BHT1000 = 0;
+        private decimal _BHTTotal = 0;
+        private bool _hasRemark = true;
+        private string _remark = "";
+
+        #endregion
+
+        #region Private Methods
+
+        private void CalcTotal()
+        {
+            decimal total = 0;
+            total += _BHT1 * 1;
+            total += _BHT2 * 2;
+            total += _BHT5 * 5;
+            total += _BHT10c * 10;
+            total += _BHT10b * 10;
+            total += _BHT20 * 20;
+            total += _BHT50 * 50;
+            total += _BHT100 * 100;
+            total += _BHT500 * 500;
+            total += _BHT1000 * 1000;
+
+            _BHTTotal = total;
+            // Raise event.
+            RaiseChanged("BHTTotal");
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets number of 1 baht coin.
+        /// </summary>
+        public int BHT1
+        {
+            get { return _BHT1; }
+            set
+            {
+                if (_BHT1 != value)
+                {
+                    _BHT1 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT1");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 2 baht coin.
+        /// </summary>
+        public int BHT2
+        {
+            get { return _BHT2; }
+            set
+            {
+                if (_BHT2 != value)
+                {
+                    _BHT2 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT2");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 5 baht coin.
+        /// </summary>
+        public int BHT5
+        {
+            get { return _BHT5; }
+            set
+            {
+                if (_BHT5 != value)
+                {
+                    _BHT5 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT5");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 10 baht coin.
+        /// </summary>
+        public int BHT10c
+        {
+            get { return _BHT10c; }
+            set
+            {
+                if (_BHT10c != value)
+                {
+                    _BHT10c = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT10c");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 10 baht bill.
+        /// </summary>
+        public int BHT10b
+        {
+            get { return _BHT10b; }
+            set
+            {
+                if (_BHT10b != value)
+                {
+                    _BHT10b = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT10b");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 20 baht bill.
+        /// </summary>
+        public int BHT20
+        {
+            get { return _BHT20; }
+            set
+            {
+                if (_BHT20 != value)
+                {
+                    _BHT20 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT20");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 50 baht bill.
+        /// </summary>
+        public int BHT50
+        {
+            get { return _BHT50; }
+            set
+            {
+                if (_BHT50 != value)
+                {
+                    _BHT50 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT50");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 100 baht bill.
+        /// </summary>
+        public int BHT100
+        {
+            get { return _BHT100; }
+            set
+            {
+                if (_BHT100 != value)
+                {
+                    _BHT100 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT100");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 500 baht bill.
+        /// </summary>
+        public int BHT500
+        {
+            get { return _BHT500; }
+            set
+            {
+                if (_BHT500 != value)
+                {
+                    _BHT500 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT500");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 1000 baht bill.
+        /// </summary>
+        public int BHT1000
+        {
+            get { return _BHT1000; }
+            set
+            {
+                if (_BHT1000 != value)
+                {
+                    _BHT1000 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT1000");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets total value in baht.
+        /// </summary>
+        public decimal BHTTotal
+        {
+            get { return _BHTTotal; }
+            set { }
+        }
+        /// <summary>
+        /// Gets or sets has remark.
+        /// </summary>
+        public bool HasRemark
+        {
+            get { return _hasRemark; }
+            set
+            {
+                if (_hasRemark != value)
+                {
+                    _hasRemark = value;
+                    // Raise event.
+                    RaiseChanged("HasRemark");
+                    RaiseChanged("RemarkVisibility");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Remark.
+        /// </summary>
+        public string Remark
+        {
+            get { return _remark; }
+            set
+            {
+                if (_remark != value)
+                {
+                    _remark = value;
+                    // Raise event.
+                    //RaiseChanged("Remark");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets RemarkVisibility.
+        /// </summary>
+        public System.Windows.Visibility RemarkVisibility
+        {
+            get { return (_hasRemark) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
+        }
+
+        #endregion
+    }
+
+    #endregion
+
+    #region Other Entry
+
+    public class OtherEntry : DMTBaseModel
+    {
+        #region Internal Variables
+
+        private decimal _BHTTotal = 0;
+        private bool _hasRemark = true;
+        private string _remark = "";
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets total value in baht.
+        /// </summary>
+        public decimal BHTTotal
+        {
+            get { return _BHTTotal; }
+            set 
+            { 
+                if (_BHTTotal != value)
+                {
+                    _BHTTotal = value;
+                    // Raise event.
+                    RaiseChanged("BHTTotal");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets has remark.
+        /// </summary>
+        public bool HasRemark
+        {
+            get { return _hasRemark; }
+            set
+            {
+                if (_hasRemark != value)
+                {
+                    _hasRemark = value;
+                    // Raise event.
+                    RaiseChanged("HasRemark");
+                    RaiseChanged("RemarkVisibility");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Remark.
+        /// </summary>
+        public string Remark
+        {
+            get { return _remark; }
+            set
+            {
+                if (_remark != value)
+                {
+                    _remark = value;
+                    // Raise event.
+                    //RaiseChanged("Remark");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets RemarkVisibility.
+        /// </summary>
+        public System.Windows.Visibility RemarkVisibility
+        {
+            get { return (_hasRemark) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
+        }
+
+        #endregion
+    }
+
+    #endregion
+
+    #region Coupon Usage Entry
+
+    /// <summary>
+    /// The CouponUsageEntry class.
+    /// </summary>
+    public class CouponUsageEntry : DMTBaseModel
+    {
+        #region Internal Variables
+
+        private int _BHT30 = 0;
+        private int _BHT35 = 0;
+        private int _BHT75 = 0;
+        private int _BHT80 = 0;
+        private int _FreePass = 0;
+        private decimal _CntTotal = 0;
+        private decimal _BHTTotal = 0;
+
+        #endregion
+
+        #region Private Methods
+
+        private void CalcTotal()
+        {
+            int cnt = 0;
+            cnt += _BHT30;
+            cnt += _BHT35;
+            cnt += _BHT75;
+            cnt += _BHT80;
+            cnt += _FreePass;
+            _CntTotal = cnt;
+
+            // Raise event.
+            RaiseChanged("CntTotal");
+
+            decimal total = 0;
+            total += _BHT30 * 30;
+            total += _BHT35 * 35;
+            total += _BHT75 * 75;
+            total += _BHT80 * 80;
+            total += _FreePass * 0;
+
+            _BHTTotal = total;
+            // Raise event.
+            RaiseChanged("BHTTotal");
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets number of 30 BHT coupon.
+        /// </summary>
+        public int BHT30
+        {
+            get { return _BHT30; }
+            set
+            {
+                if (_BHT30 != value)
+                {
+                    _BHT30 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT30");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 35 BHT coupon.
+        /// </summary>
+        public int BHT35
+        {
+            get { return _BHT35; }
+            set
+            {
+                if (_BHT35 != value)
+                {
+                    _BHT35 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT35");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 75 BHT coupon.
+        /// </summary>
+        public int BHT75
+        {
+            get { return _BHT75; }
+            set
+            {
+                if (_BHT75 != value)
+                {
+                    _BHT75 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT75");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 80 BHT coupon.
+        /// </summary>
+        public int BHT80
+        {
+            get { return _BHT80; }
+            set
+            {
+                if (_BHT80 != value)
+                {
+                    _BHT80 = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT80");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of FreePass.
+        /// </summary>
+        public int FreePass
+        {
+            get { return _FreePass; }
+            set
+            {
+                if (_FreePass != value)
+                {
+                    _FreePass = value;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("FreePass");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets total coupon count (all type).
+        /// </summary>
+        public decimal CntTotal
+        {
+            get { return _CntTotal; }
+            set { }
+        }
+        /// <summary>
+        /// Gets or sets total value in baht.
+        /// </summary>
+        public decimal BHTTotal
+        {
+            get { return _BHTTotal; }
+            set { }
+        }
+
+        #endregion
+    }
+
+    #endregion
+
+    #region Coupon Revenue Entry
+
+    public class CouponRevenueEntry : DMTBaseModel
+    {
+        #region Internal Variables
+
+        private int _BHT35 = 0;
+        private int _BHT80 = 0;
+        private int _BHT35Total = 0;
+        private int _BHT80Total = 0;
+        private int _BHTTotal = 0;
+
+        #endregion
+
+        #region Private Methods
+
+        private void CalcTotal()
+        {
+            // Raise event.
+            RaiseChanged("CntTotal");
+
+            int total = 0;
+            total += _BHT35 * 35;
+            total += _BHT80 * 80;
+
+            _BHTTotal = total;
+            // Raise event.
+            RaiseChanged("BHTTotal");
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets number of 35 BHT coupon.
+        /// </summary>
+        public int BHT35
+        {
+            get { return _BHT35; }
+            set
+            {
+                if (_BHT35 != value)
+                {
+                    _BHT35 = value;
+                    _BHT35Total = _BHT35 * 35;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT35");
+                    RaiseChanged("BHT35Total");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of 80 BHT coupon.
+        /// </summary>
+        public int BHT80
+        {
+            get { return _BHT80; }
+            set
+            {
+                if (_BHT80 != value)
+                {
+                    _BHT80 = value;
+                    _BHT80Total = _BHT80 * 80;
+                    CalcTotal();
+                    // Raise event.
+                    RaiseChanged("BHT80");
+                    RaiseChanged("BHT80Total");
+                }
+            }
+        }
+
+        public int BHT35Total
+        {
+            get { return _BHT35Total; }
+            set { }
+        }
+
+        public int BHT80Total 
+        {
+            get { return _BHT80Total; }
+            set { }
+        }
+        /// <summary>
+        /// Gets or sets total value in baht.
+        /// </summary>
+        public decimal BHTTotal
+        {
+            get { return _BHTTotal; }
+            set { }
+        }
+
+        #endregion
     }
 
     #endregion

@@ -21,7 +21,7 @@ namespace DMT.Pages.TOD.Reports
         private void cmdCancel_Click(object sender, RoutedEventArgs e)
         {
             // Main Report Page
-            var page = new TOD.ReportMenu();
+            var page = (null != this.MenuPage) ? this.MenuPage : new TOD.ReportMenu();
             PageContentManager.Instance.Current = page;
         }
 

@@ -30,15 +30,17 @@ namespace DMT.Pages.TOD.Revenue
 
         private void cmdOk_Click(object sender, RoutedEventArgs e)
         {
-            // Main Menu Page
-            //var page = new Pages.RevenuePreviewPage();
-            //PageContentManager.Instance.Current = page;
+            // Slip Preview
+            var page = new TOD.Reports.RevenueSlipPreview();
+            // back to main menu.
+            page.MenuPage = new TOD.MainMenu();
+            PageContentManager.Instance.Current = page;
         }
 
         private void cmdCancel_Click(object sender, RoutedEventArgs e)
         {
             // Main Menu Page
-            var page = new Pages.TOD.MainMenu();
+            var page = new TOD.MainMenu();
             PageContentManager.Instance.Current = page;
         }
     }

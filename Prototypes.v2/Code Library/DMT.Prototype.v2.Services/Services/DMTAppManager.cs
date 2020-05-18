@@ -76,7 +76,7 @@ namespace DMT.Services
                 !ApplicationManager.Instance.IsExit)
             {
                 ts = DateTime.Now - dt;
-                if (ts.TotalMilliseconds > 250)
+                if (ts.TotalMilliseconds > 1000)
                 {
                     UpdateInfo();
                     dt = DateTime.Now;

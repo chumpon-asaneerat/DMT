@@ -72,7 +72,7 @@ namespace DMT.Pages.TOD
             // Revenue Entry
             var page = new Revenue.RevenueDateSelectionPage();
             // setup
-            Models.RevenueEntry entry = null;
+            Models.RevenueEntry entry = new Models.RevenueEntry();
             page.Setup(Models.Job.FindJob("14077"), entry);
             PageContentManager.Instance.Current = page;
         }

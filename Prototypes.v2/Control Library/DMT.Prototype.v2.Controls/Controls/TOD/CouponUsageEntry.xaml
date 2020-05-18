@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="390" 
-             d:DesignWidth="350"             
+             d:DesignHeight="290" 
+             d:DesignWidth="300"             
              FontSize="18">
     <Grid>
         <Border BorderBrush="AliceBlue" 
@@ -56,9 +56,9 @@
                                Text="ฉบับ"
                                Width="40"/>
                         <TextBox Margin="2"
-                             TextAlignment="Right"
-                             Text="{Binding BHT30}"
-                             Width="90"/>
+                                 TextAlignment="Right"
+                                 Text="{Binding BHT30}"
+                                 Width="50"/>
                     </DockPanel>
                     <!-- 35 BHT -->
                     <DockPanel Margin="5 0 5 0">
@@ -73,9 +73,9 @@
                                Text="ฉบับ"
                                Width="40"/>
                         <TextBox Margin="2"
-                             TextAlignment="Right"
-                             Text="{Binding BHT35}"
-                             Width="90"/>
+                                 TextAlignment="Right"
+                                 Text="{Binding BHT35}"
+                                 Width="50"/>
                     </DockPanel>
                     <!-- 75 BHT -->
                     <DockPanel Margin="5 0 5 0">
@@ -90,9 +90,9 @@
                                Text="ฉบับ"
                                Width="40"/>
                         <TextBox Margin="2"
-                             TextAlignment="Right"
-                             Text="{Binding BHT75}"
-                             Width="90"/>
+                                 TextAlignment="Right"
+                                 Text="{Binding BHT75}"
+                                 Width="50"/>
                     </DockPanel>
                     <!-- 80 BHT -->
                     <DockPanel Margin="5 0 5 0">
@@ -107,9 +107,9 @@
                                Text="ฉบับ"
                                Width="40"/>
                         <TextBox Margin="2"
-                            TextAlignment="Right"
-                            Text="{Binding BHT80}"
-                            Width="90"/>
+                                 TextAlignment="Right"
+                                 Text="{Binding BHT80}"
+                                 Width="50"/>
                     </DockPanel>
                     <!-- Card Count -->
                     <DockPanel Margin="5 0 5 0">
@@ -124,9 +124,9 @@
                                Text="ครั้ง"
                                Width="40"/>
                         <TextBox Margin="2"
-                            TextAlignment="Right"
-                            Text="{Binding FreePass}"
-                            Width="90"/>
+                                 TextAlignment="Right"
+                                 Text="{Binding FreePass}"
+                                 Width="50"/>
                     </DockPanel>
                     <!-- Count Total -->
                     <DockPanel Margin="5 0 5 0">
@@ -141,9 +141,10 @@
                                Text="ฉบับ"
                                Width="40"/>
                         <TextBox Margin="2"
-                            TextAlignment="Right"
-                            Text="{Binding CntTotal}"
-                            Width="90"/>
+                                 TextAlignment="Right"
+                                 Text="{Binding CntTotal}"
+                                 IsEnabled="False"
+                                 Width="50"/>
 
                     </DockPanel>
                     <!-- Total BHT -->
@@ -159,23 +160,11 @@
                                Text="บาท"
                                Width="40"/>
                         <TextBox Margin="2"
-                             TextAlignment="Right"
-                             Text="{Binding BHTTotal}"
-                             Width="120"/>
+                                 TextAlignment="Right"
+                                 Text="{Binding BHTTotal}"
+                                 IsEnabled="False"
+                                 Width="90"/>
                     </DockPanel>
-                    <Grid Height="5"/>
-                    <!-- Remark -->
-                    <StackPanel Orientation="Vertical"
-                                Margin="10 5 10 5"
-                                HorizontalAlignment="Stretch"
-                                VerticalAlignment="Center"
-                                Visibility="{Binding RemarkVisibility}">
-                        <TextBlock Text="หมายเหตุ"
-                                   FontSize="16"
-                                   TextAlignment="Left"
-                                   Foreground="WhiteSmoke"/>
-                        <RichTextBox Height="100"/>
-                    </StackPanel>
                     <Grid Height="5"/>
                 </StackPanel>
             </DockPanel>

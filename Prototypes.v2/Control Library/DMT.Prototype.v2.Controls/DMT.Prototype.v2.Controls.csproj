@@ -53,6 +53,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\TOD\TrafficEntry.xaml.cs">
+      <DependentUpon>TrafficEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\OtherEntry.xaml.cs">
+      <DependentUpon>OtherEntry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Headers\AccountInfo.xaml.cs">
       <DependentUpon>AccountInfo.xaml</DependentUpon>
     </Compile>
@@ -126,6 +132,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Controls\TOD\TrafficEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\OtherEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\Headers\AccountInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

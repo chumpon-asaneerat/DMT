@@ -12,7 +12,70 @@
                     Background="Transparent">
             <TabItem Header="รายได้"
                      HorizontalAlignment="Center"
-                     VerticalAlignment="Center">
+                     VerticalAlignment="Center"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center">
+                <Grid x:Name="revGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="380"/>
+                        <ColumnDefinition Width="380"/>
+                        <ColumnDefinition Width="380"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0">
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="5"
+                                    HorizontalAlignment="Center">
+                            <Grid Width="10" />
+                            <TextBlock Text="หมายเลขถุงเงิน" 
+                                       Foreground="WhiteSmoke"/>
+                            <Grid Width="10" />
+                            <TextBox Width="200"
+                                     TextAlignment="Center"
+                                     Text="{Binding BagNo}"/>
+                            <Grid Width="10" />
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="1"
+                          VerticalAlignment="Top">
+                        <local:TrafficEntry x:Name="trafficRevenue" 
+                                          Grid.Row="0"
+                                          Background="ForestGreen"                                          
+                                          Foreground="WhiteSmoke"
+                                          Margin="3" />
+                    </Grid>
+                    <Grid Grid.Column="2"  Grid.Row="1"
+                          VerticalAlignment="Top">
+                        <local:OtherEntry x:Name="otherRevenue" 
+                                          Grid.Row="0"
+                                          Background="CornflowerBlue"                                          
+                                          Foreground="WhiteSmoke"
+                                          Margin="3" />
+                    </Grid>
+                    <Grid Grid.Column="3" Grid.Row="1"
+                          VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="290"/>
+                            <RowDefinition Height="170"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <local:CouponUsageEntry x:Name="couponUsage" 
+                                                Grid.Row="0"
+                                                Background="DarkRed"
+                                                Foreground="WhiteSmoke"
+                                                Margin="3"/>
+                        <local:CouponRevenueEntry x:Name="couponRevenue" 
+                                                  Grid.Row="1"
+                                                  Background="DarkRed"
+                                                  Foreground="WhiteSmoke"
+                                                  Margin="3"/>
+                    </Grid>
+                </Grid>
                 <!--
                 <local:BagEntry x:Name="bagTraffic" 
                             Background="ForestGreen"
@@ -24,10 +87,6 @@
             <TabItem Header="การใช้คูปอง"
                      HorizontalAlignment="Center"
                      VerticalAlignment="Center">
-                <local:CouponUsageEntry x:Name="couponUsage" 
-                            Background="DarkRed"
-                            Foreground="WhiteSmoke"
-                            Width="400" Margin="3"/>
             </TabItem>
             -->
             <TabItem Header="QR Code"

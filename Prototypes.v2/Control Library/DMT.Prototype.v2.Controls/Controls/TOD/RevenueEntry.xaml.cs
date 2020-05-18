@@ -23,13 +23,14 @@ namespace DMT.Controls
         {
             _job = job;
             _entry = entry;
-            /*
-            bagTraffic.DataContext = entry.Traffic;
-            bagOther.DataContext = entry.Other;
-            bagCoupon.DataContext = entry.Coupon;
-            //couponRevenue.DataContext = null;
-            couponUsage.DataContext = entry.CouponUsage;
-            */
+            if (null != _entry)
+            {
+                this.DataContext = _entry;
+                trafficRevenue.DataContext = _entry.Traffic;
+                otherRevenue.DataContext = _entry.Other;
+                couponUsage.DataContext = _entry.CouponUsage;
+                couponRevenue.DataContext = _entry.CouponRevenue;
+            }
         }
     }
 }
