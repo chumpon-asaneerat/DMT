@@ -81,6 +81,21 @@
     <Compile Include="Controls\Headers\PlazaInfo.xaml.cs">
       <DependentUpon>PlazaInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TOD\CouponRevenueEntry.xaml.cs">
+      <DependentUpon>CouponRevenueEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\CouponUsageEntry.xaml.cs">
+      <DependentUpon>CouponUsageEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\EMVEntry.xaml.cs">
+      <DependentUpon>EMVEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\QRCodeEntry.xaml.cs">
+      <DependentUpon>QRCodeEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\RevenueEntry.xaml.cs">
+      <DependentUpon>RevenueEntry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TOD\SlipView.xaml.cs">
       <DependentUpon>SlipView.xaml</DependentUpon>
     </Compile>
@@ -146,6 +161,26 @@
     <Page Include="Controls\Headers\PlazaInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TOD\CouponRevenueEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\CouponUsageEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\EMVEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\QRCodeEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\RevenueEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\TOD\SlipView.xaml">
       <SubType>Designer</SubType>

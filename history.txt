@@ -23,8 +23,9 @@ Update 2020-05-18 #09
 Update 2020-05-18 #08
 -
 
+[commited]
 Update 2020-05-18 #07
--
+- TOD Revenue Entry process update #1.
 
 [commited]
 Update 2020-05-18 #06

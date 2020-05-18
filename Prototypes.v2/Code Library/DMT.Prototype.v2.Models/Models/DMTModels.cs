@@ -1031,6 +1031,17 @@ public class DMTModel : DMTBaseModel
 
 namespace DMT.Models
 {
+    #region Revenue Entry
+
+    /// <summary>
+    /// The RevenueEntry class.
+    /// </summary>
+    public class RevenueEntry : DMTBaseModel
+    {
+
+    }
+
+    #endregion
 
     #region Daily Revenue Slip
 

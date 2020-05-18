@@ -69,6 +69,12 @@ namespace DMT.Pages.TOD
             {
                 return;
             }
+            // Revenue Entry
+            var page = new Revenue.RevenueDateSelectionPage();
+            // setup
+            Models.RevenueEntry entry = null;
+            page.Setup(Models.Job.FindJob("14077"), entry);
+            PageContentManager.Instance.Current = page;
         }
 
         private void reprintRevSlip_Click(object sender, RoutedEventArgs e)

@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="DMT.Controls.RevenueEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DMT.Controls"
+             mc:Ignorable="d"
+             d:DesignHeight="750"
+             d:DesignWidth="1100">
+    <Grid>
+        <TabControl FontSize="18"
+                    Background="Transparent">
+            <TabItem Header="รายได้"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <!--
+                <local:BagEntry x:Name="bagTraffic" 
+                            Background="ForestGreen"
+                            Foreground="WhiteSmoke"
+                            Width="400" Margin="3"/>
+                -->
+            </TabItem>
+            <!--
+            <TabItem Header="การใช้คูปอง"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:CouponUsageEntry x:Name="couponUsage" 
+                            Background="DarkRed"
+                            Foreground="WhiteSmoke"
+                            Width="400" Margin="3"/>
+            </TabItem>
+            -->
+            <TabItem Header="QR Code"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:QRCodeEntry x:Name="qrcodeEntry" 
+                            Background="Orange"
+                            Foreground="WhiteSmoke"
+                            Width="700" Margin="3"/>
+            </TabItem>
+            <TabItem Header="EMV"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center">
+                <local:EMVEntry x:Name="emvEntry" 
+                            Background="Gainsboro"
+                            Foreground="WhiteSmoke"
+                            Width="700" Margin="3"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

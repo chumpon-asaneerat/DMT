@@ -80,6 +80,12 @@
     <Compile Include="Pages\TOD\Reports\RevenueSlipPreview.xaml.cs">
       <DependentUpon>RevenueSlipPreview.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TOD\Revenue\RevenueDateSelectionPage.xaml.cs">
+      <DependentUpon>RevenueDateSelectionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TOD\Revenue\RevenueEntryPage.xaml.cs">
+      <DependentUpon>RevenueEntryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TOD\TollAdmin\ChangeShiftPage.xaml.cs">
       <DependentUpon>ChangeShiftPage.xaml</DependentUpon>
     </Compile>
@@ -121,7 +127,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\TOD\Revenue\" />
     <Folder Include="Windows\Account\" />
     <Folder Include="Windows\TA\" />
   </ItemGroup>
@@ -177,6 +182,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\TOD\Reports\RevenueSlipPreview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\TOD\Revenue\RevenueDateSelectionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\TOD\Revenue\RevenueEntryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
