@@ -64,6 +64,7 @@ namespace DMT.Pages.Account
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
+            Services.SmartCardManager.SignOut();
             // Init Sign In Page
             PageContentManager.Instance.Current = new Account.SignInPage();
         }

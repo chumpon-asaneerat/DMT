@@ -87,7 +87,7 @@ namespace DMT.Controls
             TimeSpan ts = dt - lastUpdated;
             if (ts.TotalMilliseconds > 500)
             {
-                // Check information every 2 second.
+                // Check information every 0.5 second.
                 UpdateInfo();
 
                 lastUpdated = dt;

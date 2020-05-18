@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DMTAppManager.cs" />
+    <Compile Include="Services\SmartCardManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DMT.Prototype.v2.Core\DMT.Prototype.v2.Core.csproj">

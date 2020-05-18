@@ -376,5 +376,8 @@
   <ItemGroup>
     <Resource Include="Images\Reports\สรุปรวมนำส่งรายไดรายวัน.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reports\ใบนำส่งรายได้รวม2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

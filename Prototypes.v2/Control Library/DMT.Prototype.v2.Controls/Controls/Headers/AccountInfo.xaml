@@ -54,6 +54,39 @@
                 </DockPanel>
             </Border>
             <Grid>
+                <!-- Supervisor -->
+                <Border BorderBrush="Silver"
+                        BorderThickness="1"
+                        Grid.Column="2">
+                    <DockPanel Margin="5">
+                        <Border BorderBrush="Silver"
+                                BorderThickness="1"
+                                DockPanel.Dock="Top"
+                                Background="DarkGray">
+                            <TextBlock Foreground="WhiteSmoke"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       TextAlignment="Center"
+                                       Text="ผู้ใช้งาน"/>
+                        </Border>
+                        <TextBlock Height="10" DockPanel.Dock="Top" />
+                        <TextBlock x:Name="txtUserId"
+                                   DockPanel.Dock="Top"
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"
+                                   FontSize="18"
+                                   Text="รหัสพนักงาน:"/>
+                        <TextBlock x:Name="txtUserName"
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Center"
+                                   FontSize="18"
+                                   Text="ชื่อผู้ใช้งาน:"/>
+                    </DockPanel>
+                </Border>
             </Grid>
         </DockPanel>
     </Grid>

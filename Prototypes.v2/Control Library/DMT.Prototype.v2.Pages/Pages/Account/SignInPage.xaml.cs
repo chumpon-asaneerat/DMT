@@ -20,6 +20,7 @@ namespace DMT.Pages.Account
 
         private void cmdOK_Click(object sender, RoutedEventArgs e)
         {
+            Services.SmartCardManager.SignIn();
             // Init Main Menu
             PageContentManager.Instance.Current = new Pages.Account.MainMenu();
         }

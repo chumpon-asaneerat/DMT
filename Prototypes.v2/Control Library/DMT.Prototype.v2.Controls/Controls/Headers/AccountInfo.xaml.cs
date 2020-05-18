@@ -46,6 +46,8 @@ namespace DMT.Controls
 
         private void UpdateInfo()
         {
+            txtUserId.Text = "รหัสพนักงาน: " + SmartCardManager.UserId;
+            txtUserName.Text = "ชื่อผู้ใช้งาน: " + SmartCardManager.UserName;
         }
 
         private void UpdateTime()
@@ -61,7 +63,7 @@ namespace DMT.Controls
             TimeSpan ts = dt - lastUpdated;
             if (ts.TotalMilliseconds > 500)
             {
-                // Check information every 2 second.
+                // Check information every 0.5 second.
                 UpdateInfo();
 
                 lastUpdated = dt;
