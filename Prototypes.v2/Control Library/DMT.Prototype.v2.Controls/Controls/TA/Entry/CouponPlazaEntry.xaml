@@ -76,8 +76,9 @@
                                    Text="เล่ม" 
                                    Width="50"/>
                         <TextBox Margin="2"
-                            TextAlignment="Right"
-                            Text="{Binding CntTotal}"
+                                 TextAlignment="Right"
+                                 IsEnabled="False"
+                                 Text="{Binding CntTotal}"
                                  Width="90"/>
 
                     </DockPanel>
@@ -94,8 +95,9 @@
                                    Text="บาท" 
                                    Width="50"/>
                         <TextBox Margin="2"
-                             TextAlignment="Right"
-                             Text="{Binding BHTTotal}"
+                                 TextAlignment="Right"
+                                 IsEnabled="False"
+                                 Text="{Binding BHTTotal}"
                                  Width="90"/>
                     </DockPanel>
                     <Grid Height="5"/>

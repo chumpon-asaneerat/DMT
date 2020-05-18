@@ -204,9 +204,9 @@
                                    Text="บาท" 
                                    Width="50"/>
                         <TextBox Margin="2"
-                            TextAlignment="Right"
-                             IsReadOnly="True"
-                            Text="{Binding BHTTotal}"
+                                 TextAlignment="Right"
+                                 IsEnabled="False"
+                                 Text="{Binding BHTTotal}"
                                  Width="90"/>
 
                     </DockPanel>
@@ -222,7 +222,11 @@
                                    FontSize="16"
                                    TextAlignment="Left"
                                    Foreground="WhiteSmoke"/>
-                        <RichTextBox Height="100"/>
+                        <TextBox Height="100" 
+                                 AcceptsReturn="True"
+                                 TextWrapping="Wrap"
+                                 VerticalScrollBarVisibility="Auto"
+                                 Text="{Binding Remark}"/>
                     </StackPanel>
                     <Grid Height="5"/>
                 </StackPanel>

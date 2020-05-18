@@ -67,8 +67,7 @@ namespace DMT.Pages.TA.Plaza
 
         private void cmdAppend_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            var win = new Windows.FundBorrowReturnWindow();
+            var win = new Windows.TA.Plaza.FundBorrowReturnWindow();
             win.Owner = Application.Current.MainWindow;
 
             Models.FundEntry srcObj = new Models.FundEntry();
@@ -113,11 +112,11 @@ namespace DMT.Pages.TA.Plaza
 
             //if (obj.BHTTotal != decimal.Zero)
             {
-                obj.StaffId = "14077";
+                obj.StaffId = "14477";
+                obj.StaffName = "นาย ศิริลักษณ์ วงษาหาร";
                 obj.Date = DateTime.Now;
                 _funds.Add(obj);
             }
-            */
         }
 
         private void UpdateBalance()
