@@ -34,12 +34,32 @@ namespace DMT.Pages.Account
 
         private void accountAllPlazaSummary_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                // All Plaza Fund Page.
+                var page = new Account.Check.AllPlazaFundPage();
 
+                PageContentManager.Instance.Current = page;
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
         }
 
         private void accountExchangeApprove_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                // Account Report
+                var page = new Account.Approve.AccountReport();
 
+                PageContentManager.Instance.Current = page;
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
