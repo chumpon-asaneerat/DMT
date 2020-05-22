@@ -9,42 +9,48 @@
         <ListView x:Name="listView" FontSize="18" ItemsSource="{Binding}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn>
-                        <GridViewColumnHeader Width="250">
-                            <Border VerticalAlignment="Center"
-                                    HorizontalAlignment="Center">
-                                <TextBlock TextWrapping="Wrap" 
-                                           TextAlignment="Center"
-                                           Text="No."/>
-                            </Border>
-                        </GridViewColumnHeader>
-                    </GridViewColumn>
-                    <GridViewColumn>
-                        <GridViewColumnHeader Width="250">
-                            <StackPanel Orientation="Vertical">
-                                <StackPanel Orientation="Horizontal"
-                                            HorizontalAlignment="Center"
-                                            Margin="0">
+                    <GridViewColumn Header="" Width="200" DisplayMemberBinding="{Binding}">
+                        <GridViewColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalAlignment="Stretch"
+                                      VerticalAlignment="Stretch"
+                                      Width="{Binding Path=Width}">
                                     <TextBlock TextWrapping="Wrap" 
-                                               TextAlignment="Center" 
-                                               Text="Columns"/>
-                                </StackPanel>
-                                <Grid Margin="0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1*" />
-                                        <ColumnDefinition Width="1*" />
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0"
-                                               TextWrapping="Wrap" 
                                                TextAlignment="Center"
-                                               Text="Col1"/>
-                                    <TextBlock Grid.Column="1"
-                                               TextWrapping="Wrap" 
-                                               TextAlignment="Center"
-                                               Text="Col2" />
+                                               Text="No."/>
                                 </Grid>
-                            </StackPanel>
-                        </GridViewColumnHeader>
+                            </DataTemplate>
+                        </GridViewColumn.HeaderTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="" Width="200" DisplayMemberBinding="{Binding}">
+                        <GridViewColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical"
+                                            Width="{Binding Path=Width}">
+                                    <StackPanel Orientation="Horizontal"
+                                                HorizontalAlignment="Center"
+                                                Margin="0">
+                                        <TextBlock TextWrapping="Wrap" 
+                                                   TextAlignment="Center" 
+                                                   Text="Columns"/>
+                                    </StackPanel>
+                                    <Grid Margin="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0"
+                                                   TextWrapping="Wrap" 
+                                                   TextAlignment="Center"
+                                                   Text="Col1"/>
+                                        <TextBlock Grid.Column="1"
+                                                   TextWrapping="Wrap" 
+                                                   TextAlignment="Center"
+                                                   Text="Col2" />
+                                    </Grid>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.HeaderTemplate>
                         <!--
                         <GridViewColumnHeader.HeaderContainerStyle>
                             <Style>
