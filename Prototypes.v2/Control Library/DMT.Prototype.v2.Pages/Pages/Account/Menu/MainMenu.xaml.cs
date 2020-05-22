@@ -52,7 +52,8 @@ namespace DMT.Pages.Account
             try
             {
                 // Account Report
-                var page = new Account.Approve.AccountReport();
+                //var page = new Account.Approve.AccountReport();
+                var page = new Account.RequestExchange.AccountRequestExchantePage();
 
                 PageContentManager.Instance.Current = page;
             }

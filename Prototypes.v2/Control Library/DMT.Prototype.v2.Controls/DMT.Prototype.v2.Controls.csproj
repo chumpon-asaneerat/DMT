@@ -53,6 +53,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Account\RequestExchange\AccountRequestExchangeView.xaml.cs">
+      <DependentUpon>AccountRequestExchangeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TA\Collector\CollectorFundView.xaml.cs">
       <DependentUpon>CollectorFundView.xaml</DependentUpon>
     </Compile>
@@ -169,6 +172,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Controls\Account\RequestExchange\AccountRequestExchangeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TA\Collector\CollectorFundView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
