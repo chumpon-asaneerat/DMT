@@ -5,9 +5,14 @@ Update 2020-06-01 #01
 
 --------------------------------------------------------------------------------------------
 [commited]
+Update 2020-06-01 #02
+- Update history.txt.
+
+[commited]
 Update 2020-06-01 #01
 - Temporary revert code Account menu for presentation.
 
+--------------------------------------------------------------------------------------------
 [commited]
 Update 2020-05-22 #02
 - Add AccountRequestExchangeView #2.
