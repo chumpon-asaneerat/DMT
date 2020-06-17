@@ -24,5 +24,10 @@ namespace DMT.Controls
         {
             InitializeComponent();
         }
+
+        public void Setup(List<Models.QRCodeEntry> qrCode)
+        {
+            listView.ItemsSource = qrCode;
+        }
     }
 }

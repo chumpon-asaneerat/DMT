@@ -1027,6 +1027,440 @@ public class DMTModel : DMTBaseModel
     }
 
     #endregion
+
+    #region QRCodeEntry
+
+    /// <summary>
+    /// The Lane Class.
+    /// </summary>
+    public class QRCodeEntry : DMTBaseModel
+    {
+        #region Internal Variables
+
+        private string _approvalCode = string.Empty;
+        private DateTime _dateQR = DateTime.MinValue;
+        private decimal? _qty = null;
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// GetHashCode overrides.
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            string result = string.Format(
+                "{0}_{1}_{2}",
+                _approvalCode, _dateQR, _qty);
+            return result.GetHashCode();
+        }
+        /// <summary>
+        /// Equals overrides.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+            return this.GetHashCode().Equals(obj.GetHashCode());
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Staff Id.
+        /// </summary>
+        [JsonIgnore]
+        public string ApprovalCode
+        {
+            get { return _approvalCode; }
+            set
+            {
+                if (_approvalCode != value)
+                {
+                    _approvalCode = value;
+                    // Raise event.
+                    RaiseChanged("ApprovalCode");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets Shift Begin Date.
+        /// </summary>
+        public DateTime DateQR
+        {
+            get { return _dateQR; }
+            set
+            {
+                if (_dateQR != value)
+                {
+                    _dateQR = value;
+                    // Raise event.
+                    RaiseChanged("DateQR");
+                    RaiseChanged("DateQRDateString");
+                    RaiseChanged("DateQRTimeString");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets Begin Date String.
+        /// </summary>
+        [JsonIgnore]
+        public string DateQRDateString
+        {
+            get
+            {
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("yyyy-MM-dd");
+                return ret;
+            }
+            set { }
+        }
+
+        /// <summary>
+        /// Gets Begin Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string DateQRTimeString
+        {
+            get
+            {
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+
+        [JsonIgnore]
+        public decimal? Qty
+        {
+            get { return _qty; }
+            set
+            {
+                if (_qty != value)
+                {
+                    _qty = value;
+                    // Raise event.
+                    RaiseChanged("Qty");
+                }
+            }
+        }
+        #endregion
+    }
+
+    #endregion
+
+    #region EMV
+
+    /// <summary>
+    /// The EMV Class.
+    /// </summary>
+    public class EMV : DMTBaseModel
+    {
+        #region Internal Variables
+
+        private string _approvalCode = string.Empty;
+        private DateTime _dateQR = DateTime.MinValue;
+        private decimal? _qty = null;
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// GetHashCode overrides.
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            string result = string.Format(
+                "{0}_{1}_{2}",
+                _approvalCode, _dateQR, _qty);
+            return result.GetHashCode();
+        }
+        /// <summary>
+        /// Equals overrides.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+            return this.GetHashCode().Equals(obj.GetHashCode());
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Staff Id.
+        /// </summary>
+        [JsonIgnore]
+        public string ApprovalCode
+        {
+            get { return _approvalCode; }
+            set
+            {
+                if (_approvalCode != value)
+                {
+                    _approvalCode = value;
+                    // Raise event.
+                    RaiseChanged("ApprovalCode");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets Shift Begin Date.
+        /// </summary>
+        public DateTime DateQR
+        {
+            get { return _dateQR; }
+            set
+            {
+                if (_dateQR != value)
+                {
+                    _dateQR = value;
+                    // Raise event.
+                    RaiseChanged("DateQR");
+                    RaiseChanged("DateQRDateString");
+                    RaiseChanged("DateQRTimeString");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets Begin Date String.
+        /// </summary>
+        [JsonIgnore]
+        public string DateQRDateString
+        {
+            get
+            {
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("yyyy-MM-dd");
+                return ret;
+            }
+            set { }
+        }
+
+        /// <summary>
+        /// Gets Begin Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string DateQRTimeString
+        {
+            get
+            {
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+
+        [JsonIgnore]
+        public decimal? Qty
+        {
+            get { return _qty; }
+            set
+            {
+                if (_qty != value)
+                {
+                    _qty = value;
+                    // Raise event.
+                    RaiseChanged("Qty");
+                }
+            }
+        }
+        #endregion
+    }
+
+    #endregion
+
+    #region EMVQRCode
+
+    /// <summary>
+    /// The Lane Class.
+    /// </summary>
+    public class EMVQRCode : DMTBaseModel
+    {
+        #region Internal Variables
+
+        private int _laneId = 1;
+        private string _staffId = string.Empty;
+        private string _type = string.Empty;
+
+        private string _approvalCode = string.Empty;
+        private DateTime _dateQR = DateTime.MinValue;
+        private decimal? _qty = null;
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// GetHashCode overrides.
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            string result = string.Format(
+                "{0}_{1}_{2}_{3}_{4}_{5}",
+                _laneId, _staffId, _type, _approvalCode, _dateQR, _qty);
+            return result.GetHashCode();
+        }
+        /// <summary>
+        /// Equals overrides.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+            return this.GetHashCode().Equals(obj.GetHashCode());
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets lane id.
+        /// </summary>
+        public int LaneId
+        {
+            get { return _laneId; }
+            set
+            {
+                if (_laneId != value)
+                {
+                    _laneId = value;
+                    // Raise event.
+                    RaiseChanged("LaneId");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Staff Id.
+        /// </summary>
+        [JsonIgnore]
+        public string StaffId
+        {
+            get { return _staffId; }
+            set
+            {
+                if (_staffId != value)
+                {
+                    _staffId = value;
+                    // Raise event.
+                    RaiseChanged("StaffId");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Staff Name.
+        /// </summary>
+        [JsonIgnore]
+        public string Type
+        {
+            get { return _type; }
+            set
+            {
+                if (_type != value)
+                {
+                    _type = value;
+                    // Raise event.
+                    RaiseChanged("Type");
+                }
+            }
+        }
+        [JsonIgnore]
+        public string ApprovalCode
+        {
+            get { return _approvalCode; }
+            set
+            {
+                if (_approvalCode != value)
+                {
+                    _approvalCode = value;
+                    // Raise event.
+                    RaiseChanged("ApprovalCode");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Shift Begin Date.
+        /// </summary>
+        public DateTime DateQR
+        {
+            get { return _dateQR; }
+            set
+            {
+                if (_dateQR != value)
+                {
+                    _dateQR = value;
+                    // Raise event.
+                    RaiseChanged("DateQR");
+                    RaiseChanged("DateQRDateString");
+                    RaiseChanged("DateQRTimeString");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets Begin Date String.
+        /// </summary>
+        [JsonIgnore]
+        public string DateQRDateString
+        {
+            get
+            {
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("yyyy-MM-dd");
+                return ret;
+            }
+            set { }
+        }
+
+        /// <summary>
+        /// Gets Begin Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string DateQRTimeString
+        {
+            get
+            {
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+
+        [JsonIgnore]
+        public decimal? Qty
+        {
+            get { return _qty; }
+            set
+            {
+                if (_qty != value)
+                {
+                    _qty = value;
+                    // Raise event.
+                    RaiseChanged("Qty");
+                }
+            }
+        }
+        #endregion
+    }
+
+    #endregion
 }
 
 namespace DMT.Models

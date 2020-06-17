@@ -80,6 +80,12 @@
     <Compile Include="Controls\TA\Plaza\FundPlazaView.xaml.cs">
       <DependentUpon>FundPlazaView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TOD\Entry\EMVQRCodeView.xaml.cs">
+      <DependentUpon>EMVQRCodeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TOD\Entry\LoginListView.xaml.cs">
+      <DependentUpon>LoginListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TOD\Entry\TrafficEntry.xaml.cs">
       <DependentUpon>TrafficEntry.xaml</DependentUpon>
     </Compile>
@@ -205,6 +211,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\TA\Plaza\FundPlazaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\Entry\EMVQRCodeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TOD\Entry\LoginListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

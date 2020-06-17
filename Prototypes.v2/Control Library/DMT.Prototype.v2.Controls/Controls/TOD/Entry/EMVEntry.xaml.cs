@@ -24,5 +24,9 @@ namespace DMT.Controls
         {
             InitializeComponent();
         }
+        public void Setup(List<Models.EMV> emv)
+        {
+            listView.ItemsSource = emv;
+        }
     }
 }

@@ -28,14 +28,17 @@
                                Width="110"/>
                 </Border>
                 <Grid>
-                    <ListView x:Name="listView" FontSize="18">
+                    <ListView x:Name="listView" FontSize="18" ItemsSource="{Binding}">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Approval Code" 
+                                    DisplayMemberBinding="{Binding Path=ApprovalCode}" 
                                     Width="150"/>
                                 <GridViewColumn Header="วันที่" 
+                                    DisplayMemberBinding="{Binding Path=DateQRDateString}" 
                                     Width="150"/>
                                 <GridViewColumn Header="จำนวนเงิน" 
+                                    DisplayMemberBinding="{Binding Path=Qty}" 
                                     Width="150"/>
                             </GridView>
                         </ListView.View>

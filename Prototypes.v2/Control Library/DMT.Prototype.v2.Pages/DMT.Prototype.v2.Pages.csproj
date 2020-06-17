@@ -95,8 +95,14 @@
     <Compile Include="Pages\TA\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TOD\EMVQRCode\EMVQRCodePage.xaml.cs">
+      <DependentUpon>EMVQRCodePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TOD\Job\EOJPage.xaml.cs">
       <DependentUpon>EOJPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TOD\LoginList\LoginListPage.xaml.cs">
+      <DependentUpon>LoginListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TOD\Menu\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
@@ -241,7 +247,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\TOD\EMVQRCode\EMVQRCodePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\TOD\Job\EOJPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\TOD\LoginList\LoginListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
