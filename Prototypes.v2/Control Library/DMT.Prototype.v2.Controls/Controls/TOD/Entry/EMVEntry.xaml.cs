@@ -24,9 +24,11 @@ namespace DMT.Controls
         {
             InitializeComponent();
         }
-        public void Setup(List<Models.EMV> emv)
+        public void Setup(List<Models.EMV> emv ,string strQty , string strTotal)
         {
             listView.ItemsSource = emv;
+            txtQty.Text = strQty;
+            txtTotal.Text = strTotal;
         }
     }
 }

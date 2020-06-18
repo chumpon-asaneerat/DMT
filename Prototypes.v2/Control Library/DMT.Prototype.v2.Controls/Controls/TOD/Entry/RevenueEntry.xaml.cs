@@ -45,23 +45,23 @@ namespace DMT.Controls
 
             qrCode = new Models.QRCodeEntry();
             qrCode.DateQR = new DateTime(2020, 3, 16, 18, 50, 11);
-            qrCode.ApprovalCode = "14055";
-            qrCode.Qty = 6;
+            qrCode.ApprovalCode = "25478454";
+            qrCode.Qty = 600;
             qrCodes.Add(qrCode);
 
             qrCode = new Models.QRCodeEntry();
             qrCode.DateQR = new DateTime(2020, 3, 16, 23, 15, 24);
-            qrCode.ApprovalCode = "14147";
-            qrCode.Qty = 4;
+            qrCode.ApprovalCode = "12547899";
+            qrCode.Qty = 400;
             qrCodes.Add(qrCode);
 
             qrCode = new Models.QRCodeEntry();
             qrCode.DateQR = new DateTime(2020, 3, 17, 12, 1, 47);
-            qrCode.ApprovalCode = "12562";
-            qrCode.Qty = 9;
+            qrCode.ApprovalCode = "97845671";
+            qrCode.Qty = 900;
             qrCodes.Add(qrCode);
 
-            qrcodeEntry.Setup(qrCodes);
+            qrcodeEntry.Setup(qrCodes,"3","1900");
 
         }
 
@@ -72,23 +72,35 @@ namespace DMT.Controls
 
             emv = new Models.EMV();
             emv.DateQR = new DateTime(2020, 3, 16, 18, 50, 11);
-            emv.ApprovalCode = "201568";
+            emv.ApprovalCode = "26587498";
             emv.Qty = 60;
             emvs.Add(emv);
 
             emv = new Models.EMV();
             emv.DateQR = new DateTime(2020, 3, 16, 23, 15, 24);
-            emv.ApprovalCode = "205468";
+            emv.ApprovalCode = "65874254";
             emv.Qty = 104;
             emvs.Add(emv);
 
             emv = new Models.EMV();
             emv.DateQR = new DateTime(2020, 3, 17, 12, 1, 47);
-            emv.ApprovalCode = "225620";
-            emv.Qty = 90;
+            emv.ApprovalCode = "57487487";
+            emv.Qty = 40;
             emvs.Add(emv);
 
-            emvEntry.Setup(emvs);
+            emv = new Models.EMV();
+            emv.DateQR = new DateTime(2020, 3, 16, 23, 15, 24);
+            emv.ApprovalCode = "97458742";
+            emv.Qty = 120;
+            emvs.Add(emv);
+
+            emv = new Models.EMV();
+            emv.DateQR = new DateTime(2020, 3, 17, 12, 1, 47);
+            emv.ApprovalCode = "13542741";
+            emv.Qty = 200;
+            emvs.Add(emv);
+
+            emvEntry.Setup(emvs,"5","324");
 
         }
     }

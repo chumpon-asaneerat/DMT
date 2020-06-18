@@ -27,6 +27,34 @@
                                Text="EMV"
                                Width="110"/>
                 </Border>
+                <Border DockPanel.Dock="Bottom">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#7F323232" Offset="0"/>
+                            <GradientStop Color="#7FAAAAAA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <TextBlock Margin="20,2,582,2"
+                               VerticalAlignment="Center"
+                               Text="จำนวนรวม : "/>
+                        <TextBox Name="txtQty"  Height="23" 
+                                Text="" Margin="128,2,510,2"/>
+                        <TextBlock Margin="216,2,418,2"
+
+                               VerticalAlignment="Center"
+                               Text="รายการ"/>
+
+                        <TextBlock Margin="440,2,166,2"
+                               VerticalAlignment="Center"
+                               Text="ยอดเงินรวม : "/>
+                        <TextBox Name="txtTotal"  Height="23" 
+                                Text="" Margin="557,2,81,2"/>
+                        <TextBlock Margin="642,2,8,2"
+                               VerticalAlignment="Center"
+                               Text="บาท"/>
+                    </Grid>
+                </Border>
                 <Grid>
                     <ListView x:Name="listView" FontSize="18" ItemsSource="{Binding}">
                         <ListView.View>
@@ -44,6 +72,7 @@
                         </ListView.View>
                     </ListView>
                 </Grid>
+
             </DockPanel>
         </Border>
     </Grid>
