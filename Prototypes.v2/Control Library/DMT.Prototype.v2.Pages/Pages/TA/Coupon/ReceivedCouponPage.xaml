@@ -80,53 +80,16 @@
                            Text="14055"                   
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"/>
-                </StackPanel>
-            </Border>
-            <Border BorderBrush="Silver" 
-                    BorderThickness="1">
-                <Grid HorizontalAlignment="Center"
-                      VerticalAlignment="Center">
-                    <StackPanel Orientation="Horizontal">
-                        <Grid Height="50" />
-                        <TextBlock FontSize="20"
-                                   Foreground="WhiteSmoke"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Width="150"
-                                   Text="ประเภทคูปอง" />
-                        <ComboBox x:Name="cbCouponTypes" 
-                                  ItemsSource="{Binding}"
-                                  FontSize="20"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  HorizontalContentAlignment="Center"
-                                  VerticalContentAlignment="Center"
-                                  Width="200"/>
-                        <Grid Height="50" Width="10" />
-                        <TextBlock FontSize="20"
-                                   Foreground="WhiteSmoke"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Width="150"
-                                   Text="จำนวนเล่ม" />
-                        <TextBox FontSize="20"
-                                 HorizontalAlignment="Center"
-                                 VerticalAlignment="Center"
-                                 HorizontalContentAlignment="Center"
-                                 VerticalContentAlignment="Center"
-                                 Width="200"
-                                 Text="10"/>
-                        <Button Content="บันทึก" 
+                    <Button Content="บันทึก" 
                                 x:Name="cmdAppend"
-                                Margin="5"
+                                Margin="5,10"
                                 FontSize="20"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 HorizontalContentAlignment="Center"
                                 VerticalContentAlignment="Center"
                                 Width="200" Click="cmdAppend_Click"/>
-                    </StackPanel>
-                </Grid>
+                </StackPanel>
             </Border>
             <Grid>
                 <ctrl:CouponReceiveView x:Name="grid"></ctrl:CouponReceiveView>

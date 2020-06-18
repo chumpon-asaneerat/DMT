@@ -171,6 +171,7 @@
   <ItemGroup>
     <Folder Include="Windows\Account\" />
     <Folder Include="Windows\TA\Collector\" />
+    <Folder Include="Windows\TA\Reports\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code Library\DMT.Prototype.v2.Core\DMT.Prototype.v2.Core.csproj">
@@ -403,6 +404,9 @@
   <ItemGroup>
     <Resource Include="Images\Button\back.png" />
     <Resource Include="Images\Button\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reports\coupon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

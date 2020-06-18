@@ -57,7 +57,11 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="10" />
                 </Grid.ColumnDefinitions>
-                <DataGrid x:Name="listView" FontSize="18" ItemsSource="{Binding}" Grid.Column="1" 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height ="50" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <DataGrid x:Name="listView" FontSize="18" ItemsSource="{Binding}" Grid.Column="1" Grid.Row="1"
                                     SelectionMode="Extended"
                                     AlternatingRowBackground="AntiqueWhite"
                                     AutoGenerateColumns="False"
@@ -81,7 +85,7 @@
                         </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid x:Name="listViewUse" FontSize="18" ItemsSource="{Binding}" Grid.Column="3" 
+                <DataGrid x:Name="listViewUse" FontSize="18" ItemsSource="{Binding}" Grid.Column="3" Grid.Row="1"
                                     SelectionMode="Extended"
                                     AlternatingRowBackground="AntiqueWhite"
                                     AutoGenerateColumns="False"
@@ -105,7 +109,7 @@
                         </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <Button Name="btnNext35"  Grid.Column="2" 
+                <Button Name="btnNext35"  Grid.Column="2" Grid.Row="1"
                         HorizontalAlignment="Left" 
                         Margin="10,120,0,0" 
                         VerticalAlignment="Top" 
@@ -117,7 +121,7 @@
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" Source="next.png" />
                 </Button>
-                <Button Name="btnBack35"  Grid.Column="2" 
+                <Button Name="btnBack35"  Grid.Column="2" Grid.Row="1"
                         HorizontalAlignment="Left" 
                         Margin="10,220,0,0" 
                         VerticalAlignment="Top" 
@@ -129,7 +133,7 @@
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" Source="back.png" />
                 </Button>
-                <DataGrid x:Name="listView80" FontSize="18" ItemsSource="{Binding}" Grid.Column="5"
+                <DataGrid x:Name="listView80" FontSize="18" ItemsSource="{Binding}" Grid.Column="5" Grid.Row="1"
                            AlternatingRowBackground="AntiqueWhite"
                                     AutoGenerateColumns="False"
                                     CanUserAddRows="False"
@@ -152,7 +156,7 @@
                         </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <DataGrid x:Name="listViewUse80" FontSize="18" ItemsSource="{Binding}" Grid.Column="7" SelectionMode="Extended"
+                <DataGrid x:Name="listViewUse80" FontSize="18" ItemsSource="{Binding}" Grid.Column="7" Grid.Row="1"
                                     AlternatingRowBackground="AntiqueWhite"
                                     AutoGenerateColumns="False"
                                     CanUserAddRows="False"
@@ -175,7 +179,7 @@
                         </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
-                <Button Name="btnNext80"  Grid.Column="6" 
+                <Button Name="btnNext80"  Grid.Column="6" Grid.Row="1"
                         HorizontalAlignment="Left" 
                         Margin="10,120,0,0" 
                         VerticalAlignment="Top" 
@@ -187,7 +191,7 @@
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" Source="next.png" />
                 </Button>
-                <Button Name="btnBack80"  Grid.Column="6" 
+                <Button Name="btnBack80"  Grid.Column="6" Grid.Row="1"
                         HorizontalAlignment="Left" 
                         Margin="10,220,0,0" 
                         VerticalAlignment="Top" 
@@ -199,8 +203,36 @@
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" Source="back.png" />
                 </Button>
+                <Label Content="พนง : 14055" 
+                       FontSize="18" 
+                       Foreground="White" 
+                       FontWeight="Normal" 
+                       FontFamily="Tahoma" 
+                       Grid.Column="1" 
+                       HorizontalAlignment="Center" Margin="8,0,75,0" 
+                       VerticalAlignment="Top" 
+                       Width="126" />
+                <Label Content="คูปอง 35 บาท" 
+                       FontSize="18" 
+                       Foreground="White" 
+                       FontWeight="Normal" 
+                       FontFamily="Tahoma" 
+                       Grid.Column="1" 
+                       HorizontalAlignment="Center" Margin="187,14,185,0" 
+                       VerticalAlignment="Top" 
+                       Width="126" 
+                       Grid.ColumnSpan="3" />
 
-
+                <Label Content="คูปอง 80 บาท" 
+                       FontSize="18" 
+                       Foreground="White" 
+                       FontWeight="Normal" 
+                       FontFamily="Tahoma" 
+                       Grid.Column="5" 
+                       HorizontalAlignment="Center" Margin="188,14,182,0" 
+                       VerticalAlignment="Top" 
+                       Width="126" 
+                       Grid.ColumnSpan="3" />
             </Grid>
         </DockPanel>
     </Grid>

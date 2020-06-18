@@ -34,11 +34,11 @@ namespace DMT.Pages.TA.Coupon
 
         public void Setup(List<Models.Coupon> coupons)
         {
-            var couponTypes = new List<string>();
-            couponTypes.Add("คูปอง 35 บาท");
-            couponTypes.Add("คูปอง 80 บาท");
-            cbCouponTypes.DataContext = couponTypes;
-            cbCouponTypes.SelectedIndex = 0;
+            //var couponTypes = new List<string>();
+            //couponTypes.Add("คูปอง 35 บาท");
+            //couponTypes.Add("คูปอง 80 บาท");
+            //cbCouponTypes.DataContext = couponTypes;
+            //cbCouponTypes.SelectedIndex = 0;
             grid.Setup(coupons);
         }
 
@@ -54,36 +54,87 @@ namespace DMT.Pages.TA.Coupon
             Models.Coupon35 coupon;
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "124356";
+            coupon.CouponCode = "C635001";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "1252678";
-            coupons.Add(coupon);
-
-
-            coupon = new Models.Coupon35();
-            coupon.CouponCode = "976554";
+            coupon.CouponCode = "C635002";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "5788890";
+            coupon.CouponCode = "C635003";
             coupons.Add(coupon);
 
+            coupon = new Models.Coupon35();
+            coupon.CouponCode = "C635004";
+            coupons.Add(coupon);
+
+            coupon = new Models.Coupon35();
+            coupon.CouponCode = "C635005";
+            coupons.Add(coupon);
+
+            coupon = new Models.Coupon35();
+            coupon.CouponCode = "C635006";
+            coupons.Add(coupon);
+
+            coupon = new Models.Coupon35();
+            coupon.CouponCode = "C635007";
+            coupons.Add(coupon);
+
+            coupon = new Models.Coupon35();
+            coupon.CouponCode = "C635008";
+            coupons.Add(coupon);
+
+            Models.CouponUser35 coupon35;
+
+            coupon35 = new Models.CouponUser35();
+            coupon35.CouponCode = "C635009";
+            couponUs.Add(coupon35);
+
+            coupon35 = new Models.CouponUser35();
+            coupon35.CouponCode = "C635010";
+            couponUs.Add(coupon35);
+
+            coupon35 = new Models.CouponUser35();
+            coupon35.CouponCode = "C635019";
+            couponUs.Add(coupon35);
 
             Models.Coupon80 coupon80;
 
             coupon80 = new Models.Coupon80();
-            coupon80.CouponCode = "898762";
+            coupon80.CouponCode = "C635011";
             coupons80.Add(coupon80);
 
             coupon80 = new Models.Coupon80();
-            coupon80.CouponCode = "5675785";
+            coupon80.CouponCode = "C635012";
             coupons80.Add(coupon80);
 
             coupon80 = new Models.Coupon80();
-            coupon80.CouponCode = "4367788";
+            coupon80.CouponCode = "C635013";
             coupons80.Add(coupon80);
+
+            coupon80 = new Models.Coupon80();
+            coupon80.CouponCode = "C635016";
+            coupons80.Add(coupon80);
+
+            coupon80 = new Models.Coupon80();
+            coupon80.CouponCode = "C635017";
+            coupons80.Add(coupon80);
+
+
+            Models.CouponUser80 cop80;
+
+            cop80 = new Models.CouponUser80();
+            cop80.CouponCode = "C635014";
+            couponsU80.Add(cop80);
+
+            cop80 = new Models.CouponUser80();
+            cop80.CouponCode = "C635015";
+            couponsU80.Add(cop80);
+
+            cop80 = new Models.CouponUser80();
+            cop80.CouponCode = "C635018";
+            couponsU80.Add(cop80);
 
 
             win.Setup(coupons, couponUs, coupons80, couponsU80);

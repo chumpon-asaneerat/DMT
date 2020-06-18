@@ -41,7 +41,7 @@
                                     <Button x:Name="cmdReturn" 
                                             Content="คืน" 
                                             CommandParameter="{Binding}"
-                                            Width="100"/>
+                                            Width="100" Click="cmdReturn_Click"/>
                                     <Grid Width="5"/>
                                 </StackPanel>
                             </DataTemplate>

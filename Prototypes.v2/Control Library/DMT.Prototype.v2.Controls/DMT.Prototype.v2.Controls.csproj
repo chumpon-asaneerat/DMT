@@ -160,6 +160,9 @@
     <Compile Include="Windows\TA\Collector\FundReturnWindow.xaml.cs">
       <DependentUpon>FundReturnWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\TA\Coupon\CouponReportWindow.xaml.cs">
+      <DependentUpon>CouponReportWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\TA\Coupon\CouponEditWindow.xaml.cs">
       <DependentUpon>CouponEditWindow.xaml</DependentUpon>
     </Compile>
@@ -315,6 +318,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Windows\TA\Coupon\CouponReportWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Windows\TA\Coupon\CouponEditWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -347,6 +354,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Windows\TA\Coupon\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\TA\Coupon\coupon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
