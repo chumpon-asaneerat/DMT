@@ -1461,6 +1461,270 @@ public class DMTModel : DMTBaseModel
     }
 
     #endregion
+
+    #region Coupon35
+
+    /// <summary>
+    /// The Lane Class.
+    /// </summary>
+    public class Coupon35 : DMTBaseModel
+    {
+        #region Internal Variables
+
+
+        private string _couponCode = string.Empty;
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// GetHashCode overrides.
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            string result = string.Format(
+                "{0}",
+                _couponCode);
+            return result.GetHashCode();
+        }
+        /// <summary>
+        /// Equals overrides.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+            return this.GetHashCode().Equals(obj.GetHashCode());
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Staff Id.
+        /// </summary>
+        [JsonIgnore]
+        public string CouponCode
+        {
+            get { return _couponCode; }
+            set
+            {
+                if (_couponCode != value)
+                {
+                    _couponCode = value;
+                    // Raise event.
+                    RaiseChanged("CouponCode");
+                }
+            }
+        }
+
+        #endregion
+    }
+
+    #endregion
+
+    #region Coupon80
+
+    /// <summary>
+    /// The Lane Class.
+    /// </summary>
+    public class Coupon80 : DMTBaseModel
+    {
+        #region Internal Variables
+
+
+        private string _couponCode = string.Empty;
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// GetHashCode overrides.
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            string result = string.Format(
+                "{0}",
+                _couponCode);
+            return result.GetHashCode();
+        }
+        /// <summary>
+        /// Equals overrides.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+            return this.GetHashCode().Equals(obj.GetHashCode());
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Staff Id.
+        /// </summary>
+        [JsonIgnore]
+        public string CouponCode
+        {
+            get { return _couponCode; }
+            set
+            {
+                if (_couponCode != value)
+                {
+                    _couponCode = value;
+                    // Raise event.
+                    RaiseChanged("CouponCode");
+                }
+            }
+        }
+
+        #endregion
+    }
+
+    #endregion
+
+    #region CouponUser35
+
+    /// <summary>
+    /// The Lane Class.
+    /// </summary>
+    public class CouponUser35 : DMTBaseModel
+    {
+        #region Internal Variables
+
+
+        private string _couponCode = string.Empty;
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// GetHashCode overrides.
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            string result = string.Format(
+                "{0}",
+                _couponCode);
+            return result.GetHashCode();
+        }
+        /// <summary>
+        /// Equals overrides.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+            return this.GetHashCode().Equals(obj.GetHashCode());
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Staff Id.
+        /// </summary>
+        [JsonIgnore]
+        public string CouponCode
+        {
+            get { return _couponCode; }
+            set
+            {
+                if (_couponCode != value)
+                {
+                    _couponCode = value;
+                    // Raise event.
+                    RaiseChanged("CouponCode");
+                }
+            }
+        }
+       
+        #endregion
+    }
+
+    #endregion
+
+    #region CouponUser80
+
+    /// <summary>
+    /// The Lane Class.
+    /// </summary>
+    public class CouponUser80 : DMTBaseModel
+    {
+        #region Internal Variables
+
+
+        private string _couponCode = string.Empty;
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// GetHashCode overrides.
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            string result = string.Format(
+                "{0}",
+                _couponCode);
+            return result.GetHashCode();
+        }
+        /// <summary>
+        /// Equals overrides.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+            return this.GetHashCode().Equals(obj.GetHashCode());
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Staff Id.
+        /// </summary>
+        [JsonIgnore]
+        public string CouponCode
+        {
+            get { return _couponCode; }
+            set
+            {
+                if (_couponCode != value)
+                {
+                    _couponCode = value;
+                    // Raise event.
+                    RaiseChanged("CouponCode");
+                }
+            }
+        }
+
+        #endregion
+    }
+
+    #endregion
 }
 
 namespace DMT.Models
