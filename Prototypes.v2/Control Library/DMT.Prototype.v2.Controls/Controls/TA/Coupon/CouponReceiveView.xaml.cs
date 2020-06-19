@@ -36,49 +36,49 @@ namespace DMT.Controls
             Models.Coupon35 coupon;
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "C635001";
+            coupon.CouponCode = "ข635001";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "C635002";
+            coupon.CouponCode = "ข635002";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "C635003";
+            coupon.CouponCode = "ข635003";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "C635004";
+            coupon.CouponCode = "ข635004";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "C635005";
+            coupon.CouponCode = "ข635005";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "C635006";
+            coupon.CouponCode = "ข635006";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "C635007";
+            coupon.CouponCode = "ข635007";
             coupons.Add(coupon);
 
             coupon = new Models.Coupon35();
-            coupon.CouponCode = "C635008";
+            coupon.CouponCode = "ข635008";
             coupons.Add(coupon);
 
             Models.CouponUser35 coupon35;
 
             coupon35 = new Models.CouponUser35();
-            coupon35.CouponCode = "C635009";
+            coupon35.CouponCode = "ข635009";
             couponUs.Add(coupon35);
 
             coupon35 = new Models.CouponUser35();
-            coupon35.CouponCode = "C635010";
+            coupon35.CouponCode = "ข635010";
             couponUs.Add(coupon35);
 
             coupon35 = new Models.CouponUser35();
-            coupon35.CouponCode = "C635019";
+            coupon35.CouponCode = "ข635019";
             couponUs.Add(coupon35);
 
             Models.Coupon80 coupon80;
