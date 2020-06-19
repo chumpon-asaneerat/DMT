@@ -21,9 +21,11 @@
                     <GridViewColumn Header="ชือพนักงาน" 
                                     DisplayMemberBinding="{Binding Path=StaffName}" 
                                     Width="250"/>
+                    <!--
                     <GridViewColumn Header="ประเภทคูปอง" 
                                     DisplayMemberBinding="{Binding Path=Type}" 
                                     Width="150"/>
+                    -->
                     <GridViewColumn Header="จำนวนเล่ม" 
                                     DisplayMemberBinding="{Binding Path=Count}" 
                                     Width="80"/>

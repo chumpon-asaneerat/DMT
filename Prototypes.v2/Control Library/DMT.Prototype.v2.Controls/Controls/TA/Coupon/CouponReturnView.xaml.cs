@@ -22,7 +22,7 @@ namespace DMT.Controls
 
         private void cmdReturn_Click(object sender, RoutedEventArgs e)
         {
-            var win = new DMT.Windows.TA.Coupon.CouponEditWindow();
+            var win = new DMT.Windows.TA.Coupon.CouponReturnWindow();
 
             List<Models.Coupon35> coupons = new List<Models.Coupon35>();
             List<Models.CouponUser35> couponUs = new List<Models.CouponUser35>();

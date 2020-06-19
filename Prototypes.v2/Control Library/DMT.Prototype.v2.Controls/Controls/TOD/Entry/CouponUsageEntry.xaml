@@ -121,7 +121,7 @@
                         <TextBlock Margin="2"
                                DockPanel.Dock="Right" 
                                TextAlignment="Left"
-                               Text="ครั้ง"
+                               Text="ฉบับ"
                                Width="40"/>
                         <TextBox Margin="2"
                                  TextAlignment="Right"
@@ -143,7 +143,7 @@
                         <TextBox Margin="2"
                                  TextAlignment="Right"
                                  Text="{Binding CntTotal}"
-                                 IsEnabled="False"
+                                 
                                  Width="50"/>
 
                     </DockPanel>

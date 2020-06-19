@@ -123,13 +123,13 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="รับคูปอง"/>
+                                   Text="คูปอง"/>
                             <Grid Height="10" />
                             <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="รับคูปอง"/>
+                                   Text="คูปอง"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>

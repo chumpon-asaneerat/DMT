@@ -160,6 +160,9 @@
     <Compile Include="Windows\TA\Collector\FundReturnWindow.xaml.cs">
       <DependentUpon>FundReturnWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\TA\Coupon\CouponReturnWindow.xaml.cs">
+      <DependentUpon>CouponReturnWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\TA\Coupon\CouponReportWindow.xaml.cs">
       <DependentUpon>CouponReportWindow.xaml</DependentUpon>
     </Compile>
@@ -315,6 +318,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\TA\Collector\FundReturnWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\TA\Coupon\CouponReturnWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
