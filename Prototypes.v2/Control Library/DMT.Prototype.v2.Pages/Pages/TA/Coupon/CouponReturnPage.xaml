@@ -84,7 +84,7 @@
                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                     SelectedCellsChanged="listView_SelectedCellsChanged" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่ขายได้" IsReadOnly="True" Width="180" >
+                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่ขายได้" IsReadOnly="True" Width="200" >
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -108,7 +108,7 @@
                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                     SelectedCellsChanged="listViewUse_SelectedCellsChanged" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่รับคืน" IsReadOnly="True" Width="180" >
+                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่รับคืน" IsReadOnly="True" Width="200" >
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -155,7 +155,7 @@
                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                     SelectedCellsChanged="listView80_SelectedCellsChanged" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่ขายได้" IsReadOnly="True" Width="180" >
+                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่ขายได้" IsReadOnly="True" Width="200" >
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -178,7 +178,7 @@
                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                     SelectedCellsChanged="listViewUse80_SelectedCellsChanged" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่รับคืน" IsReadOnly="True" Width="180" >
+                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่รับคืน" IsReadOnly="True" Width="200" >
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -245,13 +245,11 @@
                     FontSize="25" 
                     FontWeight="Normal" 
                     FontFamily="Tahoma" 
-                    HorizontalAlignment="Left" 
                     VerticalAlignment="Top" 
                     Height="30" 
                     Margin="10,7,0,0" 
                     TextWrapping="Wrap"
-                    Text="0"
-                    Width="120"/>
+                    Text="0" HorizontalAlignment="Left" Width="120"/>
 
                 <TextBox 
                     Name="txtCouponU35"
@@ -297,6 +295,38 @@
                     TextWrapping="Wrap"
                     Text="0"
                     Width="120"/>
+                <Label Content="เล่ม" 
+                    FontSize="20" 
+                    Foreground="White"
+                    FontWeight="Normal" 
+                    FontFamily="Tahoma" 
+                    HorizontalAlignment="Left" Margin="137,5,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="50" Grid.Row="2" Grid.Column="1" />
+                <Label Content="เล่ม" 
+                    FontSize="20" 
+                    Foreground="White"
+                    FontWeight="Normal" 
+                    FontFamily="Tahoma" 
+                    HorizontalAlignment="Left" Margin="137,5,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="50" Grid.Row="2" Grid.Column="3" />
+                <Label Content="เล่ม" 
+                    FontSize="20" 
+                    Foreground="White"
+                    FontWeight="Normal" 
+                    FontFamily="Tahoma" 
+                    HorizontalAlignment="Left" Margin="137,5,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="50" Grid.Row="2" Grid.Column="5" />
+                <Label Content="เล่ม" 
+                    FontSize="20" 
+                    Foreground="White"
+                    FontWeight="Normal" 
+                    FontFamily="Tahoma" 
+                    HorizontalAlignment="Left" Margin="137,5,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="50" Grid.Row="2" Grid.Column="7" />
             </Grid>
         </StackPanel>
 
