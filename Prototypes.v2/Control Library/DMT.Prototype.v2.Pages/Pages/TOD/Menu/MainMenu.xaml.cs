@@ -113,7 +113,30 @@ namespace DMT.Pages.TOD
             // Change Shift
             var page = new TollAdmin.ChangeShiftPage();
             // setup
-            page.Setup(Models.Job.FindJob("14077"));
+            //page.Setup(Models.Job.FindJob("14077"));
+
+            List<Models.Lane> lanes = new List<Models.Lane>();
+            Models.Lane lane;
+
+            lane = new Models.Lane();
+            lane.StaffId = "14055";
+            lane.StaffName = "นางวิภา สวัสดิวัฒน์";
+            lane.Begin = new DateTime(2020, 6, 16, 18, 50, 11);
+            lanes.Add(lane);
+
+            lane = new Models.Lane();
+            lane.StaffId = "14147";
+            lane.StaffName = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์";
+            lane.Begin = new DateTime(2020, 6, 17, 08, 50, 11);
+            lanes.Add(lane);
+
+            lane = new Models.Lane();
+            lane.StaffId = "12562";
+            lane.StaffName = "นาย ภักดี อมรรุ่งโรจฌ์";
+            lane.Begin = new DateTime(2020, 6, 17, 18, 00, 50);
+            lanes.Add(lane);
+
+            page.Setup(lanes);
             PageContentManager.Instance.Current = page;
         }
 
@@ -154,29 +177,47 @@ namespace DMT.Pages.TOD
 
             emvQR = new Models.EMVQRCode();
             emvQR.Type = "EMV";
-            emvQR.DateQR = new DateTime(2020, 3, 16, 18, 50, 11);
+            emvQR.DateQR = new DateTime(2020, 6, 16, 18, 50, 11);
             emvQR.StaffId = "14055";
             emvQR.LaneId = 1;
             emvQR.ApprovalCode = "459564";
-            emvQR.Qty = 100;
+            emvQR.Qty = 110;
             emvQRs.Add(emvQR);
 
             emvQR = new Models.EMVQRCode();
             emvQR.Type = "EMV";
-            emvQR.DateQR = new DateTime(2020, 3, 16, 23, 15, 24);
+            emvQR.DateQR = new DateTime(2020, 6, 16, 23, 15, 24);
             emvQR.StaffId = "14147";
             emvQR.LaneId = 3;
             emvQR.ApprovalCode = "485564";
-            emvQR.Qty = 170;
+            emvQR.Qty = 80;
+            emvQRs.Add(emvQR);
+
+            emvQR = new Models.EMVQRCode();
+            emvQR.Type = "EMV";
+            emvQR.DateQR = new DateTime(2020, 6, 17, 08, 15, 0);
+            emvQR.StaffId = "14148";
+            emvQR.LaneId = 3;
+            emvQR.ApprovalCode = "485568";
+            emvQR.Qty = 80;
             emvQRs.Add(emvQR);
 
             emvQR = new Models.EMVQRCode();
             emvQR.Type = "QR Code";
-            emvQR.DateQR = new DateTime(2020, 3, 17, 12, 1, 47);
+            emvQR.DateQR = new DateTime(2020, 6, 17, 12, 1, 47);
             emvQR.StaffId = "12562";
             emvQR.LaneId = 2;
             emvQR.ApprovalCode = "459564";
-            emvQR.Qty = 100;
+            emvQR.Qty = 110;
+            emvQRs.Add(emvQR);
+
+            emvQR = new Models.EMVQRCode();
+            emvQR.Type = "QR Code";
+            emvQR.DateQR = new DateTime(2020, 6, 18, 12, 5, 10);
+            emvQR.StaffId = "12563";
+            emvQR.LaneId = 2;
+            emvQR.ApprovalCode = "459566";
+            emvQR.Qty = 110;
             emvQRs.Add(emvQR);
 
             page.Setup(emvQRs);

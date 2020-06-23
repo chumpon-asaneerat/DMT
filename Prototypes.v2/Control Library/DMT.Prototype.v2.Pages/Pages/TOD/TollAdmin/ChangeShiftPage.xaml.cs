@@ -32,12 +32,18 @@ namespace DMT.Pages.TOD.TollAdmin
             PageContentManager.Instance.Current = page;
         }
 
+        /*
         private Models.Job _job;
 
         public void Setup(Models.Job job) 
         {
             _job = job;
             grid.Setup(_job.Lanes);
+        }
+        */
+        public void Setup(List<Models.Lane> lanes)
+        {
+            grid.Setup(lanes);
         }
     }
 }

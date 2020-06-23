@@ -152,8 +152,9 @@ namespace DMT.Controls
         {
             var fund = (Models.FundEntry)((FrameworkElement)sender).DataContext;
             //fund.ReceivedBag = false; // already received bag.
-            (((FrameworkElement)sender) as Button).Foreground = new SolidColorBrush(Colors.Red);
-            (((FrameworkElement)sender) as Button).IsEnabled = false;
+            //(((FrameworkElement)sender) as Button).Foreground = new SolidColorBrush(Colors.Red);
+            //(((FrameworkElement)sender) as Button).IsEnabled = false;
+            (((FrameworkElement)sender) as Button).Visibility = Visibility.Hidden;
         }
 
         public event System.EventHandler ItemChanged;

@@ -63,6 +63,7 @@
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    TextAlignment="Center" />
+                        <Grid Width="5"></Grid>
                         <Button Content="ค้นหา" 
                                 FontSize="18" 
                                    DockPanel.Dock="Left"
@@ -70,6 +71,7 @@
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    Width="75"/>
+                        <Grid Width="5"></Grid>
                         <Button Content="เคลียร์" 
                                 FontSize="18" 
                                    DockPanel.Dock="Left"

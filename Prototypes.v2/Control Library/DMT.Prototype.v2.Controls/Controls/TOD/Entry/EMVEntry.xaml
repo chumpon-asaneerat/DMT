@@ -35,24 +35,28 @@
                         </LinearGradientBrush>
                     </Border.Background>
                     <Grid>
-                        <TextBlock Margin="20,2,582,2"
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="19*"/>
+                            <RowDefinition Height="9*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="10,2,0,2"
                                VerticalAlignment="Center"
-                               Text="จำนวนรวม : "/>
+                               Text="จำนวนรวม : " HorizontalAlignment="Left" Width="88"/>
                         <TextBox Name="txtQty"  Height="23" 
-                                Text="" Margin="128,2,510,2"/>
-                        <TextBlock Margin="216,2,418,2"
+                                Text="" Margin="102,2,0,2" HorizontalAlignment="Left" Width="100"/>
+                        <TextBlock Margin="213,2,0,2"
 
                                VerticalAlignment="Center"
-                               Text="รายการ"/>
+                               Text="รายการ" HorizontalAlignment="Left" Width="90"/>
 
-                        <TextBlock Margin="440,2,166,2"
-                               VerticalAlignment="Center"
-                               Text="ยอดเงินรวม : "/>
+                        <TextBlock Margin="392,0,0,2"
+                               VerticalAlignment="Bottom"
+                               Text="ยอดเงินรวม : "  HorizontalAlignment="Left" Width="98"/>
                         <TextBox Name="txtTotal"  Height="23" 
-                                Text="" Margin="557,2,81,2"/>
-                        <TextBlock Margin="642,2,8,2"
+                                Text="" Margin="493,2,0,2" HorizontalAlignment="Left"  Width="100"/>
+                        <TextBlock Margin="601,2,0,2"
                                VerticalAlignment="Center"
-                               Text="บาท"/>
+                               Text="บาท" HorizontalAlignment="Left" Width="50"/>
                     </Grid>
                 </Border>
                 <Grid>
@@ -64,7 +68,7 @@
                                     Width="150"/>
                                 <GridViewColumn Header="วันที่" 
                                     DisplayMemberBinding="{Binding Path=DateQRDateString}" 
-                                    Width="150"/>
+                                    Width="200"/>
                                 <GridViewColumn Header="จำนวนเงิน" 
                                     DisplayMemberBinding="{Binding Path=Qty}" 
                                     Width="150"/>

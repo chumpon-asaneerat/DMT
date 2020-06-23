@@ -587,6 +587,7 @@ public class DMTModel : DMTBaseModel
         #endregion
     }
 
+
     #endregion
 
     #region Shift
@@ -883,7 +884,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy");
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy HH:mm:ss");
                 return ret;
             }
             set { }
@@ -1117,7 +1118,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy");
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy HH:mm:ss");
                 return ret;
             }
             set { }
@@ -1245,7 +1246,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy");
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy  HH:mm:ss");
                 return ret;
             }
             set { }
@@ -1423,7 +1424,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy");
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy HH:mm:ss");
                 return ret;
             }
             set { }

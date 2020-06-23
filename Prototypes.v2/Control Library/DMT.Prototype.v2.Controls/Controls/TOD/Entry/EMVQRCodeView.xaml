@@ -22,7 +22,7 @@
                     
                     <GridViewColumn Header="วันที่" 
                                     DisplayMemberBinding="{Binding Path=DateQRDateString}" 
-                                    Width="150"/>
+                                    Width="200"/>
                     <GridViewColumn Header="Approval Code" 
                                     DisplayMemberBinding="{Binding Path=ApprovalCode}" 
                                     Width="150"/>

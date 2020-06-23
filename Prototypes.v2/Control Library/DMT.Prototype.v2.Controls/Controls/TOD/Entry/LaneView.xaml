@@ -10,21 +10,16 @@
         <ListView x:Name="listView" FontSize="18" ItemsSource="{Binding}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="เริ่มต้นผลัด" 
-                                    DisplayMemberBinding="{Binding Path=BeginTimeString}" 
-                                    Width="150"/>
-                    <GridViewColumn Header="เลิกผลัด" 
-                                    DisplayMemberBinding="{Binding Path=EndTimeString}" 
-                                    Width="150"/>
+                    <GridViewColumn Header="วัน/เวลา เปิดการทำงาน" 
+                                    DisplayMemberBinding="{Binding Path=BeginDateString}" 
+                                    Width="200"/>
+
                     <GridViewColumn Header="รหัสพนักงาน" 
                                     DisplayMemberBinding="{Binding Path=StaffId}" 
                                     Width="150"/>
                     <GridViewColumn Header="ชื่อพนักงาน" 
                                     DisplayMemberBinding="{Binding Path=StaffName}" 
                                     Width="250"/>
-                    <GridViewColumn Header="เลน" 
-                                    DisplayMemberBinding="{Binding Path=LaneId}" 
-                                    Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>
