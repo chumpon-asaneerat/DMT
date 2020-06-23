@@ -15,11 +15,15 @@
         Width="1000"
         Background="DimGray">
     <Grid Margin="15">
-        <DockPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="311*"/>
+            <ColumnDefinition Width="653*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.ColumnSpan="2">
             <DockPanel x:Name="infoPanel" 
                        DockPanel.Dock="Top"
                        Margin="10"
-                       Visibility="Collapsed">
+                       Visibility="Visible">
                 <StackPanel Orientation="Horizontal">
                     <Grid Height="10"/>
                     <TextBlock FontSize="18"    
@@ -45,6 +49,20 @@
                                Width="100"/>
                     <Grid Width="5"/>
                     <TextBox x:Name="txtName"
+                             FontSize="18"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Width="100"
+                             Text=""/>
+                    <TextBlock FontSize="18"    
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Right"
+                               Foreground="WhiteSmoke"
+                               Text="เลขที่ถุงเงิน:"
+                               Width="100"/>
+                    <Grid Width="5"/>
+                    <TextBox x:Name="txtBagNo"
                              FontSize="18"
                              HorizontalAlignment="Left"
                              VerticalAlignment="Center"

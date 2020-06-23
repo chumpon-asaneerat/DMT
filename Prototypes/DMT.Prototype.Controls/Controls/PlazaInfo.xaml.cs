@@ -31,7 +31,7 @@ namespace DMT.Controls
             // update current date time.
             txtCurrentTime.Text = DateTime.Now.ToString("HH:mm:ss",
                 System.Globalization.DateTimeFormatInfo.InvariantInfo);
-            txtCurrentDate.Text = DateTime.Now.ToString("yyyy-MM-dd",
+            txtCurrentDate.Text = DateTime.Now.ToString("dd/MM/yyyy",
                 System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 

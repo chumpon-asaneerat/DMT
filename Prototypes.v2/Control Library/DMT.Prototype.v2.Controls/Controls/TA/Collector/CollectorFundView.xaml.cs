@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-
+using System.Windows.Media;
 using NLib;
 using NLib.Services;
 
@@ -63,6 +63,10 @@ namespace DMT.Controls
 
         private void assign(Models.FundEntry src, Models.FundEntry dst)
         {
+            dst.StaffId = src.StaffId;
+            dst.StaffName = src.StaffName;
+            dst.BagNo = src.BagNo;
+
             dst.BHT1 = src.BHT1;
             dst.BHT2 = src.BHT2;
             dst.BHT5 = src.BHT5;
@@ -142,6 +146,14 @@ namespace DMT.Controls
 
                 ReturnFund(fund, obj);
             }
+        }
+
+        private void cmdReceivedBag_Click(object sender, RoutedEventArgs e)
+        {
+            var fund = (Models.FundEntry)((FrameworkElement)sender).DataContext;
+            //fund.ReceivedBag = false; // already received bag.
+            (((FrameworkElement)sender) as Button).Foreground = new SolidColorBrush(Colors.Red);
+            (((FrameworkElement)sender) as Button).IsEnabled = false;
         }
 
         public event System.EventHandler ItemChanged;
