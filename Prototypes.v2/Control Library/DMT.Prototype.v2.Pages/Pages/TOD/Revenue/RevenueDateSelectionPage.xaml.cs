@@ -36,7 +36,7 @@ namespace DMT.Pages.TOD.Revenue
         private Models.Job _job;
         private Models.RevenueEntry _entry;
 
-        public void Setup(Models.Job job, Models.RevenueEntry entry) 
+        public void Setup(Models.Job job, Models.RevenueEntry entry, List<Models.Lane> lanes)
         {
             _job = job;
             _entry = entry;
@@ -46,7 +46,7 @@ namespace DMT.Pages.TOD.Revenue
             revDate.Text = (null != _job) ? 
                 _job.BeginDateString : string.Empty;
 
-            grid.Setup(_job.Lanes);
+            grid.Setup(lanes);
         }
     }
 }

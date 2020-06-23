@@ -1726,6 +1726,235 @@ public class DMTModel : DMTBaseModel
     }
 
     #endregion
+
+    #region LaneDetail
+
+    /// <summary>
+    /// The Lane Class.
+    /// </summary>
+    public class LaneDetail : DMTBaseModel
+    {
+        #region Internal Variables
+
+        private int _laneId = 1;
+        private string _staffId = string.Empty;
+        private string _jobNo = string.Empty;
+        private DateTime _begin = DateTime.MinValue;
+        private DateTime _end = DateTime.MinValue;
+        private DateTime _dateTOD = DateTime.MinValue;
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// GetHashCode overrides.
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            string result = string.Format(
+                "{0}_{1}_{2}_{3}_{4}_{5}",
+                _laneId, _staffId, _jobNo, _begin, _end, _dateTOD);
+            return result.GetHashCode();
+        }
+        /// <summary>
+        /// Equals overrides.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (null == obj)
+                return false;
+            return this.GetHashCode().Equals(obj.GetHashCode());
+        }
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets lane id.
+        /// </summary>
+        public int LaneId
+        {
+            get { return _laneId; }
+            set
+            {
+                if (_laneId != value)
+                {
+                    _laneId = value;
+                    // Raise event.
+                    RaiseChanged("LaneId");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Staff Id.
+        /// </summary>
+        [JsonIgnore]
+        public string StaffId
+        {
+            get { return _staffId; }
+            set
+            {
+                if (_staffId != value)
+                {
+                    _staffId = value;
+                    // Raise event.
+                    RaiseChanged("StaffId");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets JobNo.
+        /// </summary>
+        [JsonIgnore]
+        public string JobNo
+        {
+            get { return _jobNo; }
+            set
+            {
+                if (_jobNo != value)
+                {
+                    _jobNo = value;
+                    // Raise event.
+                    RaiseChanged("JobNo");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Shift Begin Date.
+        /// </summary>
+        public DateTime Begin
+        {
+            get { return _begin; }
+            set
+            {
+                if (_begin != value)
+                {
+                    _begin = value;
+                    // Raise event.
+                    RaiseChanged("Begin");
+                    RaiseChanged("BeginDateString");
+                    RaiseChanged("BeginTimeString");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets Shift End Date.
+        /// </summary>
+        public DateTime End
+        {
+            get { return _end; }
+            set
+            {
+                if (_end != value)
+                {
+                    _end = value;
+                    // Raise event.
+                    RaiseChanged("End");
+                    RaiseChanged("EndDateString");
+                    RaiseChanged("EndTimeString");
+                }
+            }
+        }
+
+        public DateTime DateTOD
+        {
+            get { return _dateTOD; }
+            set
+            {
+                if (_dateTOD != value)
+                {
+                    _dateTOD = value;
+                    // Raise event.
+                    RaiseChanged("DateTOD");
+                    RaiseChanged("DateTODDateString");
+                    RaiseChanged("DateTODTimeString");
+                }
+            }
+        }
+        /// <summary>
+        /// Gets Begin Date String.
+        /// </summary>
+        [JsonIgnore]
+        public string BeginDateString
+        {
+            get
+            {
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy HH:mm:ss");
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets End Date String.
+        /// </summary>
+        [JsonIgnore]
+        public string EndDateString
+        {
+            get
+            {
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("dd/MM/yyyy  HH:mm:ss");
+                return ret;
+            }
+            set { }
+        }
+
+        [JsonIgnore]
+        public string DateTODDateString
+        {
+            get
+            {
+                var ret = (this.DateTOD == DateTime.MinValue) ? "" : this.DateTOD.ToThaiDateTimeString("dd/MM/yyyy HH:mm:ss");
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets Begin Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string BeginTimeString
+        {
+            get
+            {
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+        /// <summary>
+        /// Gets End Time String.
+        /// </summary>
+        [JsonIgnore]
+        public string EndTimeString
+        {
+            get
+            {
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+
+        [JsonIgnore]
+        public string DateTODTimeString
+        {
+            get
+            {
+                var ret = (this.DateTOD == DateTime.MinValue) ? "" : this.DateTOD.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+
+        #endregion
+    }
+
+    #endregion
 }
 
 namespace DMT.Models

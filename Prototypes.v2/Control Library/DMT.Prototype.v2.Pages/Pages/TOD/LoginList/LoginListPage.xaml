@@ -46,7 +46,7 @@
                 <Grid />
             </DockPanel>
             <Grid>
-                <ctrl:LoginListView x:Name="grid"></ctrl:LoginListView>
+                <ctrl:LoginList2View x:Name="grid"></ctrl:LoginList2View>
             </Grid>
         </DockPanel>
     </Grid>
