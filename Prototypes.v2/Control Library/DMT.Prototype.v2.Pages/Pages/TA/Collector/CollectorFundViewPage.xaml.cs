@@ -101,6 +101,10 @@ namespace DMT.Pages.TA.Collector
         {
             dst.Description = src.Description;
 
+            dst.StaffId = src.StaffId;
+            dst.StaffName = src.StaffName;
+            dst.BagNo = src.BagNo;
+
             dst.BHT1 = src.BHT1;
             dst.BHT2 = src.BHT2;
             dst.BHT5 = src.BHT5;

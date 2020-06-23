@@ -473,7 +473,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -486,7 +486,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -693,7 +693,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -706,7 +706,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -883,7 +883,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.Begin == DateTime.MinValue) ? "" : this.Begin.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -896,7 +896,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.End == DateTime.MinValue) ? "" : this.End.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -1117,7 +1117,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -1245,7 +1245,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -1423,7 +1423,7 @@ public class DMTModel : DMTBaseModel
         {
             get
             {
-                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (this.DateQR == DateTime.MinValue) ? "" : this.DateQR.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -2661,7 +2661,7 @@ namespace DMT.Models
         {
             get
             {
-                var ret = (_revDate == DateTime.MinValue) ? "" : _revDate.ToThaiDateTimeString("yyyy-MM-dd");
+                var ret = (_revDate == DateTime.MinValue) ? "" : _revDate.ToThaiDateTimeString("dd/MM/yyyy");
                 return ret;
             }
             set { }
@@ -2719,6 +2719,8 @@ namespace DMT.Models
     {
         #region Internal Variables
 
+        private string _bagNo = string.Empty;
+
         private string _desc = "";
 
         private int _BHT1 = 0;
@@ -2733,6 +2735,8 @@ namespace DMT.Models
         private decimal _BHTTotal = 0;
         private bool _hasRemark = true;
         private string _remark = "";
+
+        private bool _receivedBag = true;
 
         #endregion
 
@@ -2775,6 +2779,23 @@ namespace DMT.Models
         #endregion
 
         #region Public Properties
+
+        /// <summary>
+        /// Gets or sets Bag Number.
+        /// </summary>
+        public string BagNo
+        {
+            get { return _bagNo; }
+            set
+            {
+                if (_bagNo != value)
+                {
+                    _bagNo = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BagNo"));
+                }
+            }
+        }
 
         public string Description
         {
@@ -2987,6 +3008,31 @@ namespace DMT.Models
         {
             get { return (_hasRemark) ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
         }
+
+
+        /// <summary>
+        /// Gets or sets Is Receive dBag.
+        /// </summary>
+        public bool ReceivedBag
+        {
+            get { return _receivedBag; }
+            set
+            {
+                if (_receivedBag != value)
+                {
+                    _receivedBag = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("ReceivedBag"));
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("ReceivedBagColor"));
+                }
+            }
+        }
+
+        public System.Windows.Media.Color ReceivedBagColor
+        {
+            get { return (_receivedBag) ? System.Windows.Media.Colors.DimGray : System.Windows.Media.Colors.Black; }
+        }
+
 
         public string StaffId { get; set; }
         public string StaffName { get; set; }

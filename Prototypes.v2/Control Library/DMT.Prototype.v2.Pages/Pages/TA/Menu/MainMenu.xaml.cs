@@ -545,7 +545,9 @@ namespace DMT.Pages.TA
                 fund = new Models.FundEntry();
                 fund.Description = "นาย สุเทพ เหมัน";
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
+                fund.BagNo = "301";
                 fund.StaffId = "14321";
+                fund.StaffName = fund.Description;
                 fund.Lane = 1;
                 fund.BHT1 = 50;
                 fund.BHT2 = 50;
@@ -562,7 +564,9 @@ namespace DMT.Pages.TA
                 fund = new Models.FundEntry();
                 fund.Description = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์";
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
+                fund.BagNo = "302";
                 fund.StaffId = "13201";
+                fund.StaffName = fund.Description;
                 fund.Lane = 4;
                 fund.BHT1 = 20;
                 fund.BHT2 = 15;
@@ -579,7 +583,9 @@ namespace DMT.Pages.TA
                 fund = new Models.FundEntry();
                 fund.Description = "นางวิภา สวัสดิวัฒน์";
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
+                fund.BagNo = "789";
                 fund.StaffId = "11559";
+                fund.StaffName = fund.Description;
                 fund.Lane = 8;
                 fund.BHT1 = 20;
                 fund.BHT2 = 15;
@@ -596,7 +602,9 @@ namespace DMT.Pages.TA
                 fund = new Models.FundEntry();
                 fund.Description = "นาย ภักดี อมรรุ่งโรจน์";
                 fund.Date = new DateTime(2020, 3, 17, 09, 05, 00);
+                fund.BagNo = "415";
                 fund.StaffId = "12866";
+                fund.StaffName = fund.Description;
                 fund.Lane = 5;
                 fund.BHT1 = 0;
                 fund.BHT2 = 0;
@@ -607,6 +615,25 @@ namespace DMT.Pages.TA
                 fund.BHT100 = 0;
                 fund.BHT500 = 0;
                 fund.BHT1000 = 0;
+                funds.Add(fund);
+
+                // Collector 5
+                fund = new Models.FundEntry();
+                fund.Description = "นาย สุเทพ เหมัน";
+                fund.Date = new DateTime(2020, 3, 17, 12, 05, 00);
+                fund.BagNo = "521";
+                fund.StaffId = "14321";
+                fund.StaffName = fund.Description;
+                fund.Lane = 2;
+                fund.BHT1 = 20;
+                fund.BHT2 = 10;
+                fund.BHT5 = 10;
+                fund.BHT10c = 5;
+                fund.BHT20 = 5;
+                fund.BHT50 = 5;
+                fund.BHT100 = 12;
+                fund.BHT500 = 8;
+                fund.BHT1000 = 3;
                 funds.Add(fund);
 
                 page.Setup(plazaFund, funds);

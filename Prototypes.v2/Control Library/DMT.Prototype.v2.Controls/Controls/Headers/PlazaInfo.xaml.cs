@@ -78,7 +78,7 @@ namespace DMT.Controls
         {
             // Current date time.
             txtCurrentTime.Text = DateTime.Now.ToThaiTimeString();
-            txtCurrentDate.Text = DateTime.Now.ToThaiDateTimeString("yyyy-MM-dd");
+            txtCurrentDate.Text = DateTime.Now.ToThaiDateTimeString("dd/MM/yyyy");
         }
 
         private void TimerTick(object sender, EventArgs e)

@@ -42,7 +42,7 @@ namespace DMT.Pages.TOD.Revenue
             _entry = entry;
 
             entryDate.Text = (null != _entry) ? 
-                DateTime.Now.ToThaiDateTimeString("yyyy-MM-dd HH:mm:ss") : DateTime.Now.ToThaiDateTimeString("yyyy-MM-dd HH:mm:ss");
+                DateTime.Now.ToThaiDateTimeString("dd/MM/yyyy HH:mm:ss") : DateTime.Now.ToThaiDateTimeString("dd/MM/yyyy HH:mm:ss");
             revDate.Text = (null != _job) ? 
                 _job.BeginDateString : string.Empty;
 

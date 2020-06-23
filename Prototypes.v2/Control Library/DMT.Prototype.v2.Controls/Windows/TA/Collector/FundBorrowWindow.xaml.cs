@@ -28,7 +28,16 @@ namespace DMT.Windows.TA.Collector
         public void Setup(Models.FundEntry plaza, Models.FundEntry src, 
             Models.FundEntry fund, Models.FundEntry result, bool isNew = false)
         {
-            if (isNew) infoPanel.Visibility = Visibility.Visible;
+            if (isNew)
+            {
+                //infoPanel.Visibility = Visibility.Visible;
+                infoPanel.IsEnabled = true;
+            }
+            else
+            {
+                //infoPanel.Visibility = Visibility.Collapsed;
+                infoPanel.IsEnabled = false;
+            }
 
             if (null != this.Fund) this.Fund.PropertyChanged -= Fund_PropertyChanged;
 
@@ -43,6 +52,13 @@ namespace DMT.Windows.TA.Collector
             this.srcEntry.DataContext = this.Source;
             this.usrEntry.DataContext = this.Fund;
             this.sumEntry.DataContext = this.Result;
+
+            if (null != this.Fund)
+            {
+                txtStaffId.Text = this.Source.StaffId;
+                txtName.Text = this.Source.StaffName;
+                txtBagNo.Text = this.Source.BagNo;
+            }
 
             UpdateResult();
         }
