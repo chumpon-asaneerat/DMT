@@ -16,7 +16,7 @@
 
                     <GridViewColumn Header="รหัสพนักงาน" 
                                     DisplayMemberBinding="{Binding Path=StaffId}" 
-                                    Width="150"/>
+                                    Width="100"/>
                     <GridViewColumn Header="ชื่อพนักงาน" 
                                     DisplayMemberBinding="{Binding Path=StaffName}" 
                                     Width="250"/>
