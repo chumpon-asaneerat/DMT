@@ -78,34 +78,7 @@ namespace DMT.Pages.TOD
             var page = new Revenue.RevenueDateSelectionPage();
             // setup
             Models.RevenueEntry entry = new Models.RevenueEntry();
-            //page.Setup(Models.Job.FindJob("14077"), entry);
-            List<Models.Lane> lanes = new List<Models.Lane>();
-            Models.Lane lane;
-
-            lane = new Models.Lane();
-            lane.StaffId = "14077";
-            lane.StaffName = "นายเอนก หอมจรูง";
-            lane.Begin = new DateTime(2020, 6, 16, 13, 20, 50);
-            lanes.Add(lane);
-
-            lane = new Models.Lane();
-            lane.StaffId = "14055";
-            lane.StaffName = "นางวิภา สวัสดิวัฒน์";
-            lane.Begin = new DateTime(2020, 6, 16, 18, 50, 11);
-            lanes.Add(lane);
-
-            lane = new Models.Lane();
-            lane.StaffId = "14147";
-            lane.StaffName = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์";
-            lane.Begin = new DateTime(2020, 6, 17, 08, 50, 11);
-            lanes.Add(lane);
-
-            lane = new Models.Lane();
-            lane.StaffId = "12562";
-            lane.StaffName = "นาย ภักดี อมรรุ่งโรจฌ์";
-            lane.Begin = new DateTime(2020, 6, 17, 18, 00, 50);
-            lanes.Add(lane);
-            page.Setup(Models.Job.FindJob("14077"), entry,lanes);
+            page.Setup(Models.Job.FindJob("14077"), entry);
             PageContentManager.Instance.Current = page;
         }
 
@@ -141,7 +114,6 @@ namespace DMT.Pages.TOD
             var page = new TollAdmin.ChangeShiftPage();
             // setup
             //page.Setup(Models.Job.FindJob("14077"));
-
             List<Models.Lane> lanes = new List<Models.Lane>();
             Models.Lane lane;
 
@@ -149,27 +121,34 @@ namespace DMT.Pages.TOD
             lane.StaffId = "14077";
             lane.StaffName = "นายเอนก หอมจรูง";
             lane.Begin = new DateTime(2020, 6, 16, 13, 20, 50);
+            lane.End = new DateTime(2020, 6, 16, 22, 22, 20);
+            lane.LaneId = 4;
             lanes.Add(lane);
 
             lane = new Models.Lane();
             lane.StaffId = "14055";
             lane.StaffName = "นางวิภา สวัสดิวัฒน์";
             lane.Begin = new DateTime(2020, 6, 16, 18, 50, 11);
+            lane.End = new DateTime(2020, 6, 16, 23, 50, 00);
+            lane.LaneId = 1;
             lanes.Add(lane);
 
             lane = new Models.Lane();
             lane.StaffId = "14147";
             lane.StaffName = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์";
             lane.Begin = new DateTime(2020, 6, 17, 08, 50, 11);
+            lane.End = new DateTime(2020, 6, 17, 13, 00, 10);
+            lane.LaneId = 3;
             lanes.Add(lane);
 
             lane = new Models.Lane();
             lane.StaffId = "12562";
             lane.StaffName = "นาย ภักดี อมรรุ่งโรจฌ์";
-            lane.Begin = new DateTime(2020, 6, 17, 18, 00, 50);
+            lane.Begin = new DateTime(2020, 6, 17, 08, 00, 50);
+            lane.End = new DateTime(2020, 6, 17, 18, 00, 50);
+            lane.LaneId = 2;
             lanes.Add(lane);
-
-            page.Setup(Models.Job.FindJob("14077"),lanes);
+            page.Setup(Models.Job.FindJob("14077"), lanes);
             PageContentManager.Instance.Current = page;
         }
 
