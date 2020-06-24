@@ -177,6 +177,9 @@ namespace DMT.Controls
         {
             listView.ItemsSource = lanes;
             staffId = string.Empty;
+
+            List<Models.LaneDetail> laneDetails = new List<Models.LaneDetail>();
+            listViewUse.ItemsSource = laneDetails;
         }
     }
 }
