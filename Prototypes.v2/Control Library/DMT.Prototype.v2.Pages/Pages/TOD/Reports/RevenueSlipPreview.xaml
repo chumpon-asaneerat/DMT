@@ -15,7 +15,7 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="ตกลง"
+                            Content="ยืนยัน นำส่งรายได้"
                             Height="45"
                             Width="150" Click="cmdOk_Click"/>
             <Button x:Name="cmdCancel" 
@@ -26,13 +26,13 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="ยกเลิก"
+                            Content="แก้ไข"
                             Height="45"
                             Width="150" Click="cmdCancel_Click"/>
             <Grid />
         </DockPanel>
         <ScrollViewer>
-            <Image Source="/DMT.Prototype.v2.Pages;component/Images/Reports/ใบนำส่งรายได้รวม2.jpg" />
+            <Image Source="/DMT.Prototype.v2.Pages;component/Images/Reports/ใบนำส่งเงิน 2.png" />
         </ScrollViewer>
     </DockPanel>
 </UserControl>

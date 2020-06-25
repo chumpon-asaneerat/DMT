@@ -253,6 +253,8 @@ namespace DMT.Pages.TOD
             lane.StaffId = "14077";
             lane.StaffName = "นายเอนก หอมจรูง";
             lane.Begin = new DateTime(2020, 6, 16, 08, 00, 00);
+            lane.End = new DateTime(2020, 6, 16, 10, 00, 11);
+            lane.Shift = "เช้า";
             Lanes.Add(lane);
 
             lane = new Models.Lane();
@@ -260,6 +262,7 @@ namespace DMT.Pages.TOD
             lane.End = new DateTime(2020, 6, 17, 10, 00, 11);
             lane.StaffId = "14055";
             lane.StaffName = "นางวิภา สวัสดิวัฒน์";
+            lane.Shift = "เช้า";
             Lanes.Add(lane);
 
             lane = new Models.Lane();
@@ -267,6 +270,7 @@ namespace DMT.Pages.TOD
             lane.End = new DateTime(2020,6, 17, 08, 00, 11);
             lane.StaffId = "14147";
             lane.StaffName = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์";
+            lane.Shift = "ดึก";
             Lanes.Add(lane);
 
             lane = new Models.Lane();
@@ -274,6 +278,7 @@ namespace DMT.Pages.TOD
             lane.End = new DateTime(2020, 6, 17, 08, 30, 00);
             lane.StaffId = "12562";
             lane.StaffName = "นาย ภักดี อมรรุ่งโรจน์";
+            lane.Shift = "บ่าย";
             Lanes.Add(lane);
            
             page.Setup(Lanes);

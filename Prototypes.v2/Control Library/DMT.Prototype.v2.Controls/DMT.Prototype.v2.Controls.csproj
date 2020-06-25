@@ -56,6 +56,9 @@
     <Compile Include="Controls\Account\RequestExchange\AccountRequestExchangeView.xaml.cs">
       <DependentUpon>AccountRequestExchangeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Headers\PlazaInfoTOD.xaml.cs">
+      <DependentUpon>PlazaInfoTOD.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TA\Collector\CollectorFundView.xaml.cs">
       <DependentUpon>CollectorFundView.xaml</DependentUpon>
     </Compile>
@@ -198,6 +201,10 @@
     <Page Include="Controls\Account\RequestExchange\AccountRequestExchangeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Headers\PlazaInfoTOD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\TA\Collector\CollectorFundView.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -28,7 +28,7 @@
                                Text="QR Code"
                                Width="110"/>
                 </Border>
-                <Border DockPanel.Dock="Bottom">
+                <Border DockPanel.Dock="Bottom" Height="60">
                     <Border.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#7F323232" Offset="0"/>
@@ -36,10 +36,6 @@
                         </LinearGradientBrush>
                     </Border.Background>
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="19*"/>
-                            <RowDefinition Height="9*"/>
-                        </Grid.RowDefinitions>
                         <TextBlock Margin="10,2,0,2"
                                VerticalAlignment="Center"
                                Text="จำนวนรวม : " HorizontalAlignment="Left" Width="88"/>
@@ -50,14 +46,25 @@
                                VerticalAlignment="Center"
                                Text="รายการ" HorizontalAlignment="Left" Width="90"/>
 
-                        <TextBlock Margin="392,0,0,2"
-                               VerticalAlignment="Bottom"
+                        <TextBlock Margin="281,18,0,18"
+                               VerticalAlignment="Center"
                                Text="ยอดเงินรวม : "  HorizontalAlignment="Left" Width="98"/>
                         <TextBox Name="txtTotal"  Height="23" 
-                                Text="" Margin="493,2,0,2" HorizontalAlignment="Left"  Width="100"/>
-                        <TextBlock Margin="601,2,0,2"
+                                Text="" Margin="382,18,0,18" HorizontalAlignment="Left"  Width="100"/>
+                        <TextBlock Margin="490,18,0,18"
                                VerticalAlignment="Center"
                                Text="บาท" HorizontalAlignment="Left" Width="50"/>
+                        <Button x:Name="cmdOk" 
+                            DockPanel.Dock="Right"
+                            Margin="2"
+                            FontSize="18"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Content="พิมพ์รายการ QR Code"
+                            Height="45"
+                            Width="170" />
                     </Grid>
                 </Border>
 

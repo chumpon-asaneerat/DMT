@@ -44,32 +44,32 @@
                            VerticalAlignment="Center"
                            TextAlignment="Center"
                            Text="Reports"/>
-            <Button x:Name="revSlip"
-                        Grid.Column="0" Grid.Row="1" 
-                        Margin="0 0 5 0"
-                        Background="Purple"
-                        Foreground="WhiteSmoke" Click="revSlip_Click">
+            <Button x:Name="revSlip" 
+                    Grid.Column="0" Grid.Row="1" 
+                    Margin="0 0 5 0"
+                    Background="Purple"
+                    Foreground="WhiteSmoke" Click="revSlip_Click">
                 <DockPanel>
                     <Grid DockPanel.Dock="Left"
-                              Margin="5">
+                          Margin="5">
                         <Image Height="50"
-                                    Width="50"
-                                    Source="/DMT.Prototype.v2.Pages;component/Images/Menu/report1.png" 
-                                    HorizontalAlignment="Center" 
-                                    VerticalAlignment="Center" />
+                                Width="50"
+                                Source="/DMT.Prototype.v2.Pages;component/Images/Menu/report1.png"  
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
                         <TextBlock FontSize="28" 
-                                       HorizontalAlignment="Center"
-                                       TextAlignment="Center"
-                                       TextWrapping="Wrap"
-                                       Text="ใบนำส่งรายได้"/>
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="ใบนำส่งรายได้"/>
                         <Grid Height="10" />
                         <TextBlock FontSize="14"
-                                       HorizontalAlignment="Center"
-                                       TextAlignment="Center"
-                                       TextWrapping="Wrap"
-                                       Text="ใบนำส่งรายได้"/>
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="ใบนำส่งรายได้"/>
                     </StackPanel>
                 </DockPanel>
             </Button>

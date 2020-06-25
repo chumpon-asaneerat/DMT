@@ -758,6 +758,7 @@ public class DMTModel : DMTBaseModel
         private string _staffName = string.Empty;
         private DateTime _begin = DateTime.MinValue;
         private DateTime _end = DateTime.MinValue;
+        private string _shift = string.Empty;
 
         #endregion
 
@@ -770,8 +771,8 @@ public class DMTModel : DMTBaseModel
         public override int GetHashCode()
         {
             string result = string.Format(
-                "{0}_{1}_{2}_{3}_{4}",
-                _laneId, _staffId, _staffName, _begin, _end);
+                "{0}_{1}_{2}_{3}_{4}_{5}",
+                _laneId, _staffId, _staffName, _begin, _end,_shift);
             return result.GetHashCode();
         }
         /// <summary>
@@ -927,6 +928,21 @@ public class DMTModel : DMTBaseModel
                 return ret;
             }
             set { }
+        }
+
+        [JsonIgnore]
+        public string Shift
+        {
+            get { return _shift; }
+            set
+            {
+                if (_shift != value)
+                {
+                    _shift = value;
+                    // Raise event.
+                    RaiseChanged("Shift");
+                }
+            }
         }
 
         #endregion
@@ -1742,7 +1758,7 @@ public class DMTModel : DMTBaseModel
         private DateTime _begin = DateTime.MinValue;
         private DateTime _end = DateTime.MinValue;
         private DateTime _dateTOD = DateTime.MinValue;
-
+        
         #endregion
 
         #region Overrides
