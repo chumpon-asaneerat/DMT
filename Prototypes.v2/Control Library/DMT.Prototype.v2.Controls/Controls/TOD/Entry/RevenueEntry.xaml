@@ -39,7 +39,6 @@
                                      TextAlignment="Center"
                                      Text="{Binding BagNo}"/>
                             <Grid Width="10" />
-                            <Grid Width="10" />
                             <TextBlock Text="หมายเลขเข็มขัดนิรภัย" 
                                        Foreground="WhiteSmoke"/>
                             <Grid Width="10" />

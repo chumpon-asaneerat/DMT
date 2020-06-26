@@ -548,6 +548,7 @@ namespace DMT.Pages.TA
                 fund.BagNo = "301";
                 fund.StaffId = "14321";
                 fund.StaffName = fund.Description;
+                fund.BeltNo = "10";
                 fund.Lane = 1;
                 fund.BHT1 = 50;
                 fund.BHT2 = 50;
@@ -567,6 +568,7 @@ namespace DMT.Pages.TA
                 fund.BagNo = "302";
                 fund.StaffId = "13201";
                 fund.StaffName = fund.Description;
+                fund.BeltNo = "18";
                 fund.Lane = 4;
                 fund.BHT1 = 20;
                 fund.BHT2 = 15;
@@ -586,6 +588,7 @@ namespace DMT.Pages.TA
                 fund.BagNo = "789";
                 fund.StaffId = "11559";
                 fund.StaffName = fund.Description;
+                fund.BeltNo = "19";
                 fund.Lane = 8;
                 fund.BHT1 = 20;
                 fund.BHT2 = 15;
@@ -605,6 +608,7 @@ namespace DMT.Pages.TA
                 fund.BagNo = "415";
                 fund.StaffId = "12866";
                 fund.StaffName = fund.Description;
+                fund.BeltNo = "45";
                 fund.Lane = 5;
                 fund.BHT1 = 0;
                 fund.BHT2 = 0;
@@ -624,6 +628,7 @@ namespace DMT.Pages.TA
                 fund.BagNo = "521";
                 fund.StaffId = "14321";
                 fund.StaffName = fund.Description;
+                fund.BeltNo = "72";
                 fund.Lane = 2;
                 fund.BHT1 = 20;
                 fund.BHT2 = 10;
