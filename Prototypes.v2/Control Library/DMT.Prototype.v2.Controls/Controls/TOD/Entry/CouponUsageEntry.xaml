@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="290" 
+             d:DesignHeight="200" 
              d:DesignWidth="300"             
              FontSize="18">
     <Grid>
@@ -82,7 +82,7 @@
                         <TextBlock Margin="2" 
                                DockPanel.Dock="Left"  
                                TextAlignment="Right" 
-                               Text="75 บาท" 
+                               Text="70 บาท" 
                                Width="140"/>
                         <TextBlock Margin="2"
                                DockPanel.Dock="Right" 
@@ -110,42 +110,6 @@
                                  TextAlignment="Right"
                                  Text="{Binding BHT80}"
                                  Width="50"/>
-                    </DockPanel>
-                    <!-- Card Count -->
-                    <DockPanel Margin="5 0 5 0">
-                        <TextBlock Margin="2" 
-                            DockPanel.Dock="Left"  
-                            TextAlignment="Right"
-                            Text="บัตร DMT (4 ล้อ)" 
-                            Width="140"/>
-                        <TextBlock Margin="2"
-                               DockPanel.Dock="Right" 
-                               TextAlignment="Left"
-                               Text="ฉบับ"
-                               Width="40"/>
-                        <TextBox Margin="2"
-                                 TextAlignment="Right"
-                                 Text="{Binding FreePass}"
-                                 Width="50"/>
-                    </DockPanel>
-                    <!-- Count Total -->
-                    <DockPanel Margin="5 0 5 0">
-                        <TextBlock Margin="2" 
-                            DockPanel.Dock="Left"  
-                            TextAlignment="Right" 
-                            Text="บัตร DMT (> 4 ล้อ)" 
-                            Width="140"/>
-                        <TextBlock Margin="2"
-                               DockPanel.Dock="Right" 
-                               TextAlignment="Left"
-                               Text="ฉบับ"
-                               Width="40"/>
-                        <TextBox Margin="2"
-                                 TextAlignment="Right"
-                                 Text="{Binding CntTotal}"
-                                 
-                                 Width="50"/>
-
                     </DockPanel>
                     <!-- Total BHT -->
                     <DockPanel Margin="5 0 5 0">
