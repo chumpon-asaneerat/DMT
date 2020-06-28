@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -58,6 +59,20 @@ namespace DMT.Windows.TA.Collector
                 txtStaffId.Text = this.Source.StaffId;
                 txtName.Text = this.Source.StaffName;
                 txtBagNo.Text = this.Source.BagNo;
+
+                if (!string.IsNullOrEmpty(this.Source.BeltNo))
+                {
+                    txtBeltNo.Text = this.Source.BeltNo;
+                }
+                else if (string.IsNullOrEmpty(this.Source.BeltNo))
+                {
+                    if (txtBeltNo.IsEnabled == false)
+                    {
+                        var rand = new Random();
+                        int num = rand.Next(1000);
+                        txtBeltNo.Text = num.ToString("#,##0");
+                    }
+                }
             }
 
             UpdateResult();

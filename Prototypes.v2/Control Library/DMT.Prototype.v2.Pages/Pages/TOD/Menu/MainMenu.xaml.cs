@@ -96,10 +96,17 @@ namespace DMT.Pages.TOD
             {
                 return;
             }
+            var page = new Revenue.RevenueDateSelectionPage();
+            // setup
+            Models.RevenueEntry entry = new Models.RevenueEntry();
+            page.Setup(Models.Job.FindJob("14077"), entry);
+            PageContentManager.Instance.Current = page;
+            /*
             // Revenue Slip Preview
             var page = new Reports.RevenueSlipPreview();
             page.MenuPage = this;
             PageContentManager.Instance.Current = page;
+            */
         }
 
         private void changeShift_Click(object sender, RoutedEventArgs e)

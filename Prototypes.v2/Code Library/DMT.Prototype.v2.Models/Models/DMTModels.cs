@@ -2966,7 +2966,7 @@ namespace DMT.Models
         #region Internal Variables
 
         private string _bagNo = string.Empty;
-
+        private string _beltNo = string.Empty;
         private string _desc = "";
 
         private int _BHT1 = 0;
@@ -3039,6 +3039,20 @@ namespace DMT.Models
                     _bagNo = value;
                     // Raise event.
                     PropertyChanged.Call(this, new PropertyChangedEventArgs("BagNo"));
+                }
+            }
+        }
+
+        public string BeltNo
+        {
+            get { return _beltNo; }
+            set
+            {
+                if (_beltNo != value)
+                {
+                    _beltNo = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BeltNo"));
                 }
             }
         }

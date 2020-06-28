@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="750" 
-             d:DesignWidth="1200">
+             d:DesignWidth="1600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -46,20 +46,20 @@
                 <DockPanel>
                     <Grid DockPanel.Dock="Left"
                           Margin="5">
-                        <Image Height="80"
+                        <Image Height="60"
                                 Width="80"
                                 Source="/DMT.Prototype.v2.Pages;component/images/Menu/begin_of_job.png" 
                                 HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="45" 
+                        <TextBlock FontSize="35" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="เปิดกะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="28"
+                        <TextBlock FontSize="18"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -101,13 +101,13 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="45" 
+                        <TextBlock FontSize="35" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="นำส่งรายได้"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="28"
+                        <TextBlock FontSize="18"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -130,13 +130,19 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="45" 
+                        <TextBlock FontSize="35" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="นำส่งรายได้ย้อนหลัง"/>
+                                   Text="นำส่งรายได้ย้อนหลัง">
+                            <!--
+                            <Run Text="นำส่งรายได้" />
+                            <LineBreak />
+                            <Run Text="ย้อนหลัง" />
+                            -->
+                        </TextBlock>
                         <Grid Height="10" />
-                        <TextBlock FontSize="28"
+                        <TextBlock FontSize="18"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -180,13 +186,13 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="45" 
+                        <TextBlock FontSize="35" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="เปลี่ยนกะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="28"
+                        <TextBlock FontSize="18"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -210,13 +216,13 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="45" 
+                        <TextBlock FontSize="35" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="รายงานต่าง ๆ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="28"
+                        <TextBlock FontSize="18"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -232,13 +238,13 @@
                 <DockPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="45" 
+                        <TextBlock FontSize="35" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="EMV /QR Code"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="28"
+                        <TextBlock FontSize="18"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -255,13 +261,13 @@
                 <DockPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="45" 
+                        <TextBlock FontSize="35" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="รายชื่อพนักงานเข้ากะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="28"
+                        <TextBlock FontSize="18"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"

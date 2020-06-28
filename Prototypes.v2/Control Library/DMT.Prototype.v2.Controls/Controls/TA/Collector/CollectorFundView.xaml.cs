@@ -66,6 +66,7 @@ namespace DMT.Controls
             dst.StaffId = src.StaffId;
             dst.StaffName = src.StaffName;
             dst.BagNo = src.BagNo;
+            dst.BeltNo = src.BeltNo;
 
             dst.BHT1 = src.BHT1;
             dst.BHT2 = src.BHT2;
