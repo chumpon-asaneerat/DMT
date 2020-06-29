@@ -326,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Background\snartcard.png" />
+    <Resource Include="Images\Reports\ใบนำส่งเงิน2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Menu\bag4.png" />
@@ -414,9 +415,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Reports\coupon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Reports\ใบนำส่งเงิน2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

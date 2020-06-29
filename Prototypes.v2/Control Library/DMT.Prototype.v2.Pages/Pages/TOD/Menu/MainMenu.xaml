@@ -16,21 +16,21 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="1" Grid.Row="1"
-              Margin="5 0 5 5">
+              Margin="5 0 5 5" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
+            <TextBlock Grid.Column="0" Grid.Row="0" 
                        FontSize="45"
                        Foreground="WhiteSmoke"
                        Background="DarkOrange"
@@ -39,7 +39,7 @@
                        TextAlignment="Center"
                        Text="กะ"/>
             <Button x:Name="beginJob" 
-                    Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
+                    Grid.Column="0" Grid.Row="1"
                     Margin="0 0 0 0"
                     Background="DarkOrange"
                     Foreground="WhiteSmoke" Click="beginJob_Click">
@@ -53,13 +53,13 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="35" 
+                        <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="เปิดกะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="18"
+                        <TextBlock FontSize="15"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -68,7 +68,7 @@
                 </DockPanel>
             </Button>
         </Grid>
-        <Grid Grid.Column="2" Grid.Row="1"
+        <Grid Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"
               Margin="5 0 5 5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
@@ -101,13 +101,13 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="35" 
+                        <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="นำส่งรายได้"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="18"
+                        <TextBlock FontSize="15"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -130,7 +130,7 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="35" 
+                        <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -142,7 +142,7 @@
                             -->
                         </TextBlock>
                         <Grid Height="10" />
-                        <TextBlock FontSize="18"
+                        <TextBlock FontSize="15"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -151,7 +151,7 @@
                 </DockPanel>
             </Button>
         </Grid>
-        <Grid Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"
+        <Grid Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3"
               Margin="5 0 5 5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
@@ -186,17 +186,17 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="35" 
+                        <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="เปลี่ยนกะ"/>
+                                   Text="หัวหน้าเปลี่ยนกะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="18"
+                        <TextBlock FontSize="15"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="เปลี่ยนกะ"/>
+                                   Text="หัวหน้าเปลี่ยนกะ"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -216,13 +216,13 @@
                                 VerticalAlignment="Center" />
                     </Grid>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="35" 
+                        <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="รายงานต่าง ๆ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="18"
+                        <TextBlock FontSize="15"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -238,13 +238,13 @@
                 <DockPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="35" 
+                        <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="EMV /QR Code"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="18"
+                        <TextBlock FontSize="15"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -261,13 +261,13 @@
                 <DockPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="35" 
+                        <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="รายชื่อพนักงานเข้ากะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="18"
+                        <TextBlock FontSize="15"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -276,7 +276,7 @@
                 </DockPanel>
             </Button>
         </Grid>
-        <Grid Grid.Column="2" Grid.Row="2"
+        <Grid Grid.Column="3" Grid.Row="2"
               Margin="5 0 5 0"
               Visibility="Hidden">
             <Grid.RowDefinitions>
