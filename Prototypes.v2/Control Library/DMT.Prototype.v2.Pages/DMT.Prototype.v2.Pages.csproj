@@ -326,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Background\snartcard.png" />
+    <Resource Include="Images\Reports\สรุปรวมนำส่งรายไดรายวัน.jpg" />
     <Resource Include="Images\Reports\ใบนำส่งเงิน2.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -402,9 +403,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Reports\สรุปการส่งเงินประจำวัน TOD.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Reports\สรุปรวมนำส่งรายไดรายวัน.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Reports\ใบนำส่งรายได้รวม2.jpg" />
