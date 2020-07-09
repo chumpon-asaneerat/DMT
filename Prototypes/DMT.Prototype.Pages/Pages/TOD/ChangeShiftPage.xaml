@@ -17,7 +17,7 @@
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                TextAlignment="Right"
-                               Text="ผลัดถัดไปคือ"/>
+                               Text="กะถัดไปคือ"/>
                     <Button x:Name="cmdOk" 
                             DockPanel.Dock="Right"
                             Margin="2"
@@ -26,7 +26,7 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="ยืนยันการเปลี่ยนผลัด"
+                            Content="ยืนยันการเปลี่ยนกะ"
                             Height="45"
                             Width="200" Click="cmdOk_Click"/>
                     <ComboBox FontSize="18"
@@ -48,7 +48,7 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="ยกเลิกการเปลี่ยนผลัด"
+                            Content="ยกเลิกการเปลี่ยนกะ"
                             Height="45"
                             Width="200" Click="cmdCancel_Click"/>
                     <Grid />
@@ -62,7 +62,7 @@
                 <TextBlock FontSize="18"
                            Foreground="WhiteSmoke"
                            Margin="5"
-                           Text="รายการผลัดที่ยังไม่ได้ทำการป้อนรายได้"                           
+                           Text="รายการกะที่ยังไม่ได้ทำการป้อนรายได้"                           
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"/>
             </Border>

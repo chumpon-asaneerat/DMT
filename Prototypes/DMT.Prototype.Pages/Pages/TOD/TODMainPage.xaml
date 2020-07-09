@@ -36,7 +36,7 @@
                        HorizontalAlignment="Stretch" 
                        VerticalAlignment="Center"
                        TextAlignment="Center"
-                       Text="ผลัดงาน"/>
+                       Text="กะงาน"/>
             <Button x:Name="beginJob" 
                     Grid.Column="0" Grid.Row="1" 
                     Margin="0 0 5 0"
@@ -56,13 +56,13 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="เปิดผลัดงาน"/>
+                                   Text="เปิดกะงาน"/>
                         <Grid Height="10" />
                         <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="เปิดผลัดงาน"/>
+                                   Text="เปิดกะงาน"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -85,13 +85,13 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="ปิดผลัดงาน"/>
+                                   Text="ปิดกะงาน"/>
                         <Grid Height="10" />
                         <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="ปิดผลัดงาน"/>
+                                   Text="ปิดกะงาน"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -210,13 +210,13 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="เปลี่ยนผลัด"/>
+                                   Text="เปลี่ยนกะ"/>
                         <Grid Height="10" />
                         <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="เปลี่ยนผลัด"/>
+                                   Text="เปลี่ยนกะ"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -357,7 +357,7 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="เปลี่ยนผลัด"/>
+                                   Text="เปลี่ยนกะ"/>
                     </StackPanel>
                 </DockPanel>
             </Button.Content>
@@ -425,7 +425,7 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="เปลี่ยนผลัด"/>
+                                   Text="เปลี่ยนกะ"/>
                     </StackPanel>
                 </DockPanel>
             </Button.Content>

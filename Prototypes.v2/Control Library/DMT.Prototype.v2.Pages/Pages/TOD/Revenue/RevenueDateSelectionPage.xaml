@@ -88,7 +88,7 @@
                 <TextBlock FontSize="18"
                            Foreground="WhiteSmoke"
                            Margin="5"
-                           Text="รายการผลัดที่ยังไม่ได้ทำการป้อนรายได้"                           
+                           Text="รายการกะที่ยังไม่ได้ทำการป้อนรายได้"                           
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"/>
             </Border>
