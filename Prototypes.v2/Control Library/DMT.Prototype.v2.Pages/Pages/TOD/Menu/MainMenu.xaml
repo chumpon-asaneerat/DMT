@@ -44,14 +44,6 @@
                     Background="DarkOrange"
                     Foreground="WhiteSmoke" Click="beginJob_Click">
                 <DockPanel>
-                    <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                        <Image Height="60"
-                                Width="80"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/begin_of_job.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                    </Grid>
                     <StackPanel Orientation="Vertical">
                         <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
@@ -59,11 +51,6 @@
                                    TextWrapping="Wrap"
                                    Text="เปิดกะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="15"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="เปิดกะ"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -92,14 +79,6 @@
                     Background="RoyalBlue"
                     Foreground="WhiteSmoke" Click="revEntry_Click">
                 <DockPanel>
-                    <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                        <Image Height="80"
-                                Width="80"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/reventry.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                    </Grid>
                     <StackPanel Orientation="Vertical">
                         <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
@@ -107,11 +86,6 @@
                                    TextWrapping="Wrap"
                                    Text="นำส่งรายได้"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="15"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="พนักงานเก็บค่าผ่านทาง"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -121,14 +95,6 @@
                     Background="RoyalBlue"
                     Foreground="WhiteSmoke" Click="reprintRevSlip_Click">
                 <DockPanel>
-                    <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                        <Image Height="80"
-                                Width="80"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/report1.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                    </Grid>
                     <StackPanel Orientation="Vertical">
                         <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
@@ -142,11 +108,6 @@
                             -->
                         </TextBlock>
                         <Grid Height="10" />
-                        <TextBlock FontSize="15"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="หัวหน้าพนักงานเก็บค่าผ่านทาง"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -177,14 +138,6 @@
                     Background="ForestGreen"
                     Foreground="WhiteSmoke" Click="changeShift_Click">
                 <DockPanel>
-                    <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                        <Image Height="80"
-                                Width="80"
-                                Source="/DMT.Prototype.v2.Pages;component/Images/Menu/clock.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                    </Grid>
                     <StackPanel Orientation="Vertical">
                         <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
@@ -192,11 +145,6 @@
                                    TextWrapping="Wrap"
                                    Text="หัวหน้าเปลี่ยนกะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="15"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="หัวหน้าเปลี่ยนกะ"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -207,14 +155,6 @@
                     Foreground="WhiteSmoke" 
                     Click="reportMenu_Click">
                 <DockPanel>
-                    <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                        <Image Height="80"
-                                Width="80"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/report1.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                    </Grid>
                     <StackPanel Orientation="Vertical">
                         <TextBlock FontSize="32" 
                                    HorizontalAlignment="Center"
@@ -222,11 +162,6 @@
                                    TextWrapping="Wrap"
                                    Text="รายงานต่าง ๆ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="15"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="รายงานต่าง ๆ"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -244,11 +179,6 @@
                                    TextWrapping="Wrap"
                                    Text="EMV /QR Code"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="15"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="EMV /QR Code"/>
                     </StackPanel>
                 </DockPanel>
             </Button>
@@ -267,11 +197,6 @@
                                    TextWrapping="Wrap"
                                    Text="รายชื่อพนักงานเข้ากะ"/>
                         <Grid Height="10" />
-                        <TextBlock FontSize="15"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="รายชื่อพนักงานเข้ากะ"/>
                     </StackPanel>
                 </DockPanel>
             </Button>

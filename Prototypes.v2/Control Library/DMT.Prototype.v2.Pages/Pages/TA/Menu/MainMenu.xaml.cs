@@ -51,41 +51,6 @@ namespace DMT.Pages.TA
 
         #region Button (Menu) Command Handlers
 
-        private void plazaReceivedReturnFund_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                // Plaza Fund Received
-                var page = new TA.Plaza.PlazaFundReceivedReturnPage();
-
-                BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
-                Models.FundEntry fund;
-
-                fund = new Models.FundEntry();
-                fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
-                fund.StaffId = "14055";
-                fund.StaffName = "นางวิภา สวัสดิวัฒน์";
-                fund.BHT1 = 10;
-                fund.BHT2 = 10;
-                fund.BHT5 = 10;
-                fund.BHT10c = 10;
-                fund.BHT20 = 10;
-                fund.BHT50 = 10;
-                fund.BHT100 = 10;
-                fund.BHT500 = 10;
-                fund.BHT1000 = 10;
-                funds.Add(fund);
-
-                page.Setup(plaza, funds);
-
-                PageContentManager.Instance.Current = page;
-            }
-            catch (Exception)
-            {
-                //Console.WriteLine("Refresh data error.");
-            }
-        }
-
         private void exchangeBankNote_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -479,37 +444,27 @@ namespace DMT.Pages.TA
             }
         }
 
-        private void plazaAllStock_Click(object sender, RoutedEventArgs e)
+        private void refundBankNote_Click(object sender, RoutedEventArgs e)
         {
-            var win = new Windows.TA.Plaza.PlazaStockWindow();
-            win.Owner = Application.Current.MainWindow;
 
-            Models.FundEntry fund = new Models.FundEntry();
-            fund.Description = "เงินยืมทอน";
-            fund.HasRemark = false;
-            fund.BHT1 = 100;
-            fund.BHT2 = 100;
-            fund.BHT5 = 100;
-            fund.BHT10c = 100;
-            fund.BHT20 = 100;
-            fund.BHT50 = 100;
-            fund.BHT100 = 100;
-            fund.BHT500 = 100;
-            fund.BHT1000 = 100;
+        }
 
-            Models.CouponEntry coupon = new Models.CouponEntry();
-            coupon.Description = "คุปอง";
-            coupon.BHT35 = 32;
-            coupon.BHT80 = 43;
-            win.Setup(fund, coupon);
+        private void plazaAllCoupon_Click(object sender, RoutedEventArgs e)
+        {
 
-            if (win.ShowDialog() == false)
-            {
-                return;
-            }
+        }
+
+        private void exchangeMoney_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void collectorFundReport_Click(object sender, RoutedEventArgs e)
+        {
             try
             {
-
+                var page = new TA.Reports.CollectorFundSummaryReportPage();
+                PageContentManager.Instance.Current = page;
             }
             catch (Exception)
             {
@@ -651,19 +606,6 @@ namespace DMT.Pages.TA
             }
         }
 
-        private void collectorFundReport_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                var page = new TA.Reports.CollectorFundSummaryReportPage();
-                PageContentManager.Instance.Current = page;
-            }
-            catch (Exception)
-            {
-                //Console.WriteLine("Refresh data error.");
-            }
-        }
-
         private void collectorReveivedCoupon_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -709,6 +651,11 @@ namespace DMT.Pages.TA
             {
                 //Console.WriteLine("Refresh data error.");
             }
+        }
+
+        private void changeBorrowingHistory_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void collectorReturnCoupon_Click(object sender, RoutedEventArgs e)
@@ -758,11 +705,89 @@ namespace DMT.Pages.TA
             }
         }
 
+        private void plazaAllStock_Click(object sender, RoutedEventArgs e)
+        {
+            var win = new Windows.TA.Plaza.PlazaStockWindow();
+            win.Owner = Application.Current.MainWindow;
+
+            Models.FundEntry fund = new Models.FundEntry();
+            fund.Description = "เงินยืมทอน";
+            fund.HasRemark = false;
+            fund.BHT1 = 100;
+            fund.BHT2 = 100;
+            fund.BHT5 = 100;
+            fund.BHT10c = 100;
+            fund.BHT20 = 100;
+            fund.BHT50 = 100;
+            fund.BHT100 = 100;
+            fund.BHT500 = 100;
+            fund.BHT1000 = 100;
+
+            Models.CouponEntry coupon = new Models.CouponEntry();
+            coupon.Description = "คุปอง";
+            coupon.BHT35 = 32;
+            coupon.BHT80 = 43;
+            win.Setup(fund, coupon);
+
+            if (win.ShowDialog() == false)
+            {
+                return;
+            }
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
+        }
+
         private void logout_Click(object sender, RoutedEventArgs e)
         {
             PageContentManager.Instance.Current = new TA.SignInPage();
         }
 
+        // ไม่ได้ใช้
+        #region No Use
+        //private void plazaReceivedReturnFund_Click(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        // Plaza Fund Received
+        //        var page = new TA.Plaza.PlazaFundReceivedReturnPage();
+
+        //        BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
+        //        Models.FundEntry fund;
+
+        //        fund = new Models.FundEntry();
+        //        fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
+        //        fund.StaffId = "14055";
+        //        fund.StaffName = "นางวิภา สวัสดิวัฒน์";
+        //        fund.BHT1 = 10;
+        //        fund.BHT2 = 10;
+        //        fund.BHT5 = 10;
+        //        fund.BHT10c = 10;
+        //        fund.BHT20 = 10;
+        //        fund.BHT50 = 10;
+        //        fund.BHT100 = 10;
+        //        fund.BHT500 = 10;
+        //        fund.BHT1000 = 10;
+        //        funds.Add(fund);
+
+        //        page.Setup(plaza, funds);
+
+        //        PageContentManager.Instance.Current = page;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        //Console.WriteLine("Refresh data error.");
+        //    }
+        //}
+
         #endregion
+
+        #endregion
+
     }
 }

@@ -22,14 +22,16 @@
                 <ColumnDefinition Width="50"/>
             </Grid.ColumnDefinitions>
             <!-- Group 1 : Received -->
-            <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"
+            <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="3"
               Margin="5 0 5 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="5"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -42,216 +44,128 @@
                        HorizontalAlignment="Stretch" 
                        VerticalAlignment="Center"
                        TextAlignment="Center"
-                       Text="รับเงินยืม-ทอน/คูปอง จากฝ่ายบัญชี"/>
-                <Button x:Name="plazaReceivedReturnFund" 
-                        Grid.Column="0" Grid.Row="1" 
-                        Margin="0 0 5 0"
-                        Background="DarkOrange"
-                        Foreground="WhiteSmoke"
-                        Click="plazaReceivedReturnFund_Click">
-                    <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/bag4.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="28" 
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="รับเงิน"/>
-                            <Grid Height="10" />
-                            <TextBlock FontSize="14"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="รับเงิน"/>
-                        </StackPanel>
-                    </DockPanel>
-                </Button>
+                       Text="จัดการ เงินยืมทอน / คูปอง ภายในด่าน"/>
+
                 <Button x:Name="exchangeBankNote" 
-                        Grid.Column="2" Grid.Row="1" 
+                        Grid.Column="0" Grid.Row="1" 
                         Margin="0 0 5 0"
                         Background="DarkOrange"
                         Foreground="WhiteSmoke"
                         Click="exchangeBankNote_Click">
                     <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/bag4.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
                         <StackPanel Orientation="Vertical">
                             <TextBlock FontSize="28" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="แลกเงินยืม-ทอน"/>
-                            <Grid Height="10" />
-                            <TextBlock FontSize="14"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="แลกเงินยืม-ทอน"/>
+                                   TextWrapping="Wrap">
+                                   <Run Text="ยืม/แลกเงินยืมทอน" />
+                                        <LineBreak />
+                                   <Run Text="ฝ่ายบัญชี" />
+                            </TextBlock>
                         </StackPanel>
                     </DockPanel>
                 </Button>
                 <Button x:Name="plazaReceivedCoupon"                        
-                        Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"
-                        Margin="0 0 0 30"
+                        Grid.Column="2" Grid.Row="1"
+                        Margin="5 0 0 0"
                         Background="DarkOrange"
                         Foreground="WhiteSmoke" 
                         Click="plazaReceivedCoupon_Click">
                     <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/Images/Menu/reventry.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
                         <StackPanel Orientation="Vertical">
                             <TextBlock FontSize="28" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="คูปอง"/>
-                            <Grid Height="10" />
-                            <TextBlock FontSize="14"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="คูปอง"/>
+                                   TextWrapping="Wrap">
+                                <Run Text="ขายคูปอง" />
+                            </TextBlock>
                         </StackPanel>
                     </DockPanel>
                 </Button>
-                <Button x:Name="plazaAllStock"                        
-                        Grid.Column="2" Grid.Row="3" Grid.RowSpan="2"
-                        Margin="5,0,0,30"
-                        Background="DarkOrange"
-                        Foreground="WhiteSmoke"
-                        Click="plazaAllStock_Click">
-                    <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/report1.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="28" 
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="เช็คยอดด่าน"/>
-                            <Grid Height="10" />
-                            <TextBlock FontSize="14"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="เช็คยอดด่าน"/>
-                        </StackPanel>
-                    </DockPanel>
-                </Button>
-            </Grid>
-            
-            <!-- Group 2 : Exchange Collector -->
-            <Grid Grid.Column="1" Grid.Row="3"
-              Margin="5 0 5 0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" 
-                       FontSize="28"
-                       Foreground="WhiteSmoke"
-                       Background="RoyalBlue"
-                       HorizontalAlignment="Stretch" 
-                       VerticalAlignment="Center"
-                       TextAlignment="Center"
-                       Text="การยืมเงินทอน (พนักงาน)"/>
-                <Button x:Name="collectorFund"
-                        Grid.Column="0" Grid.Row="1" 
+                <Button x:Name="refundBankNote"                        
+                        Grid.Column="0" Grid.Row="3"
                         Margin="0 0 5 0"
-                        Background="RoyalBlue"
-                        Foreground="WhiteSmoke"
-                        Click="collectorFund_Click">
+                        Background="DarkOrange"
+                        Foreground="WhiteSmoke" Click="refundBankNote_Click" >
                     <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/reventry.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="28" 
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap">
+                                   <Run Text="คืนเงินยืมทอน" />
+                                    <LineBreak />
+                                   <Run Text="ฝ่ายบัญชี" />
+                            </TextBlock>
+                        </StackPanel>
+                    </DockPanel>
+                </Button>
+                <Button x:Name="plazaAllCoupon"                        
+                        Grid.Column="2" Grid.Row="3"
+                        Margin="5,0,0,0"
+                        Background="DarkOrange"
+                        Foreground="WhiteSmoke" Click="plazaAllCoupon_Click">
+                    <DockPanel>
                         <StackPanel Orientation="Vertical">
                             <TextBlock FontSize="28" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="การยืมเงินทอน"/>
-                            <Grid Height="10" />
-                            <TextBlock FontSize="14"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="การยืมเงินทอนของพนักงาน"/>
+                                   Text="ข้อมูลการขายคูปอง"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>
+                <Button x:Name="exchangeMoney"                        
+                        Grid.Column="0" Grid.Row="5"
+                        Margin="0 0 5 0"
+                        Background="DarkOrange"
+                        Foreground="WhiteSmoke" Click="exchangeMoney_Click" >
+                    <DockPanel>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="28" 
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap">
+                                   <Run Text="แลกเงินหมุนเวียน" />
+                                    <LineBreak />
+                                   <Run Text="ภายในด่าน" />
+                            </TextBlock>
+                        </StackPanel>
+                    </DockPanel>
+                </Button>
+
                 <Button x:Name="collectorFundReport"
-                        Grid.Column="1" Grid.Row="1" 
-                        Margin="0 0 0 0"
-                        Background="RoyalBlue"
+                        Grid.Column="1" Grid.Row="5" 
+                        Margin="5 0 0 0"
+                        Background="DarkOrange"
                         Foreground="WhiteSmoke"
                         Click="collectorFundReport_Click">
                     <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/images/Menu/report1.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
                         <StackPanel Orientation="Vertical">
                             <TextBlock FontSize="28" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="รายงานสรุป การยืมเงินทอน"/>
-                            <Grid Height="10" />
-                            <TextBlock FontSize="14"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="รายงานสรุป การยืมเงินทอน"/>
+                                   TextWrapping="Wrap">
+                                <Run Text="รายงานสรุปการ" />
+                                    <LineBreak />
+                                   <Run Text="ยืมเงินทอน" />
+                            </TextBlock>
                         </StackPanel>
                     </DockPanel>
                 </Button>
             </Grid>
 
             <!-- Group 4 : Collector returns coupon  -->
-            <Grid Grid.Column="2" Grid.Row="1"
+            <Grid Grid.Column="2" Grid.Row="1" Grid.RowSpan="3"
               Margin="5 0 5 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -264,60 +178,63 @@
                        HorizontalAlignment="Stretch" 
                        VerticalAlignment="Center"
                        TextAlignment="Center"
-                       Text="การรับ-คืนคูปอง (พนักงาน)"/>
-                <Button x:Name="collectorReveivedCoupon"
+                       Text="จัดการเงินยืมทอน / คูปองพนักงาน"/>
+                <Button x:Name="collectorFund"
                         Grid.Column="0" Grid.Row="1" 
                         Margin="0 0 5 0"
                         Background="Orchid"
                         Foreground="WhiteSmoke" 
+                        Click="collectorFund_Click">
+                    <DockPanel>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="28" 
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="เงินยืมทอน"/>
+                        </StackPanel>
+                    </DockPanel>
+                </Button>
+                <Button x:Name="collectorReveivedCoupon"
+                        Grid.Column="1" Grid.Row="1" 
+                        Margin="5 0 0 0"
+                        Background="Orchid"
+                        Foreground="WhiteSmoke" 
                         Click="collectorReveivedCoupon_Click">
                     <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/Images/Menu/coupon.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
                         <StackPanel Orientation="Vertical">
                             <TextBlock FontSize="28" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
                                    Text="รับคูปอง"/>
-                            <Grid Height="10" />
-                            <TextBlock FontSize="14"
+                        </StackPanel>
+                    </DockPanel>
+                </Button>
+                <Button x:Name="changeBorrowingHistory"
+                        Grid.Column="0" Grid.Row="3" 
+                        Margin="0 0 5 0"
+                        Background="Orchid"
+                        Foreground="WhiteSmoke" Click="changeBorrowingHistory_Click">
+                    <DockPanel>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="28" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="รับคูปอง"/>
+                                   Text="ประวัติ การยืมเงินทอน"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>
                 <Button x:Name="collectorReturnCoupon"
-                        Grid.Column="1" Grid.Row="1" 
-                        Margin="0 0 0 0"
+                        Grid.Column="1" Grid.Row="3" 
+                        Margin="5 0 0 0"
                         Background="Orchid"
                         Foreground="WhiteSmoke"
                         Click="collectorReturnCoupon_Click">
                     <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/Images/Menu/coupon.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
                         <StackPanel Orientation="Vertical">
                             <TextBlock FontSize="28" 
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="คืนคูปอง"/>
-                            <Grid Height="10" />
-                            <TextBlock FontSize="14"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
@@ -325,41 +242,29 @@
                         </StackPanel>
                     </DockPanel>
                 </Button>
-            </Grid>
 
-            <!-- Group 5 : Log out -->
-            <Grid Grid.Column="2" Grid.Row="3"
-                  Margin="5 0 5 0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" 
-                       FontSize="28"
-                       Foreground="WhiteSmoke"
-                       Background="Indigo"
-                       HorizontalAlignment="Stretch" 
-                       VerticalAlignment="Center"
-                       TextAlignment="Center"
-                       Text="ระบบ"/>
+                <Button x:Name="plazaAllStock"                        
+                        Grid.Column="0" Grid.Row="5"
+                        Margin="0,0,5,0"
+                        Background="RoyalBlue"
+                        Foreground="WhiteSmoke"
+                        Click="plazaAllStock_Click">
+                    <DockPanel>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontSize="28" 
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="เช็คยอดด่าน"/>
+                        </StackPanel>
+                    </DockPanel>
+                </Button>
                 <Button x:Name="logout"
-                    Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
-                    Margin="0 0 0 0"
+                    Grid.Column="2" Grid.Row="5" 
+                    Margin="5 0 0 0"
                     Background="Indigo"
                     Foreground="WhiteSmoke" Click="logout_Click">
                     <DockPanel>
-                        <Grid DockPanel.Dock="Left"
-                          Margin="5">
-                            <Image Height="50"
-                                Width="50"
-                                Source="/DMT.Prototype.v2.Pages;component/Images/Menu/logout.png" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" />
-                        </Grid>
                         <StackPanel Orientation="Vertical">
                             <TextBlock FontSize="28" 
                                    HorizontalAlignment="Center"
@@ -367,11 +272,6 @@
                                    TextWrapping="Wrap"
                                    Text="ออกจากระบบ"/>
                             <Grid Height="10" />
-                            <TextBlock FontSize="14"
-                                   HorizontalAlignment="Center"
-                                   TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="ออกจากระบบ"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>
