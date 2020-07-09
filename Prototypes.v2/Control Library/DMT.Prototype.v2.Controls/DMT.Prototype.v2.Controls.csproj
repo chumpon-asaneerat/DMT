@@ -71,6 +71,9 @@
     <Compile Include="Controls\TA\Entry\CouponPlazaEntry.xaml.cs">
       <DependentUpon>CouponPlazaEntry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TA\Entry\LoanMoneyEntry.xaml.cs">
+      <DependentUpon>LoanMoneyEntry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TA\Entry\FundEntry.xaml.cs">
       <DependentUpon>FundEntry.xaml</DependentUpon>
     </Compile>
@@ -169,6 +172,9 @@
     <Compile Include="Windows\TA\Collector\FundBorrowWindow.xaml.cs">
       <DependentUpon>FundBorrowWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\TA\Collector\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\TA\Collector\FundReturnWindow.xaml.cs">
       <DependentUpon>FundReturnWindow.xaml</DependentUpon>
     </Compile>
@@ -222,6 +228,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\TA\Entry\CouponPlazaEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TA\Entry\LoanMoneyEntry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -342,6 +352,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\TA\Collector\FundBorrowWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\TA\Collector\MessageWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

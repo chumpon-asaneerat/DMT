@@ -11,8 +11,8 @@
         HorizontalAlignment="Center" 
         VerticalAlignment="Center" 
         WindowStartupLocation="CenterOwner"
-        Height="600" 
-        Width="1000"
+        Height="700" 
+        Width="1100"
         Background="DimGray">
     <Grid Margin="15">
         <Grid.ColumnDefinitions>
@@ -32,7 +32,7 @@
                                TextAlignment="Right"
                                Foreground="WhiteSmoke"
                                Text="รหัสพนักงาน:"
-                               Width="150"/>
+                               Width="100"/>
                     <Grid Width="5"/>
                     <TextBox x:Name="txtStaffId"
                              FontSize="18"
@@ -46,13 +46,13 @@
                                TextAlignment="Right"
                                Foreground="WhiteSmoke"
                                Text="ชื่อพนักงาน:"
-                               Width="100"/>
+                               Width="90"/>
                     <Grid Width="5"/>
                     <TextBox x:Name="txtName"
                              FontSize="18"
                              HorizontalAlignment="Left"
                              VerticalAlignment="Center"
-                             Width="100"
+                             Width="150"
                              Text=""/>
                     <Grid Width="5"/>
                     <TextBlock FontSize="18"    
@@ -61,7 +61,7 @@
                                TextAlignment="Right"
                                Foreground="WhiteSmoke"
                                Text="เลขที่ถุงเงิน:"
-                               Width="100"/>
+                               Width="80"/>
                     <Grid Width="5"/>
                     <TextBox x:Name="txtBagNo"
                              FontSize="18"
@@ -84,6 +84,25 @@
                              VerticalAlignment="Center"
                              Width="100"
                              Text=""/>
+                    <Grid Width="5"/>
+                    <TextBlock FontSize="18"    
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Right"
+                               Foreground="WhiteSmoke"
+                               Text="ด่าน:"
+                               Width="40"/>
+                    <Grid Width="5"/>
+                    <ComboBox Name="cbSide" FontSize="18" 
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              HorizontalContentAlignment="Center"
+                              VerticalContentAlignment="Center"
+                              Width="100"
+                              SelectedValue="1">
+                        <ComboBoxItem Content="ขาเข้า"/>
+                        <ComboBoxItem Content="ขาออก"/>
+                    </ComboBox>
                 </StackPanel>
             </DockPanel>
             <DockPanel DockPanel.Dock="Bottom">
@@ -114,6 +133,10 @@
                 <Grid />
             </DockPanel>
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="187*"/>
+                    <RowDefinition Height="120"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10" />
                     <ColumnDefinition Width="*" />
@@ -128,9 +151,9 @@
                                 FontSize="16"
                                 IsEnabled="False"
                                 Background="CornflowerBlue"
-                                Foreground="WhiteSmoke"/>
+                                Foreground="WhiteSmoke" Grid.RowSpan="2"/>
                 <Grid Grid.Column="2"
-                      Margin="5"
+                      Margin="15,223,15,151"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
                 </Grid>
@@ -138,9 +161,9 @@
                                 Grid.Column="3"
                                 FontSize="16"
                                 Background="DarkRed"
-                                Foreground="WhiteSmoke"/>
+                                Foreground="WhiteSmoke" Grid.RowSpan="2"/>
                 <Grid Grid.Column="4"
-                      Margin="5"
+                      Margin="15,223,15,151"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center">
                 </Grid>
@@ -149,7 +172,13 @@
                                 FontSize="16"
                                 IsEnabled="False"
                                 Background="Orange"
-                                Foreground="WhiteSmoke"/>
+                                Foreground="WhiteSmoke" />
+                <ctrl:LoanMoneyEntry x:Name="loanEntry" Grid.Row="2"
+                                Grid.Column="5"
+                                FontSize="16"
+                                IsEnabled="False"
+                                Background="Orange"
+                                Foreground="WhiteSmoke" />
             </Grid>
         </DockPanel>
     </Grid>

@@ -56,7 +56,7 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="130"/>
+                    <ColumnDefinition Width="2"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <!-- Plaza -->
@@ -75,14 +75,7 @@
                                        Text="Plaza"/>
                         </Border>
                         <TextBlock Height="10" DockPanel.Dock="Top" />
-                        <TextBlock x:Name="txtPlazaId"
-                                   DockPanel.Dock="Top"
-                                   Foreground="WhiteSmoke"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
-                                   TextAlignment="Center"
-                                   FontSize="18"
-                                   Text="รหัสด่าน:"/>
+
                         <TextBlock x:Name="txtPlazaName"
                                    Foreground="WhiteSmoke"
                                    HorizontalAlignment="Left"
@@ -90,47 +83,6 @@
                                    TextAlignment="Center"
                                    FontSize="18"
                                    Text="ชื่อด่าน:"/>
-                    </DockPanel>
-                </Border>
-                <!-- Shift -->
-                <Border BorderBrush="Silver"
-                        BorderThickness="1"
-                        Grid.Column="1">
-                    <DockPanel Margin="5">
-                        <Border BorderBrush="Silver"
-                                BorderThickness="1"
-                                DockPanel.Dock="Top"
-                                Background="DarkGray">
-                            <TextBlock Foreground="WhiteSmoke"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Center"
-                                       TextAlignment="Center"
-                                       Text="Shift"/>
-                        </Border>
-                        <TextBlock Height="5" DockPanel.Dock="Top" />
-                        <TextBlock x:Name="txtShiftTime"
-                                   Foreground="WhiteSmoke"
-                                   DockPanel.Dock="Bottom"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   TextAlignment="Center"
-                                   FontSize="14"
-                                   Text=""/>
-                        <TextBlock x:Name="txtShiftDate"
-                                   Foreground="WhiteSmoke"
-                                   DockPanel.Dock="Bottom"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   TextAlignment="Center"
-                                   FontSize="14"
-                                   Text=""/>
-                        <TextBlock x:Name="txtShiftId"
-                                   Foreground="WhiteSmoke"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   TextAlignment="Center"
-                                   FontSize="36"
-                                   Text=""/>
                     </DockPanel>
                 </Border>
                 <!-- Supervisor -->

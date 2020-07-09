@@ -27,7 +27,7 @@ namespace DMT.Windows.TA.Collector
         }
 
         public void Setup(Models.FundEntry plaza, Models.FundEntry src, 
-            Models.FundEntry fund, Models.FundEntry result, bool isNew = false)
+            Models.FundEntry fund, Models.FundEntry result, Models.LoanMoneyEntry loan, bool isNew = false)
         {
             if (isNew)
             {
@@ -47,12 +47,15 @@ namespace DMT.Windows.TA.Collector
             this.Fund = fund;
             this.Result = result;
 
+            this.Loan = loan;
+
             if (null != this.Fund) this.Fund.PropertyChanged += Fund_PropertyChanged;
 
             //this.plazaEntry.DataContext = this.Plaza;
             this.srcEntry.DataContext = this.Source;
             this.usrEntry.DataContext = this.Fund;
             this.sumEntry.DataContext = this.Result;
+            this.loanEntry.DataContext = this.Loan;
 
             if (null != this.Fund)
             {
@@ -73,6 +76,8 @@ namespace DMT.Windows.TA.Collector
                         txtBeltNo.Text = num.ToString("#,##0");
                     }
                 }
+
+                cbSide.Text = this.Source.Side;
             }
 
             UpdateResult();
@@ -113,7 +118,11 @@ namespace DMT.Windows.TA.Collector
         public Models.FundEntry Fund { get; private set; }
         public Models.FundEntry Result { get; private set; }
 
+        public Models.LoanMoneyEntry Loan { get; private set; }
+
         public string StaffId { get { return txtStaffId.Text; } }
         public string CollectorName { get { return txtName.Text; } }
+
+        public string Side { get { return cbSide.Text; } }
     }
 }

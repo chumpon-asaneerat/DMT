@@ -67,6 +67,7 @@ namespace DMT.Controls
             dst.StaffName = src.StaffName;
             dst.BagNo = src.BagNo;
             dst.BeltNo = src.BeltNo;
+            dst.Side = src.Side;
 
             dst.BHT1 = src.BHT1;
             dst.BHT2 = src.BHT2;
@@ -88,6 +89,8 @@ namespace DMT.Controls
                 Models.FundEntry obj = new Models.FundEntry();
                 Models.FundEntry ret = new Models.FundEntry();
 
+                Models.LoanMoneyEntry lm = new Models.LoanMoneyEntry();
+
                 assign(fund, src);
 
                 _plaza.Description = "ยอดที่สามารถยืมได้";
@@ -100,11 +103,13 @@ namespace DMT.Controls
                 ret.Description = "ยอดด่านคงเหลือ";
                 ret.HasRemark = false;
 
+                lm.Description = "รายละเอียด";
+
                 var win = new Windows.TA.Collector.FundBorrowWindow();
                 win.Owner = Application.Current.MainWindow;
                 win.Title = fund.Description;
                 
-                win.Setup(_plaza, src, obj, ret);
+                win.Setup(_plaza, src, obj, ret,lm);
 
                 if (win.ShowDialog() == false)
                 {

@@ -35,6 +35,7 @@ namespace DMT.Pages.TA.Collector
             Models.FundEntry src = new Models.FundEntry();
             Models.FundEntry obj = new Models.FundEntry();
             Models.FundEntry ret = new Models.FundEntry();
+            Models.LoanMoneyEntry lm = new Models.LoanMoneyEntry();
 
             assign(fund, src);
 
@@ -47,10 +48,12 @@ namespace DMT.Pages.TA.Collector
             ret.Description = "ยอดด่านคงเหลือ";
             ret.HasRemark = false;
 
+            lm.Description = "รายละเอียด";
+
             win.Owner = Application.Current.MainWindow;
             win.Title = fund.Description;
 
-            win.Setup(_current, src, obj, ret, true);
+            win.Setup(_current, src, obj, ret,lm, true);
 
             if (win.ShowDialog() == false)
             {
@@ -63,6 +66,7 @@ namespace DMT.Pages.TA.Collector
                 obj.Description = win.CollectorName;
                 obj.Lane = 1;
                 obj.Date = DateTime.Now;
+                obj.Side = win.Side;
 
                 _funds.Add(obj);
 

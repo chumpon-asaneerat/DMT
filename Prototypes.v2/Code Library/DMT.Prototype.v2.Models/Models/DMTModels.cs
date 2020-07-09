@@ -2984,6 +2984,8 @@ namespace DMT.Models
 
         private bool _receivedBag = true;
 
+        private string _Side = string.Empty;
+
         #endregion
 
         #region Constructor and Destructor
@@ -3315,6 +3317,20 @@ namespace DMT.Models
                 return ret;
             }
             set { }
+        }
+
+        public string Side
+        {
+            get { return _Side; }
+            set
+            {
+                if (_Side != value)
+                {
+                    _Side = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("Side"));
+                }
+            }
         }
 
         #endregion
@@ -3684,6 +3700,141 @@ namespace DMT.Models
 
             return obj;
         }
+
+        #endregion
+    }
+
+    #endregion
+
+    #region LoanMoneyEntry
+
+    /// <summary>
+    /// The FundEntry Class.
+    /// </summary>
+    public class LoanMoneyEntry : INotifyPropertyChanged
+    {
+        #region Internal Variables
+
+        private string _desc = "";
+
+        private int _revolvingFunds = 0;
+        private int _loanMoney = 0;
+        private int _loanMoneyCabinet = 0;
+
+        #endregion
+
+        #region Constructor and Destructor
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public LoanMoneyEntry() : base()
+        {
+            this.Date = DateTime.MinValue;
+        }
+        /// <summary>
+        /// Destructor.
+        /// </summary>
+        ~LoanMoneyEntry() { }
+
+        #endregion
+
+
+        #region Public Properties
+
+        public string Description
+        {
+            get { return _desc; }
+            set
+            {
+                if (_desc != value)
+                {
+                    _desc = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("Description"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of RevolvingFunds.
+        /// </summary>
+        public int RevolvingFunds
+        {
+            get { return _revolvingFunds; }
+            set
+            {
+                if (_revolvingFunds != value)
+                {
+                    _revolvingFunds = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("RevolvingFunds"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of LoanMoney.
+        /// </summary>
+        public int LoanMoney
+        {
+            get { return _loanMoney; }
+            set
+            {
+                if (_loanMoney != value)
+                {
+                    _loanMoney = value;
+
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("LoanMoney"));
+                }
+            }
+        }
+        /// <summary>
+        /// Gets or sets number of LoanMoneyCabinet.
+        /// </summary>
+        public int LoanMoneyCabinet
+        {
+            get { return _loanMoneyCabinet; }
+            set
+            {
+                if (_loanMoneyCabinet != value)
+                {
+                    _loanMoneyCabinet = value;
+
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("LoanMoneyCabinet"));
+                }
+            }
+        }
+       
+        public string StaffId { get; set; }
+        public string StaffName { get; set; }
+        public DateTime Date { get; set; }
+        public int Lane { get; set; }
+        public string DateString
+        {
+            get
+            {
+                var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToThaiDateString();
+                return ret;
+            }
+            set { }
+        }
+        public string TimeString
+        {
+            get
+            {
+                var ret = (this.Date == DateTime.MinValue) ? "" : this.Date.ToThaiTimeString();
+                return ret;
+            }
+            set { }
+        }
+
+        #endregion
+
+        #region Public Events
+
+        /// <summary>
+        /// The PropertyChanged event.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
         #endregion
     }

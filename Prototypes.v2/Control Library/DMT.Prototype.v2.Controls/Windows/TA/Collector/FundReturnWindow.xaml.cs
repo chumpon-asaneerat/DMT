@@ -17,6 +17,15 @@ namespace DMT.Windows.TA.Collector
 
         private void cmdOk_Click(object sender, RoutedEventArgs e)
         {
+            var win = new Windows.TA.Collector.MessageWindow();
+
+            win.Setup(Description, Total);
+
+            if (win.ShowDialog() == false)
+            {
+                return;
+            }
+
             this.DialogResult = true;
         }
 
@@ -39,6 +48,10 @@ namespace DMT.Windows.TA.Collector
             this.srcEntry.DataContext = this.Source;
             this.usrEntry.DataContext = this.Fund;
             //this.sumEntry.DataContext = this.Result;
+
+
+            txtDescription.Text = this.Source.StaffName;
+
 
             UpdateResult();
         }
@@ -67,5 +80,8 @@ namespace DMT.Windows.TA.Collector
         public Models.FundEntry Source { get; private set; }
         public Models.FundEntry Fund { get; private set; }
         public Models.FundEntry Result { get; private set; }
+
+        public string Description { get { return txtDescription.Text; } }
+        public string Total { get { return this.Fund.BHTTotal.ToString("#,##0"); } }
     }
 }

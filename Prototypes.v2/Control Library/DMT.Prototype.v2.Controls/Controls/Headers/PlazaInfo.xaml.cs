@@ -50,12 +50,12 @@ namespace DMT.Controls
             {
                 Models.Plaza plaza = DMTPlazaManager.Instance.Plaza;
                 // Plaza
-                txtPlazaId.Text = "รหัสด่าน: " + plaza.PlazaId;
+                //txtPlazaId.Text = "รหัสด่าน: " + plaza.PlazaId;
                 txtPlazaName.Text = "ชื่อด่าน: " + plaza.PlazaName;
                 // Shift
-                txtShiftId.Text = plaza.ShiftId;
-                txtShiftDate.Text = plaza.ShiftDate;
-                txtShiftTime.Text = plaza.ShiftTime;
+                //txtShiftId.Text = plaza.ShiftId;
+                //txtShiftDate.Text = plaza.ShiftDate;
+                //txtShiftTime.Text = plaza.ShiftTime;
                 // Supervisor
                 txtSupervisorId.Text = "รหัสหัวหน้าด่าน: " + plaza.SupervisorId;
                 txtSupervisorName.Text = "หัวหน้าด่าน: " + plaza.SupervisorName;
@@ -63,12 +63,12 @@ namespace DMT.Controls
             else 
             {
                 // Plaza
-                txtPlazaId.Text = "รหัสด่าน: ";
+                //txtPlazaId.Text = "รหัสด่าน: ";
                 txtPlazaName.Text = "ชื่อด่าน: ";
                 // Shift
-                txtShiftId.Text = "";
-                txtShiftDate.Text = "";
-                txtShiftTime.Text = "";
+                //txtShiftId.Text = "";
+                //txtShiftDate.Text = "";
+                //txtShiftTime.Text = "";
                 // Supervisor
                 txtSupervisorId.Text = "รหัสหัวหน้าด่าน: ";
                 txtSupervisorName.Text = "หัวหน้าด่าน: ";
