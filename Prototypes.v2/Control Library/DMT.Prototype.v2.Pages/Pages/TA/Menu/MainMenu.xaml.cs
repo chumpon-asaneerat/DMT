@@ -627,6 +627,7 @@ namespace DMT.Pages.TA
                 coupon.StaffName = "นางวิภา สวัสดิวัฒน์";
                 coupon.Lane = 6;
                 coupon.Count = 5;
+                coupon.Count80 = 10;
                 coupon.Type = "คูปอง 80 บาท";
                 coupons.Add(coupon);
 
@@ -636,6 +637,7 @@ namespace DMT.Pages.TA
                 coupon.StaffName = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์";
                 coupon.Lane = 2;
                 coupon.Count = 4;
+                coupon.Count80 = 5;
                 coupon.Type = "คูปอง 35 บาท";
                 coupons.Add(coupon);
 
@@ -645,6 +647,7 @@ namespace DMT.Pages.TA
                 coupon.StaffName = "นาย ภักดี อมรรุ่งโรจน์";
                 coupon.Lane = 4;
                 coupon.Count = 9;
+                coupon.Count80 = 3;
                 coupon.Type = "คูปอง 80 บาท";
                 coupons.Add(coupon);
 
@@ -679,6 +682,7 @@ namespace DMT.Pages.TA
                 coupon.StaffName = "นางวิภา สวัสดิวัฒน์";
                 coupon.Lane = 6;
                 coupon.Count = 10;
+                coupon.Count80 = 5;
                 coupon.Type = "คูปอง 35 บาท";
                 coupons.Add(coupon);
 
@@ -688,6 +692,7 @@ namespace DMT.Pages.TA
                 coupon.StaffName = "นางสาว แก้วใส ฟ้ารุ่งโรจณ์";
                 coupon.Lane = 2;
                 coupon.Count = 7;
+                coupon.Count80 = 3;
                 coupon.Type = "คูปอง 80 บาท";
                 coupons.Add(coupon);
 
@@ -697,6 +702,7 @@ namespace DMT.Pages.TA
                 coupon.StaffName = "นาย ภักดี อมรรุ่งโรจน์";
                 coupon.Lane = 4;
                 coupon.Count = 8;
+                coupon.Count80 = 2;
                 coupon.Type = "คูปอง 35 บาท";
                 coupons.Add(coupon);
 
@@ -732,7 +738,15 @@ namespace DMT.Pages.TA
             coupon.Description = "คุปอง";
             coupon.BHT35 = 32;
             coupon.BHT80 = 43;
-            win.Setup(fund, coupon);
+
+            Models.LoanMoneyEntry loan = new Models.LoanMoneyEntry();
+            loan.Description = "รายละเอียด";
+            loan.RevolvingFunds = 100;
+            loan.LoanMoney = 50;
+            loan.LoanMoneyCabinet = 20;
+
+
+            win.Setup(fund, coupon, loan);
 
             if (win.ShowDialog() == false)
             {

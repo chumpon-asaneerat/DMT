@@ -24,7 +24,7 @@ namespace DMT.Pages.TA.Exchange
             var win = new Windows.TA.Exchange.FundRequestExchangeWindow();
             win.Owner = Application.Current.MainWindow;
 
-            var obj = Models.FundExchange.CreateNewRequest(_plaza, "14055", "นางวิภา สวัสดิวัฒน์", 0);
+            var obj = Models.FundExchange.CreateNewFundRequest(_plaza, "14055", "นางวิภา สวัสดิวัฒน์", 0);
 
             win.Title = "คำร้องขอการแลกเปลี่ยนเงิน";
             win.Setup(Windows.TA.Exchange.ExchangeWindowMode.New, obj);

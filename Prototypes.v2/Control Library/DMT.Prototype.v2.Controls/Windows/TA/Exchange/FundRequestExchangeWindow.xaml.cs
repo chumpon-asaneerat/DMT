@@ -43,6 +43,7 @@ namespace DMT.Windows.TA.Exchange
             Mode = mode;
 
             requestEntry.DataContext = item.Request;
+            requestDetailEntry.DataContext = item.Request;
         }
 
         #endregion

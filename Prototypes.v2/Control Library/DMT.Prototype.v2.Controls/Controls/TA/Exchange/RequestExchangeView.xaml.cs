@@ -76,7 +76,8 @@ namespace DMT.Controls
 
                 // backup descriptions
                 var d1 = item.Request.Description;
-                var d2 = item.Exchange.Description;
+                var d2 = item.TrueRecive.Description;
+                var d3 = item.Exchange.Description;
 
                 // replace descriptions
                 item.Request.Description = "รายการขอแลกเงินจากด่าน";
@@ -85,7 +86,11 @@ namespace DMT.Controls
                 item.Approve.Description = "รายการอนุมัติจากบัญชี";
                 item.Approve.HasRemark = true;
 
+                item.TrueRecive.Description = "เงินที่ได้รับจริง";
+                item.TrueRecive.HasRemark = true;
+
                 item.Exchange.Description = "จ่ายออก ธนบัตร/เหรียญ";
+                item.Exchange.HasRemark = true;
 
                 win.Title = "ยืนยันข้อมูลการแลกเปลี่ยนเงิน";
                 win.Setup(item);
@@ -93,7 +98,9 @@ namespace DMT.Controls
                 {
                     // restore descriptions
                     item.Request.Description = d1;
-                    item.Exchange.Description = d2;
+                    item.TrueRecive.Description = d2;
+                    item.Exchange.Description = d3;
+
                     item.IsEditing = false;
                     return;
                 }

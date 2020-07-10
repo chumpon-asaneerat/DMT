@@ -71,6 +71,12 @@
     <Compile Include="Controls\TA\Entry\CouponPlazaEntry.xaml.cs">
       <DependentUpon>CouponPlazaEntry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TA\Entry\FundDetailEntry.xaml.cs">
+      <DependentUpon>FundDetailEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\Entry\LoanMoney2Entry.xaml.cs">
+      <DependentUpon>LoanMoney2Entry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TA\Entry\LoanMoneyEntry.xaml.cs">
       <DependentUpon>LoanMoneyEntry.xaml</DependentUpon>
     </Compile>
@@ -228,6 +234,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\TA\Entry\CouponPlazaEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TA\Entry\FundDetailEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TA\Entry\LoanMoney2Entry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

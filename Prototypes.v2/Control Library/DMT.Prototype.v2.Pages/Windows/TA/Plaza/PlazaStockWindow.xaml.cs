@@ -19,15 +19,19 @@ namespace DMT.Windows.TA.Plaza
             DialogResult = false;
         }
 
-        public void Setup(Models.FundEntry fund, Models.CouponEntry coupon)
+        public void Setup(Models.FundEntry fund, Models.CouponEntry coupon , Models.LoanMoneyEntry loan)
         {
             this.Fund = fund;
             this.Coupon = coupon;
+            this.LoanMoney = loan;
             fundEntry.DataContext = this.Fund;
             couponEntry.DataContext = this.Coupon;
+            loanMoneyEntry.DataContext = this.LoanMoney;
         }
 
         public Models.FundEntry Fund  { get; set; }
         public Models.CouponEntry Coupon { get; set; }
+
+        public Models.LoanMoneyEntry LoanMoney { get; set; }
     }
 }

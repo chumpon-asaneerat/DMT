@@ -2951,6 +2951,8 @@ namespace DMT.Models
             }
             set { }
         }
+
+        public int Count80 { get; set; }
     }
 }
 
@@ -2968,6 +2970,7 @@ namespace DMT.Models
         private string _bagNo = string.Empty;
         private string _beltNo = string.Empty;
         private string _desc = "";
+        private string _descDetail = "";
 
         private int _BHT1 = 0;
         private int _BHT2 = 0;
@@ -2985,6 +2988,11 @@ namespace DMT.Models
         private bool _receivedBag = true;
 
         private string _Side = string.Empty;
+
+        private decimal _EXCHANGE = 0;
+        private decimal _BORROW = 0;
+        private decimal _REVOLVINGFUNDS = 0;
+        private decimal _TOTALAMOUNT = 0;
 
         #endregion
 
@@ -3022,6 +3030,18 @@ namespace DMT.Models
             _BHTTotal = total;
             // Raise event.
             PropertyChanged.Call(this, new PropertyChangedEventArgs("BHTTotal"));
+        }
+
+        private void CalcTotalAmount()
+        {
+            decimal total = 0;
+            total += _EXCHANGE;
+            total += _BORROW;
+            total += _REVOLVINGFUNDS;
+
+            _TOTALAMOUNT = total;
+            // Raise event.
+            PropertyChanged.Call(this, new PropertyChangedEventArgs("TOTALAMOUNT"));
         }
 
         #endregion
@@ -3333,6 +3353,69 @@ namespace DMT.Models
             }
         }
 
+        public string DescriptionDetail
+        {
+            get { return _descDetail; }
+            set
+            {
+                if (_descDetail != value)
+                {
+                    _descDetail = value;
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("DescriptionDetail"));
+                }
+            }
+        }
+        public decimal EXCHANGE
+        {
+            get { return _EXCHANGE; }
+            set
+            {
+                if (_EXCHANGE != value)
+                {
+                    _EXCHANGE = value;
+                    CalcTotalAmount();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("EXCHANGE"));
+                }
+            }
+        }
+
+        public decimal BORROW
+        {
+            get { return _BORROW; }
+            set
+            {
+                if (_BORROW != value)
+                {
+                    _BORROW = value;
+                    CalcTotalAmount();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("BORROW"));
+                }
+            }
+        }
+
+        public decimal REVOLVINGFUNDS
+        {
+            get { return _REVOLVINGFUNDS; }
+            set
+            {
+                if (_REVOLVINGFUNDS != value)
+                {
+                    _REVOLVINGFUNDS = value;
+                    CalcTotalAmount();
+                    // Raise event.
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("REVOLVINGFUNDS"));
+                }
+            }
+        }
+
+        public decimal TOTALAMOUNT
+        {
+            get { return _TOTALAMOUNT; }
+            set { }
+        }
         #endregion
 
         #region Public Events
@@ -3555,7 +3638,7 @@ namespace DMT.Models
 
         public void Calculate()
         {
-            if (null != Plaza && null != Request && null != Exchange && null != Result)
+            if (null != Plaza && null != Request && null != Exchange && null != TrueRecive && null != Result)
             {
 
             }
@@ -3612,6 +3695,8 @@ namespace DMT.Models
         public FundEntry Exchange { get; set; }
         public FundEntry Result { get; set; }
 
+        public FundEntry TrueRecive { get; set; }
+
         public string DateString
         {
             get
@@ -3640,6 +3725,14 @@ namespace DMT.Models
             set { }
         }
 
+        public decimal TOTALAMOUNT
+        {
+            get
+            {
+                return (null != Request) ? Request.TOTALAMOUNT : 0;
+            }
+            set { }
+        }
         #endregion
 
         #region Public Events
@@ -3698,6 +3791,60 @@ namespace DMT.Models
             obj.Result.StaffName = staffName;
             obj.Result.Date = dt;
 
+            obj.TrueRecive = new Models.FundEntry();
+            obj.TrueRecive.Description = "เงินที่ได้รับจริง";
+            obj.TrueRecive.StaffId = staffId;
+            obj.TrueRecive.StaffName = staffName;
+            obj.TrueRecive.Date = dt;
+
+            return obj;
+        }
+
+        public static Models.FundExchange CreateNewFundRequest(
+            Models.FundEntry plaza, string staffId, string staffName, int statusId)
+        {
+            DateTime dt = DateTime.Now;
+            Models.FundExchange obj = new Models.FundExchange();
+            obj.StaffId = staffId;
+            obj.StaffName = staffName;
+            obj.Date = dt;
+            obj.StatusId = statusId;
+
+            obj.Plaza = plaza;
+            obj.Plaza.Description = "ธนบัตร/เหรียญ ปัจจุบัน";
+
+            obj.Request = new Models.FundEntry();
+            obj.Request.Description = "รายการขอยืม/แลกเงินยืมทอน";
+            obj.Request.DescriptionDetail = "รายละเอียดเงินยืมทอน";
+            obj.Request.StaffId = staffId;
+            obj.Request.StaffName = staffName;
+            obj.Request.Date = dt;
+
+            obj.Approve = new Models.FundEntry();
+            obj.Approve.Description = "รายการอนุมัติจากบัญชี";
+
+            obj.Approve.StaffId = staffId;
+            obj.Approve.StaffName = staffName;
+            obj.Approve.Date = dt;
+
+            obj.Exchange = new Models.FundEntry();
+            obj.Exchange.Description = "จ่ายออก ธนบัตร/เหรียญ";
+            obj.Exchange.StaffId = staffId;
+            obj.Exchange.StaffName = staffName;
+            obj.Exchange.Date = dt;
+
+            obj.Result = new Models.FundEntry();
+            obj.Result.Description = "ยอดรวมคงเหลือ";
+            obj.Result.StaffId = staffId;
+            obj.Result.StaffName = staffName;
+            obj.Result.Date = dt;
+
+            obj.TrueRecive = new Models.FundEntry();
+            obj.TrueRecive.Description = "เงินที่ได้รับจริง";
+            obj.TrueRecive.StaffId = staffId;
+            obj.TrueRecive.StaffName = staffName;
+            obj.TrueRecive.Date = dt;
+
             return obj;
         }
 
@@ -3720,6 +3867,8 @@ namespace DMT.Models
         private int _revolvingFunds = 0;
         private int _loanMoney = 0;
         private int _loanMoneyCabinet = 0;
+
+        private decimal _totalAmount = 0;
 
         #endregion
 
@@ -3766,6 +3915,7 @@ namespace DMT.Models
                 if (_revolvingFunds != value)
                 {
                     _revolvingFunds = value;
+                    CalcTotal();
                     // Raise event.
                     PropertyChanged.Call(this, new PropertyChangedEventArgs("RevolvingFunds"));
                 }
@@ -3782,7 +3932,7 @@ namespace DMT.Models
                 if (_loanMoney != value)
                 {
                     _loanMoney = value;
-
+                    CalcTotal();
                     PropertyChanged.Call(this, new PropertyChangedEventArgs("LoanMoney"));
                 }
             }
@@ -3798,7 +3948,7 @@ namespace DMT.Models
                 if (_loanMoneyCabinet != value)
                 {
                     _loanMoneyCabinet = value;
-
+                    CalcTotal();
                     PropertyChanged.Call(this, new PropertyChangedEventArgs("LoanMoneyCabinet"));
                 }
             }
@@ -3825,6 +3975,28 @@ namespace DMT.Models
                 return ret;
             }
             set { }
+        }
+
+        public decimal TotalAmount
+        {
+            get { return _totalAmount; }
+            set { }
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void CalcTotal()
+        {
+
+            decimal total = 0;
+            total += _revolvingFunds;
+            total += _loanMoney;
+            total -= _loanMoneyCabinet;
+            _totalAmount = total;
+            // Raise event.
+            PropertyChanged.Call(this, new PropertyChangedEventArgs("TotalAmount"));
         }
 
         #endregion

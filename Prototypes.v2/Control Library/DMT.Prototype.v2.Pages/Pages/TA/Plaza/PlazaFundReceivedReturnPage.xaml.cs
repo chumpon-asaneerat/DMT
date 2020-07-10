@@ -30,6 +30,11 @@ namespace DMT.Pages.TA.Plaza
             src.BHT100 -= dst.BHT100;
             src.BHT500 -= dst.BHT500;
             src.BHT1000 -= dst.BHT1000;
+
+
+            src.EXCHANGE -= dst.EXCHANGE;
+            src.BORROW -= dst.BORROW;
+            src.REVOLVINGFUNDS -= dst.REVOLVINGFUNDS;
         }
 
         private void BorrowFund(Models.FundEntry src, Models.FundEntry dst)
@@ -43,6 +48,10 @@ namespace DMT.Pages.TA.Plaza
             src.BHT100 += dst.BHT100;
             src.BHT500 += dst.BHT500;
             src.BHT1000 += dst.BHT1000;
+
+            src.EXCHANGE += dst.EXCHANGE;
+            src.BORROW += dst.BORROW;
+            src.REVOLVINGFUNDS += dst.REVOLVINGFUNDS;
         }
 
         private void assign(Models.FundEntry src, Models.FundEntry dst)
@@ -56,6 +65,11 @@ namespace DMT.Pages.TA.Plaza
             dst.BHT100 = src.BHT100;
             dst.BHT500 = src.BHT500;
             dst.BHT1000 = src.BHT1000;
+
+            dst.EXCHANGE = src.EXCHANGE;
+            dst.BORROW = src.BORROW;
+            dst.REVOLVINGFUNDS = src.REVOLVINGFUNDS;
+
         }
 
         private void cmdCancel_Click(object sender, RoutedEventArgs e)
@@ -105,6 +119,9 @@ namespace DMT.Pages.TA.Plaza
             obj.BHT500 = rcvObj.BHT500 - retObj.BHT500;
             obj.BHT1000 = rcvObj.BHT1000 - retObj.BHT1000;
 
+            obj.EXCHANGE = rcvObj.EXCHANGE - retObj.EXCHANGE;
+            obj.BORROW = rcvObj.BORROW - retObj.BORROW;
+            obj.REVOLVINGFUNDS = rcvObj.REVOLVINGFUNDS - retObj.REVOLVINGFUNDS;
 
             // Update plaza balance
             BorrowFund(_plaza, rcvObj);

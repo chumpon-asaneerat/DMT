@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ctrl="clr-namespace:DMT.Controls;assembly=DMT.Prototype.v2.Controls"
+        xmlns:ctrl2="clr-namespace:DMT.Controls;assembly=DMT.Prototype.v2.Controls"
         mc:Ignorable="d"
         Title="เช็คยอดด่าน" 
         ResizeMode="NoResize" 
@@ -39,11 +40,22 @@
                                 Foreground="WhiteSmoke"
                                 Width="300"/>
                 <Grid Width="5"/>
-                <ctrl:CouponPlazaEntry x:Name="couponEntry"
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="150"/>
+                    </Grid.RowDefinitions>
+                    <ctrl:CouponPlazaEntry x:Name="couponEntry"
                                        FontSize="16"
                                        Background="DarkRed"
                                        Foreground="WhiteSmoke"
                                        Width="300"/>
+                    <ctrl2:LoanMoney2Entry x:Name="loanMoneyEntry" Grid.Row="1"
+                                       FontSize="16"
+                                       Background="Orange"
+                                       Foreground="WhiteSmoke"
+                                       Width="300"/>
+                </Grid>
                 <Grid Width="5"/>
             </StackPanel>
         </DockPanel>

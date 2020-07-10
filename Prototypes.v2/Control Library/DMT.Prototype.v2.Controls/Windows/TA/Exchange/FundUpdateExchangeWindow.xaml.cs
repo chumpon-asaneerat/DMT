@@ -37,6 +37,7 @@ namespace DMT.Windows.TA.Exchange
             requestEntry.DataContext = item.Request;
             approveEntry.DataContext = item.Approve;
             exchangeEntry.DataContext = item.Exchange;
+            trueReciveEntry.DataContext = item.TrueRecive;
         }
 
         #endregion

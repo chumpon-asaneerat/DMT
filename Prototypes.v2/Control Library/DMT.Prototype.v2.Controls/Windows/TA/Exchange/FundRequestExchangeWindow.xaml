@@ -12,7 +12,7 @@
         VerticalAlignment="Center" 
         WindowStartupLocation="CenterOwner"
         Height="580" 
-        Width="400"
+        Width="700"
         Background="DimGray">
     <Grid Margin="15">
         <DockPanel>
@@ -63,9 +63,17 @@
                     <ColumnDefinition Width="10" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
                 </Grid.ColumnDefinitions>
                 <ctrl:FundEntry x:Name="requestEntry"
                                 Grid.Column="1"
+                                FontSize="16"
+                                Background="Indigo"
+                                Foreground="WhiteSmoke"/>
+
+                <ctrl:FundDetailEntry x:Name="requestDetailEntry"
+                                Grid.Column="3"
                                 FontSize="16"
                                 Background="Indigo"
                                 Foreground="WhiteSmoke"/>
