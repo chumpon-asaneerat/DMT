@@ -2994,6 +2994,7 @@ namespace DMT.Models
         private decimal _REVOLVINGFUNDS = 0;
         private decimal _TOTALAMOUNT = 0;
 
+        private string _list = "";
         #endregion
 
         #region Constructor and Destructor
@@ -3416,6 +3417,20 @@ namespace DMT.Models
             get { return _TOTALAMOUNT; }
             set { }
         }
+
+        public string ListType
+        {
+            get { return _list; }
+            set
+            {
+                if (_list != value)
+                {
+                    _list = value;
+                    PropertyChanged.Call(this, new PropertyChangedEventArgs("ListType"));
+                }
+            }
+        }
+
         #endregion
 
         #region Public Events

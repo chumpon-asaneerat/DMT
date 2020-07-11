@@ -89,6 +89,12 @@
     <Compile Include="Controls\TA\Plaza\CouponPlazaView.xaml.cs">
       <DependentUpon>CouponPlazaView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TA\Plaza\FundPlaza2View.xaml.cs">
+      <DependentUpon>FundPlaza2View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TA\Plaza\FundPlaza3View.xaml.cs">
+      <DependentUpon>FundPlaza3View.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TA\Plaza\FundPlazaView.xaml.cs">
       <DependentUpon>FundPlazaView.xaml</DependentUpon>
     </Compile>
@@ -194,6 +200,9 @@
       <DependentUpon>CouponEditWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\TA\Exchange\Emuns.cs" />
+    <Compile Include="Windows\TA\Exchange\ReceivedFundReturWindow.xaml.cs">
+      <DependentUpon>ReceivedFundReturWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\TA\Exchange\FundRequestExchangeWindow.xaml.cs">
       <DependentUpon>FundRequestExchangeWindow.xaml</DependentUpon>
     </Compile>
@@ -258,6 +267,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\TA\Plaza\CouponPlazaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TA\Plaza\FundPlaza2View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TA\Plaza\FundPlaza3View.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -388,6 +405,10 @@
     <Page Include="Windows\TA\Coupon\CouponEditWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TA\Exchange\ReceivedFundReturWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\TA\Exchange\FundRequestExchangeWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

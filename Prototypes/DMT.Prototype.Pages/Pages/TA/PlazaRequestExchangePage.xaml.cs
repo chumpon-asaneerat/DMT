@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 using NLib;
 using NLib.Services;
 
-namespace DMT.Pages
+namespace DMT.Pages.TA.Exchange
 {
     /// <summary>
     /// Interaction logic for PlazaRequestExchangePage.xaml

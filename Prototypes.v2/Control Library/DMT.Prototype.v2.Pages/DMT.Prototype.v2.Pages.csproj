@@ -86,6 +86,12 @@
     <Compile Include="Pages\TA\Menu\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TA\Plaza\PlazaReceivedFundReturnPage.xaml.cs">
+      <DependentUpon>PlazaReceivedFundReturnPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TA\Plaza\PlazaReceivedReturnPage.xaml.cs">
+      <DependentUpon>PlazaReceivedReturnPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TA\Plaza\PlazaFundReceivedReturnPage.xaml.cs">
       <DependentUpon>PlazaFundReceivedReturnPage.xaml</DependentUpon>
     </Compile>
@@ -238,6 +244,14 @@
     <Page Include="Pages\TA\Menu\MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TA\Plaza\PlazaReceivedFundReturnPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\TA\Plaza\PlazaReceivedReturnPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\TA\Plaza\PlazaFundReceivedReturnPage.xaml">
       <Generator>MSBuild:Compile</Generator>

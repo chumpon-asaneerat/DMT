@@ -446,17 +446,83 @@ namespace DMT.Pages.TA
 
         private void refundBankNote_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                // Plaza Fund Received
+                var page = new TA.Plaza.PlazaReceivedReturnPage();
 
+                BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
+                Models.FundEntry fund;
+                fund = new Models.FundEntry();
+                fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
+                fund.StaffId = "14055";
+                fund.StaffName = "นางวิภา สวัสดิวัฒน์";
+                fund.ListType = "ยืม";
+                fund.BHT1 = 10;
+                fund.BHT2 = 10;
+                fund.BHT5 = 10;
+                fund.BHT10c = 10;
+                fund.BHT20 = 10;
+                fund.BHT50 = 10;
+                fund.BHT100 = 10;
+                fund.BHT500 = 10;
+                fund.BHT1000 = 10;
+
+                funds.Add(fund);
+
+                Models.LoanMoneyEntry loan  = new Models.LoanMoneyEntry();
+                loan.Description = "รายละเอียด";
+                loan.RevolvingFunds = 100;
+                loan.LoanMoney = 10;
+                loan.LoanMoneyCabinet = 20;
+
+                page.Setup(fund, loan, funds);
+
+                PageContentManager.Instance.Current = page;
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
         }
 
         private void plazaAllCoupon_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void exchangeMoney_Click(object sender, RoutedEventArgs e)
         {
+            var page = new TA.Plaza.PlazaReceivedFundReturnPage();
 
+            BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
+            Models.FundEntry fund;
+            fund = new Models.FundEntry();
+            fund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
+            fund.StaffId = "14055";
+            fund.StaffName = "นางวิภา สวัสดิวัฒน์";
+            fund.ListType = "ยืม";
+            fund.BHT1 = 10;
+            fund.BHT2 = 10;
+            fund.BHT5 = 10;
+            fund.BHT10c = 10;
+            fund.BHT20 = 10;
+            fund.BHT50 = 10;
+            fund.BHT100 = 10;
+            fund.BHT500 = 10;
+            fund.BHT1000 = 10;
+
+            funds.Add(fund);
+
+            Models.LoanMoneyEntry loan = new Models.LoanMoneyEntry();
+            loan.Description = "รายละเอียด";
+            loan.RevolvingFunds = 100;
+            loan.LoanMoney = 10;
+            loan.LoanMoneyCabinet = 20;
+
+            page.Setup(fund, loan, funds);
+
+            PageContentManager.Instance.Current = page;
         }
 
         private void collectorFundReport_Click(object sender, RoutedEventArgs e)
