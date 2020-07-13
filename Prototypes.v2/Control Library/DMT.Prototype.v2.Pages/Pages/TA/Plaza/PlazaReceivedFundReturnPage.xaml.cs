@@ -166,7 +166,7 @@ namespace DMT.Pages.TA.Plaza
             this.plaza.DataContext = _plaza;
             this.grid.Setup(_plaza, _funds);
 
-            txtDate.Text = (DateTime.Now == DateTime.MinValue) ? "" : DateTime.Now.ToThaiDateString() + " " + DateTime.Now.ToString("HH:mm"); ;
+            txtDate.Text = (DateTime.Now == DateTime.MinValue) ? "" : DateTime.Now.ToThaiDateString() + " " + DateTime.Now.ToString("HH:mm");
             //txtDate.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
             UpdateBalance();

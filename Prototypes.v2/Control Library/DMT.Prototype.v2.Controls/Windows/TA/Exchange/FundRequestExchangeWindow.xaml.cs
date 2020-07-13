@@ -29,10 +29,10 @@ namespace DMT.Windows.TA.Exchange
             this.DialogResult = true;
         }
 
-        private void cmdClose_Click(object sender, RoutedEventArgs e)
-        {
-            this.DialogResult = false;
-        }
+        //private void cmdClose_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.DialogResult = false;
+        //}
 
         #endregion
 

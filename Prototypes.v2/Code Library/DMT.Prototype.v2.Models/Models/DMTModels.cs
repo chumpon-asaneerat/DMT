@@ -3018,7 +3018,7 @@ namespace DMT.Models
         private void CalcTotal()
         {
             decimal total = 0;
-            total += _BHT1 * 1;
+            total += _BHT1;
             total += _BHT2 * 2;
             total += _BHT5 * 5;
             total += _BHT10c * 10;

@@ -37,15 +37,16 @@ namespace DMT.Pages.TA
         private void InitPlazaFund()
         {
             plaza.Description = "เงินยืม-ทอน (ด่าน)";
-            plaza.BHT1 = 100;
-            plaza.BHT2 = 100;
-            plaza.BHT5 = 100;
-            plaza.BHT10c = 100;
-            plaza.BHT20 = 100;
-            plaza.BHT50 = 100;
-            plaza.BHT100 = 100;
-            plaza.BHT500 = 100;
-            plaza.BHT1000 = 100;
+            plaza.BHT1 = 890;
+            plaza.BHT2 = 910;
+            plaza.BHT5 = 870;
+            plaza.BHT10c = 410;
+            plaza.BHT20 = 130;
+            plaza.BHT50 = 82;
+            plaza.BHT100 = 125;
+            plaza.BHT500 = 58;
+            plaza.BHT1000 = 85;
+
             plaza.HasRemark = false;
         }
 
@@ -60,7 +61,13 @@ namespace DMT.Pages.TA
 
                 BindingList<Models.FundExchange> items = new BindingList<Models.FundExchange>();
 
-                page.Setup(plaza, items);
+                Models.LoanMoneyEntry loan = new Models.LoanMoneyEntry();
+                loan.Description = "รายละเอียด";
+                loan.RevolvingFunds = 150000;
+                loan.LoanMoney = 42000;
+                loan.LoanMoneyCabinet = 47640;
+
+                page.Setup(plaza, items, loan);
 
                 PageContentManager.Instance.Current = page;
             }
@@ -458,23 +465,24 @@ namespace DMT.Pages.TA
                 fund.StaffId = "14055";
                 fund.StaffName = "นางวิภา สวัสดิวัฒน์";
                 fund.ListType = "ยืม";
-                fund.BHT1 = 10;
-                fund.BHT2 = 10;
-                fund.BHT5 = 10;
-                fund.BHT10c = 10;
-                fund.BHT20 = 10;
-                fund.BHT50 = 10;
-                fund.BHT100 = 10;
-                fund.BHT500 = 10;
-                fund.BHT1000 = 10;
+
+                fund.BHT1 = 890;
+                fund.BHT2 = 910;
+                fund.BHT5 = 870;
+                fund.BHT10c = 410;
+                fund.BHT20 = 130;
+                fund.BHT50 = 82;
+                fund.BHT100 = 125;
+                fund.BHT500 = 58;
+                fund.BHT1000 = 85;
 
                 funds.Add(fund);
 
                 Models.LoanMoneyEntry loan  = new Models.LoanMoneyEntry();
                 loan.Description = "รายละเอียด";
-                loan.RevolvingFunds = 100;
-                loan.LoanMoney = 10;
-                loan.LoanMoneyCabinet = 20;
+                loan.RevolvingFunds = 150000;
+                loan.LoanMoney = 42000;
+                loan.LoanMoneyCabinet = 47640;
 
                 page.Setup(fund, loan, funds);
 
@@ -502,23 +510,23 @@ namespace DMT.Pages.TA
             fund.StaffId = "14055";
             fund.StaffName = "นางวิภา สวัสดิวัฒน์";
             fund.ListType = "ยืม";
-            fund.BHT1 = 10;
-            fund.BHT2 = 10;
-            fund.BHT5 = 10;
-            fund.BHT10c = 10;
-            fund.BHT20 = 10;
-            fund.BHT50 = 10;
-            fund.BHT100 = 10;
-            fund.BHT500 = 10;
-            fund.BHT1000 = 10;
+            fund.BHT1 = 890;
+            fund.BHT2 = 910;
+            fund.BHT5 = 870;
+            fund.BHT10c = 410;
+            fund.BHT20 = 130;
+            fund.BHT50 = 82;
+            fund.BHT100 = 125;
+            fund.BHT500 = 58;
+            fund.BHT1000 = 85;
 
             funds.Add(fund);
 
             Models.LoanMoneyEntry loan = new Models.LoanMoneyEntry();
             loan.Description = "รายละเอียด";
-            loan.RevolvingFunds = 100;
-            loan.LoanMoney = 10;
-            loan.LoanMoneyCabinet = 20;
+            loan.RevolvingFunds = 150000;
+            loan.LoanMoney = 42000;
+            loan.LoanMoneyCabinet = 47640;
 
             page.Setup(fund, loan, funds);
 
@@ -550,15 +558,15 @@ namespace DMT.Pages.TA
 
                 plazaFund.Date = new DateTime(2020, 3, 12, 09, 05, 00);
                 plazaFund.StaffId = "14055";
-                plazaFund.BHT1 = 1000;
-                plazaFund.BHT2 = 1000;
-                plazaFund.BHT5 = 1000;
-                plazaFund.BHT10c = 500;
-                plazaFund.BHT20 = 200;
-                plazaFund.BHT50 = 100;
-                plazaFund.BHT100 = 200;
-                plazaFund.BHT500 = 100;
-                plazaFund.BHT1000 = 100;
+                plazaFund.BHT1 = 890;
+                plazaFund.BHT2 = 910;
+                plazaFund.BHT5 = 870;
+                plazaFund.BHT10c = 410;
+                plazaFund.BHT20 = 130;
+                plazaFund.BHT50 = 82;
+                plazaFund.BHT100 = 125;
+                plazaFund.BHT500 = 58;
+                plazaFund.BHT1000 = 85;
 
                 BindingList<Models.FundEntry> funds = new BindingList<Models.FundEntry>();
                 Models.FundEntry fund;
@@ -667,7 +675,13 @@ namespace DMT.Pages.TA
                 fund.BHT1000 = 3;
                 funds.Add(fund);
 
-                page.Setup(plazaFund, funds);
+                Models.LoanMoneyEntry loan = new Models.LoanMoneyEntry();
+                loan.Description = "รายละเอียด";
+                loan.RevolvingFunds = 150000;
+                loan.LoanMoney = 42000;
+                loan.LoanMoneyCabinet = 47640;
+
+                page.Setup(plazaFund, funds, loan);
 
                 PageContentManager.Instance.Current = page;
             }
@@ -790,15 +804,15 @@ namespace DMT.Pages.TA
             Models.FundEntry fund = new Models.FundEntry();
             fund.Description = "เงินยืมทอน";
             fund.HasRemark = false;
-            fund.BHT1 = 100;
-            fund.BHT2 = 100;
-            fund.BHT5 = 100;
-            fund.BHT10c = 100;
-            fund.BHT20 = 100;
-            fund.BHT50 = 100;
-            fund.BHT100 = 100;
-            fund.BHT500 = 100;
-            fund.BHT1000 = 100;
+            fund.BHT1 = 890;
+            fund.BHT2 = 910;
+            fund.BHT5 = 870;
+            fund.BHT10c = 410;
+            fund.BHT20 = 130;
+            fund.BHT50 = 82;
+            fund.BHT100 = 125;
+            fund.BHT500 = 58;
+            fund.BHT1000 = 85;
 
             Models.CouponEntry coupon = new Models.CouponEntry();
             coupon.Description = "คุปอง";
@@ -807,9 +821,9 @@ namespace DMT.Pages.TA
 
             Models.LoanMoneyEntry loan = new Models.LoanMoneyEntry();
             loan.Description = "รายละเอียด";
-            loan.RevolvingFunds = 100;
-            loan.LoanMoney = 50;
-            loan.LoanMoneyCabinet = 20;
+            loan.RevolvingFunds = 150000;
+            loan.LoanMoney = 42000;
+            loan.LoanMoneyCabinet = 47640;
 
 
             win.Setup(fund, coupon, loan);

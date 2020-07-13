@@ -54,6 +54,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\TA\TAMainPage.xaml.cs">
+      <DependentUpon>TAMainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TOD\DailyRevenueSummaryPreviewPage.xaml.cs">
       <DependentUpon>DailyRevenueSummaryPreviewPage.xaml</DependentUpon>
     </Compile>
@@ -117,9 +120,6 @@
     <Compile Include="Pages\TOD\RevenuePreviewPage.xaml.cs">
       <DependentUpon>RevenuePreviewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TA\TAMainPage.xaml.cs">
-      <DependentUpon>TAMainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\TOD\TODMainPage.xaml.cs">
       <DependentUpon>TODMainPage.xaml</DependentUpon>
     </Compile>
@@ -182,6 +182,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Pages\TA\TAMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
     <Page Include="Pages\TOD\DailyRevenueSummaryPreviewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -263,10 +267,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\TOD\RevenuePreviewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\TA\TAMainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

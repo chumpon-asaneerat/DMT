@@ -35,7 +35,6 @@ namespace DMT.Pages.TA.Collector
             Models.FundEntry src = new Models.FundEntry();
             Models.FundEntry obj = new Models.FundEntry();
             Models.FundEntry ret = new Models.FundEntry();
-            Models.LoanMoneyEntry lm = new Models.LoanMoneyEntry();
 
             assign(fund, src);
 
@@ -48,12 +47,10 @@ namespace DMT.Pages.TA.Collector
             ret.Description = "ยอดด่านคงเหลือ";
             ret.HasRemark = false;
 
-            lm.Description = "รายละเอียด";
-
             win.Owner = Application.Current.MainWindow;
             win.Title = fund.Description;
 
-            win.Setup(_current, src, obj, ret,lm, true);
+            win.Setup(_current, src, obj, ret, true);
 
             if (win.ShowDialog() == false)
             {
@@ -84,6 +81,8 @@ namespace DMT.Pages.TA.Collector
         }
 
         private Models.FundEntry _plaza;
+        private Models.LoanMoneyEntry _loan;
+
         private Models.FundEntry _current = new Models.FundEntry();
         private BindingList<Models.FundEntry> _funds;
 
@@ -121,16 +120,20 @@ namespace DMT.Pages.TA.Collector
         }
 
         public void Setup(Models.FundEntry plazaFund,
-            BindingList<Models.FundEntry> funds)
+            BindingList<Models.FundEntry> funds , Models.LoanMoneyEntry loan)
         {
             _plaza = plazaFund;
+            _loan = loan;
             _funds = funds;
 
             Calculate();
 
+            _current = plazaFund;
             _current.HasRemark = false;
 
             plaza.DataContext = _current;
+            loanEntry.DataContext = loan;
+
             grid.Setup(_current, _funds);
         }
 

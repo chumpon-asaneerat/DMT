@@ -39,6 +39,9 @@ namespace DMT.Pages.TA.Coupon
             //couponTypes.Add("คูปอง 80 บาท");
             //cbCouponTypes.DataContext = couponTypes;
             //cbCouponTypes.SelectedIndex = 0;
+
+            revDate.Text = (DateTime.Now == DateTime.MinValue) ? "" : DateTime.Now.ToThaiDateString() + " " + DateTime.Now.ToString("HH:mm");
+
             grid.Setup(coupons);
         }
 

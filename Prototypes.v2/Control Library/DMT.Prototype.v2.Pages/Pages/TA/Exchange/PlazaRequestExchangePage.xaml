@@ -37,10 +37,21 @@
                                    Width="200"/>
                     </StackPanel>
                 </Border>
-                <ctrl:FundEntry x:Name="plaza"
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="150"/>
+                    </Grid.RowDefinitions>
+                    <ctrl:FundEntry x:Name="plaza" Margin="0 0 0 5"
                                 FontSize="16"
                                 Background="Orange"
                                 Foreground="WhiteSmoke"/>
+                    <ctrl:LoanMoney2Entry x:Name="loanEntry" Grid.Row="2"
+                                Grid.Column="5"
+                                FontSize="16"
+                                Background="Orange"
+                                Foreground="WhiteSmoke" />
+                </Grid>
             </DockPanel>
         </Border>
         <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom">

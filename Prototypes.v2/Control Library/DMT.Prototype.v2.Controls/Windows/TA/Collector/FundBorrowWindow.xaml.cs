@@ -27,7 +27,7 @@ namespace DMT.Windows.TA.Collector
         }
 
         public void Setup(Models.FundEntry plaza, Models.FundEntry src, 
-            Models.FundEntry fund, Models.FundEntry result, Models.LoanMoneyEntry loan, bool isNew = false)
+            Models.FundEntry fund, Models.FundEntry result, bool isNew = false)
         {
             if (isNew)
             {
@@ -47,16 +47,13 @@ namespace DMT.Windows.TA.Collector
             this.Fund = fund;
             this.Result = result;
 
-            this.Loan = loan;
-
             if (null != this.Fund) this.Fund.PropertyChanged += Fund_PropertyChanged;
 
             //this.plazaEntry.DataContext = this.Plaza;
             this.srcEntry.DataContext = this.Source;
             this.usrEntry.DataContext = this.Fund;
             this.sumEntry.DataContext = this.Result;
-            this.loanEntry.DataContext = this.Loan;
-
+           
             if (null != this.Fund)
             {
                 txtStaffId.Text = this.Source.StaffId;

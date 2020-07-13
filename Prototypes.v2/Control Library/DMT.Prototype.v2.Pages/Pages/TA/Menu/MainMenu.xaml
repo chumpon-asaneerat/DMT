@@ -77,7 +77,7 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap">
-                                <Run Text="ขายคูปอง" />
+                                <Run Text="หัวหน้า ขายคูปอง" />
                             </TextBlock>
                         </StackPanel>
                     </DockPanel>
@@ -111,7 +111,7 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="ข้อมูลการขายคูปอง"/>
+                                   Text="ประวัติ การขายคูปอง"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>
@@ -222,7 +222,7 @@
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
                                    TextWrapping="Wrap"
-                                   Text="ประวัติ การยืมเงินทอน"/>
+                                   Text="ประวัติ แลกเงินยืมทอน"/>
                         </StackPanel>
                     </DockPanel>
                 </Button>

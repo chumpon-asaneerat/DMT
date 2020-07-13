@@ -68,7 +68,7 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="คืนเงินยืมทอน"
+                            Content="แลกเงินหมุนเวียน"
                             Height="45"
                             Width="200"
                             Click="cmdAppend_Click"/>
