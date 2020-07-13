@@ -33,7 +33,7 @@
                             VerticalAlignment="Center"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Content="ตกลง"
+                            Content="คืนเงิน"
                             Height="45"
                             Width="150"
                             Click="cmdOk_Click"/>

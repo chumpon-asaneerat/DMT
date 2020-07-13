@@ -2995,6 +2995,7 @@ namespace DMT.Models
         private decimal _TOTALAMOUNT = 0;
 
         private string _list = "";
+
         #endregion
 
         #region Constructor and Destructor
@@ -3748,6 +3749,35 @@ namespace DMT.Models
             }
             set { }
         }
+
+
+        public decimal ExchangeAmount
+        {
+            get
+            {
+                return (null != Request) ? Request.EXCHANGE : 0;
+            }
+            set { }
+        }
+
+        public decimal BORROWAmount
+        {
+            get
+            {
+                return (null != Request) ? Request.BORROW : 0;
+            }
+            set { }
+        }
+
+        public decimal REVOLVINGFUNDSAmount
+        {
+            get
+            {
+                return (null != Request) ? Request.REVOLVINGFUNDS : 0;
+            }
+            set { }
+        }
+
         #endregion
 
         #region Public Events

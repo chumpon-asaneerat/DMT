@@ -12,7 +12,7 @@
         VerticalAlignment="Center" 
         WindowStartupLocation="CenterOwner"
         Height="700" 
-        Width="1100"
+        Width="1150"
         Background="DimGray">
     <Grid Margin="15">
         <Grid.ColumnDefinitions>
@@ -60,8 +60,8 @@
                                VerticalAlignment="Center"
                                TextAlignment="Right"
                                Foreground="WhiteSmoke"
-                               Text="เลขที่ถุงเงิน:"
-                               Width="80"/>
+                               Text="หมายเลขถุงเงิน:"
+                               Width="110"/>
                     <Grid Width="5"/>
                     <TextBox x:Name="txtBagNo"
                              FontSize="18"

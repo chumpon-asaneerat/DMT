@@ -56,8 +56,8 @@ namespace DMT.Windows.TA.Plaza
 
             //this.srcEntry.DataContext = this.Source;
             this.borrowEntry.DataContext = this.Borrow;
-            this.sumEntry.DataContext = this.Result;
-
+            this.sumEntry.DataContext = this.Return;
+            //this.sumEntry.DataContext = this.Result;
             UpdateResult();
         }
 

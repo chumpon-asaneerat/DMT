@@ -47,6 +47,11 @@ namespace DMT.Pages.TA
             plaza.BHT500 = 58;
             plaza.BHT1000 = 85;
 
+
+            plaza.EXCHANGE = 10000;
+            plaza.BORROW = 20000;
+            plaza.REVOLVINGFUNDS = 0;
+
             plaza.HasRemark = false;
         }
 
