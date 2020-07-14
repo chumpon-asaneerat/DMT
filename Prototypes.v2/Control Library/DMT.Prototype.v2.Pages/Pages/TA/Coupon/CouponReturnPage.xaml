@@ -90,7 +90,7 @@
                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                     SelectedCellsChanged="listView_SelectedCellsChanged" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่ขายได้" IsReadOnly="True" Width="200" >
+                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองทั้งหมด" IsReadOnly="True" Width="200" >
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -114,7 +114,7 @@
                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                     SelectedCellsChanged="listViewUse_SelectedCellsChanged" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่รับคืน" IsReadOnly="True" Width="200" >
+                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่ขาย" IsReadOnly="True" Width="200" >
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -166,7 +166,7 @@
                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                     SelectedCellsChanged="listView80_SelectedCellsChanged" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่ขายได้" IsReadOnly="True" Width="200" >
+                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองทั้งหมด" IsReadOnly="True" Width="200" >
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -189,7 +189,7 @@
                                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                     SelectedCellsChanged="listViewUse80_SelectedCellsChanged" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่รับคืน" IsReadOnly="True" Width="200" >
+                        <DataGridTextColumn Binding="{Binding Path= CouponCode , Mode= OneWay}" Header="รายการคูปองที่ขาย" IsReadOnly="True" Width="200" >
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />

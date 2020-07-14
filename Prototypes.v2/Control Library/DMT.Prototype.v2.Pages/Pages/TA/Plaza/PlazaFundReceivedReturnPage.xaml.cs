@@ -96,12 +96,13 @@ namespace DMT.Pages.TA.Plaza
 
             rcvObj.Description = "รับเงิน";
             retObj.Description = "คืนเงิน";
-            
+            retObj.HasRemark = false;
+
             resObj.Description = "ยอดรวม";
             resObj.HasRemark = false;
 
             win.Title = "ยืมเงิน";
-            win.Setup(srcObj, rcvObj, retObj, resObj);
+            win.Setup(srcObj, rcvObj, retObj, resObj, false);
             if (win.ShowDialog() == false)
             {
                 return;

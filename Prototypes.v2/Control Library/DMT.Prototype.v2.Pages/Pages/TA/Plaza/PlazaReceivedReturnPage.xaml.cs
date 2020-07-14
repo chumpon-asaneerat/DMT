@@ -94,8 +94,10 @@ namespace DMT.Pages.TA.Plaza
             srcObj.HasRemark = false;
 
             rcvObj.Description = "คืนเงิน";
-            retObj.Description = "คืนเงิน";
-            
+
+            retObj.Description = "ยอดรวม";
+            retObj.HasRemark = false;
+
             resObj.Description = "ยอดรวม";
             resObj.HasRemark = false;
 
@@ -103,7 +105,7 @@ namespace DMT.Pages.TA.Plaza
 
 
             win.Title = "คืนเงินทอน";
-            win.Setup(srcObj, rcvObj, retObj, resObj);
+            win.Setup(srcObj, rcvObj, retObj, resObj,true);
             if (win.ShowDialog() == false)
             {
                 return;

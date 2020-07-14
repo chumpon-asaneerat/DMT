@@ -41,7 +41,7 @@ namespace DMT.Windows.TA.Plaza
 
         public void Setup(Models.FundEntry srcObj, 
             Models.FundEntry rcvObj, Models.FundEntry retObj,
-            Models.FundEntry resObj)
+            Models.FundEntry resObj , bool received)
         {
             if (null != this.Return) this.Return.PropertyChanged -= Return_PropertyChanged;
             if (null != this.Borrow) this.Borrow.PropertyChanged -= Borrow_PropertyChanged;
@@ -56,8 +56,20 @@ namespace DMT.Windows.TA.Plaza
 
             //this.srcEntry.DataContext = this.Source;
             this.borrowEntry.DataContext = this.Borrow;
-            this.sumEntry.DataContext = this.Return;
+
+            if (received == true)
+            {
+                this.sumEntry.DataContext = this.Result;
+                this.sumEntry.IsEnabled = false;
+            }
+            else
+            {
+                this.sumEntry.DataContext = this.Return;
+                //Return.HasRemark = false;
+            }
+
             //this.sumEntry.DataContext = this.Result;
+
             UpdateResult();
         }
 

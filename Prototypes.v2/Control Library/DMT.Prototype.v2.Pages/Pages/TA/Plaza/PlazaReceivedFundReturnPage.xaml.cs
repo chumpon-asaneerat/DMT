@@ -94,8 +94,10 @@ namespace DMT.Pages.TA.Plaza
             srcObj.HasRemark = false;
 
             rcvObj.Description = "เงินขอแลกออก";
-            retObj.Description = "คืนเงิน";
-            
+
+            retObj.Description = "เงินขอแลกเข้า";
+            retObj.HasRemark = false;
+
             resObj.Description = "เงินขอแลกเข้า";
             resObj.HasRemark = false;
 
@@ -103,7 +105,7 @@ namespace DMT.Pages.TA.Plaza
 
 
             win.Title = "แลกเงินหมุนเวียนภายในด่าน";
-            win.Setup(srcObj, rcvObj, retObj, resObj);
+            win.Setup(srcObj, rcvObj, retObj, resObj,false);
             if (win.ShowDialog() == false)
             {
                 return;
