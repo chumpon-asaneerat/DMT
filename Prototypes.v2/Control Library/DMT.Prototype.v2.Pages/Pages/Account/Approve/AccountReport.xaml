@@ -4,23 +4,208 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="970">
+    <UserControl.Resources>
+        <GridViewColumnCollection x:Key="SubColumnCollection">
+            <GridViewColumn Header=" 1 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht1 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 2 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht2 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 5 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht5 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 10 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht10 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 20 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht20 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 50 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht50 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 100 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht100 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 500 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht500 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 1000 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht1000 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+        </GridViewColumnCollection>
+        <DataTemplate x:Key="MultiColumnHeaderTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{Binding}" HorizontalAlignment="Center"/>
+                <GridViewHeaderRowPresenter HorizontalAlignment="Stretch" Grid.Row="1" Columns="{StaticResource SubColumnCollection}"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="MultiColumnCellTemplate">
+            <Grid>
+                <GridViewRowPresenter HorizontalAlignment="Stretch" Columns="{DynamicResource SubColumnCollection}"/>
+            </Grid>
+        </DataTemplate>
+
+        <GridViewColumnCollection x:Key="SubColumnCollectionDate">
+            <GridViewColumn Header=" วันที่เริ่มต้น " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=StartDate ,Mode= OneWay, StringFormat=\{0:dd/MM/yyyy\}}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" วันที่สิ้นสุด " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=EndDate ,Mode= OneWay, StringFormat=\{0:dd/MM/yyyy\}}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+        </GridViewColumnCollection>
+        <DataTemplate x:Key="MultiColumnHeaderTemplateDate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{Binding}" HorizontalAlignment="Center"/>
+                <GridViewHeaderRowPresenter HorizontalAlignment="Stretch" Grid.Row="1" Columns="{StaticResource SubColumnCollectionDate}"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="MultiColumnCellTemplateDate">
+            <Grid>
+                <GridViewRowPresenter HorizontalAlignment="Stretch" Columns="{DynamicResource SubColumnCollectionDate}"/>
+            </Grid>
+        </DataTemplate>
+
+        <GridViewColumnCollection x:Key="SubColumnCollectionApprove">
+            <GridViewColumn Header=" 1 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht1 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 2 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht2 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 5 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht5 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 10 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht10 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 20 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht20 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 50 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht50 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 100 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht100 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 500 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht500 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+            <GridViewColumn Header=" 1000 บาท " Width="Auto">
+                <GridViewColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Baht1000 ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                    </DataTemplate>
+                </GridViewColumn.CellTemplate>
+            </GridViewColumn>
+        </GridViewColumnCollection>
+        <DataTemplate x:Key="MultiColumnHeaderTemplateApprove">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{Binding}" HorizontalAlignment="Center"/>
+                <GridViewHeaderRowPresenter HorizontalAlignment="Stretch" Grid.Row="1" Columns="{StaticResource SubColumnCollectionApprove}"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="MultiColumnCellTemplateApprove">
+            <Grid>
+                <GridViewRowPresenter HorizontalAlignment="Stretch" Columns="{DynamicResource SubColumnCollectionApprove}"/>
+            </Grid>
+        </DataTemplate>
+        
+    </UserControl.Resources>
     <DockPanel>
         <DockPanel DockPanel.Dock="Bottom"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center">
-            <Button x:Name="cmdOk" 
-                            DockPanel.Dock="Right"
-                            Margin="2"
-                            FontSize="18"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Content="ตกลง"
-                            Height="45"
-                            Width="150" 
-                    Click="cmdOk_Click"/>
+           
             <Button x:Name="cmdCancel" 
                             DockPanel.Dock="Right"
                             Margin="2"
@@ -33,27 +218,8 @@
                             Height="45"
                             Width="150" 
                     Click="cmdCancel_Click"/>
-        </DockPanel>
-        <TabControl FontSize="18"
-                    Background="Transparent">
-            <TabItem Header="รายการรออนุมัติ">
-                <DockPanel DockPanel.Dock="Top">
-                    <StackPanel Orientation="Horizontal"
-                                DockPanel.Dock="Top">
-                        <Grid Width="10"/>
-                        <Button x:Name="cmdApprove" 
-                            DockPanel.Dock="Right"
-                            Margin="2"
-                            FontSize="18"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Content="อนุมัติ"
-                            Height="45"
-                            Width="150"/>
-                        <Grid Width="10"/>
-                        <Button x:Name="cmdNotApprove" 
+            <Grid Width="10"/>
+            <Button x:Name="cmdNotApprove" 
                             DockPanel.Dock="Right"
                             Margin="2"
                             FontSize="18"
@@ -63,20 +229,216 @@
                             VerticalContentAlignment="Center"
                             Content="ไม่อนุมัติ"
                             Height="45"
-                            Width="150"/>
-                        <Grid Width="10"/>
-                    </StackPanel>
-                    <ScrollViewer VerticalAlignment="Top"
-                                  VerticalContentAlignment="Top">
-                        <Image Source="/DMT.Prototype.v2.Pages;component/Images/Reports/รายการรออนุมัติ.jpg" />
-                    </ScrollViewer>
+                            Width="150" Click="cmdNotApprove_Click"/>
+            <Grid Width="10"/>
+            <Button x:Name="cmdApprove" 
+                            DockPanel.Dock="Right"
+                            Margin="2"
+                            FontSize="18"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Content="อนุมัติ"
+                            Height="45"
+                            Width="150" Click="cmdApprove_Click"/>
+        </DockPanel>
+        <TabControl FontSize="18"
+                    Background="Transparent">
+            <TabItem Header="รายการรออนุมัติ">
+                <DockPanel DockPanel.Dock="Top">
+                    <Grid>
+                        <ListView IsSynchronizedWithCurrentItem="True" Name="listTest" SelectionMode="Extended"
+                              FontSize="16" FontWeight="Normal" FontFamily="Tahoma" 
+                              ScrollViewer.CanContentScroll="True" 
+                              ScrollViewer.VerticalScrollBarVisibility="Auto"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.View>
+                                <GridView>
+                                    <GridView.ColumnHeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                        </Style>
+                                    </GridView.ColumnHeaderContainerStyle>
+                                    <GridViewColumn Header=" ด่าน " Width="Auto">
+                                        <GridViewColumn.HeaderContainerStyle>
+                                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </Style>
+                                        </GridViewColumn.HeaderContainerStyle>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=PlazaName}" TextAlignment="Left"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Width="Auto">
+                                        <GridViewColumn.HeaderContainerStyle>
+                                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </Style>
+                                        </GridViewColumn.HeaderContainerStyle>
+                                        <GridViewColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="วันที่ร้องขอ" Width= "90" TextWrapping="Wrap" TextAlignment="Center"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.HeaderTemplate>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=DocDate ,Mode= OneWay, StringFormat=\{0:dd/MM/yyyy\}}"  TextAlignment="Center"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="วันที่ใช้เงิน" Width="Auto" HeaderTemplate="{StaticResource MultiColumnHeaderTemplateDate}"
+                            CellTemplate="{StaticResource MultiColumnCellTemplateDate}" />
+                                    <GridViewColumn Header="จำนวนเงินที่ขอ (บาท)" Width="Auto" HeaderTemplate="{StaticResource MultiColumnHeaderTemplate}"
+                            CellTemplate="{StaticResource MultiColumnCellTemplate}" />
+                                    <GridViewColumn Width="Auto">
+                                        <GridViewColumn.HeaderContainerStyle>
+                                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </Style>
+                                        </GridViewColumn.HeaderContainerStyle>
+                                        <GridViewColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="เงินรวม (บาท)" Width= "90" TextWrapping="Wrap" TextAlignment="Center"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.HeaderTemplate>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=Total ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Width="Auto">
+                                        <GridViewColumn.HeaderContainerStyle>
+                                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </Style>
+                                        </GridViewColumn.HeaderContainerStyle>
+                                        <GridViewColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="เลือก รายการ" Width= "60" TextWrapping="Wrap" TextAlignment="Center"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.HeaderTemplate>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox IsChecked="{Binding Path=IsSelect, Mode=TwoWay}" HorizontalAlignment="Center" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="" 
+                                    Width="Auto">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal"
+                                            Margin="3"
+                                            VerticalAlignment="Center">
+                                                    <Grid Width="5"/>
+                                                    <Button x:Name="cmdEdit" 
+                                            Content="แก้ไข" 
+                                            Click="cmdEdit_Click"
+                                            CommandParameter="{Binding}"
+                                            Width="Auto"/>
+                                                    <Grid Width="5"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
                 </DockPanel>
             </TabItem>
             <TabItem Header="รายการอนุมัติ">
-                <ScrollViewer VerticalAlignment="Top"
-                              VerticalContentAlignment="Top">
-                    <Image Source="/DMT.Prototype.v2.Pages;component/Images/Reports/รายการอนุมัติ.jpg" />
-                </ScrollViewer>
+                <DockPanel DockPanel.Dock="Top">
+                    <Grid>
+                        <ListView IsSynchronizedWithCurrentItem="True" Name="listApprove" SelectionMode="Extended"
+                              FontSize="16" FontWeight="Normal" FontFamily="Tahoma" 
+                              ScrollViewer.CanContentScroll="True" 
+                              ScrollViewer.VerticalScrollBarVisibility="Auto"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.View>
+                                <GridView>
+                                    <GridView.ColumnHeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="IsEnabled" Value="False"/>
+                                        </Style>
+                                    </GridView.ColumnHeaderContainerStyle>
+                                    <GridViewColumn Header=" ด่าน " Width="Auto">
+                                        <GridViewColumn.HeaderContainerStyle>
+                                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </Style>
+                                        </GridViewColumn.HeaderContainerStyle>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=PlazaName}" TextAlignment="Left"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Width="Auto">
+                                        <GridViewColumn.HeaderContainerStyle>
+                                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </Style>
+                                        </GridViewColumn.HeaderContainerStyle>
+                                        <GridViewColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="วันที่ร้องขอ" Width= "90" TextWrapping="Wrap" TextAlignment="Center"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.HeaderTemplate>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=DocDate ,Mode= OneWay, StringFormat=\{0:dd/MM/yyyy\}}"  TextAlignment="Center"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="ประเภทเงิน/จำนวน (เหรียญ/ฉบับ)" Width="Auto" HeaderTemplate="{StaticResource MultiColumnHeaderTemplateApprove}"
+                            CellTemplate="{StaticResource MultiColumnCellTemplateApprove}" />
+                                    <GridViewColumn Width="Auto">
+                                        <GridViewColumn.HeaderContainerStyle>
+                                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </Style>
+                                        </GridViewColumn.HeaderContainerStyle>
+                                        <GridViewColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="ยอดเงินรวม (บาท)" Width= "90" TextWrapping="Wrap" TextAlignment="Center"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.HeaderTemplate>
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=Total ,Mode= OneWay, StringFormat='{}{0:#,##0}'}" TextAlignment="Right"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
+                </DockPanel>
             </TabItem>
         </TabControl>
     </DockPanel>

@@ -56,8 +56,20 @@
     <Compile Include="Pages\Account\Approve\AccountReport.xaml.cs">
       <DependentUpon>AccountReport.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Account\Check\PlazaFundPage.xaml.cs">
+      <DependentUpon>PlazaFundPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Account\Check\AllPlazaFundPage.xaml.cs">
       <DependentUpon>AllPlazaFundPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Account\HistoryExchangeCoupon\HistoryExchangeCouponPage.xaml.cs">
+      <DependentUpon>HistoryExchangeCouponPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Account\HistoryExchange\HistoryExchangePage.xaml.cs">
+      <DependentUpon>HistoryExchangePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Account\Limit\LimitPage.xaml.cs">
+      <DependentUpon>LimitPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Account\Menu\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
@@ -147,6 +159,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Windows\Account\Approve\UnApprove2Window .xaml.cs">
+      <DependentUpon>UnApprove2Window .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Account\Approve\Approve2Window.xaml.cs">
+      <DependentUpon>Approve2Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Account\Approve\UnApproveWindow.xaml.cs">
+      <DependentUpon>UnApproveWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Account\Approve\ApproveWindow.xaml.cs">
+      <DependentUpon>ApproveWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Account\Edit\EditAmountWindow.xaml.cs">
+      <DependentUpon>EditAmountWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Account\Exchange\ExchangeWindow.xaml.cs">
+      <DependentUpon>ExchangeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\TA\Plaza\FundBorrowReturnWindow.xaml.cs">
       <DependentUpon>FundBorrowReturnWindow.xaml</DependentUpon>
     </Compile>
@@ -178,7 +208,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Windows\Account\" />
     <Folder Include="Windows\TA\Collector\" />
     <Folder Include="Windows\TA\Reports\" />
   </ItemGroup>
@@ -205,7 +234,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\Account\Check\PlazaFundPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\Account\Check\AllPlazaFundPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Account\HistoryExchangeCoupon\HistoryExchangeCouponPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Account\HistoryExchange\HistoryExchangePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Account\Limit\LimitPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -306,6 +351,30 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\TOD\TollAdmin\ChangeShiftPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Account\Approve\UnApprove2Window .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Account\Approve\Approve2Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Account\Approve\UnApproveWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Account\Approve\ApproveWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Account\Edit\EditAmountWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Account\Exchange\ExchangeWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

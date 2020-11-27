@@ -53,6 +53,15 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Account\Entry\AccountFundEntry.xaml.cs">
+      <DependentUpon>AccountFundEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Account\Entry\AccountFundDetailEntry.xaml.cs">
+      <DependentUpon>AccountFundDetailEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Account\PlazaCouponView\PlazaAllCouponView.xaml.cs">
+      <DependentUpon>PlazaAllCouponView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Account\RequestExchange\AccountRequestExchangeView.xaml.cs">
       <DependentUpon>AccountRequestExchangeView.xaml</DependentUpon>
     </Compile>
@@ -222,6 +231,18 @@
     <Resource Include="Windows\TA\Coupon\next.png" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\Account\Entry\AccountFundEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Account\Entry\AccountFundDetailEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Account\PlazaCouponView\PlazaAllCouponView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\Account\RequestExchange\AccountRequestExchangeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -442,5 +463,6 @@
   <ItemGroup>
     <Resource Include="Windows\TA\Coupon\coupon.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,6 +47,32 @@ namespace DMT.Pages.Account
             }
         }
 
+        private void historyExchangeApprove_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Account Report
+                var page = new Account.History.HistoryExchangePage();
+                PageContentManager.Instance.Current = page;
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
+        }
+        private void limit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Account Report
+                var page = new Account.Limit.LimitPage();
+                PageContentManager.Instance.Current = page;
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
+        }
         private void accountExchangeApprove_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -54,6 +80,21 @@ namespace DMT.Pages.Account
                 // Account Report
                 var page = new Account.Approve.AccountReport();
                 //var page = new Account.RequestExchange.AccountRequestExchantePage();
+
+                PageContentManager.Instance.Current = page;
+            }
+            catch (Exception)
+            {
+                //Console.WriteLine("Refresh data error.");
+            }
+        }
+
+        private void historyExchangeCoupon_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Account Report
+                var page = new Account.History.HistoryExchangeCouponPage();
 
                 PageContentManager.Instance.Current = page;
             }
